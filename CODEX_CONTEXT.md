@@ -18,7 +18,7 @@ Final deadline: **2026-08-02 at 12:00 noon**. Required academic deliverables: re
 
 ## 2. Current phase and decision
 
-Current phase: **the Agent and thin Streamlit client implement the clarified three-checkpoint interaction contract, the English report draft has completed its first group-authorship revision, and the academic A0 poster plus ten-slide supervisor presentation are complete and visually verified. The user selects a registered weapon, enters one short theme keyword such as `dragon`, confirms the Agent-expanded visual world, selects one of 3-4 dynamically generated textual directions, and then selects one artwork from indivisible source + left/right/top mapped candidate cards before formal execution. AK-47 is the fully accepted client target. M4A4 is visible but explicitly disabled for formal client execution because it currently provides adapter-level transfer evidence rather than an AK-equivalent end-to-end deployment contract. The existing real Gemini run selected `Treasured Relic` and `artwork_04`, then reused the exact source for formal 2048 Route-B/TGA export; this remains accepted evidence. The user explicitly authorized the reviewed initial GitHub publication on 2026-07-17. The immediate stage is staged-file safety verification, initial publication, remote verification, then team/supervisor review and final report freeze**.
+Current phase: **the Agent and thin Streamlit client implement the clarified three-checkpoint interaction contract, the English report draft has completed its first group-authorship revision, and the academic A0 poster plus ten-slide supervisor presentation are complete and visually verified. The user selects a registered weapon, enters one short theme keyword such as `dragon`, confirms the Agent-expanded visual world, selects one of 3-4 dynamically generated textual directions, and then selects one artwork from indivisible source + left/right/top mapped candidate cards before formal execution. AK-47 is the fully accepted client target. M4A4 is visible but explicitly disabled for formal client execution because it currently provides adapter-level transfer evidence rather than an AK-equivalent end-to-end deployment contract. The existing real Gemini run selected `Treasured Relic` and `artwork_04`, then reused the exact source for formal 2048 Route-B/TGA export; this remains accepted evidence. The reviewed project repository was published successfully to `https://github.com/DID-FIELD/SDSC6002-SkinSmith` on 2026-07-17 while preserving the existing remote `LICENSE` history. The immediate stage is team/supervisor review and final report freeze**.
 
 Question tested: can the project reliably execute texture generation, seam processing, real UV mapping, multi-view rendering, quantitative evaluation, automatic ranking, and evidence logging before adding diffusion?
 
@@ -859,6 +859,10 @@ Python/environment:
   formats, `tmp/`, local editor/Agent metadata, PowerPoint QA subdirectories, and
   artifact-tool inspection records. `SECURITY_RELEASE_CHECKLIST.md` records the
   complete publication gate.
+- GitHub publication completed on 2026-07-17. The initial project commit is
+  `0522ad2`; the preserved remote history and project commit were merged and
+  published as `ee628e1` on `main`. The published tree had zero forbidden-prefix
+  paths and no common credential-format match.
 
 ## 9. Non-negotiable boundaries
 

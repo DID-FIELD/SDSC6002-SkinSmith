@@ -92,10 +92,10 @@
 - [x] Scan the non-ignored publication candidate for common credential formats.
 - [x] Confirm that `runs/`, Valve assets, model caches, local environments, and
   PowerPoint QA files are ignored.
-- [ ] Create the reviewed initial Git commit.
-- [ ] Push the reviewed publication set to
+- [x] Create the reviewed initial Git commit.
+- [x] Push the reviewed publication set to
   `https://github.com/DID-FIELD/SDSC6002-SkinSmith`.
-- [ ] Verify the remote branch and repository contents after the push.
+- [x] Verify the remote branch and repository contents after the push.
 
 ## Completion conditions
 

@@ -7,7 +7,8 @@
 
 - Git remote `origin` is configured as
   `https://github.com/DID-FIELD/SDSC6002-SkinSmith.git`.
-- No GitHub push has occurred.
+- The reviewed publication was pushed successfully to remote `main` on
+  2026-07-17.
 - The user explicitly authorized the initial GitHub upload on 2026-07-17.
 - The remote `main` branch contains one existing `Initial commit` with `LICENSE`;
   the local project publication will preserve and merge that history.
@@ -75,3 +76,12 @@ After staging but before committing:
 The user has now explicitly approved the reviewed initial publication. Continue
 only if the staged-file audit passes. Stop rather than force-adding any ignored
 path or credential-bearing file.
+
+## Publication result
+
+- Initial project commit: `0522ad2` (`Initial SkinSmith project release`).
+- Existing remote `LICENSE` history was preserved.
+- Merge commit published to `main`: `ee628e1`.
+- Published tree contained 156 files and zero forbidden-prefix paths.
+- The committed-tree credential scan found no common real-key format.
+- 100 unit tests passed before publication; `compileall` also passed.

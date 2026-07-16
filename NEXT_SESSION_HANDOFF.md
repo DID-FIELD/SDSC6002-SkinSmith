@@ -97,16 +97,12 @@ testing.
 
 Resume the academic and publication work in this order:
 
-1. Publish the reviewed, non-sensitive repository candidate to GitHub; the user
-   explicitly authorized the initial upload on 2026-07-17.
-2. Verify the remote branch and confirm that ignored evidence, credentials, Valve
-   assets, model weights, and local environments were not uploaded.
-3. Review the revised 33-page report draft under `report/build/`.
-4. Confirm the five work-package contribution descriptions with all group members,
+1. Review the revised 33-page report draft under `report/build/`.
+2. Confirm the five work-package contribution descriptions with all group members,
    then apply student/team/supervisor feedback in `report/overleaf/`.
-5. Freeze the approved report and export the final report PDF.
-6. Freeze the approved poster and presentation after team/supervisor feedback.
-7. Optionally add one final Workbench screenshot of the accepted TGA.
+3. Freeze the approved report and export the final report PDF.
+4. Freeze the approved poster and presentation after team/supervisor feedback.
+5. Optionally add one final Workbench screenshot of the accepted TGA.
 
 The revised cover lists all five English names and student IDs and identifies
 YUAN Ye as project lead and integration owner. The registered topic remains as a
@@ -128,7 +124,10 @@ supervisor-approved narrowing to SkinSmith.
 - `compileall` passes.
 - Streamlit headless startup passes.
 - No new image call is required merely to continue the academic deliverables.
-- No GitHub push has occurred yet.
-- Git remote `origin` is configured, and the existing remote `main` history
-  consists of an initial `LICENSE` commit that must be preserved.
+- GitHub publication completed successfully on 2026-07-17.
+- Remote: `https://github.com/DID-FIELD/SDSC6002-SkinSmith`.
+- Published merge commit: `ee628e1`; the pre-existing `LICENSE` history was
+  preserved.
+- Ignored evidence, credentials, Valve assets, model weights, and local
+  environments were not uploaded.
 - Follow `SECURITY_RELEASE_CHECKLIST.md` before staging or publishing.
