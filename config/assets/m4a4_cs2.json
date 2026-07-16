@@ -1,0 +1,22 @@
+{
+  "asset_id": "cs2_m4a4_new_geometry",
+  "display_name": "M4A4 (new CS2 Workshop geometry)",
+  "game": "Counter-Strike 2",
+  "mesh_path": "third_party/valve_geometry/weapon_rif_m4a4.obj",
+  "mesh_sha256": "37179368f9bcd869776d3f7a34bfad39125b74ca02ba9f394dfd6c9b307b4a55",
+  "mesh_version": "Valve Workshop Resources: NEW CS2 weapon model geometry",
+  "uv_source": "mesh_derived_from_same_obj",
+  "uv_address_mode": "clamp",
+  "texture_size": 2048,
+  "export_format": "TGA 24-bit Custom Paint exact-fit",
+  "camera_views": ["left", "right", "top"],
+  "canonical_frame": {
+    "longitudinal_axis": [0, 0, 1],
+    "up_axis": [0, 1, 0]
+  },
+  "semantic_regions": [],
+  "default_region": {
+    "name": "other",
+    "color": [128, 136, 148]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "asset_id": "cs2_ak47_new_geometry",
+  "display_name": "AK-47 (new CS2 Workshop geometry)",
+  "game": "Counter-Strike 2",
+  "mesh_path": "third_party/valve_geometry/weapon_rif_ak47.obj",
+  "mesh_sha256": "dae29ee5cadfbf17f84d50d0fe1d50500988e45886571f17bf5eab0d4065654f",
+  "mesh_version": "Valve Workshop Resources: NEW CS2 weapon model geometry",
+  "uv_source": "mesh_derived_from_same_obj",
+  "texture_size": 2048,
+  "export_format": "TGA 24-bit Custom Paint exact-fit",
+  "camera_views": ["left", "right", "top"],
+  "canonical_frame": {
+    "longitudinal_axis": [0, 0, 1],
+    "up_axis": [0, 1, 0]
+  },
+  "semantic_regions": [
+    {
+      "name": "magazine",
+      "color": [224, 76, 94],
+      "component_ids": [1]
+    },
+    {
+      "name": "pistol_grip",
+      "color": [180, 92, 224],
+      "component_ids": [10]
+    },
+    {
+      "name": "handguard",
+      "color": [238, 165, 67],
+      "component_ids": [2]
+    },
+    {
+      "name": "barrel_muzzle",
+      "color": [79, 184, 223],
+      "centroid_min": {"z": 20.0}
+    },
+    {
+      "name": "stock",
+      "color": [85, 194, 123],
+      "centroid_max": {"z": 0.5}
+    },
+    {
+      "name": "receiver",
+      "color": [232, 205, 72],
+      "centroid_min": {"z": 0.5},
+      "centroid_max": {"z": 11.5}
+    },
+    {
+      "name": "front_assembly",
+      "color": [68, 125, 214],
+      "centroid_min": {"z": 11.5},
+      "centroid_max": {"z": 20.0}
+    }
+  ],
+  "default_region": {
+    "name": "other",
+    "color": [128, 136, 148]
+  }
+}

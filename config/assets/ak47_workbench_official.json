@@ -1,0 +1,20 @@
+{
+  "asset_id": "cs2_ak47_official_workbench_uv",
+  "display_name": "AK-47 (official CS Workbench model and UV sheet)",
+  "game": "Counter-Strike 2",
+  "mesh_path": "third_party/valve_workbench/OBJs/ak-47.obj",
+  "mesh_sha256": "e0e2eab03747ce3bfffae0322d1aa8adcb23d35ea938be26a49a0f1f8db2e675",
+  "mesh_version": "Valve official Workbench materials package: AK-47 OBJ",
+  "uv_source": "official_workbench_obj_vt_bound_to_official_uv_sheet",
+  "uv_address_mode": "discard_outside",
+  "uv_sheet_path": "third_party/valve_workbench/UVSheets/ak-47.tga",
+  "uv_sheet_sha256": "c670e11ea8445078e0bdd9b1f6a546d03e29232a15a72681eead9c6120febc60",
+  "texture_size": 2048,
+  "export_format": "TGA 24-bit Custom Paint using official Workbench UV",
+  "camera_views": ["left", "right", "top"],
+  "semantic_regions": [],
+  "default_region": {
+    "name": "official_uv_coverage",
+    "color": [128, 136, 148]
+  }
+}

@@ -1,0 +1,3 @@
+﻿policy,selected_id,edge_safe_pixels,asset_seam_error,multi_view_score,hard_constraint_feasible,interpretation
+Constraint-first + Pareto,width_08,8,0.005522277626543283,0.6969730821592787,True,Selected highest-priority multi-view objective among feasible Pareto candidates.
+Equal 50/50 weighted score,width_04,4,0.016599652885333542,0.7032376175736667,False,Soft aggregate hides violation of the locked asset-seam threshold.

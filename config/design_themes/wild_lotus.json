@@ -1,0 +1,102 @@
+{
+  "theme_id": "wild_lotus_v1",
+  "display_name": "Wild Lotus",
+  "generation_label": "wild lotus at night",
+  "match_terms": ["wild lotus", "lotus flower", "lotus"],
+  "concept": "A resilient wild lotus growing through dark water, elegant but not delicate, with one memorable bloom supported by leaves, stems, seed pods, ripples, and mist.",
+  "narrative": "The weapon reads like a horizontal night pond: submerged darkness begins at the stock, a wild lotus opens on the receiver, leaves and stems carry movement through the handguard, the magazine reflects a folded leaf, and the muzzle dissolves into quiet water.",
+  "default_style_id": "modern_chinese_botanical_v1",
+  "target_components": ["stock", "receiver", "magazine", "pistol_grip", "handguard", "front_assembly", "barrel_muzzle"],
+  "palette": ["#091C22", "#153D36", "#4F765C", "#D9D3BC", "#D98698", "#8DB8B0"],
+  "elements": [
+    {
+      "element_id": "wild_lotus_bloom",
+      "display_name": "Wild Lotus Hero Bloom",
+      "semantic_role": "hero",
+      "generation_description": "one asymmetrical open wild lotus with wind-shaped petals, a dark readable silhouette, and a restrained dusty-pink centre"
+    },
+    {
+      "element_id": "folded_lotus_leaf",
+      "display_name": "Folded Lotus Leaves",
+      "semantic_role": "secondary",
+      "generation_description": "large folded lotus leaves with torn natural edges, visible veins, and deep green shadow masses"
+    },
+    {
+      "element_id": "lotus_seed_pod",
+      "display_name": "Lotus Seed Pod",
+      "semantic_role": "secondary",
+      "generation_description": "two or three small lotus seed pods used as restrained rhythmic accents"
+    },
+    {
+      "element_id": "lotus_stem_flow",
+      "display_name": "Lotus Stem Flow",
+      "semantic_role": "connector",
+      "generation_description": "long sweeping lotus stems and narrow reeds that can connect distant weapon components without becoming generic lines"
+    },
+    {
+      "element_id": "night_water_mist",
+      "display_name": "Night-Water Mist",
+      "semantic_role": "background",
+      "generation_description": "dark layered pond water, sparse broken ripples, pale mist, and broad quiet negative space"
+    }
+  ],
+  "pattern_notes": [
+    "build a dense flower-and-leaf thicket rather than a formal wallpaper grid",
+    "overlap blooms, folded leaves, seed pods, and curved stems at three readable scales",
+    "let partial plants cross every edge so the repeat is hidden",
+    "retain small dark-water gaps so the cluster does not become visual noise"
+  ],
+  "component_story": {
+    "stock": {
+      "narrative_role": "submerged dark water, one cropped leaf, and mist beginning the horizontal pond",
+      "element_ids": ["folded_lotus_leaf", "night_water_mist"],
+      "prominence": 0.42,
+      "detail_density": 0.35
+    },
+    "receiver": {
+      "narrative_role": "primary wild-lotus bloom with the strongest light-dark contrast",
+      "element_ids": ["wild_lotus_bloom", "folded_lotus_leaf"],
+      "prominence": 1.0,
+      "detail_density": 0.82
+    },
+    "magazine": {
+      "narrative_role": "a downward folded leaf and soft water reflection as the secondary panel",
+      "element_ids": ["folded_lotus_leaf", "night_water_mist"],
+      "prominence": 0.65,
+      "detail_density": 0.55
+    },
+    "pistol_grip": {
+      "narrative_role": "deep pond shadow with only a small stem crossing",
+      "element_ids": ["lotus_stem_flow", "night_water_mist"],
+      "prominence": 0.2,
+      "detail_density": 0.2
+    },
+    "handguard": {
+      "narrative_role": "sweeping stems, reeds, and one seed pod continue movement away from the flower",
+      "element_ids": ["lotus_stem_flow", "lotus_seed_pod"],
+      "prominence": 0.55,
+      "detail_density": 0.48
+    },
+    "front_assembly": {
+      "narrative_role": "broken ripples and a fading reed cadence",
+      "element_ids": ["lotus_stem_flow", "night_water_mist"],
+      "prominence": 0.24,
+      "detail_density": 0.22
+    },
+    "barrel_muzzle": {
+      "narrative_role": "quiet midnight water with almost no motif",
+      "element_ids": ["night_water_mist"],
+      "prominence": 0.08,
+      "detail_density": 0.08
+    }
+  },
+  "evaluation_criteria": [
+    "receiver lotus readability",
+    "whole-weapon night-pond narrative",
+    "stem and leaf continuity across stock/receiver/handguard",
+    "intentional quiet muzzle",
+    "left/right/top balance",
+    "UV seam safety and absence of isolated sticker-like components"
+  ],
+  "reference_policy": "Use original botanical construction and only rights-safe plant references; do not copy one painting, skin, illustrator, or identifiable decorative composition."
+}

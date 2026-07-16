@@ -1,0 +1,15 @@
+{
+  "prompt_id": "neon_tide_weapon_space_hero_v1",
+  "usage_scope": "showcase_direction_or_c_plus_only_not_formal_abc",
+  "reason": "Built-in image generation does not expose the fixed seed and pinned revision required by the formal A/B/C experiment. If selected, the bitmap is frozen by SHA-256 as a showcase content-layer input.",
+  "use_case": "stylized-concept",
+  "asset_type": "wide weapon-space visual layer for a game weapon finish",
+  "prompt": "Create an original abstract wide 2:1 weapon-space visual layer titled only in metadata as Neon Tide; do not render any text. Use a flat orthographic graphic-design canvas, not a gun mockup and not a perspective scene. Dark midnight navy base. Place one strong but nonliteral tidal-energy hero form near 47% of the width and 23% from the top, sized for a weapon receiver. Extend two or three broad cyan and ultraviolet flow ribbons horizontally through the lower third so they can visually continue across stock, receiver, and handguard. Add only a few medium-scale secondary accents. Keep the rightmost 20% deliberately quiet and dark for the muzzle zone. Use crisp layered shapes with subtle luminous depth, controlled negative space, and medium-scale detail that remains readable on a narrow weapon silhouette. Palette: #071A2F, #00D4FF, #7A5CFF, #D9FBFF. No repeating tile, no dense micro-lines, no photorealism, no weapon silhouette, no faces, no skulls, no eyes, no characters, no logos, no brands, no symbols, no letters, no numbers, no watermark.",
+  "required_composition": {
+    "aspect_ratio": "2:1 landscape",
+    "hero_center_normalized": [0.47, 0.23],
+    "longitudinal_flow_zone": "lower third",
+    "quiet_zone": "rightmost 20 percent",
+    "detail_scale": "medium"
+  }
+}

@@ -1,0 +1,13 @@
+numpy
+Pillow
+opencv-python
+scipy
+torch
+transformers
+streamlit
+
+# Generation backend (exact installed versions are recorded after GPU acceptance):
+diffusers==0.39.0
+accelerate==1.14.0
+safetensors==0.8.0
+socksio==1.0.0

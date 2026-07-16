@@ -1,0 +1,16 @@
+{
+  "theme_provider": "gemini",
+  "theme_model": "gemini-3.1-flash-lite",
+  "theme_api_key_env": "GEMINI_API_KEY",
+  "image_provider": "gemini",
+  "image_model": "gemini-3.1-flash-image",
+  "image_model_family": "Nano Banana 2",
+  "image_api_key_env": "GEMINI_API_KEY",
+  "image_size": "1K",
+  "image_aspect_ratio": "16:9",
+  "initial_route_a_candidates": 1,
+  "route_b_default_strategy": "master_artwork",
+  "initial_route_b_master_artworks": 4,
+  "candidate_preview_bake_size": 256,
+  "acceptance_boundary": "Every master-artwork candidate is presented as original source plus mapped AK-47 left/right/top previews; only the human-selected candidate receives formal 2048/TGA processing."
+}

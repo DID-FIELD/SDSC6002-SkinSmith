@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "purpose": "Local source of truth for CS2 Workbench inspection; do not re-query Valve pages for routine A/B/C checks.",
+  "formal_abc_control": "A, B, and C must use the same Custom Paint Job finish so the ablation changes only the design route.",
+  "cs_deployment_asset_suffix": "__official-workbench-uv",
+  "cs_deployment_asset_rule": "Formal CS TGA files must be baked through the matching official Workbench weapon OBJ/UV Sheet AssetSpec; mesh-derived atlases for other model versions are not deployment substitutes.",
+  "routes": {
+    "A": {
+      "finish_style": "Custom Paint Job",
+      "filename_suffix": "__route-a__custom-paint-job",
+      "inspection_mode": "formal_ablation",
+      "notes": "Dense crop-tolerant tileable template. Hydrographic or Spray-Paint may be used only as an extra pattern-native showcase, never as the formal A/B/C result."
+    },
+    "B": {
+      "finish_style": "Custom Paint Job",
+      "filename_suffix": "__route-b__custom-paint-job",
+      "inspection_mode": "formal_ablation_and_showcase",
+      "notes": "Weapon-space composition baked into the weapon's original UV atlas. Keep scale, offset, rotation, and randomization neutral."
+    },
+    "C": {
+      "finish_style": "Custom Paint Job",
+      "filename_suffix": "__route-c__custom-paint-job",
+      "inspection_mode": "formal_ablation",
+      "notes": "The selected B candidate plus one bounded render-conditioned correction or rollback. Use the same Workbench settings as B."
+    },
+    "C+": {
+      "finish_style": "Gunsmith",
+      "filename_suffix": "__route-c-plus__gunsmith",
+      "inspection_mode": "showcase_only",
+      "notes": "Optional Patina plus Custom Paint material enhancement. Excluded from A/B/C ablation statistics."
+    }
+  },
+  "optional_route_a_pattern_native_preview": {
+    "allowed_finish_styles": [
+      "Hydrographic",
+      "Spray-Paint"
+    ],
+    "filename_suffixes": [
+      "__route-a-demo__hydrographic",
+      "__route-a-demo__spray-paint"
+    ],
+    "reporting_rule": "Label as an additional showcase only; do not compare its metrics directly with formal B or C."
+  }
+}

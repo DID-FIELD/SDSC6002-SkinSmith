@@ -1,0 +1,246 @@
+{
+  "theme_id": "celestial_dragon_v1",
+  "display_name": "Celestial Dragon in Clouds",
+  "generation_label": "original celestial dragon and cloud-ribbon weapon theme",
+  "match_terms": [
+    "dragon",
+    "celestial dragon",
+    "dragon claw"
+  ],
+  "concept": "A single original celestial dragon travels along the weapon silhouette, with distinct narrative details assigned to supporting components.",
+  "narrative": "The dragon body sweeps from the stock through the receiver and handguard, its head coils around the front assembly and muzzle, restrained claw traces mark the magazine, and cloud ribbons unify the complete silhouette.",
+  "default_style_id": "modern_chinese_botanical_v1",
+  "target_components": [
+    "stock",
+    "receiver",
+    "magazine",
+    "pistol_grip",
+    "handguard",
+    "front_assembly",
+    "barrel_muzzle"
+  ],
+  "palette": [
+    "#101519",
+    "#B98A42",
+    "#315B61",
+    "#D9C9A2",
+    "#8A2F2A"
+  ],
+  "elements": [
+    {
+      "element_id": "dragon_body",
+      "display_name": "Spanning Dragon Body",
+      "semantic_role": "hero",
+      "generation_description": "one continuous elongated celestial dragon body with readable scales, flowing spine rhythm, and open negative space"
+    },
+    {
+      "element_id": "dragon_head",
+      "display_name": "Coiling Dragon Head",
+      "semantic_role": "hero",
+      "generation_description": "one expressive original dragon head with whiskers and a curved neck designed to wrap toward a muzzle"
+    },
+    {
+      "element_id": "claw_marks",
+      "display_name": "Dragon Claw Traces",
+      "semantic_role": "secondary",
+      "generation_description": "three restrained diagonal claw traces with subtle metallic edges"
+    },
+    {
+      "element_id": "cloud_ribbon",
+      "display_name": "Cloud Ribbons",
+      "semantic_role": "connector",
+      "generation_description": "sparse elongated cloud ribbons that connect major forms without becoming a second focal subject"
+    },
+    {
+      "element_id": "lacquer_background",
+      "display_name": "Dark Lacquer Ground",
+      "semantic_role": "background",
+      "generation_description": "quiet dark lacquer material with low-contrast mineral grain"
+    }
+  ],
+  "pattern_notes": [
+    "For Route A, repeat smaller dragon, cloud, and claw fragments densely so arbitrary crops remain complete.",
+    "Do not use the unique whole-weapon dragon anatomy as the Route A tile structure.",
+    "For the master artwork, enrich the dragon theme with layered cloud banks, waves and foam, treasure and ancient coins, flaming pearls, mountain silhouettes, lightning, mist, jade ornaments, and restrained palace-roof or bronze-vessel pattern fragments.",
+    "Use several medium or small dragon glimpses and related motifs instead of one giant dragon occupying the complete image."
+  ],
+  "component_story": {
+    "stock": {
+      "narrative_role": "The tail begins with broad motion and establishes the dragon's direction.",
+      "element_ids": [
+        "dragon_body",
+        "cloud_ribbon",
+        "lacquer_background"
+      ],
+      "prominence": 0.72,
+      "detail_density": 0.58
+    },
+    "receiver": {
+      "narrative_role": "The torso and strongest scale rhythm create the main readable hero mass.",
+      "element_ids": [
+        "dragon_body",
+        "cloud_ribbon",
+        "lacquer_background"
+      ],
+      "prominence": 1.0,
+      "detail_density": 0.9
+    },
+    "magazine": {
+      "narrative_role": "A separate claw event punctuates the composition without repeating the dragon body.",
+      "element_ids": [
+        "claw_marks",
+        "lacquer_background"
+      ],
+      "prominence": 0.58,
+      "detail_density": 0.48
+    },
+    "pistol_grip": {
+      "narrative_role": "A quiet lacquer interval prevents the lower silhouette from becoming crowded.",
+      "element_ids": [
+        "lacquer_background"
+      ],
+      "prominence": 0.18,
+      "detail_density": 0.12
+    },
+    "handguard": {
+      "narrative_role": "The body narrows toward the neck while clouds maintain forward motion.",
+      "element_ids": [
+        "dragon_body",
+        "cloud_ribbon",
+        "lacquer_background"
+      ],
+      "prominence": 0.76,
+      "detail_density": 0.62
+    },
+    "front_assembly": {
+      "narrative_role": "The neck turns upward and transitions into the dragon head.",
+      "element_ids": [
+        "dragon_head",
+        "cloud_ribbon",
+        "lacquer_background"
+      ],
+      "prominence": 0.8,
+      "detail_density": 0.72
+    },
+    "barrel_muzzle": {
+      "narrative_role": "The dragon head deliberately coils around the muzzle as a controlled secondary focal endpoint.",
+      "element_ids": [
+        "dragon_head",
+        "lacquer_background"
+      ],
+      "prominence": 0.86,
+      "detail_density": 0.7
+    }
+  },
+  "composition_groups": [
+    {
+      "group_id": "lacquer_field",
+      "composition_mode": "background",
+      "element_ids": [
+        "lacquer_background"
+      ],
+      "components": [
+        "stock",
+        "receiver",
+        "magazine",
+        "pistol_grip",
+        "handguard",
+        "front_assembly",
+        "barrel_muzzle"
+      ],
+      "narrative_role": "Provide one shared material foundation across every component.",
+      "surfaces": [
+        "left",
+        "right",
+        "top"
+      ],
+      "mirror_on_right": true,
+      "allow_muzzle_focus": false
+    },
+    {
+      "group_id": "dragon_body_run",
+      "composition_mode": "spanning",
+      "element_ids": [
+        "dragon_body"
+      ],
+      "components": [
+        "stock",
+        "receiver",
+        "handguard"
+      ],
+      "narrative_role": "Read as one uninterrupted dragon body rather than three component stickers.",
+      "surfaces": [
+        "left",
+        "right",
+        "top"
+      ],
+      "mirror_on_right": true,
+      "allow_muzzle_focus": false
+    },
+    {
+      "group_id": "dragon_head_coil",
+      "composition_mode": "spanning",
+      "element_ids": [
+        "dragon_head"
+      ],
+      "components": [
+        "front_assembly",
+        "barrel_muzzle"
+      ],
+      "narrative_role": "Turn the neck into a dragon head that coils toward and visually embraces the muzzle.",
+      "surfaces": [
+        "left",
+        "right",
+        "top"
+      ],
+      "mirror_on_right": true,
+      "allow_muzzle_focus": true
+    },
+    {
+      "group_id": "magazine_claw",
+      "composition_mode": "independent",
+      "element_ids": [
+        "claw_marks"
+      ],
+      "components": [
+        "magazine"
+      ],
+      "narrative_role": "Create one restrained claw-mark event isolated to the magazine.",
+      "surfaces": [
+        "left",
+        "right"
+      ],
+      "mirror_on_right": true,
+      "allow_muzzle_focus": false
+    },
+    {
+      "group_id": "cloud_flow",
+      "composition_mode": "spanning",
+      "element_ids": [
+        "cloud_ribbon"
+      ],
+      "components": [
+        "stock",
+        "receiver",
+        "handguard",
+        "front_assembly"
+      ],
+      "narrative_role": "Unify the body and head groups with one quiet forward-moving cloud path.",
+      "surfaces": [
+        "left",
+        "right",
+        "top"
+      ],
+      "mirror_on_right": true,
+      "allow_muzzle_focus": false
+    }
+  ],
+  "evaluation_criteria": [
+    "dragon body reads continuously across stock, receiver, and handguard",
+    "magazine claw marks remain a distinct supporting event",
+    "dragon head remains readable around the front assembly and muzzle",
+    "cloud ribbons connect the full silhouette without competing with the dragon",
+    "left, right, and top mapped previews preserve one coherent theme"
+  ],
+  "reference_policy": "Create an original dragon design from broad historical visual vocabulary; do not copy a named artwork, game skin, copyrighted character, or living artist."
+}

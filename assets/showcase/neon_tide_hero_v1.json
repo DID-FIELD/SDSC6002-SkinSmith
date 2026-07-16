@@ -1,0 +1,13 @@
+{
+  "asset_id": "neon_tide_hero_v1",
+  "image": "neon_tide_hero_v1.png",
+  "sha256": "1ccb25bd1dc8969ae9aa60df728794c31098b5353bb1a4027c3a9767d72bb56a",
+  "generator": "OpenAI built-in image generation",
+  "generator_revision": null,
+  "seed": null,
+  "prompt_spec": "../../config/showcase_hero_prompt.json",
+  "license_scope": "original project-generated research/showcase asset",
+  "formal_abc_eligible": false,
+  "c_plus_showcase_eligible": true,
+  "reason": "The built-in generator does not expose the fixed seed and pinned model revision required by the formal A/B/C protocol. The selected bitmap is reproducibly frozen by SHA-256 for showcase/C+ use."
+}

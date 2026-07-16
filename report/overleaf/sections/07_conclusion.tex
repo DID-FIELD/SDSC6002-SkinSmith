@@ -1,0 +1,32 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+This project investigated how a compact visual theme can be converted into a
+mapped, technically valid, and reproducible game-asset texture. The resulting
+\skinsmith\ prototype combines three human checkpoints with asset-aware
+generation, deterministic UV baking, multi-view evaluation, hard feasibility
+rules, and one bounded refinement round.
+
+For RQ1, the four-pair AK-47 experiment shows that composing in continuous
+weapon space and baking into the existing atlas improves both true asset-seam and
+multi-view performance relative to the tileable baseline in every observed pair.
+For RQ2, mapped evaluation exposes view-specific loss, internal seam failure, and
+the difference between an attractive source and a usable texture. For RQ3, the
+selection-policy ablation and the Route C results show that hard constraints and
+rollback prevent acceptance of infeasible or lower-scoring candidates. For RQ4,
+the live run demonstrates a complete path from a short theme through theme,
+direction, and mapped-artwork decisions to a 2048 PNG/TGA export. For RQ5, the
+M4A4 case shows that the core pipeline transfers through an adapter, while UV
+topology and correction parameters remain asset-specific.
+
+The main conclusion is methodological: image generation should be treated as one
+stage in an asset pipeline, not as the endpoint. A credible generative Agent must
+show what happens after mapping, preserve the user's authority where metrics are
+weak, distinguish feasibility from preference, and retain the evidence behind
+acceptance and rollback.
+
+Future work should evaluate more weapon and non-weapon assets, add game-engine
+render capture, improve semantic and perceptual measures, learn adapter-specific
+seam correction, and conduct a user study of the three checkpoints. Those
+extensions would test whether the observed benefits generalize beyond the present
+case without weakening the bounded claims established here.

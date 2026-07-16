@@ -1,0 +1,18 @@
+{
+  "neon_tide": {
+    "description": "an original abstract deep-sea bioluminescent pattern, flowing cyan lines, violet shadows, no logos, no text",
+    "palette": ["#071A2F", "#00D4FF", "#7A5CFF", "#D9FBFF"],
+    "motif": "waves"
+  },
+  "urban_signal": {
+    "description": "an original abstract urban signal pattern, geometric blocks and diagonal light trails, no logos, no text",
+    "palette": ["#121212", "#FF4D35", "#FFB000", "#E8E8E8"],
+    "motif": "diagonal"
+  },
+  "frost_circuit": {
+    "description": "an original abstract frost and circuit pattern, pale blue crystalline paths, no logos, no text",
+    "palette": ["#10243A", "#77D6E8", "#D8F3F8", "#FFFFFF"],
+    "motif": "circuits"
+  }
+}
+

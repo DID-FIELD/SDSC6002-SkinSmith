@@ -1,0 +1,8 @@
+﻿candidate_id,edge_safe_pixels,asset_seam_error,seam_constraint_pass,multi_view_score,multi_view_retention,retention_constraint_pass,hard_constraint_feasible,pareto_front,constraint_pareto_selected,weighted_selected
+width_00,0,0.1939313917730359,False,0.706715382811284,1.0,True,False,False,False,False
+width_02,2,0.04383348947210464,False,0.7055611222393593,0.9983667249928351,True,False,False,False,False
+width_04,4,0.016599652885333542,False,0.7032376175736667,0.9950789733431542,True,False,False,False,True
+width_08,8,0.005522277626543283,True,0.6969730821592787,0.986214675824303,True,True,True,True,False
+width_12,12,0.003154147530705966,True,0.6901118348354198,0.9765060328674099,True,True,True,False,False
+width_16,16,0.0023011137657411654,True,0.6806792199928685,0.963158913118822,True,True,True,False,False
+width_24,24,0.0014470334460881472,True,0.6629340169525897,0.9380495077317634,False,False,False,False,False

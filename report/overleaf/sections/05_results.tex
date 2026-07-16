@@ -1,0 +1,241 @@
+\section{Results}
+\label{sec:results}
+
+\subsection{RQ1: weapon-space composition}
+
+\Cref{tab:formal-candidates} reports the four paired candidates. \routeB\ reduces
+asset-seam error from 0.2438--0.2967 to below 0.0008 for every pair. It also
+improves the multi-view score for every pair, despite a modest reduction in the
+texture-only score. Candidate 04 is selected within \routeB.
+
+\begin{table}[t]
+  \centering
+  \caption{Formal paired A/B results. Lower asset-seam error is better; higher
+  texture and multi-view scores are better.}
+  \label{tab:formal-candidates}
+  \small
+  \begin{tabular}{llrrrr}
+    \toprule
+    Route & Candidate & Asset seam & Multi-view & Texture & Selected\\
+    \midrule
+    A & 01 & 0.286821 & 0.752696 & 0.761178 & No\\
+    A & 02 & 0.252571 & 0.792474 & 0.779769 & Yes\\
+    A & 03 & 0.243767 & 0.767358 & 0.770474 & No\\
+    A & 04 & 0.296737 & 0.763398 & 0.776778 & No\\
+    \midrule
+    B & 01 & 0.000473 & 0.819614 & 0.765960 & No\\
+    B & 02 & 0.000635 & 0.818653 & 0.749159 & No\\
+    B & 03 & 0.000617 & 0.833842 & 0.755199 & No\\
+    B & 04 & 0.000796 & 0.844312 & 0.751902 & Yes\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The paired summary in \cref{tab:paired-summary} shows a mean asset-seam
+improvement of 0.26934 and a mean multi-view improvement of 0.06012. The win rate
+is 100\% on both measures. The bootstrap intervals remain above zero for the four
+observed pairs.
+
+\begin{table}[t]
+  \centering
+  \caption{Paired Route B minus Route A summary ($n=4$).}
+  \label{tab:paired-summary}
+  \small
+  \begin{tabular}{lrrrrr}
+    \toprule
+    Metric & Mean & Median & Std. & Win rate & Bootstrap 95\% CI\\
+    \midrule
+    Asset-seam improvement & 0.269344 & 0.269142 & 0.022281 & 100\% &
+    [0.247543, 0.291145]\\
+    Multi-view improvement & 0.060124 & 0.066701 & 0.020440 & 100\% &
+    [0.036363, 0.077307]\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}[t]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{formal_route_a_candidate04.png}
+    \caption{Route A candidate 04}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{formal_route_b_candidate04.png}
+    \caption{Route B candidate 04}
+  \end{subfigure}
+  \caption{Mapped left, right, and top views for the same candidate index in the
+  formal experiment. Route A behaves as an all-over pattern; Route B reconstructs
+  a continuous composition after UV fragmentation.}
+  \label{fig:formal-ab}
+\end{figure}
+
+The formal seam-correction operation reduces the mean \routeB\ seam error by
+99.62\%. Before correction, the four values range from 0.14986 to 0.17639; after
+correction, all are below 0.0008 and pass the 0.01 threshold. This establishes that
+the low final seam error is not merely inherited from the source artwork.
+
+These results answer RQ1 positively for the tested AK-47 candidates. The conclusion
+is bounded to this asset, theme family, renderer, and four-pair sample.
+
+\subsection{RQ2: failures exposed by mapped evaluation}
+
+The live dragon case provides direct examples of why source images are
+insufficient. One attempted artwork passed technical image checks but was rejected
+because its subjects formed isolated clusters around large dark regions. Such a
+composition is fragile under cropping and UV fragmentation. After a local retry,
+all four candidate sources were mapped before selection.
+
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}[t]{0.98\textwidth}
+    \includegraphics[width=\textwidth]{selected_master_artwork.png}
+    \caption{Human-selected landscape source artwork}
+  \end{subfigure}
+  \vspace{2mm}
+  \begin{subfigure}[t]{0.98\textwidth}
+    \includegraphics[width=\textwidth]{dragon_route_b_multiview.png}
+    \caption{Formal Route B left, right, and top reconstruction}
+  \end{subfigure}
+  \caption{The selected source and its mapped result are related but not
+  interchangeable evidence. The narrow top view and UV fragmentation remove or
+  compress details that appear clear in the source.}
+  \label{fig:dragon-selected}
+\end{figure}
+
+For the selected source, automatic review reports source fulfillment 0.9386, left
+readability 0.6016, right readability 0.6016, and top readability 0.3993. Only
+eight of sixteen planned elements exceed the visibility threshold. The top view
+is the weakest because of its narrow projected area, while the source score is
+much higher. This difference is the central observation for RQ2: mapping reveals
+loss of readable elements, view imbalance, component-specific cropping, and
+seam behavior that cannot be inferred reliably from the rectangular artwork.
+
+The route comparison in \cref{fig:dragon-routes} illustrates a second failure
+mode. The generated \routeA\ image has a high multi-view score of 0.8952, but its
+asset-seam error is 0.1822 and it fails the deployment constraint. A strong
+aggregate visual score is therefore not evidence of a technically valid texture.
+
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}[t]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{dragon_route_a_multiview.png}
+    \caption{Route A: strong visible activity, invalid asset seam}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{dragon_route_b_multiview.png}
+    \caption{Route B: valid seam and continuous mapped composition}
+  \end{subfigure}
+  \caption{The final live case separates visual activity from deployment
+  feasibility.}
+  \label{fig:dragon-routes}
+\end{figure}
+
+\subsection{RQ3: constrained selection and rollback}
+
+\Cref{fig:edge-sweep} shows the expected trade-off in the independent edge-width
+study. Increasing the safety width reduces seam error but gradually removes
+multi-view detail. Widths 8, 12, and 16 are feasible and Pareto-optimal. Width 24
+has a lower seam error but falls below 95\% retention.
+
+\begin{figure}[t]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      width=0.92\textwidth,
+      height=62mm,
+      xlabel={Edge-safety width (pixels)},
+      ylabel={Score},
+      xmin=0,xmax=24,
+      ymin=0,ymax=1.02,
+      grid=both,
+      legend style={at={(0.5,-0.22)},anchor=north,legend columns=3},
+      mark size=2.3pt
+    ]
+      \addplot+[thick,mark=*,skinsmithblue]
+        table[x=edge_safe_pixels,y=asset_seam_error,col sep=comma]
+        {data/table_edge_safety_sweep.csv};
+      \addlegendentry{Asset-seam error}
+      \addplot+[thick,mark=square*,skinsmithteal]
+        table[x=edge_safe_pixels,y=multi_view_score,col sep=comma]
+        {data/table_edge_safety_sweep.csv};
+      \addlegendentry{Multi-view score}
+      \addplot+[thick,mark=triangle*,orange]
+        table[x=edge_safe_pixels,y=multi_view_retention,col sep=comma]
+        {data/table_edge_safety_sweep.csv};
+      \addlegendentry{Multi-view retention}
+      \addplot[red,dashed,domain=0:24] {0.01};
+      \addplot[gray,dashed,domain=0:24] {0.95};
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Independent edge-width sweep. Width 8 is the selected feasible
+  operating point. The two dashed lines show the seam and retention thresholds.}
+  \label{fig:edge-sweep}
+\end{figure}
+
+The policy ablation is decisive. Equal weighted ranking selects width 4 because it
+retains a multi-view score of 0.70324, but its seam error is 0.01660 and therefore
+invalid. Constraint-first/Pareto selection chooses width 8, with seam error
+0.00552 and multi-view score 0.69697. The weighted approach hides a hard violation
+behind a small visual gain.
+
+All four formal \routeC\ cases execute two local corrections. The selected
+attempts change 2.33--2.93\% of atlas pixels and change zero pixels outside the
+target component plus halo. Their best locked-score changes are -0.00110,
+-0.00110, -0.00082, and -0.00088, all below the required +0.01. Consequently,
+every final C result equals B. In the live dragon case, the best correction changes
+the score by -0.02196 and is also rolled back.
+
+RQ3 is therefore supported in two ways: feasibility-first selection rejects a
+candidate preferred by a soft score, and the acceptance gate prevents a lower
+quality correction from replacing its baseline. The result does not show that
+refinement improves quality; it shows that attempted refinement is bounded.
+
+\subsection{RQ4: three-checkpoint collaboration}
+
+The live Agent completes the intended interaction:
+
+\begin{enumerate}
+  \item the theme is expanded into dragons, clouds, waves, treasure, flaming
+  pearls, mountains, lightning, mist, jade, and architectural fragments;
+  \item four directions are presented, and \emph{Treasured Relic} is selected;
+  \item four artworks are generated and mapped, and \texttt{artwork\_04} is
+  selected from its source-plus-three-view card.
+\end{enumerate}
+
+The run uses six image calls, one local retry, and one refinement round. It ends in
+the \texttt{completed} state and exports a 2048 by 2048 RGB PNG and TGA with
+identical decoded pixels. The final \routeB\ result has asset-seam error 0.000778,
+multi-view score 0.816620, and total score 0.829123. The source hash and final TGA
+hash are preserved.
+
+This case answers RQ4 at the level of functional workflow: a user can begin from a
+compact theme, make three distinct decisions, and receive a formally processed
+texture without authoring a production prompt. It does not constitute a usability
+study; no completion-time or user-satisfaction comparison was conducted.
+
+\subsection{RQ5: adapter-based portability}
+
+The M4A4 adapter executes geometry mapping, continuous composition, UV baking,
+seam measurement, rendering, and evaluation with no new image-generation call.
+\Cref{fig:m4-transfer} confirms that the same conceptual pipeline reconstructs a
+mapped texture on different geometry.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{m4a4_transfer_concept.png}
+  \caption{M4A4 adapter transfer. The core method is reused, but the denser UV
+  topology requires different seam calibration.}
+  \label{fig:m4-transfer}
+\end{figure}
+
+Transfer is only partial. The best joint candidate reaches seam error 0.00994 but
+retains 94.02\% of the raw multi-view score, below the AK-47 threshold of 95\%.
+The M4A4 contains 1,747 UV islands and 11,341 seam pairs, compared with 928 islands
+and 4,999 pairs for the AK-47. More aggressive seam treatment improves continuity
+but removes too much visible detail.
+
+RQ5 is therefore answered by a boundary rather than a universal success:
+planning, composition, bake, rendering, metrics, and logging transfer; mesh, UV,
+axes, camera, material, and correction calibration remain adapter-specific.

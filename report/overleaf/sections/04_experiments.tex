@@ -1,0 +1,115 @@
+\section{Experimental Design}
+\label{sec:experiments}
+
+\subsection{Evidence protocol}
+
+Experiments were executed through repository scripts and preserved as immutable
+run directories. Report tables were extracted from machine-readable JSON and CSV
+records rather than copied from console output. Formal A/B/C evidence is kept
+separate from earlier technical smokes and from the edge-width sub-ablation. This
+separation is necessary because the candidate sources and experimental questions
+differ.
+
+The principal asset is an AK-47 mesh with 26,133 triangles, 21,548 UV coordinates,
+928 UV islands, and 4,999 welded-topology seam pairs. The accepted texture size is
+2048 by 2048 RGB for final export. Formal comparison runs use 512-pixel working
+textures for controlled evaluation and share the target mesh, cameras, metrics,
+palette, candidate count, and base seeds.
+
+\subsection{Formal A/B/C comparison}
+
+The formal experiment contains four paired candidates with seeds 20260716 to
+20260719:
+
+\begin{description}
+  \item[\routeA] a generic pattern-first square source with periodic repair;
+  \item[\routeB] a whole-weapon composition created in continuous weapon space,
+  baked through OBJ-derived geometry maps, and corrected at UV edges;
+  \item[\routeC] the corresponding \routeB\ result plus one diagnosis and two local
+  correction attempts, subject to the 0.01 improvement gate.
+\end{description}
+
+\routeA\ and \routeB\ intentionally use different route-specific generation logic.
+The comparison asks whether the weapon-aware representation produces better
+mapped behavior, not whether identical pixels change after a single processing
+operation. Within each route, the target, seed schedule, resolution, cameras, and
+evaluation remain fixed.
+
+For paired differences, the report gives the mean, median, standard deviation, win
+rate, and bootstrap 95\% confidence interval. With only four pairs, these intervals
+describe the observed candidate set and should not be read as population-level
+proof across arbitrary themes or weapons.
+
+\subsection{Seam-correction and selection-policy sub-ablations}
+
+The seam-correction table compares each formal \routeB\ texture immediately before
+and after the locked correction. This isolates the effect of the seam operation
+without changing source content.
+
+A separate edge-width sweep uses one unchanged earlier technical composition and
+tests widths 0, 2, 4, 8, 12, 16, and 24 pixels. The hard conditions are
+$\assetseam\leq0.01$ and multi-view retention of at least 95\%. The same candidate
+pool is ranked by:
+
+\begin{enumerate}
+  \item feasibility, Pareto dominance, and deterministic objective order; and
+  \item an equal 50/50 normalized weighted score.
+\end{enumerate}
+
+This sweep supports claims about operating-point and policy behavior. It is not
+used to claim that the earlier artwork is visually superior to the final
+generated candidates.
+
+\subsection{Three-checkpoint live case}
+
+The interaction case begins with a dragon theme and the AK-47 adapter. The Agent
+produces four directions; the user selects \emph{Treasured Relic}. Four landscape
+artwork variations are generated and mapped at low cost. One failed source
+attempt, containing large empty regions and isolated clusters, is rejected and
+regenerated locally rather than restarting the complete run. The user selects
+\texttt{artwork\_04} after viewing the source with its left, right, and top
+previews. Formal 2048 processing then reuses the selected source exactly.
+
+This case is not merged with the procedural formal A/B/C pool. Its purpose is to
+test the complete human-Agent interaction, real image-generation backend,
+checkpoint persistence, candidate-local retry, and final export contract.
+
+\subsection{Adapter transfer case}
+
+The M4A4 case reuses the same theme assets and core algorithms with zero additional
+image-generation calls. Only the adapter, official mesh hash, canonical axes, UV
+topology, and seam calibration change. The M4A4 mesh contains 45,422 triangles,
+39,881 UV coordinates, 1,747 UV islands, and 11,341 seam pairs. The test asks
+whether the pipeline executes and where the AK-47 thresholds cease to transfer.
+
+\subsection{Evaluation criteria}
+
+The report uses the following primary measures:
+
+\begin{itemize}
+  \item asset-seam error $\assetseam$ (lower is better);
+  \item multi-view score $\multiview$ (higher is better);
+  \item multi-view retention relative to the uncorrected candidate;
+  \item locked Agent score for Route C accept/rollback decisions;
+  \item changed-pixel fraction and changed pixels outside the target halo;
+  \item successful completion of the three blocking human checkpoints;
+  \item final texture resolution, colour mode, export identity, and file hash.
+\end{itemize}
+
+Automatic readability is reported only for explanation. It is not a substitute
+for a human preference study, and no claim is made that it measures general
+aesthetic quality.
+
+\subsection{Implementation and reproducibility}
+
+The implementation uses Python 3.13, NumPy, Pillow, OpenCV, SciPy, PyTorch,
+Transformers, Diffusers, and Streamlit. The local diffusion acceptance used an
+NVIDIA RTX 4060 Laptop GPU with 8 GB VRAM. The repository contains a deterministic
+procedural backend, a pinned SD-Turbo backend, provider adapters, the Agent
+runtime, command-line scripts, and a thin Streamlit client. At the report freeze,
+100 unit tests, Python byte-code compilation, configuration parsing, and headless
+Streamlit startup had passed.
+
+The public repository is \url{\repositoryurl}. Valve geometry, model weights, and
+API keys are intentionally excluded. Setup documentation explains how authorized
+users obtain external assets and configure local credentials.

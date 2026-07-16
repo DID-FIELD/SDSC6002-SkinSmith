@@ -1,0 +1,106 @@
+{
+  "style_id": "blue_white_porcelain_v1",
+  "display_name": "Blue-and-White Porcelain",
+  "generation_label": "blue-and-white porcelain",
+  "match_terms": ["blue-and-white porcelain", "porcelain", "cobalt porcelain"],
+  "summary": "An original cobalt-on-warm-white decorative system inspired by blue-and-white porcelain, using disciplined negative space, brush variation, framed motifs, and ceramic ornament rather than a generic blue floral print.",
+  "visual_vocabulary": [
+    "cobalt underglaze brushwork with varied line weight",
+    "warm porcelain-white negative space",
+    "framed medallions and continuous border bands",
+    "layered foreground motif and restrained supporting ornament",
+    "hand-painted asymmetry without photographic lighting"
+  ],
+  "motifs": ["peony", "lotus", "cloud scroll", "ruyi border", "wave band", "mountain-and-water landscape"],
+  "palette": ["#F3F0E5", "#174A8B", "#0A2D5E", "#6D91B8"],
+  "material_cues": [
+    "slight cobalt pigment pooling at selected brush turns",
+    "clean matte albedo with no baked highlights",
+    "optional sparse glaze crackle reserved for a later Gunsmith material layer"
+  ],
+  "composition_principles": [
+    "preserve generous porcelain-white breathing room",
+    "use one dominant motif family and subordinate borders",
+    "vary scale deliberately instead of filling every surface uniformly",
+    "keep motifs readable after projection onto a narrow weapon silhouette"
+  ],
+  "avoid": [
+    "generic blue wallpaper",
+    "dense micro-pattern noise",
+    "photorealistic vase or weapon mockup",
+    "baked lighting, reflections, ambient occlusion, text, logos, watermarks",
+    "copying one identifiable historic artifact"
+  ],
+  "route_a": {
+    "objective": "Create an elegant seamless all-over porcelain pattern that remains complete under arbitrary tiling and UV placement.",
+    "composition_rules": [
+      "build a square edge-to-edge repeat with no single irreplaceable focal scene",
+      "balance medium floral or landscape motifs with quiet white intervals",
+      "make opposite edges continue naturally"
+    ],
+    "constraints": ["square", "seamless", "no weapon silhouette", "no isolated central badge"]
+  },
+  "route_b": {
+    "objective": "Compose a weapon-level porcelain artwork in continuous weapon space, then bake it into the fragmented UV atlas.",
+    "composition_rules": [
+      "place a primary framed scene on the receiver",
+      "continue border rhythm across stock, receiver, and handguard",
+      "treat the magazine as a secondary porcelain panel",
+      "reduce detail toward the barrel and muzzle"
+    ],
+    "constraints": ["weapon-space 2:1 canvas", "semantic component roles", "no visible UV-island framing", "quiet muzzle"]
+  },
+  "component_roles": {
+    "stock": "broad cloud-scroll transition with generous white ground",
+    "receiver": "primary framed narrative or floral medallion",
+    "magazine": "secondary vase-panel composition or lotus vignette",
+    "pistol_grip": "dark cobalt grounding band with sparse ornament",
+    "handguard": "continuous ruyi or wave border connecting the receiver to the front",
+    "front_assembly": "small cadence marks only",
+    "barrel_muzzle": "mostly quiet porcelain white or deep cobalt with no focal detail"
+  },
+  "candidate_directions": [
+    {
+      "direction_id": "peony_medallion",
+      "title": "Peony Medallion",
+      "concept": "A generous peony medallion supported by cloud scrolls and a restrained ruyi border.",
+      "motifs": ["peony", "cloud scroll", "ruyi border"],
+      "route_a_emphasis": "interlocking half-medallions form a seamless repeat without a fixed centre",
+      "route_b_emphasis": "one complete peony medallion becomes the receiver hero and the borders create longitudinal rhythm"
+    },
+    {
+      "direction_id": "landscape_scroll",
+      "title": "Landscape Scroll",
+      "concept": "An airy mountain-and-water scroll with misty negative space and a wave-band base.",
+      "motifs": ["mountain-and-water landscape", "cloud scroll", "wave band"],
+      "route_a_emphasis": "small landscape islands alternate across a repeating field",
+      "route_b_emphasis": "the weapon reads as one horizontal handscroll from stock to handguard"
+    },
+    {
+      "direction_id": "lotus_pond",
+      "title": "Lotus Pond",
+      "concept": "Lotus blossoms and leaves use sweeping stems to link broad porcelain-white spaces.",
+      "motifs": ["lotus", "wave band", "cloud scroll"],
+      "route_a_emphasis": "curved stems cross tile edges and reconnect into an organic repeat",
+      "route_b_emphasis": "a large lotus anchors the receiver while stems guide the eye across components"
+    },
+    {
+      "direction_id": "ruyi_geometry",
+      "title": "Ruyi Brocade",
+      "concept": "A more graphic interpretation combining ruyi heads, framed geometry, and sparse floral accents.",
+      "motifs": ["ruyi border", "peony", "wave band"],
+      "route_a_emphasis": "bold medium-scale geometry makes the tile highly readable",
+      "route_b_emphasis": "geometric bands follow component proportions while the receiver retains a single floral seal"
+    }
+  ],
+  "evaluation_criteria": [
+    "blue-and-white porcelain style recognizability",
+    "originality rather than imitation of a single artifact",
+    "motif hierarchy and negative-space balance",
+    "multi-view readability on the weapon",
+    "UV seam and projection continuity",
+    "absence of baked lighting and forbidden content"
+  ],
+  "reference_policy": "Use curated museum/public-domain or clearly licensed references only as a vocabulary set; record provenance and never reproduce one identifiable artifact or maker's pattern.",
+  "procedural_fallback_motif": "waves"
+}

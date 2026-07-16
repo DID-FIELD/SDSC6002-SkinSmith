@@ -1,0 +1,176 @@
+\section{Reproducibility}
+\label{app:reproducibility}
+
+\subsection{Repository}
+
+The project repository is:
+
+\begin{center}
+  \url{\repositoryurl}
+\end{center}
+
+External Valve assets, model weights, and API credentials are not included.
+The repository setup guide describes how to obtain authorized geometry and
+configure local dependencies.
+
+\subsection{Core commands}
+
+\begin{lstlisting}[basicstyle=\ttfamily\small,breaklines=true,frame=single]
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe -m compileall -q src scripts streamlit_app.py tests
+.\.venv\Scripts\python.exe scripts\smoke_test.py
+.\.venv\Scripts\python.exe scripts\real_model_smoke_test.py
+.\.venv\Scripts\python.exe scripts\abc_ablation_formal.py
+.\.venv\Scripts\python.exe scripts\build_report_ablation_tables.py
+.\.venv\Scripts\python.exe -m streamlit run streamlit_app.py
+\end{lstlisting}
+
+The exact arguments for provider-backed runs and checkpoint resume are documented
+in the repository because they depend on local credentials and preserved run
+state.
+
+\section{Evidence index}
+\label{app:evidence}
+
+\begin{table}[H]
+  \centering
+  \caption{Machine-readable evidence used in the report. Paths are relative to the
+  repository root.}
+  \small
+  \begin{tabularx}{\textwidth}{p{35mm} X}
+    \toprule
+    Claim or artifact & Preserved evidence\\
+    \midrule
+    Formal A/B/C candidates &
+    \path{runs/abc_ablation_true_weapon_space/ablation_log.json}\\
+    Paired statistics &
+    \path{runs/report_ready_ablation_tables/table_abc_paired_summary.csv}\\
+    Formal seam correction &
+    \path{runs/report_ready_ablation_tables/table_formal_b_seam_correction.csv}\\
+    Edge-width sweep &
+    \path{runs/report_ready_ablation_tables/table_edge_safety_sweep.csv}\\
+    Selection-policy comparison &
+    \path{runs/report_ready_ablation_tables/table_selection_policy_comparison.csv}\\
+    Formal Route C attempts &
+    \path{runs/report_ready_ablation_tables/table_route_c_attempts.csv}\\
+    Three-checkpoint live case &
+    \path{runs/agent_dragon_multicandidate_v1/agent_run_result.json}\\
+    Artwork alternatives &
+    \path{runs/agent_dragon_multicandidate_v1/artwork_candidates.json}\\
+    Mapped readability &
+    \path{runs/agent_dragon_multicandidate_v1/execution/mapped_element_readability.json}\\
+    M4A4 transfer &
+    \path{runs/m4a4_game_asset_adapter_transfer/transfer_final.json}\\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\section{Formal Route C attempts}
+
+\begin{table}[H]
+  \centering
+  \caption{Best correction attempt for each formal Route B candidate. All
+  modifications remain inside the target component and transition halo.}
+  \small
+  \begin{tabular}{lrrrr}
+    \toprule
+    Candidate & Changed fraction & Outside-halo pixels & Score change & Accepted\\
+    \midrule
+    01 & 0.028670 & 0 & -0.001097 & No\\
+    02 & 0.029309 & 0 & -0.001095 & No\\
+    03 & 0.023314 & 0 & -0.000816 & No\\
+    04 & 0.027806 & 0 & -0.000880 & No\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Milestone summary}
+
+\begin{table}[H]
+  \centering
+  \caption{Development milestones and corrective decisions.}
+  \small
+  \begin{tabularx}{\textwidth}{p{25mm} p{38mm} X}
+    \toprule
+    Stage & Completed capability & Evidence-based adjustment\\
+    \midrule
+    Foundation & Procedural candidates, periodic repair, metrics, logs &
+    Mirrored border blending was replaced after visual failure.\\
+    Real asset loop & OBJ/UV rendering and fixed three-view evaluation &
+    Flat texture quality was no longer treated as sufficient evidence.\\
+    UV diagnosis & Welded seam graph, masks, asset binding &
+    Incompatible legacy UV assumptions were rejected.\\
+    Weapon-space route & Canonical frame, geometry maps, continuous composition &
+    Mask-only remapping was retained as negative evidence and replaced.\\
+    Formal evaluation & A/B/C, seam and policy sub-ablations, M4A4 transfer &
+    Metrics with invalid behavior were reported with caveats.\\
+    Reusable Agent & State, budgets, retries, checkpoints, exact source reuse &
+    Per-component generation was replaced by a master-artwork workflow.\\
+    Client and delivery & Thin Streamlit client, replay, report evidence &
+    Feature development was frozen before academic production.\\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\section{Project scope record}
+
+The project was registered as \emph{Latent Vision $\rightarrow$ Image Generation}.
+The original topic description covered broad image-to-image workflows and several
+possible creative outputs. The supervisor subsequently advised narrowing the
+project to a completed technical image-processing Agent because of the remaining
+schedule, and confirmed that the work did not need to remain the original Latent
+Vision project. The SkinSmith title and scope record the final approved research
+object; the registered topic remains on the cover for administrative traceability.
+
+\section{Group contribution statement}
+\label{app:contributions}
+
+\begin{table}[H]
+  \centering
+  \caption{Detailed group work-package ownership. YUAN Ye served as project lead
+  and integration owner; all members held a substantive technical and academic
+  responsibility.}
+  \footnotesize
+  \begin{tabularx}{\textwidth}{p{25mm} p{34mm} X}
+    \toprule
+    Member & Work-package ownership & Technical and academic contribution\\
+    \midrule
+    \memberone & Project leadership, system architecture, and integration &
+    Defined the scoped research problem and Agent architecture; implemented and
+    integrated the runtime, checkpoints, asset-aware execution, weapon-space
+    method, selection and rollback logic, CLI, and Streamlit client; coordinated
+    formal runs, cross-module debugging, evidence freeze, and final manuscript
+    integration.\\
+
+    \membertwo & Creative planning, prompt methodology, and literature &
+    Developed and reviewed the ThemePack/StylePack planning logic, art-direction
+    differentiation, source-content constraints, and human-checkpoint rationale;
+    synthesized literature on controllable generation, human-AI creativity, and
+    responsible generation; evaluated source-art compliance and qualitative mapped
+    failure cases.\\
+
+    \memberthree & Generation backends, experiment reproducibility, and runtime &
+    Integrated and verified procedural, SD-Turbo, and API generation workflows;
+    maintained model and prompt configuration, retry and checkpoint records,
+    environment and execution instructions, provider trace redaction, and
+    reproducibility checks for candidate generation and replay demonstrations.\\
+
+    \memberfour & Game-asset adapters, UV processing, and multi-view rendering &
+    Developed and validated asset binding, mesh/UV diagnostics, camera orientation,
+    seam correspondence, left-right-top rendering, texture export inspection, and
+    the M4A4 transfer case; reviewed mapped candidate cards and asset-specific
+    portability limits.\\
+
+    \memberfive & Evaluation methodology, statistical analysis, and deliverables &
+    Developed and verified texture, asset-seam, multi-view, feasibility, and
+    refinement evaluation; prepared formal A/B/C and sub-ablation tables,
+    interpreted negative results and limitations, maintained claim-to-evidence
+    checks, and coordinated report, poster, and presentation quality assurance.\\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+All members reviewed the final report and presentation materials and are
+responsible for the accuracy of the work package attributed to them. YUAN Ye
+remained the project lead and integration owner. The contribution record should be
+confirmed by the group before submission.

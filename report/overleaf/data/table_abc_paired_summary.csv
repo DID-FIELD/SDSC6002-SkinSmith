@@ -1,0 +1,9 @@
+﻿comparison,metric_id,metric,direction_and_note,n,mean,median,std,win_rate,bootstrap_95_ci_low,bootstrap_95_ci_high
+B - A,asset_seam_improvement,Asset seam improvement,higher is better,4,0.26934380297599525,0.2691421357493009,0.022280894738728,1.0,0.24754286317169089,0.2911447427802996
+B - A,multi_view_improvement,Multi-view improvement,higher is better,4,0.06012373470284954,0.06670110731620854,0.020439742129585017,1.0,0.036363464747830615,0.07730663204450947
+B - A,component_balance_improvement,Component-detail balance improvement,higher is better; metric caveat,4,-0.5570916576921763,-0.5674410586569496,0.0758785260115455,0.0,-0.6297319708959859,-0.4844513444883668
+B - A,agent_score_improvement,Locked agent-score improvement,higher is better; includes caveat metric,4,-0.124827615534532,-0.12555924291993498,0.010956710520573376,0.0,-0.13558130905860022,-0.11407392201046379
+Final C - B,asset_seam_improvement,Asset seam improvement,higher is better,4,0.0,0.0,0.0,0.0,0.0,0.0
+Final C - B,multi_view_improvement,Multi-view improvement,higher is better,4,0.0,0.0,0.0,0.0,0.0,0.0
+Final C - B,component_balance_improvement,Component-detail balance improvement,higher is better; metric caveat,4,0.0,0.0,0.0,0.0,0.0,0.0
+Final C - B,agent_score_improvement,Locked agent-score improvement,higher is better; includes caveat metric,4,0.0,0.0,0.0,0.0,0.0,0.0

@@ -1,0 +1,31 @@
+{
+  "asset_id": "cs2_ak47_new_geometry",
+  "weapon_type": "long assault rifle with a curved detachable magazine",
+  "coordinate_system": "normalized continuous weapon-space canvas",
+  "source": "mesh-derived semantic mask centres and accepted manual calibration",
+  "silhouette_notes": [
+    "long horizontal body with a broad receiver as the main readable canvas",
+    "curved magazine creates a strong downward secondary panel",
+    "stock and handguard can carry a continuous longitudinal visual flow",
+    "thin barrel and muzzle lose small details and should remain visually quiet"
+  ],
+  "component_anchors": {
+    "stock": [0.14, 0.31],
+    "receiver": [0.45, 0.20],
+    "magazine": [0.50, 0.56],
+    "pistol_grip": [0.43, 0.47],
+    "handguard": [0.72, 0.11],
+    "front_assembly": [0.82, 0.16],
+    "barrel_muzzle": [0.94, 0.20]
+  },
+  "component_functions": {
+    "stock": "rear supporting canvas and narrative opening",
+    "receiver": "largest primary focal canvas",
+    "magazine": "curved secondary panel below the focal area",
+    "pistol_grip": "small grounding transition with limited readable detail",
+    "handguard": "long connector canvas carrying directional flow",
+    "front_assembly": "transition from detailed body to quiet barrel",
+    "barrel_muzzle": "thin terminal area requiring very low detail"
+  },
+  "quiet_muzzle_start": 0.84
+}

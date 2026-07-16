@@ -1,0 +1,175 @@
+\section{Related Work}
+\label{sec:related}
+
+\subsection{Image generation and structural control}
+
+Diffusion models learn to reverse a gradual noising process and provide a stable
+foundation for high-quality image synthesis \citep{ho2020ddpm}. Improved
+parameterizations and sampling methods made the approach more efficient
+\citep{nichol2021improved}, while latent diffusion reduced the cost of
+high-resolution synthesis by operating in a learned latent space
+\citep{rombach2022latent}. Joint image-text representations such as CLIP enabled
+general semantic comparison between prompts and images \citep{radford2021clip}.
+These developments explain why an existing image model can serve as a strong
+source-art generator in \skinsmith.
+
+The limitation is spatial control. A text prompt can describe a dragon, cloud, or
+metallic surface, but it does not specify how those elements should survive a
+particular UV atlas. ControlNet demonstrates the broader value of supplementing
+text with spatial conditions such as edges, depth, and segmentation
+\citep{zhang2023controlnet}. \skinsmith\ adopts the same motivation without
+training a new conditioning network: semantic planning is separated from
+deterministic geometry-based placement and evaluation.
+
+\subsection{Texture synthesis, periodicity, and UV atlases}
+
+Classical texture-synthesis methods grow or assemble images from local
+neighborhoods and patches \citep{efros1999texture,efros2001quilting}. Graph-cut
+textures improve joins between overlapping patches by optimizing the cut through
+the overlap \citep{kwatra2003graphcut}. Periodic-plus-smooth decomposition
+addresses discontinuities caused when a finite image is treated as periodic in
+the Fourier domain \citep{moisan2011periodic}. This work supports the use of a
+tileable pattern as a meaningful baseline and motivates the frequency-domain
+border repair used by \routeA.
+
+Square-border periodicity is nevertheless different from continuity on a mesh.
+Surface parameterization flattens a three-dimensional surface into one or more
+charts and must trade distortion against chart layout
+\citep{floater2005parameterization}. Least-squares conformal maps are a widely
+used approach to low-angle-distortion atlases, but chart boundaries still
+interrupt large regular patterns \citep{levy2002lscm}. TextureMontage further
+shows that positioning multiple images on an arbitrary surface requires explicit
+control over distortion and transitions \citep{zhou2005texturemontage}. In a game
+pipeline, the UV contract is often already fixed. \skinsmith\ therefore does not
+replace the parameterization; it derives geometry maps and seam correspondences
+from the bound asset and works within that atlas.
+
+\subsection{Diffusion-based 3D texturing}
+
+Several systems use two-dimensional diffusion priors to generate appearance for
+three-dimensional objects. DreamFusion demonstrated that rendered views can
+connect a text-to-image prior to a 3D representation without a large paired 3D
+dataset \citep{poole2022dreamfusion}. TEXTure progressively paints an existing
+mesh from depth-conditioned views and supports text-guided generation and editing
+\citep{richardson2023texture}. Text2Tex similarly uses a progressive
+generate-and-refine process with view partitioning and automatic view selection
+\citep{chen2023text2tex}. TexFusion aggregates denoising predictions in a shared
+latent texture representation to improve global consistency
+\citep{cao2023texfusion}. Point-UV Diffusion combines a low-frequency point-space
+representation with UV-space refinement \citep{yu2023pointuv}. Paint3D adds UV
+inpainting and high-resolution refinement to produce complete, lighting-less
+texture maps \citep{zeng2024paint3d}. Synchronized multi-view diffusion shares
+denoised content between overlapping views during sampling
+\citep{liu2024syncmvd}.
+
+This literature establishes that UV discontinuity, view inconsistency,
+incomplete coverage, and baked illumination are central problems. It also limits
+the novelty claim that can reasonably be made here: \skinsmith\ is not the first
+system to texture a mesh using diffusion. Its focus is a different layer of the
+problem---an asset-bound, human-supervised Agent that begins with compact intent,
+retains the target game's UV contract, exposes mapped alternatives before formal
+execution, enforces deployment constraints, and preserves the evidence behind
+every decision.
+
+\begin{table}[t]
+  \centering
+  \caption{Positioning against the closest 3D-texturing systems. ``Not central''
+  means that the property is not a principal reported contribution, not that an
+  extension would be impossible.}
+  \label{tab:closest-work}
+  \small
+  \begin{tabularx}{\textwidth}{p{1.8cm} X X X}
+    \toprule
+    Work & Main mechanism & Consistency and UV treatment & Human and deployment control\\
+    \midrule
+    TEXTure & Iterative depth-conditioned painting & Successive views are projected
+    to a mesh texture & Text-guided generation and editing; hard deployment gates
+    are not central\\
+    Text2Tex & Progressive generation and refinement & View partitioning and
+    automatic next-view selection update visible texels & Prompt-controlled; no
+    explicit rollback contract reported\\
+    TexFusion & Shared latent texture denoising & View predictions are aggregated
+    on one latent texture & Text-conditioned; no staged human checkpoint contract\\
+    Point-UV & Point-space coarse colour followed by UV diffusion & Low-frequency
+    global condition plus UV refinement & Conditional generation; no game-specific
+    export gate\\
+    Paint3D & Multi-view fusion, UV inpainting, and UVHD refinement & Complete
+    high-resolution lighting-less UV maps & Text or image conditioning; focuses on
+    texture quality rather than Agent rollback\\
+    SyncMVD & Synchronized denoising across overlapping views & Shares latent
+    content at each denoising step & Text-guided; no three-stage selection contract\\
+    \skinsmith & User-selected master artwork and deterministic weapon-space bake &
+    Preserves the authoritative UV; evaluates fixed mapped views and true seams &
+    Three checkpoints, hard feasibility, one bounded correction, and rollback\\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\subsection{Rendering and evaluation}
+
+Differentiable rendering research formalizes the link between a 3D representation
+and image-space supervision \citep{kato2018renderer,liu2019softras}. \skinsmith\
+does not optimize through rendering gradients, but follows the same general
+principle: the mapped views are evidence about the texture that cannot be recovered
+from the source image alone.
+
+Perceptual metrics also require care. LPIPS showed that learned feature distances
+often correlate with human perceptual judgments better than simple pixel
+distances \citep{zhang2018lpips}. CLIPScore provides reference-free semantic
+compatibility, while documenting cases in which such a score is weaker
+\citep{hessel2021clipscore}. Accordingly, \skinsmith\ keeps texture, seam,
+multi-view, and semantic evidence separate. Automated review recommends and
+explains; it does not replace artwork selection by the user.
+
+\subsection{Constrained selection and bounded Agents}
+
+Weighted aggregation is convenient, but a high score on one objective can hide a
+violation on another. Feasibility-oriented constraint handling instead ranks
+valid solutions ahead of invalid ones \citep{deb2000constraints}. NSGA-II
+formalizes non-dominated sorting for multi-objective optimization
+\citep{deb2002nsgaii}. \skinsmith\ adapts these principles to a small, expensive
+candidate pool rather than running an evolutionary search: it filters hard
+violations, computes the feasible Pareto set, and uses a fixed objective order.
+
+Agent research provides a second relevant foundation. ReAct interleaves reasoning
+and actions so observations can change the trajectory \citep{yao2023react}.
+Self-Refine and Reflexion use feedback and memory to improve later attempts without
+updating model weights \citep{madaan2023selfrefine,shinn2023reflexion}. These
+methods motivate explicit observation, diagnosis, action, and memory, but they do
+not imply that every revision is better. \skinsmith\ therefore limits refinement
+to one local round and requires measured improvement before acceptance.
+
+\subsection{Human control and responsible generation}
+
+Human-AI interaction guidelines emphasize communicating capabilities, allowing
+correction, and preserving user control when model behavior is uncertain
+\citep{amershi2019guidelines}. Co-creative systems treat generation as a turn-based
+collaboration \citep{guzdial2019cocreative}, while PromptChainer demonstrates the
+value of visible intermediate stages for complex AI tasks
+\citep{wu2022promptchainer}. These ideas inform the three checkpoints in
+\skinsmith: theme, direction, and mapped artwork.
+
+Finally, datasheets and model cards show why provenance, intended use, evaluation
+conditions, and limitations should be recorded
+\citep{gebru2021datasheets,mitchell2019modelcards}. Responsible-AI scholarship
+also warns that fluent outputs can obscure data, bias, environmental, and
+accountability concerns \citep{bender2021parrots}. The project consequently logs
+model and provider identifiers, redacts API keys, preserves formal runs, prohibits
+copied skins and protected characters, and keeps publication outside the tested
+scope.
+
+\subsection{Research gap}
+
+Prior work provides strong components: text-to-image generation, spatial
+conditioning, periodic texture synthesis, 3D-aware texture generation,
+multi-objective optimization, and iterative feedback. The gap examined here is
+their practical integration around an existing game asset:
+
+\begin{quote}
+How can compact user intent be converted into a human-selected source design that
+is deterministically bound to an authoritative UV contract, evaluated after real
+geometry mapping, and refined only within explicit feasibility and rollback rules?
+\end{quote}
+
+This framing treats deployability, evidence, and human authority as part of the
+method rather than as post-processing around a generated image.

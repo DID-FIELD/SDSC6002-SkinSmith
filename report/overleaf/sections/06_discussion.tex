@@ -1,0 +1,169 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Interpretation of the findings}
+
+The strongest result is not that \routeB\ produces a more attractive square
+texture. Its flat atlas is often less legible than \routeA\ because it stores
+pieces of a continuous composition. The relevant result is that the composition
+reconstructs on the weapon while satisfying a true asset-seam constraint. This
+changes the unit of evaluation from the generated rectangle to the mapped asset.
+
+The paired experiment supports that representation choice for the tested AK-47
+candidates. All four \routeB\ candidates improve both seam and multi-view
+performance. The seam gain is expected in part because \routeB\ explicitly
+contains an asset-edge operation, but the simultaneous multi-view gain is
+important: continuity was not purchased by simply flattening all visible detail.
+The separate before/after table further isolates the seam correction and shows
+that the operation, rather than the generator alone, is responsible for the low
+final error.
+
+The live case complicates a simple ``higher score is better'' interpretation.
+\routeA\ obtains a higher multi-view score than the selected \routeB\ texture, yet
+fails the asset-seam threshold by a large margin. This is precisely the situation
+in which feasibility must precede preference. The edge-width ablation reaches the
+same conclusion under a fixed candidate pool: a small gain in multi-view score
+causes the weighted policy to choose an invalid candidate.
+
+The rollback results are also informative. None of the formal \routeC\ attempts
+improves the locked score, and the live correction is distinctly worse. Reporting
+these outcomes avoids presenting the Agent as an automatically self-improving
+system. The contribution is narrower and more defensible: the Agent can identify a
+target, produce local alternatives, prove locality, and decline to replace a
+better baseline.
+
+\subsection{Metric appraisal}
+
+The evaluation stack deliberately contains several measures because no single
+metric captures deployable visual quality. Asset-seam error has a clear technical
+interpretation, but a very low value can be achieved by over-smoothing boundaries.
+Multi-view retention protects against that failure, although it still summarizes
+contrast, saturation, detail, coverage, and consistency rather than aesthetic
+quality.
+
+The component-detail balance metric failed on high-contrast weapon-space
+candidates: several \routeB\ values collapsed to zero and made the locked Agent
+score lower even when seam and multi-view performance improved. For this reason,
+the component-balance and aggregate-score differences are not used as evidence
+that \routeA\ is superior. They are retained as a documented metric limitation and
+as motivation for reporting primary measures separately.
+
+Mapped-element readability has a similar boundary. The selected artwork scores
+highly at the source and substantially lower on the top view, which is useful
+diagnostic information. However, it depends on model-based semantic judgments and
+view weighting chosen for this case study. The human artwork decision remains
+authoritative.
+
+\subsection{Internal and external validity}
+
+Several controls strengthen internal validity: fixed assets and cameras, shared
+seed schedules within the formal comparison, exact source reuse after human
+selection, machine-readable logs, isolated sub-ablations, and deterministic
+rendering. The renderer, UV bake, seam metric, selection policy, and locality gate
+also have regression tests.
+
+The main threat is sample size. Four formal pairs are sufficient to expose
+consistent behavior in the preserved candidate set but not to estimate performance
+over the space of themes, generators, or weapons. Route-specific generation logic
+also means the comparison evaluates two complete design strategies rather than a
+single-factor image transformation. This is appropriate for the research question,
+but the result should not be interpreted as a causal estimate of one isolated
+algorithmic component.
+
+External validity is limited by one complete weapon, one principal creative case,
+one software renderer, and a small set of backends. The M4A4 result is useful
+because it fails the joint threshold: it shows that adapter portability is not the
+same as parameter portability. Broader claims would require several weapon
+families, game material systems, viewing conditions, and users.
+
+\subsection{Human-Agent interaction limitations}
+
+The three checkpoints solve a structural problem: they separate interpretation,
+creative direction, and mapped artwork. They also make disagreement recoverable.
+A user can edit a theme before generation, reject an unwanted direction, or reject
+an artwork after mapping without discarding the complete run.
+
+The present study verifies this contract technically, but does not compare it with
+a one-prompt baseline through a user study. Future work should measure task time,
+number of revisions, perceived control, preference confidence, and the frequency
+with which source-only and mapped choices disagree. Such a study would provide
+stronger evidence for RQ4 beyond successful execution.
+
+\subsection{Project management and methodological evolution}
+
+The registered topic, \emph{Latent Vision $\rightarrow$ Image Generation}, was
+intentionally broad and emphasized image-to-image workflows, diffusion models,
+conditioning, and creative visual outputs. Supervisor guidance later superseded
+that original scope: given the remaining delivery window, completing the technical
+development of an image-processing Agent was considered sufficient, and the Agent
+did not need to preserve the original Latent Vision framing. The team therefore
+treated SkinSmith as a focused implementation of the approved image-processing
+Agent direction rather than as an attempt to cover every objective in the original
+topic description.
+
+Work then progressed through dated milestones: deterministic generation and seam
+repair; real OBJ rendering; local diffusion; UV and seam diagnostics; weapon-space
+composition; formal A/B/C experiments; provider-backed generation; the reusable
+Agent runtime; the three-checkpoint client; and academic production.
+
+Several changes were driven by failed evidence rather than by the original plan.
+Direct border blending was removed after it produced a visible mirrored frame.
+An early mask-aware route was retained as negative evidence because it changed
+component appearance without creating a coherent whole-weapon composition.
+Per-component dragon generation was abandoned after it produced semantically wrong
+source parts and framed panels. A legacy UV assumption was rejected after
+deployment mismatch. These corrections delayed the interface, but reduced the risk
+of polishing a workflow whose asset contract was wrong.
+
+The group used five connected work packages with one integration lead. YUAN Ye
+served as project lead and integration owner, defining the system architecture and
+coordinating the shared Agent contract. CHEN Yuhong owned creative planning and
+literature synthesis; Ben Tangjie owned generation-backend integration and
+reproducibility; Wang Zhengye owned asset, UV, and rendering validation; and WANG
+Lihui owned evaluation, experiment reporting, and submission quality control.
+Each work package contributed method decisions, implementation or configuration,
+experimental verification, and documentation to the final system. This structure
+gave every member an assessable technical contribution while retaining one owner
+for cross-module consistency.
+
+\subsection{Responsible use, provenance, and rights}
+
+The project uses generative models as experimental components. Structured theme
+and style planning in the accepted live case used
+\texttt{gemini-3.1-flash-lite}; source artwork used
+\texttt{gemini-3.1-flash-image}; and SD-Turbo provided a pinned local baseline.
+Prompts, model identifiers, validation traces, and source hashes are recorded.
+Credentials are supplied through local environment variables and removed from
+evidence.
+
+The system is restricted to original themes and explicitly prohibits copied skins,
+logos, brands, teams, protected characters, text, watermarks, and imitation of a
+named living artist. Generated sources are reviewed before mapping. Valve geometry
+is used only as an external case-study asset and is not redistributed in the
+repository. The report does not claim ownership of Valve assets, affiliation with
+Valve, or readiness for Steam Workshop publication.
+
+These safeguards do not resolve every concern. The training data of external image
+models are not controlled by this project, and automated filters can miss
+similarity or embedded content. Any use beyond the academic prototype would
+require model-licence review, independent rights checking, stronger moderation,
+game-specific terms review, and a clear appeals process for rejected or disputed
+content.
+
+\subsection{Practical implications}
+
+Three practical lessons follow from the study:
+
+\begin{enumerate}
+  \item A source image should not be approved before it is mapped. Candidate cards
+  should bind the source to the views on which it will be judged.
+  \item A deployment constraint should not be averaged into a general quality
+  score. Feasibility and preference answer different questions.
+  \item Agent refinement should have a budget and a rollback rule. In creative
+  pipelines, a plausible correction can still remove valuable detail.
+\end{enumerate}
+
+These lessons extend beyond weapon skins to other assets whose appearance is
+stored in fragmented atlases, including props, clothing, vehicle parts, and
+product visualizations. The geometry and deployment adapters would change, but
+the evidence and decision structure would remain relevant.

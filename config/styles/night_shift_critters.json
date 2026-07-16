@@ -1,0 +1,41 @@
+{
+  "style_id": "night_shift_critters_v1",
+  "display_name": "Night Shift Critters",
+  "generation_label": "expressive original cartoon cat and dog mascots",
+  "match_terms": ["cute critters", "cat and dog", "mascot", "cartoon animal"],
+  "summary": "Original expressive cat-and-dog mascots with bold silhouettes, thick dark outlines, readable faces, playful asymmetry, and a coherent shared cast.",
+  "visual_vocabulary": ["thick near-black outlines", "large readable expressions", "flat colour blocks", "subtle cel shading", "playful overlapping silhouettes"],
+  "motifs": ["original cat mascot", "original dog mascot", "paw connector", "workshop accessory", "comic expression"],
+  "palette": ["#0A102A", "#F6C85F", "#FF7A59", "#43D9C5", "#8A6CFF", "#F4F1DE"],
+  "material_cues": ["clean printed illustration", "flat albedo", "no baked highlights"],
+  "composition_principles": ["prioritise facial readability", "keep all characters in one original visual family", "vary expression and scale", "use broad colour masses rather than micro-patterns"],
+  "avoid": ["copied or recognisable franchise characters", "exact reference poses or costumes", "dense unreadable faces", "text, logos, brands, watermarks", "photorealism"],
+  "route_a": {
+    "objective": "Create a seamless crowd pattern of original mascot heads with no single required focal character.",
+    "composition_rules": ["overlap medium and large faces", "continue partial silhouettes across opposite edges", "distribute palette accents evenly"],
+    "constraints": ["square", "seamless", "no weapon silhouette", "original characters only"]
+  },
+  "route_b": {
+    "objective": "Create one weapon-level mascot scene with semantic roles for the hero and supporting cast.",
+    "composition_rules": ["receiver carries the hero face", "magazine carries a sidekick", "stock contains supporting faces", "paw shapes connect the handguard", "muzzle stays quiet"],
+    "constraints": ["weapon-space 2:1 canvas", "large readable silhouettes", "quiet muzzle", "original characters only"]
+  },
+  "component_roles": {
+    "stock": "two or three supporting mascot faces",
+    "receiver": "one memorable hero mascot",
+    "magazine": "one secondary sidekick",
+    "pistol_grip": "dark grounding colour with one simple paw accent",
+    "handguard": "broad graphic connectors and small mascot accents",
+    "front_assembly": "low-detail colour transition",
+    "barrel_muzzle": "quiet dark field without faces"
+  },
+  "candidate_directions": [
+    {"direction_id": "garage_crew", "title": "Garage Crew", "concept": "A mechanic cat leads a cheerful workshop crew.", "motifs": ["mechanic cat", "dog co-pilot", "tools as abstract accents"], "route_a_emphasis": "many workshop expressions form the repeat", "route_b_emphasis": "mechanic cat is the receiver hero and the sidekick occupies the magazine"},
+    {"direction_id": "midnight_couriers", "title": "Midnight Couriers", "concept": "Courier cats and dogs race through a playful night shift.", "motifs": ["courier scarf", "wind marks", "paw connector"], "route_a_emphasis": "alternating courier faces and motion accents", "route_b_emphasis": "a longitudinal chase scene guides the whole weapon"},
+    {"direction_id": "snack_patrol", "title": "Snack Patrol", "concept": "Serious-looking mascots secretly guard colourful snacks.", "motifs": ["comic expression", "snack badge", "paw connector"], "route_a_emphasis": "expression contrast drives a lively repeat", "route_b_emphasis": "hero and sidekick interaction forms the receiver-magazine narrative"},
+    {"direction_id": "space_watch", "title": "Space Watch", "concept": "A small original animal crew monitors a whimsical night station.", "motifs": ["visor", "control-light shapes", "star dots"], "route_a_emphasis": "helmeted faces alternate with sparse control lights", "route_b_emphasis": "the receiver is the command deck and the handguard carries a controlled star trail"}
+  ],
+  "evaluation_criteria": ["character originality", "facial readability", "cast consistency", "multi-view composition", "UV continuity", "absence of copied IP and forbidden content"],
+  "reference_policy": "Use references only for high-level density, readability, and expression vocabulary; never copy characters, poses, costumes, text, or arrangement.",
+  "procedural_fallback_motif": "diagonal"
+}

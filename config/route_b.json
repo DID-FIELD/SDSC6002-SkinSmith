@@ -1,0 +1,100 @@
+{
+  "asset_spec": "config/assets/ak47_cs2.json",
+  "source_theme": "neon_tide",
+  "source_size": 512,
+  "output_size": 2048,
+  "base_color": [7, 26, 47],
+  "transition_sigma": 8,
+  "selected_edge_safe_pixels": 8,
+  "component_styles": {
+    "receiver": {
+      "blur_sigma": 0,
+      "rotation_quadrants": 0,
+      "contrast": 1.1,
+      "saturation": 1.05,
+      "motif_strength": 1.0
+    },
+    "stock": {
+      "blur_sigma": 8,
+      "rotation_quadrants": 0,
+      "contrast": 0.92,
+      "saturation": 0.9,
+      "motif_strength": 0.68
+    },
+    "magazine": {
+      "blur_sigma": 3,
+      "rotation_quadrants": 1,
+      "contrast": 1.0,
+      "saturation": 1.0,
+      "motif_strength": 0.82
+    },
+    "pistol_grip": {
+      "blur_sigma": 14,
+      "rotation_quadrants": 0,
+      "contrast": 0.85,
+      "saturation": 1.0,
+      "motif_strength": 0.35
+    },
+    "handguard": {
+      "blur_sigma": 6,
+      "rotation_quadrants": 3,
+      "contrast": 0.95,
+      "saturation": 1.0,
+      "motif_strength": 0.72
+    },
+    "front_assembly": {
+      "blur_sigma": 10,
+      "rotation_quadrants": 0,
+      "contrast": 0.9,
+      "saturation": 1.0,
+      "motif_strength": 0.5
+    },
+    "barrel_muzzle": {
+      "blur_sigma": 18,
+      "rotation_quadrants": 0,
+      "contrast": 0.82,
+      "saturation": 1.0,
+      "motif_strength": 0.25
+    },
+    "other": {
+      "blur_sigma": 18,
+      "rotation_quadrants": 0,
+      "contrast": 1.0,
+      "saturation": 1.0,
+      "motif_strength": 0.2
+    }
+  },
+  "edge_sweep": {
+    "widths": [0, 2, 4, 8, 12, 16, 24],
+    "asset_seam_error_maximum": 0.01,
+    "minimum_multiview_retention": 0.95
+  },
+  "pareto_objectives_in_fixed_priority": [
+    {"metric": "multi_view_score", "maximize": true},
+    {"metric": "asset_seam_error", "maximize": false}
+  ],
+  "weighted_baseline": {
+    "multi_view_score": 0.5,
+    "asset_seam_error": 0.5
+  },
+  "route_c_local_refinement": {
+    "detail_targets": {
+      "receiver": 0.1,
+      "stock": 0.06,
+      "magazine": 0.08,
+      "pistol_grip": 0.04,
+      "handguard": 0.07,
+      "front_assembly": 0.05,
+      "barrel_muzzle": 0.03
+    },
+    "candidate_intensities": [1, 2],
+    "agent_score_weights": {
+      "texture_score": 0.4,
+      "multi_view_score": 0.35,
+      "component_detail_balance": 0.25
+    },
+    "asset_seam_error_maximum": 0.01,
+    "minimum_multiview_retention": 0.95,
+    "minimum_agent_score_improvement": 0.01
+  }
+}

@@ -1,0 +1,41 @@
+\begin{abstract}
+Text-to-image models produce rectangular images, whereas a usable game-asset
+texture must remain coherent after it is cut into a fragmented UV atlas, mapped
+onto a narrow three-dimensional surface, viewed from several directions, and
+exported under asset-specific constraints. This report presents \skinsmith, a
+human-supervised generative Agent that converts a short theme keyword into a
+mapped and reproducible weapon texture. The system introduces three checkpoints:
+the user confirms an expanded visual theme, selects one textual art direction,
+and selects one artwork only after seeing its source image together with left,
+right, and top weapon previews.
+
+The technical method separates a tileable-pattern baseline from a weapon-aware
+route. The latter derives a canonical coordinate frame from the target mesh,
+constructs per-UV-pixel position and normal maps, fits a selected master artwork
+to continuous weapon-space canvases, and then bakes the result into the asset's
+existing UV atlas. Candidates are evaluated using texture statistics, a
+mesh-derived seam metric, and fixed multi-view renders. Selection first enforces
+hard constraints and then applies Pareto dominance and a deterministic objective
+order. One local refinement round is permitted, but it is retained only when it
+improves the locked score by at least 0.01; otherwise the system rolls back.
+
+In a four-pair formal experiment on an AK-47 asset, the weapon-space route reduced
+asset-seam error by a mean of 0.2693 and improved the multi-view score by 0.0601,
+winning all four paired comparisons on both measures. A separate selection-policy
+ablation showed that an equal weighted score chose an infeasible seam width,
+whereas constraint-first selection returned a valid operating point. All four
+formal refinement attempts were rejected and rolled back, demonstrating bounded
+no-regression behavior rather than guaranteed self-improvement. A real
+three-checkpoint run generated four mapped artwork alternatives from the keyword
+\emph{dragon}; the user-selected candidate was exported as a 2048 by 2048 RGB
+texture with asset-seam error 0.00078 and multi-view score 0.8166. Transfer to an
+M4A4 adapter reused the core pipeline without new image generation, but did not
+satisfy the AK-47 retention threshold, exposing the asset-specific limits of
+portability.
+
+The results support the value of composing and evaluating artwork in the target
+asset's geometry rather than treating image generation as the final output. They
+also show why human selection, explicit feasibility rules, preserved evidence,
+and rollback are necessary in a creative Agent whose automatic metrics remain
+imperfect.
+\end{abstract}

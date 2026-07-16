@@ -1,0 +1,57 @@
+{
+  "style_id": "modern_chinese_botanical_v1",
+  "display_name": "Modern Eastern Botanical Illustration",
+  "generation_label": "modern East-Asian botanical illustration",
+  "match_terms": ["eastern botanical", "botanical illustration", "botanical", "ink botanical"],
+  "summary": "An original modern East-Asian botanical illustration system with bold plant silhouettes, selective ink-like texture, restrained colour blocks, and strong negative-space control, avoiding antique wallpaper symmetry.",
+  "visual_vocabulary": [
+    "bold asymmetrical botanical silhouettes",
+    "selective dry-brush and ink-wash texture",
+    "large flat shadow masses",
+    "controlled pale mist and broken water shapes",
+    "modern editorial composition rather than formal antique ornament"
+  ],
+  "motifs": ["flower", "leaf", "stem", "seed pod", "water ripple", "mist"],
+  "palette": ["#091C22", "#153D36", "#4F765C", "#D9D3BC", "#D98698", "#8DB8B0"],
+  "material_cues": ["matte printed illustration", "subtle ink granulation", "no baked highlights or glaze reflections"],
+  "composition_principles": [
+    "use asymmetry and directional plant growth",
+    "separate hero silhouette from supporting foliage",
+    "balance dense botanical zones with quiet dark water",
+    "keep important forms readable on a narrow weapon body"
+  ],
+  "avoid": [
+    "formal wallpaper symmetry",
+    "generic floral fabric",
+    "random decorative lines",
+    "photorealistic flower photography",
+    "text, logos, brands, signatures, watermarks, baked lighting"
+  ],
+  "route_a": {
+    "objective": "Create a dense crop-tolerant botanical template whose repeat is hidden by overlapping organic forms.",
+    "composition_rules": ["overlap three element scales", "cross every edge with partial plants", "retain small quiet gaps"],
+    "constraints": ["square", "seamless", "dense all-over elements", "no unique focal subject"]
+  },
+  "route_b": {
+    "objective": "Create one weapon-level botanical narrative with an asymmetrical hero and directional plant flow.",
+    "composition_rules": ["receiver carries the hero", "organic connectors cross components", "secondary panel on magazine", "quiet muzzle"],
+    "constraints": ["weapon-space composition", "component narrative", "no tiled wallpaper", "no isolated stickers"]
+  },
+  "component_roles": {
+    "stock": "dark atmospheric opening with cropped supporting foliage",
+    "receiver": "primary flower or plant hero",
+    "magazine": "secondary leaf or reflection panel",
+    "pistol_grip": "dark grounding mass",
+    "handguard": "directional stems and supporting accents",
+    "front_assembly": "fading cadence",
+    "barrel_muzzle": "quiet low-detail field"
+  },
+  "candidate_directions": [
+    {"direction_id": "hero_bloom", "title": "Hero Bloom", "concept": "One asymmetrical flower dominates a field of supporting leaves.", "motifs": ["flower", "leaf", "stem"], "route_a_emphasis": "many cropped blooms share emphasis", "route_b_emphasis": "one receiver bloom controls the weapon hierarchy"},
+    {"direction_id": "leaf_current", "title": "Leaf Current", "concept": "Broad leaves and directional stems create a strong horizontal current.", "motifs": ["leaf", "stem", "water ripple"], "route_a_emphasis": "leaf currents interlock across tile edges", "route_b_emphasis": "the current connects stock, receiver, and handguard"},
+    {"direction_id": "mist_negative", "title": "Mist and Negative Space", "concept": "Sparse botanical silhouettes emerge through broad atmospheric negative space.", "motifs": ["mist", "flower", "seed pod"], "route_a_emphasis": "small clusters alternate with quiet gaps", "route_b_emphasis": "mist protects the hero and quiet muzzle"}
+  ],
+  "evaluation_criteria": ["botanical silhouette readability", "asymmetrical hierarchy", "negative-space control", "multi-view coherence", "absence of wallpaper symmetry"],
+  "reference_policy": "Use rights-safe botanical references only for plant anatomy; do not imitate a named living artist or copy an existing illustration.",
+  "procedural_fallback_motif": "waves"
+}

@@ -1,0 +1,116 @@
+\section{Introduction}
+\label{sec:introduction}
+
+\subsection{Problem context}
+
+Generative image models have made it straightforward to produce visually rich
+concept art from a short text prompt. That capability does not, by itself, solve
+the problem of designing a texture for an existing three-dimensional game asset.
+The visible surface of a weapon is stored as a set of UV charts: pieces of the
+surface are flattened, rotated, scaled, and packed into a square image. A source
+illustration that looks coherent in two dimensions can therefore be split across
+unrelated atlas regions, disappear on narrow components, or become inconsistent
+between the left, right, and top views. Export requirements, paintable regions,
+texture resolution, and seam behavior add further constraints.
+
+This distinction matters for both research and practice. If the generated source
+image is treated as the result, an evaluation can reward an attractive rectangle
+while overlooking the failures introduced by mapping. Conversely, a simple
+tileable pattern may survive arbitrary UV fragmentation but provide little control
+over whole-weapon composition. A useful system must connect creative generation to
+the actual asset contract and must make its decisions observable.
+
+\skinsmith\ addresses this integration problem. It is a constraint-aware
+generative Agent for weapon-skin design, evaluated through a Counter-Strike 2
+case study. The system accepts a registered weapon and a compact theme such as
+\emph{dragon}. It expands the theme into a visual world, offers several textual
+directions, generates several landscape artworks for the selected direction, and
+maps every artwork to the target geometry before asking the user to choose. The
+chosen source is then processed at full resolution, evaluated, optionally refined
+once, and exported with prompts, model identifiers, hashes, metrics, and decisions.
+
+\subsection{Scope}
+
+The research object is the Agent workflow and its geometry-aware texture pipeline,
+not a universal Counter-Strike skin generator. The AK-47 is the complete case
+study. An M4A4 adapter is used to examine transfer, but it is not presented as an
+equivalent production result. The system preserves each asset's existing UV
+layout; it does not perform automatic UV unwrapping. Its software renderer provides
+controlled technical views rather than photorealistic game-engine rendering.
+Steam Workshop publication is outside the project scope.
+
+The group originally registered under the umbrella topic
+\emph{Latent Vision $\rightarrow$ Image Generation}. Its initial brief proposed a
+broad investigation of image-to-image generation, diffusion models, prompt
+engineering, conditioning, and creative outputs such as illustrations, game
+concept art, and posters. With fewer than three weeks remaining, the supervisor
+advised the group to narrow the work to the technical development of a completed
+image-processing Agent and explicitly stated that it did not need to remain the
+original broad Latent Vision project. \skinsmith\ is the resulting scoped research
+project: it retains image generation and human-AI collaboration from the registered
+topic, but concentrates them on one technically testable asset pipeline.
+
+This approved narrowing made it possible to evaluate the complete path from intent
+to deployable texture, including negative results, UV failures, selection errors,
+and rollback behavior that would be invisible in a source-image-only study. The
+registered topic is therefore retained on the title page for administrative
+continuity, while the report title names the actual system and research question.
+
+\subsection{Research questions}
+
+The study addresses five questions:
+
+\begin{description}[leftmargin=1.2cm,style=nextline]
+  \item[RQ1] Does composing artwork in a mesh-derived continuous weapon space and
+  then baking it to the authoritative UV atlas improve mapped asset-seam and
+  multi-view performance relative to a generic tileable-pattern baseline?
+
+  \item[RQ2] What failures become observable when candidates are evaluated after
+  mapping to the real weapon from left, right, and top views rather than only as
+  source images or flat texture atlases?
+
+  \item[RQ3] Can hard-constraint filtering, Pareto-based selection, and a bounded
+  correction with rollback prevent an Agent from accepting technically invalid or
+  lower-quality updates that a soft aggregate score might prefer?
+
+  \item[RQ4] Can three explicit human checkpoints separate theme intent,
+  art-direction choice, and mapped-artwork selection while allowing the Agent to
+  begin from one short keyword?
+
+  \item[RQ5] Which parts of the pipeline transfer to a second weapon through a
+  \texttt{GameAssetAdapter}, and which geometry, material, camera, and deployment
+  contracts remain asset-specific?
+\end{description}
+
+\subsection{Contributions}
+
+The project makes five bounded contributions:
+
+\begin{enumerate}
+  \item A weapon-space-to-UV generation route that composes selected artwork in a
+  canonical frame derived from the target mesh and bakes it through per-UV-pixel
+  geometry maps into the existing atlas.
+  \item Render-in-the-loop evaluation in which source images, true asset seams,
+  and fixed left, right, and top renders are retained as separate evidence.
+  \item A small-pool multi-objective policy that separates feasibility from
+  preference and permits one local correction with an explicit rollback gate.
+  \item A three-checkpoint human-Agent interaction that preserves human authority
+  over the theme, direction, and mapped artwork.
+  \item An adapter boundary that distinguishes reusable planning and evaluation
+  logic from asset-specific mesh, UV, camera, and export contracts.
+\end{enumerate}
+
+These claims concern the integration and evaluation of a deployable workflow.
+They do not claim the first use of diffusion for mesh texturing, the first
+multi-view texture method, or general compatibility with every game asset.
+
+\subsection{Report structure}
+
+\Cref{sec:related} positions the work against diffusion, texture synthesis,
+3D-aware texturing, constrained selection, and human-AI systems.
+\Cref{sec:method} describes the Agent, asset representation, weapon-space bake,
+evaluation, and refinement rules. \Cref{sec:experiments} defines the controlled
+experiments and evidence protocol. \Cref{sec:results} reports findings in the
+order of the research questions. \Cref{sec:discussion} considers validity,
+limitations, project management, and responsible use before
+\cref{sec:conclusion} concludes.

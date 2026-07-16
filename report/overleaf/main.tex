@@ -1,0 +1,135 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=25mm]{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,shapes.geometric}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[round,authoryear]{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{listings}
+
+\input{metadata}
+
+\definecolor{skinsmithblue}{HTML}{1565C0}
+\definecolor{skinsmithteal}{HTML}{008C95}
+\definecolor{skinsmithdark}{HTML}{263238}
+\definecolor{skinsmithlight}{HTML}{EEF4F8}
+
+\hypersetup{
+  pdftitle={\reporttitle},
+  pdfauthor={\reportauthors},
+  pdfsubject={SDSC6002 Research Project},
+  colorlinks=true,
+  linkcolor=skinsmithblue,
+  citecolor=skinsmithteal,
+  urlcolor=skinsmithblue
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small SkinSmith}
+\rhead{\small SDSC6002 Research Project}
+\cfoot{\thepage}
+\setlength{\headheight}{14pt}
+\onehalfspacing
+\setlength{\parskip}{0.35em}
+\setlength{\parindent}{1.5em}
+\setlist{nosep}
+\graphicspath{{figures/}}
+\sisetup{round-mode=places,round-precision=4,detect-all}
+
+\newcommand{\routeA}{Route~A}
+\newcommand{\routeB}{Route~B}
+\newcommand{\routeC}{Route~C}
+\newcommand{\skinsmith}{SkinSmith}
+\newcommand{\assetseam}{E_{\mathrm{asset}}}
+\newcommand{\multiview}{S_{\mathrm{view}}}
+
+\begin{document}
+
+\pagenumbering{gobble}
+\begin{titlepage}
+  \centering
+  \vspace*{18mm}
+  {\Large City University of Hong Kong\par}
+  \vspace{4mm}
+  {\large Master of Science in Data Science\par}
+  \vspace{22mm}
+  {\Huge\bfseries \reporttitle\par}
+  \vspace{9mm}
+  {\large Registered Project Topic: \registeredtopic\par}
+  \vspace{5mm}
+  {\Large SDSC6002 Research Project\par}
+  \vfill
+  \begin{tabular}{ll}
+    \toprule
+    \textbf{Group member} & \textbf{Student ID}\\
+    \midrule
+    \memberone & \memberoneid\\
+    \membertwo & \membertwoid\\
+    \memberthree & \memberthreeid\\
+    \memberfour & \memberfourid\\
+    \memberfive & \memberfiveid\\
+    \bottomrule
+  \end{tabular}
+  \vspace{8mm}
+
+  \begin{tabular}{rl}
+    Supervisor: & \supervisor\\
+    Submission date: & \submissiondate
+  \end{tabular}
+  \vfill
+  {\small This report describes an academic prototype. Counter-Strike 2 is used
+  as a case study; the project is not affiliated with Valve and does not publish
+  items to the Steam Workshop.\par}
+\end{titlepage}
+
+\clearpage
+\pagenumbering{roman}
+\input{sections/00_abstract}
+\tableofcontents
+\clearpage
+\listoffigures
+\listoftables
+\clearpage
+
+\pagenumbering{arabic}
+\input{sections/01_introduction}
+\input{sections/02_related_work}
+\input{sections/03_methodology}
+\input{sections/04_experiments}
+\input{sections/05_results}
+\input{sections/06_discussion}
+\input{sections/07_conclusion}
+
+\clearpage
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\clearpage
+\appendix
+\input{sections/appendix}
+
+\end{document}

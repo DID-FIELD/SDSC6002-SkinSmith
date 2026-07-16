@@ -1,0 +1,43 @@
+{
+  "plan_id": "neon_tide_weapon_space_hero_v1",
+  "description": "An original Neon Tide showcase composition with a generated tidal-energy hero placed near the receiver, broad longitudinal flow, and a restrained muzzle zone.",
+  "palette": ["#071A2F", "#00D4FF", "#7A5CFF", "#D9FBFF"],
+  "canvas_size": [1536, 768],
+  "focal_center": [0.47, 0.77],
+  "focal_radius": [0.105, 0.13],
+  "flow_center": 0.73,
+  "flow_amplitude": 0.06,
+  "flow_cycles": 1.35,
+  "flow_thicknesses": [34, 22, 12],
+  "quiet_start": 0.79,
+  "quiet_strength": 0.82,
+  "secondary_anchors": [[0.25, 0.72], [0.48, 0.38], [0.68, 0.76]],
+  "projection_blend_power": 4.0,
+  "content_layers": [
+    {
+      "layer_id": "showcase_hero",
+      "surfaces": ["left", "right", "top"],
+      "center": [0.5, 0.5],
+      "size": [1.0, 1.0],
+      "rotation_degrees": 0.0,
+      "opacity": 0.16,
+      "blend_mode": "screen",
+      "fit_mode": "cover",
+      "mirror_on_right": true,
+      "feather_fraction": 0.025
+    },
+    {
+      "layer_id": "showcase_hero",
+      "surfaces": ["left", "right"],
+      "center": [0.47, 0.23],
+      "size": [0.24, 0.34],
+      "rotation_degrees": 0.0,
+      "opacity": 1.0,
+      "blend_mode": "normal",
+      "fit_mode": "contain",
+      "mirror_on_right": true,
+      "feather_fraction": 0.1,
+      "source_crop": [0.12, 0.02, 0.65, 0.69]
+    }
+  ]
+}

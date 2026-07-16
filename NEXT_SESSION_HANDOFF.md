@@ -1,0 +1,134 @@
+# SkinSmith Next-Session Handoff
+
+> Updated: 2026-07-17  
+> Canonical context: `CODEX_CONTEXT.md`  
+> Accepted formal run: `runs/agent_dragon_multicandidate_v1/`
+
+## Current status
+
+The complete Agent workflow is implemented:
+
+```text
+Select registered weapon + enter one theme keyword
+  -> expand and confirm ThemePack
+  -> generate and select one textual art direction
+  -> generate 3-4 landscape master artworks
+  -> map every artwork to weapon left/right/top previews
+  -> human selects one indivisible source-and-views candidate
+  -> reuse the exact selected source for formal 2048 UV baking
+  -> Route B/C evaluation and rollback
+  -> PNG/TGA export
+```
+
+AK-47 is the accepted full target. M4A4 remains transfer evidence only.
+
+## Locked formal result
+
+- Direction: `Treasured Relic`
+- Direction ID: `candidate_04_d4_mythic_relic`
+- Human-selected artwork: `artwork_04`
+- Final phase: `completed`
+- Image calls: 6
+- Role retries: 1
+- Refinement rounds: 1
+- Selected route: Route B
+- Edge width: 4
+- Asset seam: `0.0007776109029832148`
+- Multi-view: `0.8166198880536247`
+- Total: `0.8291228922780649`
+- Route C change: `-0.02195902089447299`, correctly rolled back
+
+Source:
+
+`runs/agent_dragon_multicandidate_v1/artwork_candidates/artwork_04/source/route_b_master_artwork.png`
+
+Source SHA-256:
+
+`0299f43512b9a946eeedc0a58c418424c7bddfad8e0c9dd54610a4c13f63750a`
+
+Final outputs:
+
+- PNG: `runs/agent_dragon_multicandidate_v1/execution/route_b/route_b_selected.png`
+- TGA: `runs/agent_dragon_multicandidate_v1/execution/route_b/selected__route-b__custom-paint-job.tga`
+- Multi-view: `runs/agent_dragon_multicandidate_v1/execution/route_b/route_b_width_4_multiview.png`
+- TGA SHA-256: `82d18671e50cf59501c901ad86916a04637464883e79d5375b4cb37f96bc2aac`
+
+PNG and TGA are 2048 x 2048 RGB and decode to identical pixels.
+
+## Recommendation-only readability
+
+Report:
+
+`runs/agent_dragon_multicandidate_v1/execution/mapped_element_readability.json`
+
+- Source fulfillment: `0.938562091503268`
+- Left: `0.6016339869281045`
+- Right: `0.6016339869281045`
+- Top: `0.3993464052287582`
+- Recommendation: `0.6656372549019607`
+- Visible elements above threshold: 8 of 16
+
+These scores explain and recommend. Human selection remains authoritative.
+
+## Next work
+
+Academic Phase 1 is complete and preserved in:
+
+- `RESEARCH_FRAMING.md`: locked title, problem, five research questions,
+  contribution boundaries, and evidence mapping.
+- `LITERATURE_REVIEW.md`: nine-theme synthesis, research gap, and closest-work
+  comparison.
+- `references.bib`: 34 unique primary sources; every literature-review citation
+  resolves and every database entry is cited.
+- `RUBRIC_EVIDENCE_MATRIX.md`: all seven assessment dimensions, five CILOs,
+  milestones, evidence rules, and report production gates.
+
+The academic poster and presentation are now complete:
+
+- `report/build/SkinSmith_A0_Poster.pptx`
+- `report/build/SkinSmith_A0_Poster.pdf`
+- `report/build/SkinSmith_Supervisor_Presentation.pptx`
+- `report/build/SkinSmith_Supervisor_Presentation.pdf`
+
+The poster is a true 1189.04 x 841.11 mm A0 landscape academic poster. The
+presentation contains ten slides. Both were exported through Microsoft
+PowerPoint and visually checked; the presentation also passed automated overflow
+testing.
+
+Resume the academic and publication work in this order:
+
+1. Publish the reviewed, non-sensitive repository candidate to GitHub; the user
+   explicitly authorized the initial upload on 2026-07-17.
+2. Verify the remote branch and confirm that ignored evidence, credentials, Valve
+   assets, model weights, and local environments were not uploaded.
+3. Review the revised 33-page report draft under `report/build/`.
+4. Confirm the five work-package contribution descriptions with all group members,
+   then apply student/team/supervisor feedback in `report/overleaf/`.
+5. Freeze the approved report and export the final report PDF.
+6. Freeze the approved poster and presentation after team/supervisor feedback.
+7. Optionally add one final Workbench screenshot of the accepted TGA.
+
+The revised cover lists all five English names and student IDs and identifies
+YUAN Ye as project lead and integration owner. The registered topic remains as a
+cover subtitle, while the Introduction, Discussion, and Appendix document the
+supervisor-approved narrowing to SkinSmith.
+
+## Non-negotiable boundaries
+
+- Use `config/assets/ak47_cs2.json` for the accepted AK-47 contract.
+- Do not switch to the legacy UV or assume a V flip.
+- Do not restore per-component generation as the default.
+- Do not add a third weapon before deliverables are complete.
+- Do not delete formal runs, ignored Valve assets, or user files.
+- Do not let automatic scores replace human selection.
+
+## Verification baseline
+
+- 100 tests pass.
+- `compileall` passes.
+- Streamlit headless startup passes.
+- No new image call is required merely to continue the academic deliverables.
+- No GitHub push has occurred yet.
+- Git remote `origin` is configured, and the existing remote `main` history
+  consists of an initial `LICENSE` commit that must be preserved.
+- Follow `SECURITY_RELEASE_CHECKLIST.md` before staging or publishing.

@@ -1,0 +1,282 @@
+\section{Methodology}
+\label{sec:method}
+
+\subsection{Design principles}
+
+The method was developed around four principles. First, generation is an
+intermediate operation rather than the final product. Second, every technical
+decision is made against a versioned asset contract. Third, feasibility and
+preference are separated during selection. Fourth, human approval is required at
+points where automatic metrics cannot adequately represent intent or aesthetic
+judgment.
+
+\Cref{fig:architecture} summarizes the resulting pipeline. A thin client calls the
+same Agent runtime used by the command-line interface. The runtime coordinates
+planning, generation, asset processing, rendering, evaluation, and persistence;
+the user interface does not reimplement those operations.
+
+\begin{figure}[t]
+  \centering
+  \begin{tikzpicture}[
+    node distance=6mm and 8mm,
+    box/.style={draw=skinsmithdark, rounded corners, align=center, minimum height=9mm,
+      text width=27mm, fill=skinsmithlight, font=\small},
+    checkpoint/.style={box, fill=skinsmithblue!12, draw=skinsmithblue},
+    process/.style={box, fill=skinsmithteal!10, draw=skinsmithteal},
+    arrow/.style={-{Latex[length=2mm]}, thick, draw=skinsmithdark}
+  ]
+    \node[box] (input) {Weapon + short theme};
+    \node[process, right=of input] (theme) {Theme and style compilation};
+    \node[checkpoint, right=of theme] (c1) {Checkpoint 1\\confirm theme};
+    \node[process, below=of c1] (dirs) {3--4 textual directions};
+    \node[checkpoint, left=of dirs] (c2) {Checkpoint 2\\select direction};
+    \node[process, left=of c2] (art) {3--4 landscape artworks};
+    \node[process, below=of art] (preview) {Low-cost UV mapping and three views};
+    \node[checkpoint, right=of preview] (c3) {Checkpoint 3\\select mapped artwork};
+    \node[process, right=of c3] (formal) {Formal weapon-space bake};
+    \node[process, below=of formal] (eval) {Constraints, Pareto selection, Route C};
+    \node[box, left=of eval] (export) {2048 PNG/TGA + evidence log};
+
+    \draw[arrow] (input) -- (theme);
+    \draw[arrow] (theme) -- (c1);
+    \draw[arrow] (c1) -- (dirs);
+    \draw[arrow] (dirs) -- (c2);
+    \draw[arrow] (c2) -- (art);
+    \draw[arrow] (art) -- (preview);
+    \draw[arrow] (preview) -- (c3);
+    \draw[arrow] (c3) -- (formal);
+    \draw[arrow] (formal) -- (eval);
+    \draw[arrow] (eval) -- (export);
+  \end{tikzpicture}
+  \caption{The \skinsmith\ workflow. The three blue nodes are blocking human
+  checkpoints; formal processing cannot begin before a mapped artwork is selected.}
+  \label{fig:architecture}
+\end{figure}
+
+\subsection{Agent state and human checkpoints}
+
+An \texttt{AgentRunRequest} contains the asset identifier, a short theme or free
+brief, an optional broad style family, the candidate count, and explicit budgets
+for image calls, retries, and refinement rounds. The persisted state follows:
+
+\begin{align*}
+\texttt{created} &\rightarrow \texttt{planning}
+\rightarrow \texttt{awaiting\_theme}
+\rightarrow \texttt{awaiting\_direction}\\
+&\rightarrow \texttt{awaiting\_artwork}
+\rightarrow \texttt{executing}
+\rightarrow \texttt{completed}.
+\end{align*}
+
+At the first checkpoint, a \texttt{ThemeCompiler} expands a compact keyword into a
+validated \texttt{ThemePack}. The pack contains the concept, palette, primary and
+supporting elements, environmental and material cues, atmosphere, component
+story, evaluation criteria, and prohibited content. The user may confirm or edit
+this interpretation. A \texttt{StyleCompiler} then produces three or four
+materially different textual directions for the confirmed theme and selected
+weapon. At the second checkpoint, the user chooses one direction.
+
+The selected direction generates three or four dense landscape master artworks.
+Each is validated for resolution, tonal and colour variation, local detail
+density, and forbidden content. It is then passed through a low-cost mapping stage
+using the target adapter. The original image and the left, right, and top views are
+treated as one indivisible candidate card. The third checkpoint asks the user to
+select one card. This design prevents a visually attractive source from being
+chosen without seeing how it behaves on the asset.
+
+The selected source path and hash become part of a frozen design contract. Formal
+processing reuses that exact file; it does not regenerate an approximation after
+selection. Every transition, tool action, budget change, retry, and stop reason is
+written to persisted state so a failed or interrupted run can resume from the last
+valid checkpoint.
+
+\subsection{Asset adapter}
+
+Each target is represented by a versioned \texttt{GameAssetAdapter}. The adapter
+binds:
+
+\begin{itemize}
+  \item the mesh path, version, and SHA-256 hash;
+  \item the authoritative UV source and UV address mode;
+  \item canonical longitudinal and up axes;
+  \item semantic regions and creative anchors;
+  \item paintable-area rules;
+  \item fixed cameras;
+  \item texture size and export format.
+\end{itemize}
+
+This boundary is important because mesh geometry, UV charts, and material behavior
+cannot be assumed to transfer between weapons. The accepted AK-47 adapter uses the
+new CS2 geometry, a 2048 by 2048 RGB texture, fixed left/right/top cameras, and a
+24-bit TGA Custom Paint export. The M4A4 case supplies a different mesh hash, axes,
+UV topology, and seam calibration while reusing the core algorithms.
+
+\subsection{Mesh-derived geometry maps}
+
+Let a mesh triangle have three-dimensional vertices
+$\mathbf{p}_0,\mathbf{p}_1,\mathbf{p}_2$, vertex normals
+$\mathbf{n}_0,\mathbf{n}_1,\mathbf{n}_2$, and UV coordinates
+$\mathbf{u}_0,\mathbf{u}_1,\mathbf{u}_2$. For every covered atlas pixel
+$\mathbf{u}$, barycentric coordinates $(\lambda_0,\lambda_1,\lambda_2)$ are
+computed in UV space. The corresponding position and normal are
+
+\begin{align}
+  \mathbf{p}(\mathbf{u}) &=
+  \lambda_0\mathbf{p}_0+\lambda_1\mathbf{p}_1+\lambda_2\mathbf{p}_2,\\
+  \tilde{\mathbf{n}}(\mathbf{u}) &=
+  \lambda_0\mathbf{n}_0+\lambda_1\mathbf{n}_1+\lambda_2\mathbf{n}_2,\\
+  \mathbf{n}(\mathbf{u}) &= \frac{\tilde{\mathbf{n}}(\mathbf{u})}
+  {\lVert\tilde{\mathbf{n}}(\mathbf{u})\rVert_2}.
+\end{align}
+
+The mesh is transformed into a canonical frame whose $x$ axis follows the weapon
+length, $y$ is up, and $z$ distinguishes the two sides. Positions are normalized
+to the asset bounds. Rasterizing all UV triangles produces a position map, a
+normal map, a valid-pixel mask, and a face-index map. These maps connect continuous
+weapon-space composition to the existing fragmented atlas.
+
+\subsection{Route A: tileable-pattern baseline}
+
+\routeA\ generates a square, dense, crop-tolerant pattern. Its opposite image
+borders are repaired using periodic-plus-smooth decomposition
+\citep{moisan2011periodic}. The repaired square is then sampled through the
+original UVs and rendered on the weapon. This route is deliberately generic: it
+is expected to tolerate arbitrary crops, but it has no explicit whole-weapon
+hierarchy.
+
+Two seam concepts are recorded. The square-border error measures differences
+between opposite image edges. The asset-seam error instead evaluates pairs of UV
+edges that correspond to the same welded three-dimensional edge. Passing the
+first measure does not imply passing the second.
+
+\subsection{Route B: weapon-space composition and UV bake}
+
+\routeB\ uses one selected landscape master artwork. The source is fitted to
+continuous left, right, and top canvases in canonical weapon coordinates. The
+source must be dense and edge-to-edge, with several medium or small thematic
+clusters, because a single dominant subject or large empty region is unlikely to
+survive the narrow silhouette and UV fragmentation.
+
+For each valid UV pixel, the canonical position determines the sampling coordinate
+on the side and top canvases. Surface normals blend the projections:
+
+\begin{align}
+  w_s &= |n_z|^p,\qquad w_t = \max(n_y,0)^p,\\
+  \mathbf{c}(\mathbf{u}) &=
+  \frac{w_s\mathbf{c}_s(\mathbf{p})+w_t\mathbf{c}_t(\mathbf{p})}
+  {w_s+w_t+\epsilon},
+\end{align}
+
+where $p=4$ in the accepted configuration. $\mathbf{c}_s$ is sampled from the
+appropriate left or right canvas according to surface orientation, while
+$\mathbf{c}_t$ is sampled from the top canvas. This soft blend avoids an abrupt
+switch between charts selected solely by the largest normal component.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{weapon_space_concept.png}
+  \caption{The central Route B idea: compose in continuous weapon space, store
+  fragments in the authoritative UV atlas, and judge coherence after
+  reconstruction. The flat atlas is not expected to read as a conventional
+  illustration.}
+  \label{fig:weapon-space}
+\end{figure}
+
+\subsection{True asset-seam metric and correction}
+
+OBJ files often duplicate vertices at UV boundaries. The method first welds
+coordinate-identical geometric vertices, identifies mesh edges shared by adjacent
+faces, and records pairs whose UV coordinates differ. These pairs form the true
+asset-seam graph.
+
+For $N$ paired samples with RGB colours $\mathbf{a}_i,\mathbf{b}_i$ and local
+gradients $\mathbf{g}^{a}_i,\mathbf{g}^{b}_i$, the colour and gradient terms are
+
+\begin{align}
+  E_c &= \frac{1}{N}\sum_{i=1}^{N}
+  \frac{\lVert\mathbf{a}_i-\mathbf{b}_i\rVert_1}{3\cdot255},\\
+  E_g &= \frac{1}{N}\sum_{i=1}^{N}
+  \frac{\lVert\mathbf{g}^{a}_i-\mathbf{g}^{b}_i\rVert_1}{3\cdot255}.
+\end{align}
+
+The implementation combines these normalized terms into $\assetseam$ using the
+locked project weights. The principal hard requirement is
+$\assetseam\leq0.01$.
+
+An edge-safety correction blends a narrow region around UV-island boundaries
+toward a stable base colour. Wider regions generally reduce seam error but can
+erase visible detail. Candidate widths are therefore evaluated against both the
+seam threshold and a minimum multi-view retention of 95\% relative to the
+uncorrected texture.
+
+\subsection{Rendering and evaluation}
+
+The software renderer loads textured OBJ geometry, triangulates polygon faces,
+interpolates UV coordinates barycentrically, samples the texture bilinearly, and
+uses a z-buffer with fixed orthographic left, right, and top cameras. Lighting and
+cameras are deterministic so candidates are compared under the same conditions.
+
+Texture-level evidence includes contrast, saturation, detail, paintable coverage,
+and square-border periodicity. The multi-view score combines foreground coverage,
+contrast, saturation, visible detail, and luminance consistency across the three
+views. The project also records mapped-element readability, defined as
+
+\begin{equation}
+  S_{\mathrm{read}} =
+  0.25S_{\mathrm{source}}+
+  0.50S_{\mathrm{left}}+
+  0.15S_{\mathrm{right}}+
+  0.10S_{\mathrm{top}}.
+\end{equation}
+
+This weighting reflects the principal inspection view in the case study. It is
+recommendation-only and cannot override the user's artwork selection.
+
+\subsection{Constraint-first selection}
+
+For a candidate $x$, each hard constraint $j$ has a non-negative violation
+$v_j(x)$. A candidate is feasible only if
+
+\[
+  V(x)=\sum_j v_j(x)=0.
+\]
+
+Feasible candidates are compared using Pareto dominance over the locked
+objectives. If several candidates remain non-dominated, a deterministic priority
+order selects the operating point. A conventional normalized weighted score is
+retained only as an ablation baseline. This policy prevents a strong visual score
+from compensating for a deployment failure.
+
+\subsection{Route C: bounded local correction}
+
+\routeC\ begins from the selected \routeB\ texture. Rendered component visibility
+masks identify a component whose detail level deviates from its target. The Agent
+creates exactly two correction candidates at fixed intensities. Changes are
+restricted to that component plus a transition halo, and the number of changed
+pixels outside the allowed region must be zero.
+
+Each correction must retain all \routeB\ hard constraints. Let $S_B$ be the locked
+score of the original and $S_C$ the best feasible correction. The correction is
+accepted only when
+
+\[
+  S_C-S_B\geq0.01.
+\]
+
+Otherwise the final result is the unchanged \routeB\ texture. The method therefore
+tests diagnosis and action without assuming that automatic refinement is
+monotonic.
+
+\subsection{Generation backends and evidence}
+
+The generator interface supports a deterministic procedural baseline, a local
+SD-Turbo model, and provider-backed image generation. SD-Turbo is pinned to
+revision \path{b261bac6fd2cf515557d5d0707481eafa0485ec2} at 512 pixels, two
+inference steps, and guidance scale zero. The accepted creative run used
+\texttt{gemini-3.1-flash-lite} for structured planning and
+\texttt{gemini-3.1-flash-image} for 1K landscape source images.
+
+Every formal run preserves the request, prompts, provider and model identifiers,
+seeds where applicable, redacted traces, source hashes, validation, mapped views,
+UV outputs, metrics, decisions, budgets, retries, runtime, and checkpoints. API
+keys are read from environment variables and are not written to run evidence.

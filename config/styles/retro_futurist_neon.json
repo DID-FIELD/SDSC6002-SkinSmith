@@ -1,0 +1,41 @@
+{
+  "style_id": "retro_futurist_neon_v1",
+  "display_name": "Retro-Futurist Neon",
+  "generation_label": "retro-futurist neon graphic art",
+  "match_terms": ["retro futurist", "retro-futurist", "neon", "synthwave"],
+  "summary": "A designed retro-futurist graphic system combining bold 1980s geometry, controlled neon gradients, dark negative space, and a clear focal hierarchy.",
+  "visual_vocabulary": ["bold geometric silhouettes", "limited neon gradient bands", "deep navy negative space", "large sun-disc forms", "controlled chrome-like accents without reflections"],
+  "motifs": ["sun disc", "horizon grid", "speed wedge", "orbital arc", "stepped geometry"],
+  "palette": ["#071229", "#F238B8", "#7048E8", "#12D9D0", "#F6A623"],
+  "material_cues": ["screen-printed colour blocks", "subtle airbrush transitions", "no baked specular lighting"],
+  "composition_principles": ["one dominant focal geometry", "use neon as accents rather than full coverage", "protect dark resting areas", "keep details medium-scale and silhouette-readable"],
+  "avoid": ["random glowing lines", "dense circuit-board filler", "photorealistic cityscape", "baked lighting and reflections", "text, logos, brands, watermarks"],
+  "route_a": {
+    "objective": "Create a seamless retro-futurist graphic repeat with complete motifs at every crop.",
+    "composition_rules": ["interlock stepped geometry across edges", "alternate warm and cool focal accents", "retain dark negative-space pockets"],
+    "constraints": ["square", "seamless", "no weapon silhouette", "no unique central poster composition"]
+  },
+  "route_b": {
+    "objective": "Create a poster-like weapon-space composition whose focal hierarchy survives UV baking.",
+    "composition_rules": ["receiver carries the main disc or wedge", "stock starts the horizon rhythm", "handguard extends the motion path", "muzzle becomes dark and quiet"],
+    "constraints": ["weapon-space 2:1 canvas", "semantic component roles", "quiet muzzle", "no dense micro-lines"]
+  },
+  "component_roles": {
+    "stock": "dark horizon field with one broad gradient band",
+    "receiver": "primary sun disc or geometric focal mark",
+    "magazine": "secondary stepped colour panel",
+    "pistol_grip": "deep navy grounding mass",
+    "handguard": "one or two broad orbital or speed arcs",
+    "front_assembly": "small cyan cadence accent",
+    "barrel_muzzle": "quiet dark finish without focal detail"
+  },
+  "candidate_directions": [
+    {"direction_id": "sunset_drive", "title": "Sunset Drive", "concept": "A bold sun disc and horizontal speed bands evoke a graphic night drive.", "motifs": ["sun disc", "speed wedge", "horizon grid"], "route_a_emphasis": "cropped discs and wedges interlock across tile edges", "route_b_emphasis": "the receiver sun disc leads a stock-to-handguard motion path"},
+    {"direction_id": "orbital_arcade", "title": "Orbital Arcade", "concept": "Orbital arcs and stepped arcade geometry form a playful technical rhythm.", "motifs": ["orbital arc", "stepped geometry", "star dots"], "route_a_emphasis": "arc fragments reconnect into a seamless field", "route_b_emphasis": "one orbital centre anchors the receiver with restrained arcs forward"},
+    {"direction_id": "neon_construct", "title": "Neon Construct", "concept": "Large abstract blocks create a disciplined constructivist neon composition.", "motifs": ["stepped geometry", "speed wedge", "sun disc"], "route_a_emphasis": "large blocks form readable repeat units", "route_b_emphasis": "component proportions determine the block hierarchy"},
+    {"direction_id": "midnight_signal", "title": "Midnight Signal", "concept": "Sparse signal bars and one luminous disc create a calmer premium variant.", "motifs": ["orbital arc", "sun disc", "signal bar"], "route_a_emphasis": "sparse accents repeat over generous navy ground", "route_b_emphasis": "one receiver signal mark is supported by very quiet surrounding surfaces"}
+  ],
+  "evaluation_criteria": ["retro-futurist recognizability", "focal hierarchy", "negative-space control", "multi-view readability", "UV continuity", "absence of generic random-line filler"],
+  "reference_policy": "Build an original vocabulary from broad period-design characteristics and clearly licensed references; do not imitate a specific poster, studio, or artist.",
+  "procedural_fallback_motif": "circuits"
+}
