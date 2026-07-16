@@ -97,6 +97,16 @@
   `https://github.com/DID-FIELD/SDSC6002-SkinSmith`.
 - [x] Verify the remote branch and repository contents after the push.
 
+## Awaiting external review
+
+- [ ] Receive supervisor feedback.
+- [ ] Receive and consolidate feedback from all group members.
+- [ ] Confirm the five-member contribution statement.
+- [ ] Classify and document every requested revision.
+- [ ] Apply approved report revisions.
+- [ ] Apply any consequential poster and presentation revisions.
+- [ ] Freeze the final report PDF and submission artifacts.
+
 ## Completion conditions
 
 - [x] A real three-checkpoint Agent can progress from one keyword to a

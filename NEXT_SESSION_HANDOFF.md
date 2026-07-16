@@ -6,6 +6,10 @@
 
 ## Current status
 
+Session closed on 2026-07-17. The project is intentionally paused while YUAN Ye
+waits for feedback from the supervisor and group members. Continue from the
+feedback review; do not restart implementation or expand the technical scope.
+
 The complete Agent workflow is implemented:
 
 ```text
@@ -97,12 +101,16 @@ testing.
 
 Resume the academic and publication work in this order:
 
-1. Review the revised 33-page report draft under `report/build/`.
-2. Confirm the five work-package contribution descriptions with all group members,
-   then apply student/team/supervisor feedback in `report/overleaf/`.
-3. Freeze the approved report and export the final report PDF.
-4. Freeze the approved poster and presentation after team/supervisor feedback.
-5. Optionally add one final Workbench screenshot of the accepted TGA.
+1. Collect the supervisor and group-member responses supplied by YUAN Ye.
+2. Classify each requested change as report, poster, presentation, code/demo,
+   contribution record, or out-of-scope request.
+3. Resolve contradictions explicitly and preserve the locked technical evidence.
+4. Apply approved feedback to the report source under `report/overleaf/`.
+5. Update the poster and presentation only where the approved report narrative or
+   group record changes.
+6. Freeze the approved report and export the final report PDF.
+7. Run the final submission consistency and visual QA.
+8. Optionally add one final Workbench screenshot of the accepted TGA.
 
 The revised cover lists all five English names and student IDs and identifies
 YUAN Ye as project lead and integration owner. The registered topic remains as a
@@ -128,6 +136,15 @@ supervisor-approved narrowing to SkinSmith.
 - Remote: `https://github.com/DID-FIELD/SDSC6002-SkinSmith`.
 - Published merge commit: `ee628e1`; the pre-existing `LICENSE` history was
   preserved.
+- Publication-status documentation was subsequently updated on remote `main` at
+  commit `49e34ee`.
 - Ignored evidence, credentials, Valve assets, model weights, and local
   environments were not uploaded.
 - Follow `SECURITY_RELEASE_CHECKLIST.md` before staging or publishing.
+
+## Feedback intake rule
+
+When feedback arrives, preserve the exact wording and source of each comment.
+Do not treat an informal suggestion as approval to alter formal evidence,
+contribution ownership, research claims, or project scope. Record accepted,
+rejected, and deferred changes in the continuity documents.
