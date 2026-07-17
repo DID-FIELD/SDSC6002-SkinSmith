@@ -18,7 +18,7 @@ Final deadline: **2026-08-02 at 12:00 noon**. Required academic deliverables: re
 
 ## 2. Current phase and decision
 
-Current phase: **the Agent and thin Streamlit client implement the clarified three-checkpoint interaction contract, the English report draft has completed its first group-authorship revision, and the academic A0 poster plus ten-slide supervisor presentation are complete and visually verified. The user selects a registered weapon, enters one short theme keyword such as `dragon`, confirms the Agent-expanded visual world, selects one of 3-4 dynamically generated textual directions, and then selects one artwork from indivisible source + left/right/top mapped candidate cards before formal execution. AK-47 is the fully accepted client target. M4A4 is visible but explicitly disabled for formal client execution because it currently provides adapter-level transfer evidence rather than an AK-equivalent end-to-end deployment contract. The existing real Gemini run selected `Treasured Relic` and `artwork_04`, then reused the exact source for formal 2048 Route-B/TGA export; this remains accepted evidence. The reviewed project repository was published successfully to `https://github.com/DID-FIELD/SDSC6002-SkinSmith` on 2026-07-17 while preserving the existing remote `LICENSE` history. Work is now intentionally paused while YUAN Ye waits for supervisor and group-member feedback. The next session begins by recording, classifying, and applying only approved feedback before final report freeze**.
+Current phase: **the Agent and thin Streamlit client implement the clarified three-checkpoint interaction contract, the English report draft has completed its first group-authorship revision, and the academic A0 poster plus ten-slide supervisor presentation are complete and visually verified. The user selects a registered weapon, enters one short theme keyword such as `dragon`, confirms the Agent-expanded visual world, selects one of 3-4 dynamically generated textual directions, and then selects one artwork from indivisible source + left/right/top mapped candidate cards before formal execution. AK-47 is the fully accepted client target. M4A4 is visible but explicitly disabled for formal client execution because it currently provides adapter-level transfer evidence rather than an AK-equivalent end-to-end deployment contract. The existing real Gemini run selected `Treasured Relic` and `artwork_04`, then reused the exact source for formal 2048 Route-B/TGA export; this remains accepted evidence. The reviewed project repository was published successfully to `https://github.com/DID-FIELD/SDSC6002-SkinSmith` on 2026-07-17 while preserving the existing remote `LICENSE` history. Group contribution feedback is complete and accepted; work is now waiting only for supervisor feedback before final report freeze. Poster and presentation revisions are deferred by the user**.
 
 Question tested: can the project reliably execute texture generation, seam processing, real UV mapping, multi-view rendering, quantitative evaluation, automatic ranking, and evidence logging before adding diffusion?
 
@@ -383,13 +383,12 @@ CS2 Workbench path validation completed on 15 July:
 This list supersedes older V-flip, legacy-UV, B0-runner, M4A4, and “build UI next”
 notes elsewhere in historical documents.
 
-1. Complete team/supervisor review and freeze the final report PDF.
-2. Apply any approved feedback to the completed A0 poster and supervisor
-   presentation, then freeze those versions.
+1. Receive supervisor feedback and freeze the final report PDF.
+2. Revisit the A0 poster and supervisor presentation only after a direct request;
+   dissatisfaction is recorded, but revision is currently deferred.
 3. Complete the final reproducibility, disclosure, copyright-boundary, and visual
    QA.
-4. Complete the staged-file security/license audit and publish to GitHub only
-   after explicit user approval.
+4. Keep approved changes synchronized with the published GitHub `main` branch.
 5. Optionally import the accepted `artwork_04` TGA into Workbench for the final
    presentation screenshot; this is visual evidence, not a change to the UV route.
 
@@ -466,11 +465,10 @@ Renderer limitation: the current software renderer now uses barycentric per-pixe
 
 Execute in this order unless the user changes priority:
 
-1. Collect team/supervisor feedback and freeze the final report.
-2. Apply only approved feedback to the completed poster and presentation.
+1. Receive supervisor feedback and freeze the final report.
+2. Leave the poster and presentation unchanged until the user resumes that work.
 3. Complete reproducibility, disclosure, copyright-boundary, and visual QA.
-4. Follow `SECURITY_RELEASE_CHECKLIST.md`, review the publication set, and push
-   only after explicit user approval.
+4. Follow `SECURITY_RELEASE_CHECKLIST.md` for every subsequent GitHub update.
 5. Do not add a third weapon, return to legacy UV, or resume per-part dragon
    generation before deliverables are stable.
 Implementation checkpoint (2026-07-16):
@@ -869,6 +867,16 @@ Python/environment:
 - On receipt of feedback, preserve each comment's source and wording, classify it
   by deliverable and scope, resolve contradictions explicitly, and update the
   continuity documents with accepted, rejected, and deferred actions.
+- Group feedback confirms the five-member contribution statement. The detailed
+  contribution table remains unchanged, and the provisional paragraph requesting
+  later group confirmation is removed from the report appendix.
+- The root `README.md` is rewritten as a reader-facing project description rather
+  than a chronological development log. It now explains the problem, three
+  checkpoints, design routes, verified findings, setup, execution, repository
+  structure, artifacts, limitations, and publication boundaries.
+- The user is dissatisfied with the current poster and presentation, but has
+  explicitly deferred those revisions. Do not modify either artifact until later
+  feedback or a direct request.
 
 ## 9. Non-negotiable boundaries
 

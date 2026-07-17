@@ -101,14 +101,14 @@ testing.
 
 Resume the academic and publication work in this order:
 
-1. Collect the supervisor and group-member responses supplied by YUAN Ye.
-2. Classify each requested change as report, poster, presentation, code/demo,
-   contribution record, or out-of-scope request.
+1. Wait for and record the supervisor response supplied by YUAN Ye.
+2. Classify each requested change as report, poster, presentation, code/demo, or
+   out-of-scope request.
 3. Resolve contradictions explicitly and preserve the locked technical evidence.
-4. Apply approved feedback to the report source under `report/overleaf/`.
-5. Update the poster and presentation only where the approved report narrative or
-   group record changes.
-6. Freeze the approved report and export the final report PDF.
+4. Apply approved supervisor feedback to `report/overleaf/`.
+5. Freeze the approved report and export the final report PDF.
+6. Revisit the poster and presentation only when requested; dissatisfaction is
+   recorded, but revisions are explicitly deferred for now.
 7. Run the final submission consistency and visual QA.
 8. Optionally add one final Workbench screenshot of the accepted TGA.
 
@@ -116,6 +116,10 @@ The revised cover lists all five English names and student IDs and identifies
 YUAN Ye as project lead and integration owner. The registered topic remains as a
 cover subtitle, while the Introduction, Discussion, and Appendix document the
 supervisor-approved narrowing to SkinSmith.
+
+The group has confirmed the five-member contribution statement. The detailed
+contribution table remains in the report, while the provisional confirmation
+paragraph after it has been removed.
 
 ## Non-negotiable boundaries
 

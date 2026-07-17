@@ -100,8 +100,8 @@
 ## Awaiting external review
 
 - [ ] Receive supervisor feedback.
-- [ ] Receive and consolidate feedback from all group members.
-- [ ] Confirm the five-member contribution statement.
+- [x] Receive and consolidate contribution feedback from all group members.
+- [x] Confirm the five-member contribution statement.
 - [ ] Classify and document every requested revision.
 - [ ] Apply approved report revisions.
 - [ ] Apply any consequential poster and presentation revisions.

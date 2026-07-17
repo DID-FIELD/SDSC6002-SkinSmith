@@ -1,230 +1,197 @@
 # SkinSmith
 
-SkinSmith is an academic prototype for constraint-aware generation of transferable
-game weapon finishes. Counter-Strike 2 is used only as a case study. The project does
-not publish items to the Steam Workshop and is not affiliated with Valve.
+SkinSmith is a constraint-aware generative Agent for game weapon skin design. It
+turns a short theme keyword into multiple art directions and mapped weapon
+concepts, keeps the user in control at three explicit checkpoints, and evaluates
+the selected design after it has been baked to the target asset.
 
-Project documents:
+The project was developed for the City University of Hong Kong SDSC6002 Research
+Project. Counter-Strike 2 is used as the main case study, but the research focus is
+the reusable image-processing Agent, not the game itself.
 
-- `report/overleaf/`: complete Overleaf-ready report source, figures, BibTeX, and
-  machine-readable table data;
-- `report/build/SkinSmith_Report_Draft.pdf`: locally compiled report draft for
-  visual review;
-- `RESEARCH_FRAMING.md`: locked title, research questions, contribution boundaries, and evidence mapping;
-- `LITERATURE_REVIEW.md`: nine-theme related-work synthesis and closest-work comparison;
-- `references.bib`: verified 34-source BibTeX database;
-- `RUBRIC_EVIDENCE_MATRIX.md`: SDSC6002 assessment, CILO, milestone, and evidence mapping;
-- `TECHNICAL_SPEC.md`: locked technical route, formulas, models, parameters, refinement policy, and experiments;
-- `TECHNICAL_CONTRIBUTIONS.md`: contribution analysis and report/PPT/poster-ready technical narrative;
-- `PROJECT_OVERVIEW.md`: current phase, final scope, and technical rationale for the team;
-- `PROJECT_STRUCTURE.md`: layered architecture, directory responsibilities, data flow, and run-entry map;
-- `WORKBENCH_VIEWING_GUIDE.md`: local A/B/C Workbench finish-style and TGA filename source of truth;
-- `PROGRESS_AND_COMPLETION_CHECKLIST.md`: current completion status, two portability dimensions, remaining work, and next-session checklist;
-- `VERIFICATION.md`: exact verified chain, commands, evidence, and limitations;
-- `CODEX_CONTEXT.md`: authoritative progress and requirement context for future Codex sessions.
+## Project goal
 
-## Locked MVP
+A visually attractive rectangular image is not automatically a usable weapon
+texture. UV atlases split, rotate, and repack the visible surface, so important
+motifs may disappear, seams may become visible, and a design that works from one
+view may fail from another.
 
-The two-week MVP implements this loop:
+SkinSmith addresses this gap by evaluating the reconstructed asset rather than the
+source image alone. The system combines:
 
-1. Compile any brief into validated `ThemePack` and `StylePack` objects: reuse
-   compatible cached examples when they match, otherwise call injectable creative
-   reasoning backends with the target weapon's `AssetCreativeProfile` to define both
-   what to depict and how to depict it.
-2. Route A uses `PatternDesigner` to create a dense, crop-tolerant, tileable square template.
-3. Route B uses `WeaponThemeDesigner` to generate one square source per explicit
-   composition group. Groups may span several components, repeat as coordinated
-   units, remain component-specific, or provide the shared background. They are
-   composed in continuous weapon space and baked into the UV atlas. Older themes
-   without a graph retain the four-role compatibility path.
-4. Render candidate previews through a swappable asset adapter and renderer.
-5. Score texture, UV, multi-view, and semantic constraints.
-6. Apply one bounded corrective action, accept only measured improvement, and save a full decision log.
+- theme and art-direction planning;
+- human selection at three checkpoints;
+- continuous weapon-space composition;
+- OBJ/UV-driven texture baking;
+- fixed left, right, and top rendering;
+- asset-seam and multi-view evaluation;
+- hard feasibility gates and Pareto-style selection;
+- one bounded refinement attempt with rollback.
 
-The deterministic smoke-test uses a procedural generator and a tiled 2D preview.
-The real-model smoke-test applies the same generated texture to the official local
-AK-47 OBJ and renders left, right, and top views. SD-Turbo is accepted, and the
-current Route-B smoke also verifies weapon-space design -> fragmented UV bake -> 3D reconstruction.
+## Human-Agent workflow
 
-To inspect the new general art-direction layer without running image generation:
-
-```powershell
-& '.\.venv\Scripts\python.exe' scripts\plan_style.py `
-  "Design an elegant but contemporary blue-and-white porcelain AK-47 skin" `
-  --count 4
+```text
+Select a registered weapon and enter one keyword
+  -> Checkpoint 1: confirm the expanded visual world
+  -> Checkpoint 2: select one of 3-4 textual art directions
+  -> generate 3-4 artwork candidates
+  -> map every candidate to left/right/top weapon views
+  -> Checkpoint 3: select one source-and-mapped-view card
+  -> reuse the exact selected source for formal execution
+  -> bake, render, evaluate, refine once if justified, and export
 ```
 
-The built-in style library currently contains blue-and-white porcelain, original
-cartoon mascots, and retro-futurist neon. These are examples behind one schema, not
-three hard-coded project modes.
+For example, the keyword `dragon` is expanded into subjects, symbols, materials,
+palette, atmosphere, supporting details, and prohibited content. The Agent then
+proposes materially different directions instead of treating the keyword as a
+complete prompt.
 
-The theme library is a cache, not a whitelist. `ThemeCompiler` accepts a real
-`ThemeSynthesisBackend` for previously unseen prompts such as landscape painting,
-relief, marble, electronics, or chip circuitry. Without that backend the system
-fails explicitly; it does not pretend that keyword rules provide open-ended creation.
+Model review can recommend a candidate, but it does not replace the user's
+decision. Formal execution cannot begin until the user selects the mapped artwork.
 
-Provider-neutral API adapters are implemented in `src/skinsmith/api_backends.py`:
+## Design routes
 
-- OpenAI Responses structured output or Gemini Interactions structured output can compile new `ThemePack` and `StylePack` objects;
-- OpenAI GPT Image or Gemini native image generation can feed the existing texture pipeline;
-- provider, model, request, response, and validation evidence are saved, but API keys are never logged;
-- `ApiTextureGenerator` adapts either image provider to the existing Route-A candidate loop.
+SkinSmith evaluates three related routes:
 
-The selected production image backend is Nano Banana 2 through Gemini API:
-`gemini-3.1-flash-image`, 1K, square. Live theme compilation uses
-`gemini-3.1-flash-lite` after `gemini-3.5-flash` returned sustained high-demand
-errors. The locked provider/model/budget gate is in `config/creative_api.json`;
-OpenAI remains an optional backend comparison only.
+- **Route A - pattern-first baseline:** creates a dense, crop-tolerant, tileable
+  texture without a weapon-level composition plan.
+- **Route B - weapon-space composition:** arranges the design in a continuous
+  canonical weapon frame before baking it into the fragmented UV atlas.
+- **Route C - bounded correction:** diagnoses one mapped weakness, applies a local
+  correction, and accepts it only if constraints and the minimum improvement rule
+  pass; otherwise it rolls back to Route B.
 
-ChatGPT Plus and the Gemini consumer subscription are not treated as project API
-credentials. Configure a developer key locally through an environment variable;
-never paste it into a prompt, JSON file, commit, or run log. A live Gemini theme
-compile, for example, is:
+The AK-47 adapter is the complete end-to-end case. The M4A4 adapter demonstrates
+transfer of the Agent contract, but it is not presented as an equivalent completed
+production target.
 
-```powershell
-$env:GEMINI_API_KEY = "<set-locally>"
-& '.\.venv\Scripts\python.exe' scripts\plan_design_routes.py `
-  "Design an AK-47 skin based on dark marble faults and warm gold veins" `
-  --theme-provider gemini `
-  --output runs\theme_compilation_marble\route_design_bundle.json
+## Verified findings
+
+The formal paired experiment contains four shared candidates. Compared with the
+pattern-first baseline, weapon-space Route B:
+
+- reduced mean asset-seam error from `0.26997` to `0.00063` (`99.77%`);
+- increased mean multi-view score from `0.76898` to `0.82911`;
+- improved both measures for all four paired candidates.
+
+In the accepted live three-checkpoint run, the user selected:
+
+- theme keyword: `dragon`;
+- art direction: `Treasured Relic`;
+- artwork: `artwork_04`;
+- final route: Route B;
+- asset-seam error: `0.0007776109029832148`;
+- multi-view score: `0.8166198880536247`;
+- total score: `0.8291228922780649`.
+
+The Route C correction reduced the score by `0.02195902089447299`, so the Agent
+correctly rejected it and retained Route B. This rollback is part of the intended
+behavior rather than a failed execution.
+
+## Repository structure
+
+```text
+config/                 Asset, model, theme, style, and route configuration
+src/skinsmith/          Agent runtime, generation, UV, rendering, and evaluation
+scripts/                Planning, experiment, diagnostics, and replay entry points
+tests/                  Unit and integration tests
+assets/showcase/        Project-owned example artwork
+report/overleaf/        Overleaf-ready report source, figures, tables, and BibTeX
+report/build/           Compiled report, A0 poster, presentation, and Overleaf ZIP
+streamlit_app.py        Thin interactive client over the same Agent runtime
 ```
 
-Use `--theme-provider openai` to switch providers. `--theme-model` and
-`--api-key-env` are explicit overrides, so model selection is configuration rather
-than hard-coded project logic. Candidate count should expand only after the first
-paid five-image smoke completes mapped A/B previews successfully.
+`runs/`, `third_party/`, local environments, model weights, API traces, Valve
+assets, and temporary rendering files are intentionally excluded from GitHub.
 
-The live marble test now compiles both layers dynamically. Its first pass exposed
-the incorrect cached botanical style; the corrected pass generated the geological
-material style `abyssal_vein_marble_v1`, with exact seven-component coverage and
-four candidate directions. Redacted evidence is preserved under
-`runs/theme_compilation_marble_dynamic_style/`. No paid image was generated in this
-text-only acceptance.
+## Requirements
 
-After Gemini Paid Tier is enabled, internal A/B source assets can be generated with:
+- Windows and PowerShell are used by the documented commands.
+- Python 3.13 is the verified local version.
+- A project-local virtual environment is recommended.
+- The deterministic procedural path does not require an image API.
+- Provider-backed generation requires a developer API key supplied through an
+  environment variable.
+- Real AK-47 or M4A4 mapping requires locally obtained, authorized geometry. See
+  `ASSET_SETUP.md`; Valve geometry and UV files are not redistributed here.
 
-```powershell
-& '.\.venv\Scripts\python.exe' scripts\generate_route_assets.py `
-  runs\theme_compilation_chip_circuit\route_design_bundle.json `
-  --output runs\nano_banana_chip_circuit
-```
-
-This command intentionally does not mark square images as accepted. They must still
-pass the UV-mapping and AK-47 left/right/top preview stages.
-
-Paid Tier is now active and the locked five-image marble smoke has completed: one
-Route-A template plus hero/secondary/connector/background Route-B assets. The
-resumable checkpoint prevented duplicate calls across transient TLS failures. Both
-routes were mapped to the real AK-47 and rendered from left/right/top; evidence is
-under `runs/nano_banana_marble_dynamic_style/`. That preserved Round 0 passes the
-`0.01` asset-seam gate and outperforms Route A automatically, but its hero/connector
-contain forbidden weapon-mockup fragments. A separate role-local refinement under
-`runs/nano_banana_marble_dynamic_style_refined/` regenerates only those two paid
-assets, reuses secondary/background, and remaps the same plan. Its corrected asset
-seam is `0.006540`, multi-view score is `0.725273`, and total score is `0.763492`;
-the AK preview no longer exposes a ghost weapon or rectangular source boundary. This
-is an accepted 512 refinement candidate.
-
-Candidate expansion is now direction-aware: `generate_route_assets.py --direction`
-locks one validated StylePack alternative into distinct A/B prompts, while `--role`
-still supports failure-local retries. A `tectonic_cluster` alternative exposed and
-then verified a coordinate bug: canonical longitudinal/up anchors and top-left image
-layer coordinates must be converted separately. After that fix, the retained
-single-fissure candidate was selected at 512 (`asset seam 0.007113`, multi-view
-`0.735170`, total `0.782189`) and baked to a formal 2048 RGB TGA with an 8 px safety
-band (`asset seam 0.003943`, multi-view `0.749259`). The remaining gate is visual
-confirmation in CS2 Workbench, not another image-generation call.
-
-The first Workbench import then exposed an asset-contract mismatch rather than a
-generation failure: the atlas was correct for the bound new-CS2 geometry OBJ, but
-that UV was not accepted as the deployment layout for the tested Workbench path.
-`config/assets/ak47_workbench_official.json` now binds Valve's matching official
-Workbench AK-47 OBJ and UV sheet by hash and paints only faces inside its official
-0-1 atlas. The re-baked 2048 candidate records asset seam `0.004429` and retains
-`96.16%` of raw multi-view score. It is pending one Workbench reimport.
-
-For Workbench inspection, formal A/B/C all use `Custom Paint Job`; this keeps the
-finish style fixed while the design route changes. Route A may additionally be shown
-with `Hydrographic` or `Spray-Paint`, but that pattern-native preview is showcase-only.
-Optional C+ uses `Gunsmith` and is excluded from ablation statistics. The complete
-local lookup and filename suffixes are locked in `WORKBENCH_VIEWING_GUIDE.md` and
-`config/workbench_finish_profiles.json`; routine work should use those files instead
-of re-reading the Valve website.
-
-To inspect the corrected, genuinely different A/B/C design logic using the `Wild Lotus`
-example without spending a generation run:
+Install the Python dependencies:
 
 ```powershell
-& '.\.venv\Scripts\python.exe' scripts\plan_design_routes.py `
-  "Design an AK-47 skin called Wild Lotus, inspired by a night pond" `
-  --output runs\design_planning_wild_lotus\route_design_bundle.json
+python -m venv .venv
+& '.\.venv\Scripts\python.exe' -m pip install -r requirements.txt
 ```
 
 ## Quick start
 
-From this directory, using the project-local environment:
+Run the automated test suite:
+
+```powershell
+& '.\.venv\Scripts\python.exe' -m unittest discover -s tests -v
+```
+
+Run the deterministic smoke test:
 
 ```powershell
 & '.\.venv\Scripts\python.exe' scripts\smoke_test.py
 ```
 
-Replay the accepted Agent run in the thin Streamlit client without making any new
-model calls:
+Start the Streamlit client:
 
 ```powershell
 & '.\.venv\Scripts\python.exe' -m streamlit run streamlit_app.py
 ```
 
-The client defaults to `runs/agent_dragon_multicandidate_v1/` and presents the
-selected text direction, indivisible source-plus-left/right/top artwork cards,
-recommendation-only mapped-element readability, event/budget/retry state, rollback
-decision, and final PNG/TGA downloads. New-task mode invokes the existing Agent CLI
-for weapon selection, one-keyword ThemePack expansion and confirmation, direction
-selection, mapped-artwork selection, checkpoint resume, and formal 2048/TGA export;
-it does not duplicate the generation pipeline. AK-47 is the enabled full workflow;
-M4A4 is currently labelled as transfer evidence rather than an equivalent formal
-client target.
+The client exposes weapon selection, one-keyword theme expansion, direction
+selection, mapped-artwork selection, progress and retry state, final evaluation,
+rollback, and PNG/TGA export. Preserved-run replay is available only when the
+corresponding local `runs/` evidence is present.
 
-Outputs are written to `runs/smoke/`.
+## Optional provider-backed generation
 
-After following `ASSET_SETUP.md`, run the real-geometry path:
+Credentials are read from environment variables and are never intended to be
+stored in configuration, logs, or commits. For Gemini-backed generation:
 
 ```powershell
-& '.\.venv\Scripts\python.exe' scripts\real_model_smoke_test.py
+$env:GEMINI_API_KEY = "<set-locally>"
+& '.\.venv\Scripts\python.exe' scripts\run_skinsmith_agent.py dragon
 ```
 
-Outputs are written to `runs/real_model_smoke/`.
+Provider and model defaults are defined in `config/creative_api.json`. OpenAI and
+Gemini adapters share the same validated planning and generation interfaces.
 
-After the SD-Turbo model has been cached locally, run the diffusion acceptance paths:
+## Reproducibility and academic artifacts
 
-```powershell
-$env:HF_HOME = "$PWD\third_party\huggingface"
-$env:HF_HUB_OFFLINE = "1"
-& '.\.venv\Scripts\python.exe' scripts\diffusion_smoke_test.py
-& '.\.venv\Scripts\python.exe' scripts\diffusion_real_model_test.py
-```
+The repository includes:
 
-The pinned backend is `stabilityai/sd-turbo` revision
-`b261bac6fd2cf515557d5d0707481eafa0485ec2`, using two inference steps at 512 px.
-Model weights remain under ignored `third_party/` and must never be committed.
+- an Overleaf-ready report project under `report/overleaf/`;
+- the compiled report draft and Overleaf ZIP under `report/build/`;
+- an A0 landscape academic poster in PowerPoint and PDF formats;
+- a ten-slide supervisor presentation in PowerPoint and PDF formats;
+- machine-readable tables used by the report;
+- 100 automated tests covering the Agent, generation contracts, UV processing,
+  rendering, evaluation, selection, replay, and bounded refinement.
 
-Every run writes:
+Formal experiment payloads are not published because they include large generated
+assets and provider traces. The report contains an evidence index describing the
+preserved local records used for each claim.
 
-- `agent_log.json`: full specification, per-view metrics, weights, ranking, and timing;
-- `run_summary.csv`: compact candidate ranking for analysis and report tables;
-- `candidates/`: raw and seamless textures;
-- `previews/`: individual and combined weapon views.
+## Scope and limitations
 
-With real geometry, the final score uses 65% texture-constraint score and 35%
-multi-view render score. The deterministic baseline keeps a fixed seed so identical
-code and inputs can be checked by file hashes.
+- SkinSmith is an academic prototype, not a commercial authoring platform.
+- The current renderer is a controlled software evaluator, not a photorealistic
+  replacement for the game engine.
+- Automated semantic readability is recommendation-only.
+- AK-47 is the complete case; M4A4 provides bounded transfer evidence.
+- The system does not claim that one UV layout or texture transfers directly
+  across weapons.
+- Steam Workshop publication is outside the project scope.
 
-## Publication boundary
+## Responsible use and licensing
 
-- Code may be published after dependency and license review.
-- Valve models, UV sheets, and game files must not be committed to this repository.
-- Official UV sheets are optional adapter resources. A sheet may be used only
-  with its matching model/version; otherwise the atlas is derived from the OBJ.
-- Valve resource index: https://www.counter-strike.net/workshop/workshopresources
-- Generated samples must use original prompts and pass manual IP review.
-- Steam Workshop submission is explicitly outside the course deliverable.
+The repository does not redistribute Valve models, UV sheets, game files, model
+weights, or API credentials. Generated examples use original prompts and require
+manual rights review before external use. Counter-Strike 2 is referenced only as
+an academic case study; this project is not affiliated with or endorsed by Valve.
+
+See `LEGAL_NOTICE.md`, `ASSET_SETUP.md`, and the repository `LICENSE` before reuse.
