@@ -963,6 +963,42 @@ Python/environment:
   100 tests pass after the change.
 - The interrupted attempts, one transient SSL failure, rejected candidates, and
   corrected final run remain preserved as evidence. No API key is logged.
+- After visual review, the user rejected the colourful `artwork_04` mapping as
+  unattractive. A preserved branch at `runs/agent_flower_ornamental_v2/` selects
+  `artwork_02` (`Ornamental Tapestry`) and exports an independent 2048 Route-B
+  PNG/TGA. Its formal asset seam is `0.000575`, multi-view score is `0.738551`,
+  and Route C is rolled back after a `-0.018890` change. Use this cleaner floral
+  version for the next Workbench comparison unless the user rejects it too.
+- Raw `runs/` contains 2.43 GB and remains ignored. The tracked
+  `experiments/public/flower_workflow_v1/` package publishes 66 evidence files
+  (about 27.2 MB): checkpoints, events, planning, all four source/mapped cards,
+  source gates, sanitized API traces, final ornamental PNG/TGA, views, metrics,
+  and a SHA-256 manifest. Actual API keys, authorization values, Valve assets,
+  repeated intermediate textures, geometry caches, and long embedded binary
+  response fields remain excluded.
+
+## 8.8 Garden replacement and public evidence package (2026-07-20)
+
+- The user rejected both flower mappings and requested a new one-word task:
+  `garden`. `runs/agent_garden_demo_v1/` is now the current visual case.
+- CP1 expanded `garden` into the bioluminescent `Midnight Serenity` world with
+  spectral koi, glowing lotus, stone lanterns, bamboo, water ripples, willow, and
+  fireflies. CP2 produced four directions and locked
+  `candidate_02_direction_koi_flow` (`Spectral Movement`). CP3 compared four
+  source-plus-three-view cards and selected `artwork_02` (`Ornamental Tapestry`)
+  by visual judgment rather than the maximum automatic score.
+- Formal Route B selected edge width 4, asset seam `0.001246`, multi-view
+  `0.811677`, and total `0.817374`. Route C decreased the score by `0.016233` and
+  was rolled back. The 2048 TGA is
+  `runs/agent_garden_demo_v1/execution/route_b/selected__route-b__custom-paint-job.tga`
+  with SHA-256 `8615e42473d86719a6ebb1dc2f2fa239381f635ab9c648475c94430fe28f4bb0`.
+- `experiments/public/garden_workflow_v1/` publishes 49 evidence files (about
+  25.1 MB) with the same redaction and hash policy as the flower package. Both
+  package manifests verify and the combined public evidence scan finds no API
+  credential pattern.
+- The next action is user Workbench validation of the garden TGA, followed by a
+  presentation rebuild using garden CP1/CP2/CP3, formal export, and fixed engine
+  views. Do not use either flower mapping as the final visual case.
 
 ## 9. Non-negotiable boundaries
 

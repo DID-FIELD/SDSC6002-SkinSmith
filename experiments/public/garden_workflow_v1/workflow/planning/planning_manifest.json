@@ -1,0 +1,34 @@
+{
+  "request": {
+    "brief": "garden",
+    "asset_id": "cs2_ak47_new_geometry",
+    "style_family": null,
+    "candidate_budget": 4,
+    "direction_choice": null,
+    "budget": {
+      "max_image_calls": 8,
+      "max_role_retries": 4,
+      "max_refinement_rounds": 1
+    }
+  },
+  "asset_profile": "D:\\project\\SDSC6002-SkinSmith\\config\\assets\\ak47_weapon_space_anchors.json",
+  "theme": {
+    "id": "midnight_serenity_garden",
+    "source_mode": "generated",
+    "backend_id": "gemini:gemini-3.1-flash-lite",
+    "path": "runs\\agent_garden_demo_v1\\planning\\compiled_theme.json"
+  },
+  "style": {
+    "id": "midnight_serenity_01",
+    "source_mode": "generated",
+    "backend_id": "gemini:gemini-3.1-flash-lite:style",
+    "path": "runs\\agent_garden_demo_v1\\planning\\compiled_style.json"
+  },
+  "direction_ids": [
+    "candidate_01_direction_lantern_focus",
+    "candidate_02_direction_koi_flow",
+    "candidate_03_direction_bamboo_frame",
+    "candidate_04_direction_ethereal_mist"
+  ],
+  "route_design_bundle": "runs\\agent_garden_demo_v1\\planning\\route_design_bundle.json"
+}

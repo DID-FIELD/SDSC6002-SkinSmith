@@ -1,0 +1,67 @@
+{
+  "provider": "gemini",
+  "model": "gemini-3.1-flash-image",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/interactions",
+  "api_key_env": "GEMINI_API_KEY",
+  "api_key_recorded": false,
+  "request": {
+    "model": "gemini-3.1-flash-image",
+    "input": [
+      {
+        "type": "text",
+        "text": "Use case: stylized-concept. Asset type: tileable game weapon-skin texture source. Create an original dense all-over seamless template pattern for: flower. Theme elements: A large, semi-wilted peony flower with curling, translucent petal edges, rendered in fine-line ink illustration., A macro texture of fine, spiderweb-like cracks in old lacquer, creating a sense of aged material depth., Intertwining, thin, dry thorny vines that bridge the negative space between larger floral motifs., Single, wind-blown, curling petals resting on the barrel area, showing signs of browning edges., Subtle, tarnished brass ornamental flourishes that outline the receiver edges., Brittle, translucent leaves showing prominent vein structures, layered behind flowers., Micro-specks of light-colored debris scattered unevenly across the dark surfaces to imply a forgotten room., Soft, monochromatic ink bleeding patterns that transition between the botanical elements.. Style language: fine-line pen work, cross-hatched shadows, sepia-toned ink washes, spiderweb craquelure, desiccated vein structures, tarnished brass etchings. Palette: #2D3A2C, #8C7B75, #C4A484, #4A2E35, #D9D0C1. Pattern logic: The design utilizes a heavy 'aged lacquer' overlay that creates a high-gloss finish over the matte floral ink work.; Floral density should be highest on the receiver and decrease as the pattern moves toward the muzzle.; Avoid solid geometric repeats; favor an organic, asymmetrical arrangement that mimics an overgrown garden wall.. Every crop must remain visually complete; repeat partial elements across opposite edges; use many overlapping elements at varied scales; no unique hero or weapon-aware placement. Avoid: bright saturated neons, vectorized sharp edges, digital gradient blurs, photorealistic petal textures, large repeating geometric shapes. Locked candidate art direction: Decay Gradient (candidate_04_dir_04_decay_gradient). Concept: Visual metaphor for time: vibrant flora on stock, decaying to dust at muzzle.. Motifs: dying peony, fading ink, scattered petals. Expanded thematic world: Focal Peony, Varnish Craquelure, Barbed Tendrils, Petal Scatter, Oxidized Frame, Skeletonized Foliage, Atmospheric Dust, Stained Ink Wash, A large, semi-wilted peony flower with curling, translucent petal edges, rendered in fine-line ink illustration., A macro texture of fine, spiderweb-like cracks in old lacquer, creating a sense of aged material depth., Intertwining, thin, dry thorny vines that bridge the negative space between larger floral motifs., Single, wind-blown, curling petals resting on the barrel area, showing signs of browning edges., Subtle, tarnished brass ornamental flourishes that outline the receiver edges., Brittle, translucent leaves showing prominent vein structures, layered behind flowers., Micro-specks of light-colored debris scattered unevenly across the dark surfaces to imply a forgotten room., Soft, monochromatic ink bleeding patterns that transition between the botanical elements., small symbolic objects related to the main theme, environmental fragments that imply a complete world, atmospheric connectors and motion rhythms, fine material grain and ornamental micro-detail, peony bloom, thorny vine, skeleton leaf, curling petal, dust mote cloud, oxidized scrollwork, fine-line pen work, cross-hatched shadows, sepia-toned ink washes, spiderweb craquelure, desiccated vein structures, tarnished brass etchings, matte parchment texture, glossy varnish overlay with heavy crackle, patinated brass metallic highlights, absorbent paper grain. Route-A emphasis: Brief: flower. Style: A somber, archival-grade botanical study where vibrant life meets inevitable decomposition, preserved under layers of translucent, fractured lacquer.. Direction: Visual metaphor for time: vibrant flora on stock, decaying to dust at muzzle.. Visual language: fine-line pen work, cross-hatched shadows, sepia-toned ink washes, spiderweb craquelure, desiccated vein structures, tarnished brass etchings. Motifs: dying peony, fading ink, scattered petals. Palette: #2D3A2C, #8C7B75, #C4A484, #4A2E35, #D9D0C1. Material cues: matte parchment texture, glossy varnish overlay with heavy crackle, patinated brass metallic highlights, absorbent paper grain. Route A objective: Establish a seamless botanical tapestry that flows longitudinally across the weapon geometry.. tiling density distribution scaled to 0.75; no visible seam-lines; uniform vine interconnection. Emphasis: Seamless tonal transition from deep burgundy to ash. Required: maximum of three color overlaps, no hero flowers crossing component boundaries. Avoid: bright saturated neons, vectorized sharp edges, digital gradient blurs, photorealistic petal textures, large repeating geometric shapes.. Do not drift to another art direction. Candidate 1 of 1. Output only the square artwork: no weapon, text, logo, watermark, presentation border, UV wireframe, or mockup."
+      }
+    ],
+    "response_format": {
+      "type": "image",
+      "mime_type": "image/jpeg",
+      "aspect_ratio": "1:1",
+      "image_size": "1K"
+    }
+  },
+  "response": {
+    "id": "v1_ChdOREplYXFlWklaZnVuc0VQaWVuVzhRRRIXTkRKZWFxZVpJWmZ1bnNFUGllblc4UUU",
+    "status": "completed",
+    "usage": {
+      "total_tokens": 2612,
+      "total_input_tokens": 1040,
+      "input_tokens_by_modality": [
+        {
+          "modality": "text",
+          "tokens": 1040
+        }
+      ],
+      "total_cached_tokens": 0,
+      "total_output_tokens": 1572,
+      "output_tokens_by_modality": [
+        {
+          "modality": "image",
+          "tokens": 1120
+        }
+      ],
+      "total_tool_use_tokens": 0,
+      "total_thought_tokens": 0
+    },
+    "created": "2026-07-20T14:35:32Z",
+    "updated": "2026-07-20T14:35:32Z",
+    "service_tier": "standard",
+    "steps": [
+      {
+        "signature": "<omitted-long-value length=1927832 sha256=3e178254a343ab015a281270b751cf778600d6863ee040c52a236ce3c1a7914a>",
+        "type": "thought"
+      },
+      {
+        "content": [
+          {
+            "mime_type": "image/jpeg",
+            "data": "<omitted-long-value length=1513292 sha256=f443add5eb8c412b76c09f1aa26f31b87f9c733b6ead05ecb9a4a652a48cd6d8>",
+            "type": "image"
+          }
+        ],
+        "type": "model_output"
+      }
+    ],
+    "object": "interaction",
+    "model": "gemini-3.1-flash-image"
+  }
+}

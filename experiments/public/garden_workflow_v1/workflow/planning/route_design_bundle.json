@@ -1,0 +1,261 @@
+{
+  "brief": "garden",
+  "theme_name": "Midnight Serenity",
+  "style_name": "Midnight Serenity",
+  "pattern": {
+    "route": "A",
+    "design_object": "tileable_template_pattern",
+    "brief": "garden",
+    "theme_id": "midnight_serenity_garden",
+    "style_id": "midnight_serenity_01",
+    "palette": [
+      "#0B132B",
+      "#1C2541",
+      "#3A506B",
+      "#7FFFD4",
+      "#E94560",
+      "#F4F4F4"
+    ],
+    "element_ids": [
+      "stone_lantern",
+      "koi_fish",
+      "lotus_pad",
+      "bamboo_stalks",
+      "raindrop_ripples",
+      "stone_texture",
+      "hanging_willow",
+      "firefly_dust"
+    ],
+    "density_strategy": "dense_all_over_with_varied_scale_and_crop_tolerance",
+    "source_canvas": [
+      1024,
+      1024
+    ],
+    "generation_prompt": "Create an original dense all-over seamless template pattern for: garden. Theme elements: An ornate, moss-covered stone lantern emitting a soft, ethereal cyan glow., A graceful, semi-translucent koi fish with flowing fins, caught mid-turn in dark water., Closed and partially blooming lotus flowers with bioluminescent tips., Vertical, segmented bamboo stalks that serve as grounding frame lines., Subtle, overlapping circular ripples on a dark, wet-stone texture., Dark, worn flagstone paving tiles with fine fissures and moss accumulation., Delicate, trailing willow branches that frame the upper edge of the receiver., Tiny, scattered pin-points of light creating depth and motion across the canvas.. Style language: wet slate crackle, bioluminescent flora veins, submerged refractive ripples, bamboo segment geometry, floating firefly particle drift. Palette: #0B132B, #1C2541, #3A506B, #7FFFD4, #E94560, #F4F4F4. Pattern logic: Utilize a seamless, dark-to-light gradient across the weapon body to mimic the transition from the dark floor of the garden to the illuminated water surface.; The receiver should prioritize the stone lantern and the koi as the central focus.. Every crop must remain visually complete; repeat partial elements across opposite edges; use many overlapping elements at varied scales; no unique hero or weapon-aware placement. Avoid: sharp vector edges, uniform grid layouts, bright daylight saturation, industrial hardware schematics, hyper-realistic human anatomy.",
+    "constraints": [
+      "square source is the actual design object",
+      "seamless on all four edges",
+      "arbitrary crops remain complete",
+      "no single irreplaceable focal subject",
+      "must be reviewed on AK-47 left/right/top previews"
+    ],
+    "required_outputs": [
+      "source_pattern_square",
+      "three_by_three_tile_preview",
+      "mapped_uv_texture",
+      "ak47_left_preview",
+      "ak47_right_preview",
+      "ak47_top_preview"
+    ]
+  },
+  "weapon_theme": {
+    "route": "B",
+    "design_object": "weapon_space_theme_composition",
+    "brief": "garden",
+    "theme_id": "midnight_serenity_garden",
+    "style_id": "midnight_serenity_01",
+    "palette": [
+      "#0B132B",
+      "#1C2541",
+      "#3A506B",
+      "#7FFFD4",
+      "#E94560",
+      "#F4F4F4"
+    ],
+    "focal_component": "receiver",
+    "source_square_semantics": "one dense master artwork used as the continuous weapon-surface design",
+    "final_square_semantics": "fragmented UV-atlas storage of the weapon design, not a standalone picture",
+    "asset_briefs": [
+      {
+        "asset_id": "midnight_serenity_garden_master_artwork",
+        "semantic_role": "master_artwork",
+        "element_ids": [
+          "stone_lantern",
+          "koi_fish",
+          "lotus_pad",
+          "bamboo_stalks",
+          "raindrop_ripples",
+          "stone_texture",
+          "hanging_willow",
+          "firefly_dust"
+        ],
+        "source_canvas": [
+          1536,
+          864
+        ],
+        "background_policy": "dense opaque edge-to-edge master artwork",
+        "generation_prompt": "Generate one original dense landscape master artwork, approximately 16:9, for the Midnight Serenity weapon-skin theme. Theme content: An ornate, moss-covered stone lantern emitting a soft, ethereal cyan glow.; A graceful, semi-translucent koi fish with flowing fins, caught mid-turn in dark water.; Closed and partially blooming lotus flowers with bioluminescent tips.; Vertical, segmented bamboo stalks that serve as grounding frame lines.; Subtle, overlapping circular ripples on a dark, wet-stone texture.; Dark, worn flagstone paving tiles with fine fissures and moss accumulation.; Delicate, trailing willow branches that frame the upper edge of the receiver.; Tiny, scattered pin-points of light creating depth and motion across the canvas.. Narrative: The weapon becomes a cross-section of a secret moonlit courtyard. The stock anchors the scene in a dark, mossy perimeter, while the receiver serves as the primary pond feature, with the magazine acting as a submerged descent into the water.. Theme enrichment notes: Utilize a seamless, dark-to-light gradient across the weapon body to mimic the transition from the dark floor of the garden to the illuminated water surface.; The receiver should prioritize the stone lantern and the koi as the central focus.. Style: A high-contrast exploration of a nocturnal garden where cold stone textures are punctured by ethereal, glowing botanical and aquatic life forms. The aesthetic balances architectural rigidity with fluid organic motion.. Visual language: wet slate crackle, bioluminescent flora veins, submerged refractive ripples, bamboo segment geometry, floating firefly particle drift. Palette: #0B132B, #1C2541, #3A506B, #7FFFD4, #E94560, #F4F4F4. Fill the complete canvas with layered, high-quality, high-density visual information at several scales. Every large crop must remain attractive and richly detailed. Build a complete thematic world with many medium and small clusters: primary forms, related symbolic objects, environment, architecture or nature, atmospheric connectors, linework, and material texture. No single subject may dominate more than roughly 35% of the canvas width or height, and no subject may stretch across the full image width. Weave these elements through every region rather than arranging isolated stickers on empty space. Do not split it into component assets and do not reserve large plain or near-black areas. This image will be fitted to continuous weapon space and automatically cut into the OBJ-derived UV atlas. Do not draw a weapon, weapon mockup, UV layout, text, logo, watermark, frame, presentation board, or product render.",
+        "composition_group_id": "master_artwork",
+        "composition_mode": "background",
+        "target_components": [
+          "stock",
+          "receiver",
+          "magazine",
+          "pistol_grip",
+          "handguard",
+          "front_assembly",
+          "barrel_muzzle"
+        ]
+      }
+    ],
+    "component_layout": [
+      {
+        "component": "stock",
+        "canvas_center": [
+          0.14,
+          0.31
+        ],
+        "narrative_role": "The tranquil corner of the garden where the stone lantern sits among bamboo.",
+        "element_ids": [
+          "stone_lantern",
+          "bamboo_stalks"
+        ],
+        "prominence": 0.6,
+        "detail_density": 0.4
+      },
+      {
+        "component": "receiver",
+        "canvas_center": [
+          0.45,
+          0.2
+        ],
+        "narrative_role": "The central pond surface housing the primary glowing koi and lotus.",
+        "element_ids": [
+          "koi_fish",
+          "lotus_pad",
+          "raindrop_ripples"
+        ],
+        "prominence": 1.0,
+        "detail_density": 0.9
+      },
+      {
+        "component": "magazine",
+        "canvas_center": [
+          0.5,
+          0.56
+        ],
+        "narrative_role": "The depths of the pond, showing submerged koi and bottom-dwelling patterns.",
+        "element_ids": [
+          "koi_fish",
+          "raindrop_ripples"
+        ],
+        "prominence": 0.7,
+        "detail_density": 0.6
+      },
+      {
+        "component": "pistol_grip",
+        "canvas_center": [
+          0.43,
+          0.47
+        ],
+        "narrative_role": "Grounded edge of the stone path.",
+        "element_ids": [
+          "stone_texture"
+        ],
+        "prominence": 0.3,
+        "detail_density": 0.2
+      },
+      {
+        "component": "handguard",
+        "canvas_center": [
+          0.72,
+          0.11
+        ],
+        "narrative_role": "Overhanging willow branches leading the eye toward the front.",
+        "element_ids": [
+          "hanging_willow",
+          "firefly_dust"
+        ],
+        "prominence": 0.5,
+        "detail_density": 0.5
+      },
+      {
+        "component": "front_assembly",
+        "canvas_center": [
+          0.82,
+          0.16
+        ],
+        "narrative_role": "Fading garden edge into the darkness.",
+        "element_ids": [
+          "firefly_dust"
+        ],
+        "prominence": 0.3,
+        "detail_density": 0.3
+      },
+      {
+        "component": "barrel_muzzle",
+        "canvas_center": [
+          0.94,
+          0.2
+        ],
+        "narrative_role": "Quiet, dark transition to the void.",
+        "element_ids": [
+          "stone_texture"
+        ],
+        "prominence": 0.1,
+        "detail_density": 0.1
+      }
+    ],
+    "composition_graph": {
+      "strategy": "master_artwork",
+      "groups": [],
+      "relations": []
+    },
+    "composition_prompt": "Create one dense whole-canvas master artwork for garden. Theme narrative: The weapon becomes a cross-section of a secret moonlit courtyard. The stock anchors the scene in a dark, mossy perimeter, while the receiver serves as the primary pond feature, with the magazine acting as a submerged descent into the water.. Style: A high-contrast exploration of a nocturnal garden where cold stone textures are punctured by ethereal, glowing botanical and aquatic life forms. The aesthetic balances architectural rigidity with fluid organic motion.. Use the complete palette and visual language across the image. The artwork must remain attractive under arbitrary cropping and must provide useful detail throughout the canvas. It will be fitted to continuous left/right/top weapon canvases and automatically cut into the fragmented OBJ-derived UV atlas. Do not design separate component stickers and do not require a named motif part to land on a named weapon component.",
+    "pipeline": [
+      "generate one dense master artwork by default; preserve graph/legacy fallbacks for old bundles",
+      "fit the artwork to continuous left/right/top weapon-space canvases",
+      "bake weapon-space canvases through position/normal maps into one square UV atlas",
+      "apply UV-edge safety correction",
+      "render AK-47 left/right/top previews before accepting the candidate"
+    ],
+    "constraints": [
+      "do not tile one square pattern across all components",
+      "default Route B uses one dense edge-to-edge master artwork, not isolated component stickers",
+      "master artwork must remain visually useful under crop and across the full canvas",
+      "do not require semantic subparts to land on predetermined components",
+      "accept visual quality only from mapped multi-view previews"
+    ],
+    "required_outputs": [
+      "generated_square_source_assets",
+      "weapon_space_left_canvas",
+      "weapon_space_right_canvas",
+      "weapon_space_top_canvas",
+      "final_square_uv_atlas",
+      "ak47_left_preview",
+      "ak47_right_preview",
+      "ak47_top_preview"
+    ]
+  },
+  "refinement": {
+    "route": "C",
+    "base_route": "B",
+    "inputs": [
+      "Route-B UV atlas",
+      "left/right/top renders",
+      "semantic and technical scores"
+    ],
+    "allowed_actions": [
+      "move or resize the receiver hero in weapon space",
+      "reduce detail on one semantic component",
+      "replace one theme asset while preserving the composition plan",
+      "adjust connector flow or quiet-zone strength",
+      "re-bake and re-render without changing unrelated components"
+    ],
+    "acceptance_rule": "accept only if hard constraints pass and agent score improves by at least 0.01; otherwise roll back",
+    "required_outputs": [
+      "diagnosis",
+      "localized change record",
+      "new previews",
+      "accept_or_rollback decision"
+    ]
+  },
+  "invariants": [
+    "A and B share theme, style, palette, generation backend, resolution, and evaluation cameras",
+    "A designs the square pattern; B designs the weapon and stores the result in a square UV atlas",
+    "C is B plus bounded render-conditioned correction, not a third art style",
+    "no candidate is shown as accepted without mapped weapon previews"
+  ],
+  "theme_pack_path": "runs\\agent_garden_demo_v1\\planning\\compiled_theme.json",
+  "style_pack_path": "runs\\agent_garden_demo_v1\\planning\\compiled_style.json"
+}

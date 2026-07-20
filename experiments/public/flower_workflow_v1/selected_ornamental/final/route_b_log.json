@@ -1,0 +1,531 @@
+{
+  "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_selected.png",
+  "texture_tga": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\selected__route-b__custom-paint-job.tga",
+  "previews": [
+    "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_left.png",
+    "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_right.png",
+    "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_top.png",
+    "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_multiview.png"
+  ],
+  "score": {
+    "candidate_id": "width_4",
+    "seam_score": 0.993692102975079,
+    "contrast_score": 0.7428445482943976,
+    "saturation_score": 0.45992244422705475,
+    "coverage_score": 0.6512350506252713,
+    "texture_score": 0.7728577247028326,
+    "multi_view": {
+      "views": [
+        {
+          "view_name": "left",
+          "foreground_ratio": 0.08498649691358025,
+          "contrast_score": 0.5961947077663355,
+          "saturation_score": 0.44865161821938404,
+          "detail_score": 1.0,
+          "mean_luminance": 0.3366293308979856
+        },
+        {
+          "view_name": "right",
+          "foreground_ratio": 0.07738425925925926,
+          "contrast_score": 0.5967666032845543,
+          "saturation_score": 0.47898274491155135,
+          "detail_score": 1.0,
+          "mean_luminance": 0.32513270339544736
+        },
+        {
+          "view_name": "top",
+          "foreground_ratio": 0.03456983024691358,
+          "contrast_score": 0.6371218424228895,
+          "saturation_score": 0.4521086891917039,
+          "detail_score": 1.0,
+          "mean_luminance": 0.35564323156861655
+        }
+      ],
+      "consistency_score": 0.9370936583727598,
+      "total_score": 0.7385509517968452
+    },
+    "semantic": null,
+    "total_score": 0.7608503541857371
+  },
+  "constraints_passed": true,
+  "metrics": {
+    "selected_edge_width": 4,
+    "asset_seam": {
+      "seam_pair_count": 4999,
+      "samples_per_edge": 16,
+      "color_error": 0.0006834329114681682,
+      "gradient_error": 0.00024865550599955104,
+      "total_error": 0.000574738560101014
+    },
+    "multi_view_score": 0.7385509517968452,
+    "multi_view_retention": 1.0016229718379743,
+    "total_score": 0.7608503541857371,
+    "constraints_passed": true
+  },
+  "artifacts": {
+    "raw_texture": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\uv_baked_raw.png",
+    "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_selected.png",
+    "texture_tga": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\selected__route-b__custom-paint-job.tga",
+    "previews": [
+      "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_left.png",
+      "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_right.png",
+      "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_top.png",
+      "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_multiview.png"
+    ],
+    "weapon_space_canvases": {
+      "left": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\weapon_space_left.png",
+      "right": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\weapon_space_right.png",
+      "top": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\weapon_space_top.png"
+    }
+  },
+  "asset_verification": {
+    "mesh_sha256": "dae29ee5cadfbf17f84d50d0fe1d50500988e45886571f17bf5eab0d4065654f",
+    "uv_sheet_sha256": null
+  },
+  "asset_contract": {
+    "asset_spec": {
+      "asset_id": "cs2_ak47_new_geometry",
+      "display_name": "AK-47 (new CS2 Workshop geometry)",
+      "game": "Counter-Strike 2",
+      "mesh_path": "D:\\project\\SDSC6002-SkinSmith\\third_party\\valve_geometry\\weapon_rif_ak47.obj",
+      "mesh_sha256": "dae29ee5cadfbf17f84d50d0fe1d50500988e45886571f17bf5eab0d4065654f",
+      "mesh_version": "Valve Workshop Resources: NEW CS2 weapon model geometry",
+      "uv_source": "mesh_derived_from_same_obj",
+      "uv_address_mode": "clamp",
+      "uv_sheet_path": null,
+      "uv_sheet_sha256": null,
+      "texture_size": 2048,
+      "export_format": "TGA 24-bit Custom Paint exact-fit",
+      "camera_views": [
+        "left",
+        "right",
+        "top"
+      ],
+      "semantic_region_order": [
+        "magazine",
+        "pistol_grip",
+        "handguard",
+        "barrel_muzzle",
+        "stock",
+        "receiver",
+        "front_assembly"
+      ],
+      "default_region": "other",
+      "source_path": "D:\\project\\SDSC6002-SkinSmith\\config\\assets\\ak47_cs2.json"
+    },
+    "canonical_frame_axes": {
+      "longitudinal_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "up_axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    }
+  },
+  "geometry_maps": {
+    "size": 2048,
+    "valid_pixel_count": 2971821,
+    "valid_pixel_fraction": 0.7085373401641846,
+    "overlap_pixel_count": 15375,
+    "overlap_pixel_fraction": 0.0036656856536865234,
+    "maximum_coverage_count": 14
+  },
+  "content_provenance": {
+    "master_artwork__side": {
+      "semantic_role": "master_artwork",
+      "composition_group_id": "master_artwork",
+      "source_path": "runs\\agent_flower_ornamental_v2\\execution\\generated_sources\\route_b_master_artwork.png",
+      "sha256": "dac71aeaa9d061e154020e929c08feea49000f37f5121cae3dff0fd75ccc7abc"
+    },
+    "master_artwork__top": {
+      "semantic_role": "master_artwork",
+      "composition_group_id": "master_artwork",
+      "source_path": "runs\\agent_flower_ornamental_v2\\execution\\generated_sources\\route_b_master_artwork.png",
+      "sha256": "dac71aeaa9d061e154020e929c08feea49000f37f5121cae3dff0fd75ccc7abc"
+    }
+  },
+  "composition_mode": "continuous_master_artwork_obj_uv_bake",
+  "edge_candidates": {
+    "width_0": {
+      "width": 0,
+      "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\width_0.png",
+      "previews": [
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_0_left.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_0_right.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_0_top.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_0_multiview.png"
+      ],
+      "asset_seam": {
+        "seam_pair_count": 4999,
+        "samples_per_edge": 16,
+        "color_error": 0.1033512629095906,
+        "gradient_error": 0.031190450536636872,
+        "total_error": 0.08531105981635216
+      },
+      "score": {
+        "candidate_id": "route_b_width_0",
+        "seam_score": 0.9900053933795009,
+        "contrast_score": 0.7840740530307183,
+        "saturation_score": 0.4628513481462343,
+        "coverage_score": 0.7435493999057347,
+        "texture_score": 0.796123350224587,
+        "multi_view": {
+          "views": [
+            {
+              "view_name": "left",
+              "foreground_ratio": 0.08633101851851852,
+              "contrast_score": 0.5998213060148913,
+              "saturation_score": 0.4519292359485415,
+              "detail_score": 1.0,
+              "mean_luminance": 0.3403963453370802
+            },
+            {
+              "view_name": "right",
+              "foreground_ratio": 0.07875192901234568,
+              "contrast_score": 0.6010616387678864,
+              "saturation_score": 0.48134654870003013,
+              "detail_score": 1.0,
+              "mean_luminance": 0.32900563140136646
+            },
+            {
+              "view_name": "top",
+              "foreground_ratio": 0.03445601851851852,
+              "contrast_score": 0.6401340613066322,
+              "saturation_score": 0.45496873719126685,
+              "detail_score": 1.0,
+              "mean_luminance": 0.3684592771158402
+            }
+          ],
+          "consistency_score": 0.9171033501625061,
+          "total_score": 0.7373542466199702
+        },
+        "semantic": null,
+        "total_score": 0.775554163962971
+      },
+      "multi_view_retention": 1.0
+    },
+    "width_4": {
+      "width": 4,
+      "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\width_4.png",
+      "previews": [
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_left.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_right.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_top.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_multiview.png"
+      ],
+      "asset_seam": {
+        "seam_pair_count": 4999,
+        "samples_per_edge": 16,
+        "color_error": 0.0006834329114681682,
+        "gradient_error": 0.00024865550599955104,
+        "total_error": 0.000574738560101014
+      },
+      "score": {
+        "candidate_id": "width_4",
+        "seam_score": 0.993692102975079,
+        "contrast_score": 0.7428445482943976,
+        "saturation_score": 0.45992244422705475,
+        "coverage_score": 0.6512350506252713,
+        "texture_score": 0.7728577247028326,
+        "multi_view": {
+          "views": [
+            {
+              "view_name": "left",
+              "foreground_ratio": 0.08498649691358025,
+              "contrast_score": 0.5961947077663355,
+              "saturation_score": 0.44865161821938404,
+              "detail_score": 1.0,
+              "mean_luminance": 0.3366293308979856
+            },
+            {
+              "view_name": "right",
+              "foreground_ratio": 0.07738425925925926,
+              "contrast_score": 0.5967666032845543,
+              "saturation_score": 0.47898274491155135,
+              "detail_score": 1.0,
+              "mean_luminance": 0.32513270339544736
+            },
+            {
+              "view_name": "top",
+              "foreground_ratio": 0.03456983024691358,
+              "contrast_score": 0.6371218424228895,
+              "saturation_score": 0.4521086891917039,
+              "detail_score": 1.0,
+              "mean_luminance": 0.35564323156861655
+            }
+          ],
+          "consistency_score": 0.9370936583727598,
+          "total_score": 0.7385509517968452
+        },
+        "semantic": null,
+        "total_score": 0.7608503541857371
+      },
+      "multi_view_retention": 1.0016229718379743
+    },
+    "width_8": {
+      "width": 8,
+      "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\width_8.png",
+      "previews": [
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_8_left.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_8_right.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_8_top.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_8_multiview.png"
+      ],
+      "asset_seam": {
+        "seam_pair_count": 4999,
+        "samples_per_edge": 16,
+        "color_error": 0.000239274169756494,
+        "gradient_error": 8.80173817125293e-05,
+        "total_error": 0.00020145997274550282
+      },
+      "score": {
+        "candidate_id": "width_8",
+        "seam_score": 0.9955326558223793,
+        "contrast_score": 0.7139677566036314,
+        "saturation_score": 0.4582390903887166,
+        "coverage_score": 0.595537821451823,
+        "texture_score": 0.7576834927753764,
+        "multi_view": {
+          "views": [
+            {
+              "view_name": "left",
+              "foreground_ratio": 0.08410493827160494,
+              "contrast_score": 0.5913484567828481,
+              "saturation_score": 0.4454745942131263,
+              "detail_score": 1.0,
+              "mean_luminance": 0.3324728368411585
+            },
+            {
+              "view_name": "right",
+              "foreground_ratio": 0.07648341049382716,
+              "contrast_score": 0.5913196130723324,
+              "saturation_score": 0.4768050046396952,
+              "detail_score": 1.0,
+              "mean_luminance": 0.32125321262707707
+            },
+            {
+              "view_name": "top",
+              "foreground_ratio": 0.034602623456790126,
+              "contrast_score": 0.6341899959456614,
+              "saturation_score": 0.4506010059452308,
+              "detail_score": 1.0,
+              "mean_luminance": 0.34721491673935717
+            }
+          ],
+          "consistency_score": 0.9468435626477003,
+          "total_score": 0.7381190580437436
+        },
+        "semantic": null,
+        "total_score": 0.7508359406193049
+      },
+      "multi_view_retention": 1.0010372374300132
+    },
+    "width_12": {
+      "width": 12,
+      "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\width_12.png",
+      "previews": [
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_12_left.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_12_right.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_12_top.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_12_multiview.png"
+      ],
+      "asset_seam": {
+        "seam_pair_count": 4999,
+        "samples_per_edge": 16,
+        "color_error": 0.0001543447678419713,
+        "gradient_error": 5.704031629058334e-05,
+        "total_error": 0.0001300186549541243
+      },
+      "score": {
+        "candidate_id": "width_12",
+        "seam_score": 0.9974343200613346,
+        "contrast_score": 0.6885866707074949,
+        "saturation_score": 0.4570210411537827,
+        "coverage_score": 0.5538543065388998,
+        "texture_score": 0.7456027499129991,
+        "multi_view": {
+          "views": [
+            {
+              "view_name": "left",
+              "foreground_ratio": 0.08318479938271604,
+              "contrast_score": 0.5870939118938389,
+              "saturation_score": 0.4423141717215714,
+              "detail_score": 1.0,
+              "mean_luminance": 0.3283829701906039
+            },
+            {
+              "view_name": "right",
+              "foreground_ratio": 0.07564236111111111,
+              "contrast_score": 0.5855686156195948,
+              "saturation_score": 0.4749871520045277,
+              "detail_score": 1.0,
+              "mean_luminance": 0.3172358306543998
+            },
+            {
+              "view_name": "top",
+              "foreground_ratio": 0.034639274691358024,
+              "contrast_score": 0.6304609339390849,
+              "saturation_score": 0.44959464502556,
+              "detail_score": 1.0,
+              "mean_luminance": 0.34033633724136203
+            }
+          ],
+          "consistency_score": 0.9528367398306727,
+          "total_score": 0.7371458545158244
+        },
+        "semantic": null,
+        "total_score": 0.7426428365239879
+      },
+      "multi_view_retention": 0.9997173785801043
+    },
+    "width_16": {
+      "width": 16,
+      "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\width_16.png",
+      "previews": [
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_16_left.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_16_right.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_16_top.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_16_multiview.png"
+      ],
+      "asset_seam": {
+        "seam_pair_count": 4999,
+        "samples_per_edge": 16,
+        "color_error": 0.00012641831521192,
+        "gradient_error": 4.6676685489540787e-05,
+        "total_error": 0.0001064829077813252
+      },
+      "score": {
+        "candidate_id": "width_16",
+        "seam_score": 0.9983899674511382,
+        "contrast_score": 0.6655790445368991,
+        "saturation_score": 0.45621880578778984,
+        "coverage_score": 0.514874193403456,
+        "texture_score": 0.7342256382827564,
+        "multi_view": {
+          "views": [
+            {
+              "view_name": "left",
+              "foreground_ratio": 0.08212962962962964,
+              "contrast_score": 0.5838713229764529,
+              "saturation_score": 0.43978706448034655,
+              "detail_score": 1.0,
+              "mean_luminance": 0.32504190890937357
+            },
+            {
+              "view_name": "right",
+              "foreground_ratio": 0.07473572530864198,
+              "contrast_score": 0.579433303053531,
+              "saturation_score": 0.47284481964902414,
+              "detail_score": 1.0,
+              "mean_luminance": 0.31333407223974175
+            },
+            {
+              "view_name": "top",
+              "foreground_ratio": 0.0345679012345679,
+              "contrast_score": 0.625528671165002,
+              "saturation_score": 0.44850374043848307,
+              "detail_score": 1.0,
+              "mean_luminance": 0.334718793767507
+            }
+          ],
+          "consistency_score": 0.9562830617651343,
+          "total_score": 0.7357537576982566
+        },
+        "semantic": null,
+        "total_score": 0.7347604800781815
+      },
+      "multi_view_retention": 0.9978294165537797
+    },
+    "width_24": {
+      "width": 24,
+      "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\width_24.png",
+      "previews": [
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_24_left.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_24_right.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_24_top.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_24_multiview.png"
+      ],
+      "asset_seam": {
+        "seam_pair_count": 4999,
+        "samples_per_edge": 16,
+        "color_error": 0.00010600098073740638,
+        "gradient_error": 4.00806285884944e-05,
+        "total_error": 8.952089270017838e-05
+      },
+      "score": {
+        "candidate_id": "width_24",
+        "seam_score": 0.9992075117604274,
+        "contrast_score": 0.6261274358809757,
+        "saturation_score": 0.4551019783652924,
+        "coverage_score": 0.44951968722873265,
+        "texture_score": 0.7146632124317834,
+        "multi_view": {
+          "views": [
+            {
+              "view_name": "left",
+              "foreground_ratio": 0.0800192901234568,
+              "contrast_score": 0.579082278140353,
+              "saturation_score": 0.435225571315782,
+              "detail_score": 1.0,
+              "mean_luminance": 0.31926495876784733
+            },
+            {
+              "view_name": "right",
+              "foreground_ratio": 0.07280671296296297,
+              "contrast_score": 0.5673198830704999,
+              "saturation_score": 0.46902547110610626,
+              "detail_score": 1.0,
+              "mean_luminance": 0.30634430069619456
+            },
+            {
+              "view_name": "top",
+              "foreground_ratio": 0.03449266975308642,
+              "contrast_score": 0.6187337997877547,
+              "saturation_score": 0.44621248756759,
+              "detail_score": 1.0,
+              "mean_luminance": 0.3249862105795285
+            }
+          ],
+          "consistency_score": 0.9610129208303988,
+          "total_score": 0.7332041617235437
+        },
+        "semantic": null,
+        "total_score": 0.7211525446838996
+      },
+      "multi_view_retention": 0.9943716539025165
+    }
+  },
+  "selection": {
+    "selected_id": "width_4",
+    "feasible_ids": [
+      "width_4",
+      "width_8",
+      "width_12",
+      "width_16",
+      "width_24"
+    ],
+    "rejected_ids": [
+      "width_0"
+    ],
+    "pareto_ids": [
+      "width_4",
+      "width_8",
+      "width_12",
+      "width_16",
+      "width_24"
+    ],
+    "violations": {
+      "width_0": 7.531105981635217,
+      "width_4": 0.0,
+      "width_8": 0.0,
+      "width_12": 0.0,
+      "width_16": 0.0,
+      "width_24": 0.0
+    },
+    "policy": "hard constraints -> Pareto front -> lexicographic fixed objectives"
+  }
+}

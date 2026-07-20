@@ -1,0 +1,21 @@
+{
+  "role": "master_artwork",
+  "passed": false,
+  "technical_passed": true,
+  "semantic_status": "The artwork fails to meet the strict negative constraints regarding prohibited inclusions. Despite the artistic quality and adherence to the botanical theme, the image contains visible text and script elements.; violations: Includes visible text and pseudo-calligraphic writing, which is explicitly prohibited by the contract.; Contains elements resembling paper labels with text, which borders on a framed panel or presentation board style.",
+  "reasons": [
+    "semantic reviewer rejected source: The artwork fails to meet the strict negative constraints regarding prohibited inclusions. Despite the artistic quality and adherence to the botanical theme, the image contains visible text and script elements.; violations: Includes visible text and pseudo-calligraphic writing, which is explicitly prohibited by the contract.; Contains elements resembling paper labels with text, which borders on a framed panel or presentation board style."
+  ],
+  "metrics": {
+    "width": 1376,
+    "height": 768,
+    "aspect_ratio": 1.7916666666666667,
+    "foreground_ratio": 0.8718564528827519,
+    "foreground_edge_ratio": 0.1257209529494763,
+    "border_std": 61.85491943359375,
+    "image_std": 59.84452438354492,
+    "detail_density": 0.46605651626983524,
+    "low_detail_patch_ratio": 0.0,
+    "minimum_local_detail_density": 0.28826766002528964
+  }
+}

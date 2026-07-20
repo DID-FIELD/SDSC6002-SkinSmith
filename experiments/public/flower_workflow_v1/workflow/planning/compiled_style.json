@@ -1,0 +1,146 @@
+{
+  "style_id": "withered_petal_covenant_001",
+  "display_name": "Withered Petal Covenant",
+  "generation_label": "faded floral illustration",
+  "match_terms": [
+    "pressed flower illustration",
+    "botanical decay",
+    "cracked varnish macro",
+    "oxidized copper filigree",
+    "charcoal ink wash",
+    "vintage herbarium"
+  ],
+  "summary": "A somber, archival-grade botanical study where vibrant life meets inevitable decomposition, preserved under layers of translucent, fractured lacquer.",
+  "visual_vocabulary": [
+    "fine-line pen work",
+    "cross-hatched shadows",
+    "sepia-toned ink washes",
+    "spiderweb craquelure",
+    "desiccated vein structures",
+    "tarnished brass etchings"
+  ],
+  "motifs": [
+    "peony bloom",
+    "thorny vine",
+    "skeleton leaf",
+    "curling petal",
+    "dust mote cloud",
+    "oxidized scrollwork"
+  ],
+  "palette": [
+    "#2D3A2C",
+    "#8C7B75",
+    "#C4A484",
+    "#4A2E35",
+    "#D9D0C1"
+  ],
+  "material_cues": [
+    "matte parchment texture",
+    "glossy varnish overlay with heavy crackle",
+    "patinated brass metallic highlights",
+    "absorbent paper grain"
+  ],
+  "composition_principles": [
+    "focal density concentration on receiver",
+    "narrative thinning towards muzzle",
+    "negative space utilization for dust motes",
+    "asymmetrical botanical layering"
+  ],
+  "avoid": [
+    "bright saturated neons",
+    "vectorized sharp edges",
+    "digital gradient blurs",
+    "photorealistic petal textures",
+    "large repeating geometric shapes"
+  ],
+  "route_a": {
+    "objective": "Establish a seamless botanical tapestry that flows longitudinally across the weapon geometry.",
+    "composition_rules": [
+      "tiling density distribution scaled to 0.75",
+      "no visible seam-lines",
+      "uniform vine interconnection"
+    ],
+    "constraints": [
+      "maximum of three color overlaps",
+      "no hero flowers crossing component boundaries"
+    ]
+  },
+  "route_b": {
+    "objective": "A curated, painterly arrangement where clusters of decay are mapped to unique weapon sections.",
+    "composition_rules": [
+      "isolated vignette layering",
+      "weighted focus on the receiver panel",
+      "negative space transition zones"
+    ],
+    "constraints": [
+      "no pattern repetition",
+      "strictly bounded detail zones"
+    ]
+  },
+  "component_roles": {
+    "stock": "High-density saturated peony blooms integrated with light craquelure.",
+    "receiver": "Central heroic composition featuring overlapping floral elements and brass filigree.",
+    "magazine": "Secondary flow of barbed tendrils and skeleton leaves curving downward.",
+    "pistol_grip": "Single decaying leaf motif providing grounded transition.",
+    "handguard": "Thinned vine progression acting as a visual bridge.",
+    "front_assembly": "Soft ink wash stains fading into monochromatic tones.",
+    "barrel_muzzle": "Quiet atmosphere of isolated dust motes and subtle parchment grain."
+  },
+  "candidate_directions": [
+    {
+      "direction_id": "dir_01_archival_sepia",
+      "title": "Archival Sepia Study",
+      "concept": "Focus on the monochromatic, dried-out state of a historical herbarium.",
+      "motifs": [
+        "skeleton leaves",
+        "ink smudges",
+        "dust motes"
+      ],
+      "route_a_emphasis": "Densely packed leaf skeletons",
+      "route_b_emphasis": "Sparse, high-contrast ink wash vignettes"
+    },
+    {
+      "direction_id": "dir_02_varnished_bloom",
+      "title": "Varnished Bloom",
+      "concept": "Emphasizes the glossy, cracked surface layer trapping fresh flora beneath.",
+      "motifs": [
+        "peony bloom",
+        "cracked glaze",
+        "brass frame"
+      ],
+      "route_a_emphasis": "Uniform spiderweb crackle distribution",
+      "route_b_emphasis": "Heroic central peony placement"
+    },
+    {
+      "direction_id": "dir_03_thorny_path",
+      "title": "The Barbed Path",
+      "concept": "Prioritizes the wild, aggressive growth of vines wrapping the mechanical structure.",
+      "motifs": [
+        "thorny vines",
+        "dried leaf clusters",
+        "curling petals"
+      ],
+      "route_a_emphasis": "Intertwining long-form vine connectivity",
+      "route_b_emphasis": "Localized dense vine clusters"
+    },
+    {
+      "direction_id": "dir_04_decay_gradient",
+      "title": "Decay Gradient",
+      "concept": "Visual metaphor for time: vibrant flora on stock, decaying to dust at muzzle.",
+      "motifs": [
+        "dying peony",
+        "fading ink",
+        "scattered petals"
+      ],
+      "route_a_emphasis": "Seamless tonal transition from deep burgundy to ash",
+      "route_b_emphasis": "Gradient-based component-specific detail density"
+    }
+  ],
+  "evaluation_criteria": [
+    "Floral elements must feel organic and hand-illustrated.",
+    "Contrast between fresh/aged materials must be clear.",
+    "Detail density must decline significantly from stock to barrel."
+  ],
+  "reference_policy": "Adhere to historical 18th-century botanical sketches; no modern digital art references.",
+  "procedural_fallback_motif": "waves"
+}

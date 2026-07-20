@@ -1,0 +1,34 @@
+{
+  "request": {
+    "brief": "flower",
+    "asset_id": "cs2_ak47_new_geometry",
+    "style_family": null,
+    "candidate_budget": 4,
+    "direction_choice": null,
+    "budget": {
+      "max_image_calls": 8,
+      "max_role_retries": 4,
+      "max_refinement_rounds": 1
+    }
+  },
+  "asset_profile": "D:\\project\\SDSC6002-SkinSmith\\config\\assets\\ak47_weapon_space_anchors.json",
+  "theme": {
+    "id": "botanical_decay_bloom",
+    "source_mode": "generated",
+    "backend_id": "gemini:gemini-3.1-flash-lite",
+    "path": "runs\\agent_flower_demo_v1\\planning\\compiled_theme.json"
+  },
+  "style": {
+    "id": "withered_petal_covenant_001",
+    "source_mode": "generated",
+    "backend_id": "gemini:gemini-3.1-flash-lite:style",
+    "path": "runs\\agent_flower_demo_v1\\planning\\compiled_style.json"
+  },
+  "direction_ids": [
+    "candidate_01_dir_01_archival_sepia",
+    "candidate_02_dir_02_varnished_bloom",
+    "candidate_03_dir_03_thorny_path",
+    "candidate_04_dir_04_decay_gradient"
+  ],
+  "route_design_bundle": "runs\\agent_flower_demo_v1\\planning\\route_design_bundle.json"
+}

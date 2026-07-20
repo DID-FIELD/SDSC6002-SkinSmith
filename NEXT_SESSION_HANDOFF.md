@@ -3,7 +3,8 @@
 > Updated: 2026-07-20
 > Canonical context: `CODEX_CONTEXT.md`  
 > Accepted benchmark run: `runs/agent_dragon_multicandidate_v1/`
-> Current presentation case: `runs/agent_flower_demo_v1/`
+> Rejected iteration: `runs/agent_flower_demo_v1/` and `runs/agent_flower_ornamental_v2/`
+> Current presentation case: `runs/agent_garden_demo_v1/`
 
 ## Current status
 
@@ -27,19 +28,24 @@ Select registered weapon + enter one theme keyword
 
 AK-47 is the accepted full target. M4A4 remains transfer evidence only.
 
-The fresh `flower` case completed the same three-checkpoint workflow on
-2026-07-20. It locked `Decay Gradient`, human-selected `artwork_04`, selected
-Route B after Route-C rollback, and exported the exact selected source at 2048.
-Use this case as the narrative spine of the next presentation revision; retain
-the dragon run as stronger benchmark evidence rather than mixing its Workshop
-images into the flower sequence.
+The fresh `garden` case completed the same three-checkpoint workflow on
+2026-07-20. It expanded to `Midnight Serenity`, locked `Spectral Movement`,
+human-selected `artwork_02`, selected Route B after Route-C rollback, and exported
+the exact selected source at 2048. Use this case as the narrative spine of the
+next presentation revision; retain the dragon run as stronger benchmark evidence.
 
-Flower TGA for Workbench:
+Garden TGA for Workbench:
 
-`runs/agent_flower_demo_v1/execution/route_b/selected__route-b__custom-paint-job.tga`
+`runs/agent_garden_demo_v1/execution/route_b/selected__route-b__custom-paint-job.tga`
 
 The user must return fixed left/right/top Workbench captures and one settings
 screenshot before the presentation is rebuilt and frozen.
+
+Publication-safe experiment evidence is tracked under `experiments/public/` for
+both the rejected flower iteration and the current garden workflow. It contains
+inspectable checkpoints, candidates, selected final assets, and sanitized
+provider metadata without API keys. The 2.43 GB raw `runs/` workspace remains
+local and ignored.
 
 ## Locked formal result
 
@@ -137,19 +143,18 @@ Resume the academic and publication work in this order:
 3. Resolve contradictions explicitly and preserve the locked technical evidence.
 4. Apply approved supervisor feedback to `report/overleaf/`.
 5. Freeze the approved report and export the final report PDF.
-6. Rebuild the presentation around the complete flower CP1/CP2/CP3/formal-export
-   sequence after the user supplies flower Workbench screenshots; retain English
+6. Rebuild the presentation around the complete garden CP1/CP2/CP3/formal-export
+   sequence after the user supplies garden Workbench screenshots; retain English
    speaker notes on every slide.
 7. Run the final submission consistency and visual QA.
-8. Add final Workbench evidence for the flower TGA: fixed left, right, and top
+8. Add final Workbench evidence for the garden TGA: fixed left, right, and top
    captures plus one settings-panel screenshot.
 9. Before 12:00 noon on 2026-08-02, send the final A0 PPTX to the supervisor and
    `ds.go@cityu.edu.hk`, and confirm the poster-presentation arrangement.
 
 The required import path and filenames are recorded in
-`WORKBENCH_VIEWING_GUIDE.md`. Keep the new flower captures separate from the
-dragon and black-and-gold cases already used as benchmark and calibrated-engine
-evidence.
+`WORKBENCH_VIEWING_GUIDE.md`. Keep the new garden captures separate from the
+rejected flower, dragon, and black-and-gold cases.
 
 The revised cover lists all five English names and student IDs and identifies
 YUAN Ye as project lead and integration owner. The registered topic remains as a

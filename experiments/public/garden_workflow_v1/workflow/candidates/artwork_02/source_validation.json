@@ -1,0 +1,19 @@
+{
+  "role": "master_artwork",
+  "passed": true,
+  "technical_passed": true,
+  "semantic_status": "The artwork successfully adheres to the 'Midnight Serenity' theme, providing a dense, richly detailed landscape filled with multiple thematic clusters including glowing stone lanterns, spectral koi, lotus flowers, bamboo, and mossy stone textures. The composition maintains a balanced distribution of elements without any single subject dominating or spanning the entire width, and it avoids all prohibited objects such as weapons, UI elements, or frames.",
+  "reasons": [],
+  "metrics": {
+    "width": 1376,
+    "height": 768,
+    "aspect_ratio": 1.7916666666666667,
+    "foreground_ratio": 0.5892050099927325,
+    "foreground_edge_ratio": 0.07483461896112281,
+    "border_std": 27.067943572998047,
+    "image_std": 52.186180114746094,
+    "detail_density": 0.2545292394780316,
+    "low_detail_patch_ratio": 0.0,
+    "minimum_local_detail_density": 0.12655534007242522
+  }
+}

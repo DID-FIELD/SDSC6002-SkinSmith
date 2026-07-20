@@ -1,0 +1,147 @@
+{
+  "style_id": "midnight_serenity_01",
+  "display_name": "Midnight Serenity",
+  "generation_label": "A nocturnal, bioluminescent botanical garden layout with flowing water and stone lantern highlights.",
+  "match_terms": [
+    "bioluminescent garden",
+    "midnight pond",
+    "nocturnal botanical",
+    "wet slate stone",
+    "spectral koi movement",
+    "ethereal cyan glow"
+  ],
+  "summary": "A high-contrast exploration of a nocturnal garden where cold stone textures are punctured by ethereal, glowing botanical and aquatic life forms. The aesthetic balances architectural rigidity with fluid organic motion.",
+  "visual_vocabulary": [
+    "wet slate crackle",
+    "bioluminescent flora veins",
+    "submerged refractive ripples",
+    "bamboo segment geometry",
+    "floating firefly particle drift"
+  ],
+  "motifs": [
+    "glowing lotus petals",
+    "translucent koi scales",
+    "segmented black bamboo",
+    "stacked pagodas",
+    "rippled dark water"
+  ],
+  "palette": [
+    "#0B132B",
+    "#1C2541",
+    "#3A506B",
+    "#7FFFD4",
+    "#E94560",
+    "#F4F4F4"
+  ],
+  "material_cues": [
+    "porous weathered stone",
+    "cool-touch silk-finish water",
+    "glowing emissive plant fiber",
+    "matte metallic dark accents"
+  ],
+  "composition_principles": [
+    "asymmetrical equilibrium",
+    "depth layering through luminosity",
+    "continuous flow lines via water ripples",
+    "foreground framing with vertical bamboo"
+  ],
+  "avoid": [
+    "sharp vector edges",
+    "uniform grid layouts",
+    "bright daylight saturation",
+    "industrial hardware schematics",
+    "hyper-realistic human anatomy"
+  ],
+  "route_a": {
+    "objective": "Establish a seamless, dense texture field of the garden floor and pond edge.",
+    "composition_rules": [
+      "tiling stone textures with subtle moss overlays",
+      "interspersing glowing lotus buds at 15% density",
+      "rhythmic placement of bamboo segments to guide the eye"
+    ],
+    "constraints": [
+      "zero blank space",
+      "constant contrast ratio between stone and light",
+      "no large focal objects to allow for weapon-wide cropping"
+    ]
+  },
+  "route_b": {
+    "objective": "Generate master compositions focusing on the interaction between the koi and the lantern light.",
+    "composition_rules": [
+      "centralize the koi movement along the receiver curvature",
+      "anchor corners with heavy dark stone textures",
+      "use light scattering to bridge gaps between components"
+    ],
+    "constraints": [
+      "balanced distribution of small thematic clusters",
+      "avoidance of single large subjects spanning more than 40% of the canvas",
+      "enforce depth-of-field blurring on background elements"
+    ]
+  },
+  "component_roles": {
+    "stock": "Dense stone texture with vertical bamboo silhouettes framing the rear.",
+    "receiver": "Primary pond scene; focus of koi motion and lotus bloom intensity.",
+    "magazine": "Submerged depths; darker, saturated blues with fading fish tails.",
+    "pistol_grip": "Solid wet flagstone transition, anchoring the piece.",
+    "handguard": "Trailing willow branches, blending into a fine, starry firefly mist.",
+    "front_assembly": "Soft atmospheric fade from indigo to void-black.",
+    "barrel_muzzle": "Quiet, minimal texture; simple dark slate gradient."
+  },
+  "candidate_directions": [
+    {
+      "direction_id": "direction_lantern_focus",
+      "title": "Stone and Emissivity",
+      "concept": "Prioritizes the architectural stone lantern as the primary structural anchor for the lighting.",
+      "motifs": [
+        "pagoda lantern",
+        "mossy flagstone",
+        "firefly dust"
+      ],
+      "route_a_emphasis": "High density of stone cracks and moss.",
+      "route_b_emphasis": "Lantern light casts long, soft shadows across the receiver."
+    },
+    {
+      "direction_id": "direction_koi_flow",
+      "title": "Spectral Movement",
+      "concept": "Focuses on the fluid motion of koi across the weapon's curved geometry.",
+      "motifs": [
+        "spectral koi",
+        "water ripples",
+        "lotus petals"
+      ],
+      "route_a_emphasis": "Overlapping ripple patterns for rhythmic flow.",
+      "route_b_emphasis": "Dynamic arcs of koi bodies following the magazine curve."
+    },
+    {
+      "direction_id": "direction_bamboo_frame",
+      "title": "Bamboo Verticality",
+      "concept": "Uses bamboo to create rhythmic, clean vertical lines that break the dark massing.",
+      "motifs": [
+        "bamboo stalks",
+        "glowing lotus",
+        "dark water"
+      ],
+      "route_a_emphasis": "Strict vertical spacing to simulate a dense thicket.",
+      "route_b_emphasis": "Bamboo stalks acting as visual dividers for the koi scenes."
+    },
+    {
+      "direction_id": "direction_ethereal_mist",
+      "title": "Firefly Void",
+      "concept": "Deep focus on the darkness and the sparse, ethereal points of light.",
+      "motifs": [
+        "firefly swarm",
+        "willow boughs",
+        "deep water"
+      ],
+      "route_a_emphasis": "Fine particle grain throughout.",
+      "route_b_emphasis": "Atmospheric fade-outs and negative space utilization."
+    }
+  ],
+  "evaluation_criteria": [
+    "Clarity of the bioluminescent highlights against the dark slate background.",
+    "Natural transition of the koi's flowing form across the magazine curve.",
+    "Degree of 'night atmosphere' achieved through the lighting palette."
+  ],
+  "reference_policy": "All visual references to botanical structures and traditional stone lanterns are derived from public domain nature photography and classical garden architecture, avoiding direct emulation of contemporary game artists.",
+  "procedural_fallback_motif": "waves"
+}

@@ -1,0 +1,19 @@
+{
+  "role": "master_artwork",
+  "passed": true,
+  "technical_passed": true,
+  "semantic_status": "The artwork successfully depicts a somber, archival-grade botanical landscape featuring peony motifs, architectural ruins, and intricate texture work as requested. It maintains a dense, high-detail composition with balanced distribution of elements, avoiding large empty areas or single-subject dominance. No forbidden objects, such as weapons, UI, or borders, are present.",
+  "reasons": [],
+  "metrics": {
+    "width": 1376,
+    "height": 768,
+    "aspect_ratio": 1.7916666666666667,
+    "foreground_ratio": 0.8656223504118217,
+    "foreground_edge_ratio": 0.12332497414628067,
+    "border_std": 66.37639617919922,
+    "image_std": 63.27465057373047,
+    "detail_density": 0.43729871099255846,
+    "low_detail_patch_ratio": 0.0,
+    "minimum_local_detail_density": 0.19995898978162058
+  }
+}

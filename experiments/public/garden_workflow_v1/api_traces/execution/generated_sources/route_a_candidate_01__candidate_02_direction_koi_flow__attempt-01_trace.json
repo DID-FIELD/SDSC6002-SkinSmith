@@ -1,0 +1,67 @@
+{
+  "provider": "gemini",
+  "model": "gemini-3.1-flash-image",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/interactions",
+  "api_key_env": "GEMINI_API_KEY",
+  "api_key_recorded": false,
+  "request": {
+    "model": "gemini-3.1-flash-image",
+    "input": [
+      {
+        "type": "text",
+        "text": "Use case: stylized-concept. Asset type: tileable game weapon-skin texture source. Create an original dense all-over seamless template pattern for: garden. Theme elements: An ornate, moss-covered stone lantern emitting a soft, ethereal cyan glow., A graceful, semi-translucent koi fish with flowing fins, caught mid-turn in dark water., Closed and partially blooming lotus flowers with bioluminescent tips., Vertical, segmented bamboo stalks that serve as grounding frame lines., Subtle, overlapping circular ripples on a dark, wet-stone texture., Dark, worn flagstone paving tiles with fine fissures and moss accumulation., Delicate, trailing willow branches that frame the upper edge of the receiver., Tiny, scattered pin-points of light creating depth and motion across the canvas.. Style language: wet slate crackle, bioluminescent flora veins, submerged refractive ripples, bamboo segment geometry, floating firefly particle drift. Palette: #0B132B, #1C2541, #3A506B, #7FFFD4, #E94560, #F4F4F4. Pattern logic: Utilize a seamless, dark-to-light gradient across the weapon body to mimic the transition from the dark floor of the garden to the illuminated water surface.; The receiver should prioritize the stone lantern and the koi as the central focus.. Every crop must remain visually complete; repeat partial elements across opposite edges; use many overlapping elements at varied scales; no unique hero or weapon-aware placement. Avoid: sharp vector edges, uniform grid layouts, bright daylight saturation, industrial hardware schematics, hyper-realistic human anatomy. Locked candidate art direction: Spectral Movement (candidate_02_direction_koi_flow). Concept: Focuses on the fluid motion of koi across the weapon's curved geometry.. Motifs: spectral koi, water ripples, lotus petals. Expanded thematic world: Pagoda Lantern, Spectral Koi, Glowing Lotus, Black Bamboo, Water Ripples, Wet Flagstone, Weeping Willow Boughs, Firefly Swarm, An ornate, moss-covered stone lantern emitting a soft, ethereal cyan glow., A graceful, semi-translucent koi fish with flowing fins, caught mid-turn in dark water., Closed and partially blooming lotus flowers with bioluminescent tips., Vertical, segmented bamboo stalks that serve as grounding frame lines., Subtle, overlapping circular ripples on a dark, wet-stone texture., Dark, worn flagstone paving tiles with fine fissures and moss accumulation., Delicate, trailing willow branches that frame the upper edge of the receiver., Tiny, scattered pin-points of light creating depth and motion across the canvas., small symbolic objects related to the main theme, environmental fragments that imply a complete world, atmospheric connectors and motion rhythms, fine material grain and ornamental micro-detail, glowing lotus petals, translucent koi scales, segmented black bamboo, stacked pagodas, rippled dark water, wet slate crackle, bioluminescent flora veins, submerged refractive ripples, bamboo segment geometry, floating firefly particle drift, porous weathered stone, cool-touch silk-finish water, glowing emissive plant fiber, matte metallic dark accents. Route-A emphasis: Brief: garden. Style: A high-contrast exploration of a nocturnal garden where cold stone textures are punctured by ethereal, glowing botanical and aquatic life forms. The aesthetic balances architectural rigidity with fluid organic motion.. Direction: Focuses on the fluid motion of koi across the weapon's curved geometry.. Visual language: wet slate crackle, bioluminescent flora veins, submerged refractive ripples, bamboo segment geometry, floating firefly particle drift. Motifs: spectral koi, water ripples, lotus petals. Palette: #0B132B, #1C2541, #3A506B, #7FFFD4, #E94560, #F4F4F4. Material cues: porous weathered stone, cool-touch silk-finish water, glowing emissive plant fiber, matte metallic dark accents. Route A objective: Establish a seamless, dense texture field of the garden floor and pond edge.. tiling stone textures with subtle moss overlays; interspersing glowing lotus buds at 15% density; rhythmic placement of bamboo segments to guide the eye. Emphasis: Overlapping ripple patterns for rhythmic flow.. Required: zero blank space, constant contrast ratio between stone and light, no large focal objects to allow for weapon-wide cropping. Avoid: sharp vector edges, uniform grid layouts, bright daylight saturation, industrial hardware schematics, hyper-realistic human anatomy.. Do not drift to another art direction. Candidate 1 of 1. Output only the square artwork: no weapon, text, logo, watermark, presentation border, UV wireframe, or mockup."
+      }
+    ],
+    "response_format": {
+      "type": "image",
+      "mime_type": "image/jpeg",
+      "aspect_ratio": "1:1",
+      "image_size": "1K"
+    }
+  },
+  "response": {
+    "id": "v1_ChdTejFlYXUza0d0bUFrZFVQdzR6RThBaxIXU3oxZWF1M2tHdG1Ba2RVUHc0ekU4QWs",
+    "status": "completed",
+    "usage": {
+      "total_tokens": 2650,
+      "total_input_tokens": 966,
+      "input_tokens_by_modality": [
+        {
+          "modality": "text",
+          "tokens": 966
+        }
+      ],
+      "total_cached_tokens": 0,
+      "total_output_tokens": 1684,
+      "output_tokens_by_modality": [
+        {
+          "modality": "image",
+          "tokens": 1120
+        }
+      ],
+      "total_tool_use_tokens": 0,
+      "total_thought_tokens": 0
+    },
+    "created": "2026-07-20T15:22:51Z",
+    "updated": "2026-07-20T15:22:51Z",
+    "service_tier": "standard",
+    "steps": [
+      {
+        "signature": "<omitted-long-value length=1775520 sha256=9f7a4aa193e351baa0f24299033ff79d443490df0dcc0a7e37630ebdf9b893bd>",
+        "type": "thought"
+      },
+      {
+        "content": [
+          {
+            "mime_type": "image/jpeg",
+            "data": "<omitted-long-value length=1342208 sha256=bf2aa2e37b7d81554339befd444a7dfac73077ed6e4faaefd6b2af510c3b5eee>",
+            "type": "image"
+          }
+        ],
+        "type": "model_output"
+      }
+    ],
+    "object": "interaction",
+    "model": "gemini-3.1-flash-image"
+  }
+}

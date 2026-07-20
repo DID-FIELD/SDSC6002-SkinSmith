@@ -1,0 +1,157 @@
+{
+  "theme_id": "midnight_serenity_garden",
+  "display_name": "Midnight Serenity",
+  "generation_label": "A nocturnal, bioluminescent botanical garden layout with flowing water and stone lantern highlights.",
+  "match_terms": [
+    "botanical",
+    "serene",
+    "night garden",
+    "bioluminescent",
+    "stone lantern",
+    "flowing koi",
+    "petals"
+  ],
+  "concept": "A tranquil midnight garden scene transitioning from dark, wet slate tones to glowing organic flora, emphasizing the contrast between cold stone architecture and warm, living light.",
+  "narrative": "The weapon becomes a cross-section of a secret moonlit courtyard. The stock anchors the scene in a dark, mossy perimeter, while the receiver serves as the primary pond feature, with the magazine acting as a submerged descent into the water.",
+  "default_style_id": "modern_chinese_botanical_v1",
+  "palette": [
+    "#0B132B",
+    "#1C2541",
+    "#3A506B",
+    "#7FFFD4",
+    "#E94560",
+    "#F4F4F4"
+  ],
+  "elements": [
+    {
+      "element_id": "stone_lantern",
+      "display_name": "Pagoda Lantern",
+      "semantic_role": "hero",
+      "generation_description": "An ornate, moss-covered stone lantern emitting a soft, ethereal cyan glow."
+    },
+    {
+      "element_id": "koi_fish",
+      "display_name": "Spectral Koi",
+      "semantic_role": "hero",
+      "generation_description": "A graceful, semi-translucent koi fish with flowing fins, caught mid-turn in dark water."
+    },
+    {
+      "element_id": "lotus_pad",
+      "display_name": "Glowing Lotus",
+      "semantic_role": "secondary",
+      "generation_description": "Closed and partially blooming lotus flowers with bioluminescent tips."
+    },
+    {
+      "element_id": "bamboo_stalks",
+      "display_name": "Black Bamboo",
+      "semantic_role": "connector",
+      "generation_description": "Vertical, segmented bamboo stalks that serve as grounding frame lines."
+    },
+    {
+      "element_id": "raindrop_ripples",
+      "display_name": "Water Ripples",
+      "semantic_role": "background",
+      "generation_description": "Subtle, overlapping circular ripples on a dark, wet-stone texture."
+    },
+    {
+      "element_id": "stone_texture",
+      "display_name": "Wet Flagstone",
+      "semantic_role": "background",
+      "generation_description": "Dark, worn flagstone paving tiles with fine fissures and moss accumulation."
+    },
+    {
+      "element_id": "hanging_willow",
+      "display_name": "Weeping Willow Boughs",
+      "semantic_role": "secondary",
+      "generation_description": "Delicate, trailing willow branches that frame the upper edge of the receiver."
+    },
+    {
+      "element_id": "firefly_dust",
+      "display_name": "Firefly Swarm",
+      "semantic_role": "background",
+      "generation_description": "Tiny, scattered pin-points of light creating depth and motion across the canvas."
+    }
+  ],
+  "pattern_notes": [
+    "Utilize a seamless, dark-to-light gradient across the weapon body to mimic the transition from the dark floor of the garden to the illuminated water surface.",
+    "The receiver should prioritize the stone lantern and the koi as the central focus."
+  ],
+  "component_story": {
+    "stock": {
+      "narrative_role": "The tranquil corner of the garden where the stone lantern sits among bamboo.",
+      "element_ids": [
+        "stone_lantern",
+        "bamboo_stalks"
+      ],
+      "prominence": 0.6,
+      "detail_density": 0.4
+    },
+    "receiver": {
+      "narrative_role": "The central pond surface housing the primary glowing koi and lotus.",
+      "element_ids": [
+        "koi_fish",
+        "lotus_pad",
+        "raindrop_ripples"
+      ],
+      "prominence": 1.0,
+      "detail_density": 0.9
+    },
+    "magazine": {
+      "narrative_role": "The depths of the pond, showing submerged koi and bottom-dwelling patterns.",
+      "element_ids": [
+        "koi_fish",
+        "raindrop_ripples"
+      ],
+      "prominence": 0.7,
+      "detail_density": 0.6
+    },
+    "pistol_grip": {
+      "narrative_role": "Grounded edge of the stone path.",
+      "element_ids": [
+        "stone_texture"
+      ],
+      "prominence": 0.3,
+      "detail_density": 0.2
+    },
+    "handguard": {
+      "narrative_role": "Overhanging willow branches leading the eye toward the front.",
+      "element_ids": [
+        "hanging_willow",
+        "firefly_dust"
+      ],
+      "prominence": 0.5,
+      "detail_density": 0.5
+    },
+    "front_assembly": {
+      "narrative_role": "Fading garden edge into the darkness.",
+      "element_ids": [
+        "firefly_dust"
+      ],
+      "prominence": 0.3,
+      "detail_density": 0.3
+    },
+    "barrel_muzzle": {
+      "narrative_role": "Quiet, dark transition to the void.",
+      "element_ids": [
+        "stone_texture"
+      ],
+      "prominence": 0.1,
+      "detail_density": 0.1
+    }
+  },
+  "evaluation_criteria": [
+    "Clarity of the bioluminescent highlights against the dark slate background.",
+    "Natural transition of the koi's flowing form across the magazine curve.",
+    "Degree of 'night atmosphere' achieved through the lighting palette."
+  ],
+  "reference_policy": "All visual references to botanical structures and traditional stone lanterns are derived from public domain nature photography and classical garden architecture, avoiding direct emulation of contemporary game artists.",
+  "target_components": [
+    "stock",
+    "receiver",
+    "magazine",
+    "pistol_grip",
+    "handguard",
+    "front_assembly",
+    "barrel_muzzle"
+  ]
+}

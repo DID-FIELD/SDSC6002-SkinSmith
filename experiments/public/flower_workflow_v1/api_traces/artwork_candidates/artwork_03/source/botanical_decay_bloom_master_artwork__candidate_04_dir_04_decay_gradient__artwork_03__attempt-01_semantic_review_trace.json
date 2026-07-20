@@ -1,0 +1,97 @@
+{
+  "provider": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/interactions",
+  "api_key_env": "GEMINI_API_KEY",
+  "api_key_recorded": false,
+  "request": {
+    "model": "gemini-3.1-flash-lite",
+    "input": [
+      {
+        "type": "text",
+        "text": "Act as a composition and forbidden-content gate for one generated landscape 2D master artwork that will later be automatically cut into a game-asset UV atlas. Do not judge whether a named anatomical part lands on a weapon component. Do verify that the image is richly populated with multiple distinct medium/small thematic, symbolic, environmental, atmospheric, and micro-detail clusters; that no single subject dominates or spans the complete width; and that large dead or near-black regions are absent. Reject any visible or implied firearm, weapon silhouette, weapon part, mockup, product render, UV layout, text, logo, watermark, border, framed panel, material sample board, or presentation board. Judge the supplied image against the source contract below. If uncertain about a forbidden object, reject and state one concise correction.\n\nSOURCE CONTRACT:\nUse case: stylized-concept. Asset type: game weapon-skin source for later UV-aware composition. Generate one original dense landscape master artwork, approximately 16:9, for the Withered Petal Covenant weapon-skin theme. Theme content: A large, semi-wilted peony flower with curling, translucent petal edges, rendered in fine-line ink illustration.; A macro texture of fine, spiderweb-like cracks in old lacquer, creating a sense of aged material depth.; Intertwining, thin, dry thorny vines that bridge the negative space between larger floral motifs.; Single, wind-blown, curling petals resting on the barrel area, showing signs of browning edges.; Subtle, tarnished brass ornamental flourishes that outline the receiver edges.; Brittle, translucent leaves showing prominent vein structures, layered behind flowers.; Micro-specks of light-colored debris scattered unevenly across the dark surfaces to imply a forgotten room.; Soft, monochromatic ink bleeding patterns that transition between the botanical elements.. Narrative: The weapon serves as a relic from a forgotten conservatory. As the floral patterns transition from the stock to the barrel, they shift from vibrant, saturated pigments to desiccated, charcoal-toned skeletons, reflecting the passage of time and the fragility of nature against industrial steel.. Theme enrichment notes: The design utilizes a heavy 'aged lacquer' overlay that creates a high-gloss finish over the matte floral ink work.; Floral density should be highest on the receiver and decrease as the pattern moves toward the muzzle.; Avoid solid geometric repeats; favor an organic, asymmetrical arrangement that mimics an overgrown garden wall.. Style: A somber, archival-grade botanical study where vibrant life meets inevitable decomposition, preserved under layers of translucent, fractured lacquer.. Visual language: fine-line pen work, cross-hatched shadows, sepia-toned ink washes, spiderweb craquelure, desiccated vein structures, tarnished brass etchings. Palette: #2D3A2C, #8C7B75, #C4A484, #4A2E35, #D9D0C1. Fill the complete canvas with layered, high-quality, high-density visual information at several scales. Every large crop must remain attractive and richly detailed. Build a complete thematic world with many medium and small clusters: primary forms, related symbolic objects, environment, architecture or nature, atmospheric connectors, linework, and material texture. No single subject may dominate more than roughly 35% of the canvas width or height, and no subject may stretch across the full image width. Weave these elements through every region rather than arranging isolated stickers on empty space. Do not split it into component assets and do not reserve large plain or near-black areas. This image will be fitted to continuous weapon space and automatically cut into the OBJ-derived UV atlas. Do not draw a weapon, weapon mockup, UV layout, text, logo, watermark, frame, presentation board, or product render. Locked candidate art direction: Decay Gradient (candidate_04_dir_04_decay_gradient). Concept: Visual metaphor for time: vibrant flora on stock, decaying to dust at muzzle.. Motifs: dying peony, fading ink, scattered petals. Expanded thematic world: Focal Peony, Varnish Craquelure, Barbed Tendrils, Petal Scatter, Oxidized Frame, Skeletonized Foliage, Atmospheric Dust, Stained Ink Wash, A large, semi-wilted peony flower with curling, translucent petal edges, rendered in fine-line ink illustration., A macro texture of fine, spiderweb-like cracks in old lacquer, creating a sense of aged material depth., Intertwining, thin, dry thorny vines that bridge the negative space between larger floral motifs., Single, wind-blown, curling petals resting on the barrel area, showing signs of browning edges., Subtle, tarnished brass ornamental flourishes that outline the receiver edges., Brittle, translucent leaves showing prominent vein structures, layered behind flowers., Micro-specks of light-colored debris scattered unevenly across the dark surfaces to imply a forgotten room., Soft, monochromatic ink bleeding patterns that transition between the botanical elements., small symbolic objects related to the main theme, environmental fragments that imply a complete world, atmospheric connectors and motion rhythms, fine material grain and ornamental micro-detail, peony bloom, thorny vine, skeleton leaf, curling petal, dust mote cloud, oxidized scrollwork, fine-line pen work, cross-hatched shadows, sepia-toned ink washes, spiderweb craquelure, desiccated vein structures, tarnished brass etchings, matte parchment texture, glossy varnish overlay with heavy crackle, patinated brass metallic highlights, absorbent paper grain. Route-B emphasis: Brief: flower. Style: A somber, archival-grade botanical study where vibrant life meets inevitable decomposition, preserved under layers of translucent, fractured lacquer.. Direction: Visual metaphor for time: vibrant flora on stock, decaying to dust at muzzle.. Visual language: fine-line pen work, cross-hatched shadows, sepia-toned ink washes, spiderweb craquelure, desiccated vein structures, tarnished brass etchings. Motifs: dying peony, fading ink, scattered petals. Palette: #2D3A2C, #8C7B75, #C4A484, #4A2E35, #D9D0C1. Material cues: matte parchment texture, glossy varnish overlay with heavy crackle, patinated brass metallic highlights, absorbent paper grain. Route B objective: generate one complete, dense, crop-robust master artwork, fit it across continuous left/right/top weapon space, then automatically cut and repack it through the OBJ-derived UV atlas. Distribute useful visual information at multiple scales across the full image; avoid large empty regions. Subject-part placement on named weapon components is not required or evaluated. Avoid: bright saturated neons, vectorized sharp edges, digital gradient blurs, photorealistic petal textures, large repeating geometric shapes.. Do not drift to another art direction. CRITICAL SOURCE-ASSET MODE: all weapon names, component names, and placement descriptions above are placement metadata only for later composition. No weapon or weapon part may appear. Do not depict, imply, crop, silhouette, emboss, or texture any firearm, weapon, receiver, trigger, grip, magazine, stock, barrel, muzzle, mechanical weapon part, weapon mockup, product mockup, UV layout, rectangular material sample, framed tile, or presentation board. COMPOSITION-GROUP CONTRACT: preserve the requested spatial structure and narrative purpose exactly; spanning sources must read as one continuous elongated subject, grouped sources as coordinated reusable units, and independent sources as one component-specific mark. MASTER-ARTWORK CONTRACT: create one dense, opaque, edge-to-edge landscape thematic artwork with strong local detail at multiple scales. Large crops from any part of the image must remain visually rich. Use many medium and small subject clusters rather than one oversized subject: no single element may occupy more than roughly 35% of the canvas width or height, and no subject may span the complete image width. Weave primary motifs, supporting symbols, environmental fragments, atmospheric connectors, linework, and material texture through every region. Do not isolate motifs as separate stickers and do not leave large plain or near-black negative-space pockets. Do not draw a weapon, weapon part, mockup, UV layout, text, logo, watermark, border, framed panel, presentation board, or product render. Subject-part placement is not evaluated. Output only the landscape 2D source artwork, approximately 16:9, with no text, logo, watermark, border, annotation, or explanation.\nCANDIDATE VARIATION 3: landscape-led world with mountains, water or terrain, architecture or natural structures, mist layers, celestial effects, and many small thematic discoveries. Create a materially different composition from the other candidates while preserving the locked direction and palette. Include at least ten visually distinct clusters distributed across the landscape canvas. Keep the main theme readable through repeated medium/small appearances and related elements, not one giant central subject."
+      },
+      {
+        "type": "image",
+        "mime_type": "image/png",
+        "data": "<inline image data omitted; source hash is recorded by the caller>"
+      }
+    ],
+    "response_format": {
+      "type": "text",
+      "mime_type": "application/json",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "passed": {
+            "type": "boolean"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "depicted_subjects": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "violations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "passed",
+          "summary",
+          "depicted_subjects",
+          "violations"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "response": {
+    "id": "v1_ChdyekZlYXQydUo5LXhuc0VQdWEzVWlRRRIXcnpGZWF0MnVKOS14bnNFUHVhM1VpUUU",
+    "status": "completed",
+    "usage": {
+      "total_tokens": 3106,
+      "total_input_tokens": 2929,
+      "input_tokens_by_modality": [
+        {
+          "modality": "image",
+          "tokens": 1100
+        },
+        {
+          "modality": "text",
+          "tokens": 1829
+        }
+      ],
+      "total_cached_tokens": 0,
+      "total_output_tokens": 177,
+      "total_tool_use_tokens": 0,
+      "total_thought_tokens": 0
+    },
+    "created": "2026-07-20T14:33:19Z",
+    "updated": "2026-07-20T14:33:19Z",
+    "service_tier": "standard",
+    "steps": [
+      {
+        "signature": "EjQKMgERTTIPYWFooamVoG1Le2kOsaBgTpzOyYKww6ZK/39wb9aRL+a1p3H08ckCUDXGp7Av",
+        "type": "thought"
+      },
+      {
+        "content": [
+          {
+            "text": "{\n  \"passed\": true,\n  \"summary\": \"The artwork successfully depicts a somber, archival-grade botanical landscape featuring peony motifs, architectural ruins, and intricate texture work as requested. It maintains a dense, high-detail composition with balanced distribution of elements, avoiding large empty areas or single-subject dominance. No forbidden objects, such as weapons, UI, or borders, are present.\",\n  \"depicted_subjects\": [\n    \"peony flowers\",\n    \"skeletonized foliage\",\n    \"thorny vines\",\n    \"architectural ruins\",\n    \"mountains\",\n    \"lacquer craquelure\",\n    \"floating petals\",\n    \"atmospheric mist\",\n    \"tarnished brass filigree\",\n    \"sepia-toned ink washes\"\n  ],\n  \"violations\": []\n}",
+            "type": "text"
+          }
+        ],
+        "type": "model_output"
+      }
+    ],
+    "object": "interaction",
+    "model": "gemini-3.1-flash-lite"
+  }
+}

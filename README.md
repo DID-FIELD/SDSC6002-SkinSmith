@@ -95,12 +95,17 @@ config/                 Asset, model, theme, style, and route configuration
 src/skinsmith/          Agent runtime, generation, UV, rendering, and evaluation
 scripts/                Planning, experiment, diagnostics, and replay entry points
 tests/                  Unit and integration tests
+experiments/public/     Sanitized workflow evidence, outputs, and API metadata
 assets/showcase/        Project-owned example artwork
 streamlit_app.py        Thin interactive client over the same Agent runtime
 ```
 
-`runs/`, `third_party/`, local environments, model weights, API traces, Valve
-assets, and temporary rendering files are intentionally excluded from GitHub.
+Raw `runs/`, `third_party/`, local environments, model weights, Valve assets, and
+temporary rendering files are intentionally excluded from GitHub. A compact
+publication-safe experiment package is available under `experiments/public/`.
+It includes checkpoints, events, planning records, candidate comparisons, final
+PNG/TGA outputs, metrics, hashes, and sanitized provider traces. API keys and
+long embedded binary response values are not published.
 
 ## Requirements
 
@@ -177,8 +182,9 @@ Gemini adapters share the same validated planning and generation interfaces.
 The next technical priorities are aligned multi-channel material generation,
 cross-channel and engine-side validation, automated fixed-view Workbench capture,
 additional asset adapters, stronger perceptual measures, and a user study of the
-three checkpoints. The immediate evidence task is to capture the accepted final
-dragon TGA in fixed left, right, and top Workbench views plus the import settings.
+three checkpoints. The immediate evidence task is to capture the selected garden
+TGA in fixed left, right, and top Workbench views plus the import settings, then
+use that complete workflow as the presentation case.
 
 ## Responsible use and licensing
 

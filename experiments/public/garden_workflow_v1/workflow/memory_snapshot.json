@@ -1,0 +1,17 @@
+{
+  "facts": {
+    "20260720_231403_17bc4b09.route_execution": {
+      "key": "20260720_231403_17bc4b09.route_execution",
+      "value": {
+        "selected_route": "B",
+        "route_a_total": 0.8101798103328274,
+        "route_b_total": 0.8173740781485412,
+        "route_b_constraints_passed": true
+      },
+      "evidence": [
+        "runs\\agent_garden_demo_v1\\execution\\execution_manifest.json"
+      ],
+      "recorded_at": "2026-07-20T15:24:13.267455+00:00"
+    }
+  }
+}

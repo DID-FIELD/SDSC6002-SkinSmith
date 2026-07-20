@@ -1,0 +1,19 @@
+{
+  "role": "master_artwork",
+  "passed": true,
+  "technical_passed": true,
+  "semantic_status": "The artwork successfully depicts a high-density, stylized botanical composition following the Withered Petal Covenant theme. It features an organic, non-repeating arrangement of peony flowers, thorny vines, and skeletonized foliage, integrated with a fine-line ink aesthetic and aged lacquer texture. The composition is richly populated with multiple distinct clusters, avoiding dead space and ensuring no single subject dominates the canvas or spans its entire width. All forbidden objects—such as tools, keys, vials, weapons, or rendered containers—have been removed, resulting in a strictly thematic, archival-grade botanical study.",
+  "reasons": [],
+  "metrics": {
+    "width": 1376,
+    "height": 768,
+    "aspect_ratio": 1.7916666666666667,
+    "foreground_ratio": 0.8507184169089147,
+    "foreground_edge_ratio": 0.12291159628570031,
+    "border_std": 63.976749420166016,
+    "image_std": 59.99747848510742,
+    "detail_density": 0.4171598642033313,
+    "low_detail_patch_ratio": 0.0,
+    "minimum_local_detail_density": 0.23980725197361677
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "brief": "flower",
+  "theme_name": "Withered Petal Covenant",
+  "style_name": "Withered Petal Covenant",
+  "pattern": {
+    "route": "A",
+    "design_object": "tileable_template_pattern",
+    "brief": "flower",
+    "theme_id": "botanical_decay_bloom",
+    "style_id": "withered_petal_covenant_001",
+    "palette": [
+      "#2D3A2C",
+      "#8C7B75",
+      "#C4A484",
+      "#4A2E35",
+      "#D9D0C1"
+    ],
+    "element_ids": [
+      "dying_peony_hero",
+      "cracked_glaze_texture",
+      "thorny_vines",
+      "fallen_petals",
+      "antique_brass_filigree",
+      "dried_leaf_clusters",
+      "dust_motes",
+      "ink_wash_smudge"
+    ],
+    "density_strategy": "dense_all_over_with_varied_scale_and_crop_tolerance",
+    "source_canvas": [
+      1024,
+      1024
+    ],
+    "generation_prompt": "Create an original dense all-over seamless template pattern for: flower. Theme elements: A large, semi-wilted peony flower with curling, translucent petal edges, rendered in fine-line ink illustration., A macro texture of fine, spiderweb-like cracks in old lacquer, creating a sense of aged material depth., Intertwining, thin, dry thorny vines that bridge the negative space between larger floral motifs., Single, wind-blown, curling petals resting on the barrel area, showing signs of browning edges., Subtle, tarnished brass ornamental flourishes that outline the receiver edges., Brittle, translucent leaves showing prominent vein structures, layered behind flowers., Micro-specks of light-colored debris scattered unevenly across the dark surfaces to imply a forgotten room., Soft, monochromatic ink bleeding patterns that transition between the botanical elements.. Style language: fine-line pen work, cross-hatched shadows, sepia-toned ink washes, spiderweb craquelure, desiccated vein structures, tarnished brass etchings. Palette: #2D3A2C, #8C7B75, #C4A484, #4A2E35, #D9D0C1. Pattern logic: The design utilizes a heavy 'aged lacquer' overlay that creates a high-gloss finish over the matte floral ink work.; Floral density should be highest on the receiver and decrease as the pattern moves toward the muzzle.; Avoid solid geometric repeats; favor an organic, asymmetrical arrangement that mimics an overgrown garden wall.. Every crop must remain visually complete; repeat partial elements across opposite edges; use many overlapping elements at varied scales; no unique hero or weapon-aware placement. Avoid: bright saturated neons, vectorized sharp edges, digital gradient blurs, photorealistic petal textures, large repeating geometric shapes.",
+    "constraints": [
+      "square source is the actual design object",
+      "seamless on all four edges",
+      "arbitrary crops remain complete",
+      "no single irreplaceable focal subject",
+      "must be reviewed on AK-47 left/right/top previews"
+    ],
+    "required_outputs": [
+      "source_pattern_square",
+      "three_by_three_tile_preview",
+      "mapped_uv_texture",
+      "ak47_left_preview",
+      "ak47_right_preview",
+      "ak47_top_preview"
+    ]
+  },
+  "weapon_theme": {
+    "route": "B",
+    "design_object": "weapon_space_theme_composition",
+    "brief": "flower",
+    "theme_id": "botanical_decay_bloom",
+    "style_id": "withered_petal_covenant_001",
+    "palette": [
+      "#2D3A2C",
+      "#8C7B75",
+      "#C4A484",
+      "#4A2E35",
+      "#D9D0C1"
+    ],
+    "focal_component": "receiver",
+    "source_square_semantics": "one dense master artwork used as the continuous weapon-surface design",
+    "final_square_semantics": "fragmented UV-atlas storage of the weapon design, not a standalone picture",
+    "asset_briefs": [
+      {
+        "asset_id": "botanical_decay_bloom_master_artwork",
+        "semantic_role": "master_artwork",
+        "element_ids": [
+          "dying_peony_hero",
+          "cracked_glaze_texture",
+          "thorny_vines",
+          "fallen_petals",
+          "antique_brass_filigree",
+          "dried_leaf_clusters",
+          "dust_motes",
+          "ink_wash_smudge"
+        ],
+        "source_canvas": [
+          1536,
+          864
+        ],
+        "background_policy": "dense opaque edge-to-edge master artwork",
+        "generation_prompt": "Generate one original dense landscape master artwork, approximately 16:9, for the Withered Petal Covenant weapon-skin theme. Theme content: A large, semi-wilted peony flower with curling, translucent petal edges, rendered in fine-line ink illustration.; A macro texture of fine, spiderweb-like cracks in old lacquer, creating a sense of aged material depth.; Intertwining, thin, dry thorny vines that bridge the negative space between larger floral motifs.; Single, wind-blown, curling petals resting on the barrel area, showing signs of browning edges.; Subtle, tarnished brass ornamental flourishes that outline the receiver edges.; Brittle, translucent leaves showing prominent vein structures, layered behind flowers.; Micro-specks of light-colored debris scattered unevenly across the dark surfaces to imply a forgotten room.; Soft, monochromatic ink bleeding patterns that transition between the botanical elements.. Narrative: The weapon serves as a relic from a forgotten conservatory. As the floral patterns transition from the stock to the barrel, they shift from vibrant, saturated pigments to desiccated, charcoal-toned skeletons, reflecting the passage of time and the fragility of nature against industrial steel.. Theme enrichment notes: The design utilizes a heavy 'aged lacquer' overlay that creates a high-gloss finish over the matte floral ink work.; Floral density should be highest on the receiver and decrease as the pattern moves toward the muzzle.; Avoid solid geometric repeats; favor an organic, asymmetrical arrangement that mimics an overgrown garden wall.. Style: A somber, archival-grade botanical study where vibrant life meets inevitable decomposition, preserved under layers of translucent, fractured lacquer.. Visual language: fine-line pen work, cross-hatched shadows, sepia-toned ink washes, spiderweb craquelure, desiccated vein structures, tarnished brass etchings. Palette: #2D3A2C, #8C7B75, #C4A484, #4A2E35, #D9D0C1. Fill the complete canvas with layered, high-quality, high-density visual information at several scales. Every large crop must remain attractive and richly detailed. Build a complete thematic world with many medium and small clusters: primary forms, related symbolic objects, environment, architecture or nature, atmospheric connectors, linework, and material texture. No single subject may dominate more than roughly 35% of the canvas width or height, and no subject may stretch across the full image width. Weave these elements through every region rather than arranging isolated stickers on empty space. Do not split it into component assets and do not reserve large plain or near-black areas. This image will be fitted to continuous weapon space and automatically cut into the OBJ-derived UV atlas. Do not draw a weapon, weapon mockup, UV layout, text, logo, watermark, frame, presentation board, or product render.",
+        "composition_group_id": "master_artwork",
+        "composition_mode": "background",
+        "target_components": [
+          "stock",
+          "receiver",
+          "magazine",
+          "pistol_grip",
+          "handguard",
+          "front_assembly",
+          "barrel_muzzle"
+        ]
+      }
+    ],
+    "component_layout": [
+      {
+        "component": "stock",
+        "canvas_center": [
+          0.14,
+          0.31
+        ],
+        "narrative_role": "Introduction to the garden, featuring the most intact and saturated peony blooms.",
+        "element_ids": [
+          "dying_peony_hero",
+          "cracked_glaze_texture"
+        ],
+        "prominence": 0.8,
+        "detail_density": 0.6
+      },
+      {
+        "component": "receiver",
+        "canvas_center": [
+          0.45,
+          0.2
+        ],
+        "narrative_role": "The heart of the composition, where hero flowers meet encroaching ink smudges and brass framing.",
+        "element_ids": [
+          "dying_peony_hero",
+          "antique_brass_filigree",
+          "ink_wash_smudge"
+        ],
+        "prominence": 1.0,
+        "detail_density": 0.9
+      },
+      {
+        "component": "magazine",
+        "canvas_center": [
+          0.5,
+          0.56
+        ],
+        "narrative_role": "Dense cluster of thorny vines and skeletonized leaves wrapping around the curvature.",
+        "element_ids": [
+          "thorny_vines",
+          "dried_leaf_clusters",
+          "cracked_glaze_texture"
+        ],
+        "prominence": 0.7,
+        "detail_density": 0.8
+      },
+      {
+        "component": "pistol_grip",
+        "canvas_center": [
+          0.43,
+          0.47
+        ],
+        "narrative_role": "A singular, decaying leaf motif serving as a transition point.",
+        "element_ids": [
+          "dried_leaf_clusters",
+          "ink_wash_smudge"
+        ],
+        "prominence": 0.4,
+        "detail_density": 0.5
+      },
+      {
+        "component": "handguard",
+        "canvas_center": [
+          0.72,
+          0.11
+        ],
+        "narrative_role": "Vines extending forward, thinning out as they move toward the front assembly.",
+        "element_ids": [
+          "thorny_vines",
+          "cracked_glaze_texture"
+        ],
+        "prominence": 0.6,
+        "detail_density": 0.6
+      },
+      {
+        "component": "front_assembly",
+        "canvas_center": [
+          0.82,
+          0.16
+        ],
+        "narrative_role": "The end of the growth, showing only subtle, faded vine wisps.",
+        "element_ids": [
+          "ink_wash_smudge",
+          "dust_motes"
+        ],
+        "prominence": 0.3,
+        "detail_density": 0.3
+      },
+      {
+        "component": "barrel_muzzle",
+        "canvas_center": [
+          0.94,
+          0.2
+        ],
+        "narrative_role": "Quiet, muted transition to oxidized metal, with only light dust motes remaining.",
+        "element_ids": [
+          "dust_motes"
+        ],
+        "prominence": 0.1,
+        "detail_density": 0.2
+      }
+    ],
+    "composition_graph": {
+      "strategy": "master_artwork",
+      "groups": [],
+      "relations": []
+    },
+    "composition_prompt": "Create one dense whole-canvas master artwork for flower. Theme narrative: The weapon serves as a relic from a forgotten conservatory. As the floral patterns transition from the stock to the barrel, they shift from vibrant, saturated pigments to desiccated, charcoal-toned skeletons, reflecting the passage of time and the fragility of nature against industrial steel.. Style: A somber, archival-grade botanical study where vibrant life meets inevitable decomposition, preserved under layers of translucent, fractured lacquer.. Use the complete palette and visual language across the image. The artwork must remain attractive under arbitrary cropping and must provide useful detail throughout the canvas. It will be fitted to continuous left/right/top weapon canvases and automatically cut into the fragmented OBJ-derived UV atlas. Do not design separate component stickers and do not require a named motif part to land on a named weapon component.",
+    "pipeline": [
+      "generate one dense master artwork by default; preserve graph/legacy fallbacks for old bundles",
+      "fit the artwork to continuous left/right/top weapon-space canvases",
+      "bake weapon-space canvases through position/normal maps into one square UV atlas",
+      "apply UV-edge safety correction",
+      "render AK-47 left/right/top previews before accepting the candidate"
+    ],
+    "constraints": [
+      "do not tile one square pattern across all components",
+      "default Route B uses one dense edge-to-edge master artwork, not isolated component stickers",
+      "master artwork must remain visually useful under crop and across the full canvas",
+      "do not require semantic subparts to land on predetermined components",
+      "accept visual quality only from mapped multi-view previews"
+    ],
+    "required_outputs": [
+      "generated_square_source_assets",
+      "weapon_space_left_canvas",
+      "weapon_space_right_canvas",
+      "weapon_space_top_canvas",
+      "final_square_uv_atlas",
+      "ak47_left_preview",
+      "ak47_right_preview",
+      "ak47_top_preview"
+    ]
+  },
+  "refinement": {
+    "route": "C",
+    "base_route": "B",
+    "inputs": [
+      "Route-B UV atlas",
+      "left/right/top renders",
+      "semantic and technical scores"
+    ],
+    "allowed_actions": [
+      "move or resize the receiver hero in weapon space",
+      "reduce detail on one semantic component",
+      "replace one theme asset while preserving the composition plan",
+      "adjust connector flow or quiet-zone strength",
+      "re-bake and re-render without changing unrelated components"
+    ],
+    "acceptance_rule": "accept only if hard constraints pass and agent score improves by at least 0.01; otherwise roll back",
+    "required_outputs": [
+      "diagnosis",
+      "localized change record",
+      "new previews",
+      "accept_or_rollback decision"
+    ]
+  },
+  "invariants": [
+    "A and B share theme, style, palette, generation backend, resolution, and evaluation cameras",
+    "A designs the square pattern; B designs the weapon and stores the result in a square UV atlas",
+    "C is B plus bounded render-conditioned correction, not a third art style",
+    "no candidate is shown as accepted without mapped weapon previews"
+  ],
+  "theme_pack_path": "runs\\agent_flower_demo_v1\\planning\\compiled_theme.json",
+  "style_pack_path": "runs\\agent_flower_demo_v1\\planning\\compiled_style.json"
+}

@@ -1,0 +1,19 @@
+{
+  "role": "master_artwork",
+  "passed": true,
+  "technical_passed": true,
+  "semantic_status": "The artwork successfully depicts a dense, nocturnal garden scene consistent with the Midnight Serenity theme. It avoids all forbidden elements, including text, weapons, and framing, and features a high density of thematic clusters (koi, stone lanterns, lotus flowers, bamboo, and prayer beads) distributed across the canvas without any single subject dominating the composition.",
+  "reasons": [],
+  "metrics": {
+    "width": 1376,
+    "height": 768,
+    "aspect_ratio": 1.7916666666666667,
+    "foreground_ratio": 0.5750968992248062,
+    "foreground_edge_ratio": 0.07450834561920809,
+    "border_std": 28.475507736206055,
+    "image_std": 44.83787536621094,
+    "detail_density": 0.26381931919795093,
+    "low_detail_patch_ratio": 0.0,
+    "minimum_local_detail_density": 0.1756225650883004
+  }
+}

@@ -1,0 +1,1159 @@
+{
+  "status": "complete_route_a_b_c",
+  "backend_id": "gemini:gemini-3.1-flash-image",
+  "design_contract": {
+    "brief": "flower",
+    "asset_id": "cs2_ak47_new_geometry",
+    "selected_direction": {
+      "direction_id": "candidate_04_dir_04_decay_gradient",
+      "title": "Decay Gradient",
+      "concept": "Visual metaphor for time: vibrant flora on stock, decaying to dust at muzzle.",
+      "style_family": "Withered Petal Covenant",
+      "palette": [
+        "#2D3A2C",
+        "#8C7B75",
+        "#C4A484",
+        "#4A2E35",
+        "#D9D0C1"
+      ],
+      "materials": [
+        "matte parchment texture",
+        "glossy varnish overlay with heavy crackle",
+        "patinated brass metallic highlights",
+        "absorbent paper grain"
+      ],
+      "hero_strategy": "Dense multi-scale theme artwork whose large crops remain visually complete.",
+      "secondary_strategy": "Distribute supporting motifs and material detail across the full canvas.",
+      "connector_strategy": "Use continuous line, colour, and texture rhythm rather than component stickers.",
+      "background_strategy": "Resolve the background as an active material field with no large dead zones.",
+      "route_a_logic": "Brief: flower. Style: A somber, archival-grade botanical study where vibrant life meets inevitable decomposition, preserved under layers of translucent, fractured lacquer.. Direction: Visual metaphor for time: vibrant flora on stock, decaying to dust at muzzle.. Visual language: fine-line pen work, cross-hatched shadows, sepia-toned ink washes, spiderweb craquelure, desiccated vein structures, tarnished brass etchings. Motifs: dying peony, fading ink, scattered petals. Palette: #2D3A2C, #8C7B75, #C4A484, #4A2E35, #D9D0C1. Material cues: matte parchment texture, glossy varnish overlay with heavy crackle, patinated brass metallic highlights, absorbent paper grain. Route A objective: Establish a seamless botanical tapestry that flows longitudinally across the weapon geometry.. tiling density distribution scaled to 0.75; no visible seam-lines; uniform vine interconnection. Emphasis: Seamless tonal transition from deep burgundy to ash. Required: maximum of three color overlaps, no hero flowers crossing component boundaries. Avoid: bright saturated neons, vectorized sharp edges, digital gradient blurs, photorealistic petal textures, large repeating geometric shapes.",
+      "route_b_logic": "Brief: flower. Style: A somber, archival-grade botanical study where vibrant life meets inevitable decomposition, preserved under layers of translucent, fractured lacquer.. Direction: Visual metaphor for time: vibrant flora on stock, decaying to dust at muzzle.. Visual language: fine-line pen work, cross-hatched shadows, sepia-toned ink washes, spiderweb craquelure, desiccated vein structures, tarnished brass etchings. Motifs: dying peony, fading ink, scattered petals. Palette: #2D3A2C, #8C7B75, #C4A484, #4A2E35, #D9D0C1. Material cues: matte parchment texture, glossy varnish overlay with heavy crackle, patinated brass metallic highlights, absorbent paper grain. Route B objective: generate one complete, dense, crop-robust master artwork, fit it across continuous left/right/top weapon space, then automatically cut and repack it through the OBJ-derived UV atlas. Distribute useful visual information at multiple scales across the full image; avoid large empty regions. Subject-part placement on named weapon components is not required or evaluated. Avoid: bright saturated neons, vectorized sharp edges, digital gradient blurs, photorealistic petal textures, large repeating geometric shapes.",
+      "quiet_regions": [],
+      "risks": [
+        "avoid bright saturated neons",
+        "avoid vectorized sharp edges",
+        "avoid digital gradient blurs"
+      ],
+      "recommendation_reason": "Distinct Decay Gradient interpretation with explicit Route A and crop-robust master-artwork Route B logic.",
+      "motifs": [
+        "dying peony",
+        "fading ink",
+        "scattered petals"
+      ],
+      "world_elements": [
+        "Focal Peony",
+        "Varnish Craquelure",
+        "Barbed Tendrils",
+        "Petal Scatter",
+        "Oxidized Frame",
+        "Skeletonized Foliage",
+        "Atmospheric Dust",
+        "Stained Ink Wash",
+        "A large, semi-wilted peony flower with curling, translucent petal edges, rendered in fine-line ink illustration.",
+        "A macro texture of fine, spiderweb-like cracks in old lacquer, creating a sense of aged material depth.",
+        "Intertwining, thin, dry thorny vines that bridge the negative space between larger floral motifs.",
+        "Single, wind-blown, curling petals resting on the barrel area, showing signs of browning edges.",
+        "Subtle, tarnished brass ornamental flourishes that outline the receiver edges.",
+        "Brittle, translucent leaves showing prominent vein structures, layered behind flowers.",
+        "Micro-specks of light-colored debris scattered unevenly across the dark surfaces to imply a forgotten room.",
+        "Soft, monochromatic ink bleeding patterns that transition between the botanical elements.",
+        "small symbolic objects related to the main theme",
+        "environmental fragments that imply a complete world",
+        "atmospheric connectors and motion rhythms",
+        "fine material grain and ornamental micro-detail",
+        "peony bloom",
+        "thorny vine",
+        "skeleton leaf",
+        "curling petal",
+        "dust mote cloud",
+        "oxidized scrollwork",
+        "fine-line pen work",
+        "cross-hatched shadows",
+        "sepia-toned ink washes",
+        "spiderweb craquelure",
+        "desiccated vein structures",
+        "tarnished brass etchings",
+        "matte parchment texture",
+        "glossy varnish overlay with heavy crackle",
+        "patinated brass metallic highlights",
+        "absorbent paper grain"
+      ],
+      "generator_brief": "Original faded floral illustration design, Visual metaphor for time: vibrant flora on stock, decaying to dust at muzzle.; dying peony, fading ink, scattered petals; balanced medium-scale motifs and clear negative space"
+    },
+    "locked_at": "2026-07-20T14:32:03.855510+00:00",
+    "constraints": [
+      "do not silently change the selected concept",
+      "Route A and Route B must share the locked palette and visual language",
+      "accept final quality only from mapped multi-view previews"
+    ]
+  },
+  "selected_artwork": {
+    "candidate_id": "artwork_02",
+    "title": "Ornamental Tapestry",
+    "variation": "symbol-led tapestry with repeated medium motifs, treasure-like details, patterned borders dissolved into the field, material ornament, and dense micro-symbols",
+    "source": "runs\\agent_flower_demo_v1\\artwork_candidates\\artwork_02\\source\\route_b_master_artwork.png",
+    "source_sha256": "dac71aeaa9d061e154020e929c08feea49000f37f5121cae3dff0fd75ccc7abc",
+    "canonical_output": "runs\\agent_flower_ornamental_v2\\execution\\generated_sources\\route_b_master_artwork.png",
+    "canonical_sha256": "dac71aeaa9d061e154020e929c08feea49000f37f5121cae3dff0fd75ccc7abc",
+    "preview_paths": [
+      "runs\\agent_flower_demo_v1\\artwork_candidates\\artwork_02\\mapped_preview\\route_b_width_1_left.png",
+      "runs\\agent_flower_demo_v1\\artwork_candidates\\artwork_02\\mapped_preview\\route_b_width_1_right.png",
+      "runs\\agent_flower_demo_v1\\artwork_candidates\\artwork_02\\mapped_preview\\route_b_width_1_top.png",
+      "runs\\agent_flower_demo_v1\\artwork_candidates\\artwork_02\\mapped_preview\\route_b_width_1_multiview.png"
+    ],
+    "preview_metrics": {
+      "selected_edge_width": 1,
+      "asset_seam": {
+        "seam_pair_count": 4999,
+        "samples_per_edge": 16,
+        "color_error": 0.0033971487424843115,
+        "gradient_error": 0.0001492328788348839,
+        "total_error": 0.0025851697765719548
+      },
+      "multi_view_score": 0.7151381886408699,
+      "multi_view_retention": 1.005312814278188,
+      "total_score": 0.7772365835535947,
+      "constraints_passed": true,
+      "preview_bake_size": 256
+    },
+    "validation": {
+      "role": "master_artwork",
+      "passed": true,
+      "technical_passed": true,
+      "semantic_status": "The artwork is a highly detailed, continuous landscape composition that adheres to the Withered Petal Covenant theme. It effectively integrates fine-line peonies, craquelure textures, thorny vines, and tarnished brass flourishes across the entire 16:9 canvas without any dominant single subject or forbidden elements.",
+      "reasons": [],
+      "metrics": {
+        "width": 1376,
+        "height": 768,
+        "aspect_ratio": 1.7916666666666667,
+        "foreground_ratio": 0.8507184169089147,
+        "foreground_edge_ratio": 0.12291159628570031,
+        "border_std": 63.976749420166016,
+        "image_std": 59.99747848510742,
+        "detail_density": 0.4171598642033313,
+        "low_detail_patch_ratio": 0.0,
+        "minimum_local_detail_density": 0.23980725197361677
+      }
+    },
+    "mode": "human_selected_pre_mapped_master_artwork"
+  },
+  "bundle_path": "runs\\agent_flower_ornamental_v2\\planning\\route_design_bundle.json",
+  "bundle_sha256": "6cbf3b065d8b831f6e0266ba8d51ef3a64b5845f91031eef9805f3f6c2a453fd",
+  "generated_sources": [
+    {
+      "job_id": "route_a_candidate_01__candidate_04_dir_04_decay_gradient",
+      "route": "A",
+      "semantic_role": "tileable_template_pattern",
+      "composition_group_id": null,
+      "attempt": 1,
+      "prompt": "Use case: stylized-concept. Asset type: tileable game weapon-skin texture source. Create an original dense all-over seamless template pattern for: flower. Theme elements: A large, semi-wilted peony flower with curling, translucent petal edges, rendered in fine-line ink illustration., A macro texture of fine, spiderweb-like cracks in old lacquer, creating a sense of aged material depth., Intertwining, thin, dry thorny vines that bridge the negative space between larger floral motifs., Single, wind-blown, curling petals resting on the barrel area, showing signs of browning edges., Subtle, tarnished brass ornamental flourishes that outline the receiver edges., Brittle, translucent leaves showing prominent vein structures, layered behind flowers., Micro-specks of light-colored debris scattered unevenly across the dark surfaces to imply a forgotten room., Soft, monochromatic ink bleeding patterns that transition between the botanical elements.. Style language: fine-line pen work, cross-hatched shadows, sepia-toned ink washes, spiderweb craquelure, desiccated vein structures, tarnished brass etchings. Palette: #2D3A2C, #8C7B75, #C4A484, #4A2E35, #D9D0C1. Pattern logic: The design utilizes a heavy 'aged lacquer' overlay that creates a high-gloss finish over the matte floral ink work.; Floral density should be highest on the receiver and decrease as the pattern moves toward the muzzle.; Avoid solid geometric repeats; favor an organic, asymmetrical arrangement that mimics an overgrown garden wall.. Every crop must remain visually complete; repeat partial elements across opposite edges; use many overlapping elements at varied scales; no unique hero or weapon-aware placement. Avoid: bright saturated neons, vectorized sharp edges, digital gradient blurs, photorealistic petal textures, large repeating geometric shapes. Locked candidate art direction: Decay Gradient (candidate_04_dir_04_decay_gradient). Concept: Visual metaphor for time: vibrant flora on stock, decaying to dust at muzzle.. Motifs: dying peony, fading ink, scattered petals. Expanded thematic world: Focal Peony, Varnish Craquelure, Barbed Tendrils, Petal Scatter, Oxidized Frame, Skeletonized Foliage, Atmospheric Dust, Stained Ink Wash, A large, semi-wilted peony flower with curling, translucent petal edges, rendered in fine-line ink illustration., A macro texture of fine, spiderweb-like cracks in old lacquer, creating a sense of aged material depth., Intertwining, thin, dry thorny vines that bridge the negative space between larger floral motifs., Single, wind-blown, curling petals resting on the barrel area, showing signs of browning edges., Subtle, tarnished brass ornamental flourishes that outline the receiver edges., Brittle, translucent leaves showing prominent vein structures, layered behind flowers., Micro-specks of light-colored debris scattered unevenly across the dark surfaces to imply a forgotten room., Soft, monochromatic ink bleeding patterns that transition between the botanical elements., small symbolic objects related to the main theme, environmental fragments that imply a complete world, atmospheric connectors and motion rhythms, fine material grain and ornamental micro-detail, peony bloom, thorny vine, skeleton leaf, curling petal, dust mote cloud, oxidized scrollwork, fine-line pen work, cross-hatched shadows, sepia-toned ink washes, spiderweb craquelure, desiccated vein structures, tarnished brass etchings, matte parchment texture, glossy varnish overlay with heavy crackle, patinated brass metallic highlights, absorbent paper grain. Route-A emphasis: Brief: flower. Style: A somber, archival-grade botanical study where vibrant life meets inevitable decomposition, preserved under layers of translucent, fractured lacquer.. Direction: Visual metaphor for time: vibrant flora on stock, decaying to dust at muzzle.. Visual language: fine-line pen work, cross-hatched shadows, sepia-toned ink washes, spiderweb craquelure, desiccated vein structures, tarnished brass etchings. Motifs: dying peony, fading ink, scattered petals. Palette: #2D3A2C, #8C7B75, #C4A484, #4A2E35, #D9D0C1. Material cues: matte parchment texture, glossy varnish overlay with heavy crackle, patinated brass metallic highlights, absorbent paper grain. Route A objective: Establish a seamless botanical tapestry that flows longitudinally across the weapon geometry.. tiling density distribution scaled to 0.75; no visible seam-lines; uniform vine interconnection. Emphasis: Seamless tonal transition from deep burgundy to ash. Required: maximum of three color overlaps, no hero flowers crossing component boundaries. Avoid: bright saturated neons, vectorized sharp edges, digital gradient blurs, photorealistic petal textures, large repeating geometric shapes.. Do not drift to another art direction. Candidate 1 of 1. Output only the square artwork: no weapon, text, logo, watermark, presentation border, UV wireframe, or mockup.",
+      "output": "runs\\agent_flower_ornamental_v2\\execution\\generated_sources\\route_a_candidate_01__attempt-01.png",
+      "sha256": "3aced44764526ac71da121189ee1b458686062e9a441304018b1798cc52a5c46",
+      "canonical_output": "runs\\agent_flower_ornamental_v2\\execution\\generated_sources\\route_a_candidate_01.png",
+      "trace": "runs\\agent_flower_ornamental_v2\\execution\\generated_sources\\route_a_candidate_01__candidate_04_dir_04_decay_gradient__attempt-01_trace.json"
+    },
+    {
+      "candidate_id": "artwork_02",
+      "title": "Ornamental Tapestry",
+      "variation": "symbol-led tapestry with repeated medium motifs, treasure-like details, patterned borders dissolved into the field, material ornament, and dense micro-symbols",
+      "source": "runs\\agent_flower_demo_v1\\artwork_candidates\\artwork_02\\source\\route_b_master_artwork.png",
+      "source_sha256": "dac71aeaa9d061e154020e929c08feea49000f37f5121cae3dff0fd75ccc7abc",
+      "canonical_output": "runs\\agent_flower_ornamental_v2\\execution\\generated_sources\\route_b_master_artwork.png",
+      "canonical_sha256": "dac71aeaa9d061e154020e929c08feea49000f37f5121cae3dff0fd75ccc7abc",
+      "preview_paths": [
+        "runs\\agent_flower_demo_v1\\artwork_candidates\\artwork_02\\mapped_preview\\route_b_width_1_left.png",
+        "runs\\agent_flower_demo_v1\\artwork_candidates\\artwork_02\\mapped_preview\\route_b_width_1_right.png",
+        "runs\\agent_flower_demo_v1\\artwork_candidates\\artwork_02\\mapped_preview\\route_b_width_1_top.png",
+        "runs\\agent_flower_demo_v1\\artwork_candidates\\artwork_02\\mapped_preview\\route_b_width_1_multiview.png"
+      ],
+      "preview_metrics": {
+        "selected_edge_width": 1,
+        "asset_seam": {
+          "seam_pair_count": 4999,
+          "samples_per_edge": 16,
+          "color_error": 0.0033971487424843115,
+          "gradient_error": 0.0001492328788348839,
+          "total_error": 0.0025851697765719548
+        },
+        "multi_view_score": 0.7151381886408699,
+        "multi_view_retention": 1.005312814278188,
+        "total_score": 0.7772365835535947,
+        "constraints_passed": true,
+        "preview_bake_size": 256
+      },
+      "validation": {
+        "role": "master_artwork",
+        "passed": true,
+        "technical_passed": true,
+        "semantic_status": "The artwork is a highly detailed, continuous landscape composition that adheres to the Withered Petal Covenant theme. It effectively integrates fine-line peonies, craquelure textures, thorny vines, and tarnished brass flourishes across the entire 16:9 canvas without any dominant single subject or forbidden elements.",
+        "reasons": [],
+        "metrics": {
+          "width": 1376,
+          "height": 768,
+          "aspect_ratio": 1.7916666666666667,
+          "foreground_ratio": 0.8507184169089147,
+          "foreground_edge_ratio": 0.12291159628570031,
+          "border_std": 63.976749420166016,
+          "image_std": 59.99747848510742,
+          "detail_density": 0.4171598642033313,
+          "low_detail_patch_ratio": 0.0,
+          "minimum_local_detail_density": 0.23980725197361677
+        }
+      },
+      "mode": "human_selected_pre_mapped_master_artwork"
+    }
+  ],
+  "source_validations": {
+    "master_artwork": {
+      "role": "master_artwork",
+      "passed": true,
+      "technical_passed": true,
+      "semantic_status": "The artwork is a highly detailed, continuous landscape composition that adheres to the Withered Petal Covenant theme. It effectively integrates fine-line peonies, craquelure textures, thorny vines, and tarnished brass flourishes across the entire 16:9 canvas without any dominant single subject or forbidden elements.",
+      "reasons": [],
+      "metrics": {
+        "width": 1376,
+        "height": 768,
+        "aspect_ratio": 1.7916666666666667,
+        "foreground_ratio": 0.8507184169089147,
+        "foreground_edge_ratio": 0.12291159628570031,
+        "border_std": 63.976749420166016,
+        "image_std": 59.99747848510742,
+        "detail_density": 0.4171598642033313,
+        "low_detail_patch_ratio": 0.0,
+        "minimum_local_detail_density": 0.23980725197361677
+      }
+    }
+  },
+  "route_a": {
+    "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_a\\route_a_seamless.png",
+    "texture_tga": "runs\\agent_flower_ornamental_v2\\execution\\route_a\\selected__route-a__custom-paint-job.tga",
+    "previews": [
+      "runs\\agent_flower_ornamental_v2\\execution\\route_a\\route_a_seamless_ak47_left.png",
+      "runs\\agent_flower_ornamental_v2\\execution\\route_a\\route_a_seamless_ak47_right.png",
+      "runs\\agent_flower_ornamental_v2\\execution\\route_a\\route_a_seamless_ak47_top.png",
+      "runs\\agent_flower_ornamental_v2\\execution\\route_a\\route_a_seamless_ak47_multiview.png"
+    ],
+    "score": {
+      "candidate_id": "route_a",
+      "seam_score": 0.906843262059348,
+      "contrast_score": 0.9293931562480845,
+      "saturation_score": 0.6035160191278471,
+      "coverage_score": 1.0,
+      "texture_score": 0.8657887977113298,
+      "multi_view": {
+        "views": [
+          {
+            "view_name": "left",
+            "foreground_ratio": 0.09006944444444444,
+            "contrast_score": 0.6790032619714494,
+            "saturation_score": 0.5732279270761741,
+            "detail_score": 1.0,
+            "mean_luminance": 0.29666240007525324
+          },
+          {
+            "view_name": "right",
+            "foreground_ratio": 0.09449266975308641,
+            "contrast_score": 0.6354791750775998,
+            "saturation_score": 0.5440259284593385,
+            "detail_score": 1.0,
+            "mean_luminance": 0.28270783172920083
+          },
+          {
+            "view_name": "top",
+            "foreground_ratio": 0.03891010802469136,
+            "contrast_score": 0.5939559935653269,
+            "saturation_score": 0.5342978917884067,
+            "detail_score": 1.0,
+            "mean_luminance": 0.2741864898257156
+          }
+        ],
+        "consistency_score": 0.9536765925586224,
+        "total_score": 0.7715246442222242
+      },
+      "semantic": null,
+      "total_score": 0.8327963439901429
+    },
+    "metrics": {
+      "square_seam_raw": 0.1290701925754547,
+      "square_seam_repaired": 0.03260485827922821,
+      "asset_seam": {
+        "seam_pair_count": 4999,
+        "samples_per_edge": 16,
+        "color_error": 0.24663440212314122,
+        "gradient_error": 0.028039696286102003,
+        "total_error": 0.19198572566388142
+      },
+      "multi_view_score": 0.7715246442222242,
+      "total_score": 0.8327963439901429
+    },
+    "artifacts": {
+      "source": "runs\\agent_flower_ornamental_v2\\execution\\generated_sources\\route_a_candidate_01.png",
+      "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_a\\route_a_seamless.png",
+      "texture_tga": "runs\\agent_flower_ornamental_v2\\execution\\route_a\\selected__route-a__custom-paint-job.tga",
+      "previews": [
+        "runs\\agent_flower_ornamental_v2\\execution\\route_a\\route_a_seamless_ak47_left.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_a\\route_a_seamless_ak47_right.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_a\\route_a_seamless_ak47_top.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_a\\route_a_seamless_ak47_multiview.png"
+      ]
+    },
+    "asset_verification": {
+      "mesh_sha256": "dae29ee5cadfbf17f84d50d0fe1d50500988e45886571f17bf5eab0d4065654f",
+      "uv_sheet_sha256": null
+    },
+    "asset_contract": {
+      "asset_spec": {
+        "asset_id": "cs2_ak47_new_geometry",
+        "display_name": "AK-47 (new CS2 Workshop geometry)",
+        "game": "Counter-Strike 2",
+        "mesh_path": "D:\\project\\SDSC6002-SkinSmith\\third_party\\valve_geometry\\weapon_rif_ak47.obj",
+        "mesh_sha256": "dae29ee5cadfbf17f84d50d0fe1d50500988e45886571f17bf5eab0d4065654f",
+        "mesh_version": "Valve Workshop Resources: NEW CS2 weapon model geometry",
+        "uv_source": "mesh_derived_from_same_obj",
+        "uv_address_mode": "clamp",
+        "uv_sheet_path": null,
+        "uv_sheet_sha256": null,
+        "texture_size": 2048,
+        "export_format": "TGA 24-bit Custom Paint exact-fit",
+        "camera_views": [
+          "left",
+          "right",
+          "top"
+        ],
+        "semantic_region_order": [
+          "magazine",
+          "pistol_grip",
+          "handguard",
+          "barrel_muzzle",
+          "stock",
+          "receiver",
+          "front_assembly"
+        ],
+        "default_region": "other",
+        "source_path": "D:\\project\\SDSC6002-SkinSmith\\config\\assets\\ak47_cs2.json"
+      },
+      "canonical_frame_axes": {
+        "longitudinal_axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "up_axis": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "route_b": {
+    "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_selected.png",
+    "texture_tga": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\selected__route-b__custom-paint-job.tga",
+    "previews": [
+      "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_left.png",
+      "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_right.png",
+      "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_top.png",
+      "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_multiview.png"
+    ],
+    "score": {
+      "candidate_id": "width_4",
+      "seam_score": 0.993692102975079,
+      "contrast_score": 0.7428445482943976,
+      "saturation_score": 0.45992244422705475,
+      "coverage_score": 0.6512350506252713,
+      "texture_score": 0.7728577247028326,
+      "multi_view": {
+        "views": [
+          {
+            "view_name": "left",
+            "foreground_ratio": 0.08498649691358025,
+            "contrast_score": 0.5961947077663355,
+            "saturation_score": 0.44865161821938404,
+            "detail_score": 1.0,
+            "mean_luminance": 0.3366293308979856
+          },
+          {
+            "view_name": "right",
+            "foreground_ratio": 0.07738425925925926,
+            "contrast_score": 0.5967666032845543,
+            "saturation_score": 0.47898274491155135,
+            "detail_score": 1.0,
+            "mean_luminance": 0.32513270339544736
+          },
+          {
+            "view_name": "top",
+            "foreground_ratio": 0.03456983024691358,
+            "contrast_score": 0.6371218424228895,
+            "saturation_score": 0.4521086891917039,
+            "detail_score": 1.0,
+            "mean_luminance": 0.35564323156861655
+          }
+        ],
+        "consistency_score": 0.9370936583727598,
+        "total_score": 0.7385509517968452
+      },
+      "semantic": null,
+      "total_score": 0.7608503541857371
+    },
+    "constraints_passed": true,
+    "metrics": {
+      "selected_edge_width": 4,
+      "asset_seam": {
+        "seam_pair_count": 4999,
+        "samples_per_edge": 16,
+        "color_error": 0.0006834329114681682,
+        "gradient_error": 0.00024865550599955104,
+        "total_error": 0.000574738560101014
+      },
+      "multi_view_score": 0.7385509517968452,
+      "multi_view_retention": 1.0016229718379743,
+      "total_score": 0.7608503541857371,
+      "constraints_passed": true
+    },
+    "artifacts": {
+      "raw_texture": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\uv_baked_raw.png",
+      "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_selected.png",
+      "texture_tga": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\selected__route-b__custom-paint-job.tga",
+      "previews": [
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_left.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_right.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_top.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_multiview.png"
+      ],
+      "weapon_space_canvases": {
+        "left": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\weapon_space_left.png",
+        "right": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\weapon_space_right.png",
+        "top": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\weapon_space_top.png"
+      }
+    },
+    "asset_verification": {
+      "mesh_sha256": "dae29ee5cadfbf17f84d50d0fe1d50500988e45886571f17bf5eab0d4065654f",
+      "uv_sheet_sha256": null
+    },
+    "asset_contract": {
+      "asset_spec": {
+        "asset_id": "cs2_ak47_new_geometry",
+        "display_name": "AK-47 (new CS2 Workshop geometry)",
+        "game": "Counter-Strike 2",
+        "mesh_path": "D:\\project\\SDSC6002-SkinSmith\\third_party\\valve_geometry\\weapon_rif_ak47.obj",
+        "mesh_sha256": "dae29ee5cadfbf17f84d50d0fe1d50500988e45886571f17bf5eab0d4065654f",
+        "mesh_version": "Valve Workshop Resources: NEW CS2 weapon model geometry",
+        "uv_source": "mesh_derived_from_same_obj",
+        "uv_address_mode": "clamp",
+        "uv_sheet_path": null,
+        "uv_sheet_sha256": null,
+        "texture_size": 2048,
+        "export_format": "TGA 24-bit Custom Paint exact-fit",
+        "camera_views": [
+          "left",
+          "right",
+          "top"
+        ],
+        "semantic_region_order": [
+          "magazine",
+          "pistol_grip",
+          "handguard",
+          "barrel_muzzle",
+          "stock",
+          "receiver",
+          "front_assembly"
+        ],
+        "default_region": "other",
+        "source_path": "D:\\project\\SDSC6002-SkinSmith\\config\\assets\\ak47_cs2.json"
+      },
+      "canonical_frame_axes": {
+        "longitudinal_axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "up_axis": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      }
+    },
+    "geometry_maps": {
+      "size": 2048,
+      "valid_pixel_count": 2971821,
+      "valid_pixel_fraction": 0.7085373401641846,
+      "overlap_pixel_count": 15375,
+      "overlap_pixel_fraction": 0.0036656856536865234,
+      "maximum_coverage_count": 14
+    },
+    "content_provenance": {
+      "master_artwork__side": {
+        "semantic_role": "master_artwork",
+        "composition_group_id": "master_artwork",
+        "source_path": "runs\\agent_flower_ornamental_v2\\execution\\generated_sources\\route_b_master_artwork.png",
+        "sha256": "dac71aeaa9d061e154020e929c08feea49000f37f5121cae3dff0fd75ccc7abc"
+      },
+      "master_artwork__top": {
+        "semantic_role": "master_artwork",
+        "composition_group_id": "master_artwork",
+        "source_path": "runs\\agent_flower_ornamental_v2\\execution\\generated_sources\\route_b_master_artwork.png",
+        "sha256": "dac71aeaa9d061e154020e929c08feea49000f37f5121cae3dff0fd75ccc7abc"
+      }
+    },
+    "composition_mode": "continuous_master_artwork_obj_uv_bake",
+    "edge_candidates": {
+      "width_0": {
+        "width": 0,
+        "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\width_0.png",
+        "previews": [
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_0_left.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_0_right.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_0_top.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_0_multiview.png"
+        ],
+        "asset_seam": {
+          "seam_pair_count": 4999,
+          "samples_per_edge": 16,
+          "color_error": 0.1033512629095906,
+          "gradient_error": 0.031190450536636872,
+          "total_error": 0.08531105981635216
+        },
+        "score": {
+          "candidate_id": "route_b_width_0",
+          "seam_score": 0.9900053933795009,
+          "contrast_score": 0.7840740530307183,
+          "saturation_score": 0.4628513481462343,
+          "coverage_score": 0.7435493999057347,
+          "texture_score": 0.796123350224587,
+          "multi_view": {
+            "views": [
+              {
+                "view_name": "left",
+                "foreground_ratio": 0.08633101851851852,
+                "contrast_score": 0.5998213060148913,
+                "saturation_score": 0.4519292359485415,
+                "detail_score": 1.0,
+                "mean_luminance": 0.3403963453370802
+              },
+              {
+                "view_name": "right",
+                "foreground_ratio": 0.07875192901234568,
+                "contrast_score": 0.6010616387678864,
+                "saturation_score": 0.48134654870003013,
+                "detail_score": 1.0,
+                "mean_luminance": 0.32900563140136646
+              },
+              {
+                "view_name": "top",
+                "foreground_ratio": 0.03445601851851852,
+                "contrast_score": 0.6401340613066322,
+                "saturation_score": 0.45496873719126685,
+                "detail_score": 1.0,
+                "mean_luminance": 0.3684592771158402
+              }
+            ],
+            "consistency_score": 0.9171033501625061,
+            "total_score": 0.7373542466199702
+          },
+          "semantic": null,
+          "total_score": 0.775554163962971
+        },
+        "multi_view_retention": 1.0
+      },
+      "width_4": {
+        "width": 4,
+        "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\width_4.png",
+        "previews": [
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_left.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_right.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_top.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_multiview.png"
+        ],
+        "asset_seam": {
+          "seam_pair_count": 4999,
+          "samples_per_edge": 16,
+          "color_error": 0.0006834329114681682,
+          "gradient_error": 0.00024865550599955104,
+          "total_error": 0.000574738560101014
+        },
+        "score": {
+          "candidate_id": "width_4",
+          "seam_score": 0.993692102975079,
+          "contrast_score": 0.7428445482943976,
+          "saturation_score": 0.45992244422705475,
+          "coverage_score": 0.6512350506252713,
+          "texture_score": 0.7728577247028326,
+          "multi_view": {
+            "views": [
+              {
+                "view_name": "left",
+                "foreground_ratio": 0.08498649691358025,
+                "contrast_score": 0.5961947077663355,
+                "saturation_score": 0.44865161821938404,
+                "detail_score": 1.0,
+                "mean_luminance": 0.3366293308979856
+              },
+              {
+                "view_name": "right",
+                "foreground_ratio": 0.07738425925925926,
+                "contrast_score": 0.5967666032845543,
+                "saturation_score": 0.47898274491155135,
+                "detail_score": 1.0,
+                "mean_luminance": 0.32513270339544736
+              },
+              {
+                "view_name": "top",
+                "foreground_ratio": 0.03456983024691358,
+                "contrast_score": 0.6371218424228895,
+                "saturation_score": 0.4521086891917039,
+                "detail_score": 1.0,
+                "mean_luminance": 0.35564323156861655
+              }
+            ],
+            "consistency_score": 0.9370936583727598,
+            "total_score": 0.7385509517968452
+          },
+          "semantic": null,
+          "total_score": 0.7608503541857371
+        },
+        "multi_view_retention": 1.0016229718379743
+      },
+      "width_8": {
+        "width": 8,
+        "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\width_8.png",
+        "previews": [
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_8_left.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_8_right.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_8_top.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_8_multiview.png"
+        ],
+        "asset_seam": {
+          "seam_pair_count": 4999,
+          "samples_per_edge": 16,
+          "color_error": 0.000239274169756494,
+          "gradient_error": 8.80173817125293e-05,
+          "total_error": 0.00020145997274550282
+        },
+        "score": {
+          "candidate_id": "width_8",
+          "seam_score": 0.9955326558223793,
+          "contrast_score": 0.7139677566036314,
+          "saturation_score": 0.4582390903887166,
+          "coverage_score": 0.595537821451823,
+          "texture_score": 0.7576834927753764,
+          "multi_view": {
+            "views": [
+              {
+                "view_name": "left",
+                "foreground_ratio": 0.08410493827160494,
+                "contrast_score": 0.5913484567828481,
+                "saturation_score": 0.4454745942131263,
+                "detail_score": 1.0,
+                "mean_luminance": 0.3324728368411585
+              },
+              {
+                "view_name": "right",
+                "foreground_ratio": 0.07648341049382716,
+                "contrast_score": 0.5913196130723324,
+                "saturation_score": 0.4768050046396952,
+                "detail_score": 1.0,
+                "mean_luminance": 0.32125321262707707
+              },
+              {
+                "view_name": "top",
+                "foreground_ratio": 0.034602623456790126,
+                "contrast_score": 0.6341899959456614,
+                "saturation_score": 0.4506010059452308,
+                "detail_score": 1.0,
+                "mean_luminance": 0.34721491673935717
+              }
+            ],
+            "consistency_score": 0.9468435626477003,
+            "total_score": 0.7381190580437436
+          },
+          "semantic": null,
+          "total_score": 0.7508359406193049
+        },
+        "multi_view_retention": 1.0010372374300132
+      },
+      "width_12": {
+        "width": 12,
+        "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\width_12.png",
+        "previews": [
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_12_left.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_12_right.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_12_top.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_12_multiview.png"
+        ],
+        "asset_seam": {
+          "seam_pair_count": 4999,
+          "samples_per_edge": 16,
+          "color_error": 0.0001543447678419713,
+          "gradient_error": 5.704031629058334e-05,
+          "total_error": 0.0001300186549541243
+        },
+        "score": {
+          "candidate_id": "width_12",
+          "seam_score": 0.9974343200613346,
+          "contrast_score": 0.6885866707074949,
+          "saturation_score": 0.4570210411537827,
+          "coverage_score": 0.5538543065388998,
+          "texture_score": 0.7456027499129991,
+          "multi_view": {
+            "views": [
+              {
+                "view_name": "left",
+                "foreground_ratio": 0.08318479938271604,
+                "contrast_score": 0.5870939118938389,
+                "saturation_score": 0.4423141717215714,
+                "detail_score": 1.0,
+                "mean_luminance": 0.3283829701906039
+              },
+              {
+                "view_name": "right",
+                "foreground_ratio": 0.07564236111111111,
+                "contrast_score": 0.5855686156195948,
+                "saturation_score": 0.4749871520045277,
+                "detail_score": 1.0,
+                "mean_luminance": 0.3172358306543998
+              },
+              {
+                "view_name": "top",
+                "foreground_ratio": 0.034639274691358024,
+                "contrast_score": 0.6304609339390849,
+                "saturation_score": 0.44959464502556,
+                "detail_score": 1.0,
+                "mean_luminance": 0.34033633724136203
+              }
+            ],
+            "consistency_score": 0.9528367398306727,
+            "total_score": 0.7371458545158244
+          },
+          "semantic": null,
+          "total_score": 0.7426428365239879
+        },
+        "multi_view_retention": 0.9997173785801043
+      },
+      "width_16": {
+        "width": 16,
+        "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\width_16.png",
+        "previews": [
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_16_left.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_16_right.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_16_top.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_16_multiview.png"
+        ],
+        "asset_seam": {
+          "seam_pair_count": 4999,
+          "samples_per_edge": 16,
+          "color_error": 0.00012641831521192,
+          "gradient_error": 4.6676685489540787e-05,
+          "total_error": 0.0001064829077813252
+        },
+        "score": {
+          "candidate_id": "width_16",
+          "seam_score": 0.9983899674511382,
+          "contrast_score": 0.6655790445368991,
+          "saturation_score": 0.45621880578778984,
+          "coverage_score": 0.514874193403456,
+          "texture_score": 0.7342256382827564,
+          "multi_view": {
+            "views": [
+              {
+                "view_name": "left",
+                "foreground_ratio": 0.08212962962962964,
+                "contrast_score": 0.5838713229764529,
+                "saturation_score": 0.43978706448034655,
+                "detail_score": 1.0,
+                "mean_luminance": 0.32504190890937357
+              },
+              {
+                "view_name": "right",
+                "foreground_ratio": 0.07473572530864198,
+                "contrast_score": 0.579433303053531,
+                "saturation_score": 0.47284481964902414,
+                "detail_score": 1.0,
+                "mean_luminance": 0.31333407223974175
+              },
+              {
+                "view_name": "top",
+                "foreground_ratio": 0.0345679012345679,
+                "contrast_score": 0.625528671165002,
+                "saturation_score": 0.44850374043848307,
+                "detail_score": 1.0,
+                "mean_luminance": 0.334718793767507
+              }
+            ],
+            "consistency_score": 0.9562830617651343,
+            "total_score": 0.7357537576982566
+          },
+          "semantic": null,
+          "total_score": 0.7347604800781815
+        },
+        "multi_view_retention": 0.9978294165537797
+      },
+      "width_24": {
+        "width": 24,
+        "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_b\\width_24.png",
+        "previews": [
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_24_left.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_24_right.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_24_top.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_24_multiview.png"
+        ],
+        "asset_seam": {
+          "seam_pair_count": 4999,
+          "samples_per_edge": 16,
+          "color_error": 0.00010600098073740638,
+          "gradient_error": 4.00806285884944e-05,
+          "total_error": 8.952089270017838e-05
+        },
+        "score": {
+          "candidate_id": "width_24",
+          "seam_score": 0.9992075117604274,
+          "contrast_score": 0.6261274358809757,
+          "saturation_score": 0.4551019783652924,
+          "coverage_score": 0.44951968722873265,
+          "texture_score": 0.7146632124317834,
+          "multi_view": {
+            "views": [
+              {
+                "view_name": "left",
+                "foreground_ratio": 0.0800192901234568,
+                "contrast_score": 0.579082278140353,
+                "saturation_score": 0.435225571315782,
+                "detail_score": 1.0,
+                "mean_luminance": 0.31926495876784733
+              },
+              {
+                "view_name": "right",
+                "foreground_ratio": 0.07280671296296297,
+                "contrast_score": 0.5673198830704999,
+                "saturation_score": 0.46902547110610626,
+                "detail_score": 1.0,
+                "mean_luminance": 0.30634430069619456
+              },
+              {
+                "view_name": "top",
+                "foreground_ratio": 0.03449266975308642,
+                "contrast_score": 0.6187337997877547,
+                "saturation_score": 0.44621248756759,
+                "detail_score": 1.0,
+                "mean_luminance": 0.3249862105795285
+              }
+            ],
+            "consistency_score": 0.9610129208303988,
+            "total_score": 0.7332041617235437
+          },
+          "semantic": null,
+          "total_score": 0.7211525446838996
+        },
+        "multi_view_retention": 0.9943716539025165
+      }
+    },
+    "selection": {
+      "selected_id": "width_4",
+      "feasible_ids": [
+        "width_4",
+        "width_8",
+        "width_12",
+        "width_16",
+        "width_24"
+      ],
+      "rejected_ids": [
+        "width_0"
+      ],
+      "pareto_ids": [
+        "width_4",
+        "width_8",
+        "width_12",
+        "width_16",
+        "width_24"
+      ],
+      "violations": {
+        "width_0": 7.531105981635217,
+        "width_4": 0.0,
+        "width_8": 0.0,
+        "width_12": 0.0,
+        "width_16": 0.0,
+        "width_24": 0.0
+      },
+      "policy": "hard constraints -> Pareto front -> lexicographic fixed objectives"
+    }
+  },
+  "route_c": {
+    "status": "rolled_back",
+    "accepted": false,
+    "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_c\\route_c_selected.png",
+    "texture_tga": "runs\\agent_flower_ornamental_v2\\execution\\route_c\\selected__route-c__custom-paint-job.tga",
+    "previews": [
+      "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_left.png",
+      "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_right.png",
+      "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_top.png",
+      "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_multiview.png"
+    ],
+    "score": {
+      "candidate_id": "width_4",
+      "seam_score": 0.993692102975079,
+      "contrast_score": 0.7428445482943976,
+      "saturation_score": 0.45992244422705475,
+      "coverage_score": 0.6512350506252713,
+      "texture_score": 0.7728577247028326,
+      "multi_view": {
+        "views": [
+          {
+            "view_name": "left",
+            "foreground_ratio": 0.08498649691358025,
+            "contrast_score": 0.5961947077663355,
+            "saturation_score": 0.44865161821938404,
+            "detail_score": 1.0,
+            "mean_luminance": 0.3366293308979856
+          },
+          {
+            "view_name": "right",
+            "foreground_ratio": 0.07738425925925926,
+            "contrast_score": 0.5967666032845543,
+            "saturation_score": 0.47898274491155135,
+            "detail_score": 1.0,
+            "mean_luminance": 0.32513270339544736
+          },
+          {
+            "view_name": "top",
+            "foreground_ratio": 0.03456983024691358,
+            "contrast_score": 0.6371218424228895,
+            "saturation_score": 0.4521086891917039,
+            "detail_score": 1.0,
+            "mean_luminance": 0.35564323156861655
+          }
+        ],
+        "consistency_score": 0.9370936583727598,
+        "total_score": 0.7385509517968452
+      },
+      "semantic": null,
+      "total_score": 0.7608503541857371
+    },
+    "metrics": {
+      "asset_seam": {
+        "seam_pair_count": 4999,
+        "samples_per_edge": 16,
+        "color_error": 0.0006834329114681682,
+        "gradient_error": 0.00024865550599955104,
+        "total_error": 0.000574738560101014
+      },
+      "multi_view_score": 0.7385509517968452,
+      "total_score": 0.7608503541857371,
+      "accepted": false
+    },
+    "artifacts": {
+      "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_c\\route_c_selected.png",
+      "texture_tga": "runs\\agent_flower_ornamental_v2\\execution\\route_c\\selected__route-c__custom-paint-job.tga",
+      "previews": [
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_left.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_right.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_top.png",
+        "runs\\agent_flower_ornamental_v2\\execution\\route_b\\route_b_width_4_multiview.png"
+      ]
+    },
+    "diagnosis": {
+      "action": "reduce_receiver_focal_detail_in_weapon_space",
+      "target": "receiver_focal_region",
+      "reason": "bounded correction reuses the locked receiver focal zone without a new image call"
+    },
+    "candidates": {
+      "route_c_intensity_1": {
+        "intensity": 1,
+        "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_c\\route_c_intensity_1.png",
+        "previews": [
+          "runs\\agent_flower_ornamental_v2\\execution\\route_c\\route_c_intensity_1_left.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_c\\route_c_intensity_1_right.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_c\\route_c_intensity_1_top.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_c\\route_c_intensity_1_multiview.png"
+        ],
+        "score": {
+          "candidate_id": "route_c_intensity_1",
+          "seam_score": 0.9941082737807717,
+          "contrast_score": 0.7136705682616162,
+          "saturation_score": 0.4420677820841471,
+          "coverage_score": 0.5604810184902616,
+          "texture_score": 0.7485466607680814,
+          "multi_view": {
+            "views": [
+              {
+                "view_name": "left",
+                "foreground_ratio": 0.0840895061728395,
+                "contrast_score": 0.5717950461502528,
+                "saturation_score": 0.4374712990635502,
+                "detail_score": 1.0,
+                "mean_luminance": 0.3393913796019417
+              },
+              {
+                "view_name": "right",
+                "foreground_ratio": 0.07576774691358025,
+                "contrast_score": 0.5641455020590114,
+                "saturation_score": 0.46519829990145667,
+                "detail_score": 1.0,
+                "mean_luminance": 0.3300775068416287
+              },
+              {
+                "view_name": "top",
+                "foreground_ratio": 0.03468942901234568,
+                "contrast_score": 0.6180077145232866,
+                "saturation_score": 0.4415855631709821,
+                "detail_score": 1.0,
+                "mean_luminance": 0.3549291106088212
+              }
+            ],
+            "consistency_score": 0.9487443035468459,
+            "total_score": 0.7297277353166144
+          },
+          "semantic": null,
+          "total_score": 0.741960036860068
+        },
+        "asset_seam": {
+          "seam_pair_count": 4999,
+          "samples_per_edge": 16,
+          "color_error": 0.0005939971135366861,
+          "gradient_error": 0.00020490444262220476,
+          "total_error": 0.0004967239458080658
+        },
+        "multi_view_retention": 0.9880533408578454,
+        "locality": {
+          "left": {
+            "changed_pixel_count": 119560,
+            "changed_pixel_fraction": 0.1013522677951389,
+            "changed_outside_target_halo_count": 0,
+            "changed_outside_target_halo_fraction_of_changes": 0.0
+          },
+          "right": {
+            "changed_pixel_count": 117358,
+            "changed_pixel_fraction": 0.09948560926649305,
+            "changed_outside_target_halo_count": 0,
+            "changed_outside_target_halo_fraction_of_changes": 0.0
+          },
+          "top": {
+            "changed_pixel_count": 121246,
+            "changed_pixel_fraction": 0.10278150770399305,
+            "changed_outside_target_halo_count": 0,
+            "changed_outside_target_halo_fraction_of_changes": 0.0
+          }
+        }
+      },
+      "route_c_intensity_2": {
+        "intensity": 2,
+        "texture_png": "runs\\agent_flower_ornamental_v2\\execution\\route_c\\route_c_intensity_2.png",
+        "previews": [
+          "runs\\agent_flower_ornamental_v2\\execution\\route_c\\route_c_intensity_2_left.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_c\\route_c_intensity_2_right.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_c\\route_c_intensity_2_top.png",
+          "runs\\agent_flower_ornamental_v2\\execution\\route_c\\route_c_intensity_2_multiview.png"
+        ],
+        "score": {
+          "candidate_id": "route_c_intensity_2",
+          "seam_score": 0.9943777938772526,
+          "contrast_score": 0.6973381862365906,
+          "saturation_score": 0.4290239879268687,
+          "coverage_score": 0.5181087387932671,
+          "texture_score": 0.7356067725144125,
+          "multi_view": {
+            "views": [
+              {
+                "view_name": "left",
+                "foreground_ratio": 0.08622106481481481,
+                "contrast_score": 0.5702818795618642,
+                "saturation_score": 0.42886186125171766,
+                "detail_score": 1.0,
+                "mean_luminance": 0.33449540632415126
+              },
+              {
+                "view_name": "right",
+                "foreground_ratio": 0.07785108024691358,
+                "contrast_score": 0.562534982430992,
+                "saturation_score": 0.4552105563203297,
+                "detail_score": 1.0,
+                "mean_luminance": 0.32461761353532936
+              },
+              {
+                "view_name": "top",
+                "foreground_ratio": 0.03622492283950617,
+                "contrast_score": 0.6165620236403804,
+                "saturation_score": 0.4278635268351566,
+                "detail_score": 1.0,
+                "mean_luminance": 0.346560874735964
+              }
+            ],
+            "consistency_score": 0.9551344057545066,
+            "total_score": 0.7275360447937667
+          },
+          "semantic": null,
+          "total_score": 0.7327820178121864
+        },
+        "asset_seam": {
+          "seam_pair_count": 4999,
+          "samples_per_edge": 16,
+          "color_error": 0.0005306215909149518,
+          "gradient_error": 0.0001815392309689757,
+          "total_error": 0.00044335100092845786
+        },
+        "multi_view_retention": 0.9850857859213641,
+        "locality": {
+          "left": {
+            "changed_pixel_count": 125284,
+            "changed_pixel_fraction": 0.1062045627170139,
+            "changed_outside_target_halo_count": 0,
+            "changed_outside_target_halo_fraction_of_changes": 0.0
+          },
+          "right": {
+            "changed_pixel_count": 124011,
+            "changed_pixel_fraction": 0.10512542724609375,
+            "changed_outside_target_halo_count": 0,
+            "changed_outside_target_halo_fraction_of_changes": 0.0
+          },
+          "top": {
+            "changed_pixel_count": 127916,
+            "changed_pixel_fraction": 0.10843573676215278,
+            "changed_outside_target_halo_count": 0,
+            "changed_outside_target_halo_fraction_of_changes": 0.0
+          }
+        }
+      }
+    },
+    "selection": {
+      "selected_id": "route_c_intensity_1",
+      "feasible_ids": [
+        "route_c_intensity_1",
+        "route_c_intensity_2"
+      ],
+      "rejected_ids": [],
+      "pareto_ids": [
+        "route_c_intensity_1",
+        "route_c_intensity_2"
+      ],
+      "violations": {
+        "route_c_intensity_1": 0.0,
+        "route_c_intensity_2": 0.0
+      },
+      "policy": "hard constraints -> Pareto front -> lexicographic fixed objectives"
+    },
+    "decision": {
+      "accepted": false,
+      "round_0_score": 0.7608503541857371,
+      "round_1_score": 0.741960036860068,
+      "improvement": -0.018890317325669148,
+      "selected_round": 0,
+      "reason": "Round 1 improved by -0.018890, below the 0.010000 threshold",
+      "constraints_passed": true,
+      "selected_candidate": "route_c_intensity_1"
+    }
+  },
+  "decision": {
+    "selected_route": "B",
+    "reason": "Route B passed hard constraints and Route C was disabled or rolled back.",
+    "route_c": {
+      "accepted": false,
+      "round_0_score": 0.7608503541857371,
+      "round_1_score": 0.741960036860068,
+      "improvement": -0.018890317325669148,
+      "selected_round": 0,
+      "reason": "Round 1 improved by -0.018890, below the 0.010000 threshold",
+      "constraints_passed": true,
+      "selected_candidate": "route_c_intensity_1"
+    }
+  },
+  "runtime_seconds": 122.60183190000316
+}

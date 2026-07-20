@@ -1,0 +1,17 @@
+{
+  "facts": {
+    "20260720_221717_56252655.route_execution": {
+      "key": "20260720_221717_56252655.route_execution",
+      "value": {
+        "selected_route": "B",
+        "route_a_total": 0.8327963439901429,
+        "route_b_total": 0.7608503541857371,
+        "route_b_constraints_passed": true
+      },
+      "evidence": [
+        "runs\\agent_flower_ornamental_v2\\execution\\execution_manifest.json"
+      ],
+      "recorded_at": "2026-07-20T15:10:43.229380+00:00"
+    }
+  }
+}

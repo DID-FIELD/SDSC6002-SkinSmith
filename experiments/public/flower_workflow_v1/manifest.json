@@ -1,0 +1,473 @@
+{
+  "package": "SkinSmith public flower workflow evidence",
+  "source_runs": [
+    "runs/agent_flower_demo_v1",
+    "runs/agent_flower_ornamental_v2"
+  ],
+  "secret_policy": "API keys and authorization values are excluded. Provider, model, endpoint, prompts, usage, retries, decisions, and response metadata are retained. Long embedded values are replaced by length and SHA-256.",
+  "raw_runs_local_bytes": 407257341,
+  "files": [
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-01_semantic_review_trace.json",
+      "bytes": 12193,
+      "sha256": "51a25f9b7d37bbe007d5081f19ed42b0d0e653c18c6ec1edc58870552851746f",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-01_semantic_review_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-01_trace.json",
+      "bytes": 10028,
+      "sha256": "f3c8d937f603c372cb877af632691ac501926d049245b04a09cb7d5db185260b",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-01_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-02_semantic_review_trace.json",
+      "bytes": 12350,
+      "sha256": "9c1e388f7708f0d3a957a923a510375ffcc66c90846371a2327e5dee7a22aea1",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-02_semantic_review_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-02_trace.json",
+      "bytes": 10028,
+      "sha256": "aa2a438965451977535d68a8b2df3a9e623e6e8e7e855dd1cc89b37ab0a0546e",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-02_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-03_semantic_review_trace.json",
+      "bytes": 12915,
+      "sha256": "5f42d5eee7d8fb4a595d02b3dcc51f00dc46f14af8b546455fd8188ae1a92cc3",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-03_semantic_review_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-03_trace.json",
+      "bytes": 10770,
+      "sha256": "56faab31fe00235e861b63bcf9d2d38326a4f849579fb4922dadf44e8cf64a4d",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-03_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-04_semantic_review_trace.json",
+      "bytes": 12997,
+      "sha256": "b0bfaa62f297a48216f2e50d1705170c568abe955f5c913839f184ed78beec95",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-04_semantic_review_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-04_trace.json",
+      "bytes": 10622,
+      "sha256": "8515ad4e1511c741bd4b43941f9d789094519fe678f6ad489f292d7806ce44dd",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-04_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-05_semantic_review_trace.json",
+      "bytes": 12862,
+      "sha256": "140b47ac85023ff01e3dd60302462e05cb4d6ad95f34ab2e3f7f9adc433f5e24",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-05_semantic_review_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-05_trace.json",
+      "bytes": 10792,
+      "sha256": "62bce537f661963a3e1e3a8f347b43b9faa3089876fd0cbaf6b72710b8633278",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-05_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-06_trace.json",
+      "bytes": 10606,
+      "sha256": "7ea6d62a777a6bde3c06e804c835de3ff62259be79da7f815f88d17bfb3b4719",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-06_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-07_semantic_review_trace.json",
+      "bytes": 12184,
+      "sha256": "1288818115d61e87621625467bf92baa5f5d13f643c9d8006c08471c2380bf6e",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-07_semantic_review_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-07_trace.json",
+      "bytes": 10876,
+      "sha256": "91b32624cc4074b8aa987609425a509ad558454064b662c4a3e5757da9849e4c",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-07_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-08_semantic_review_trace.json",
+      "bytes": 12590,
+      "sha256": "bf913f667ea5aea65dd1b5b785360eece61e8b44dce749e2714e766d2ce98151",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-08_semantic_review_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-08_trace.json",
+      "bytes": 10570,
+      "sha256": "b0beaeba14383ed3e0759554accdb7acd883e6f2139120fa3260178444484065",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-08_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-09_semantic_review_trace.json",
+      "bytes": 12742,
+      "sha256": "151f3ffd0202db0909a8ac28fd7eaa1a1a90618d68e24eedeea3d3df09284111",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-09_semantic_review_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-09_trace.json",
+      "bytes": 10495,
+      "sha256": "8bef391d8ca25b741b02c6dbd87089e1264d534653e0e09a96c52085a09ef6ea",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-09_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-10_semantic_review_trace.json",
+      "bytes": 12987,
+      "sha256": "9a96a91641505c7021674026c3573097ab8a6b004c964a4324c6cbf9ab8493aa",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-10_semantic_review_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-10_trace.json",
+      "bytes": 11123,
+      "sha256": "87b794fe9a1ba018a70659e214123a876ae7fa122036177ff4d6aa83ec874820",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-10_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-11_semantic_review_trace.json",
+      "bytes": 12969,
+      "sha256": "01fe164271f2c921317c563e035b5b0dd32e38511e4c3450d05e3e2b64262934",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-11_semantic_review_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-11_trace.json",
+      "bytes": 10763,
+      "sha256": "d07eea6b6d3b54be48c844d6a2a556eff936cb4220f5640fda87685dc3c7ce92",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_01__attempt-11_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_02/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_02__attempt-01_semantic_review_trace.json",
+      "bytes": 12212,
+      "sha256": "faa6a1888e4f0ef88d61b82ccfa80fc6238b749aaaef1f662a6964322c9fba6b",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_02/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_02__attempt-01_semantic_review_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_02/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_02__attempt-01_trace.json",
+      "bytes": 9999,
+      "sha256": "906ac5cfb5d29c24b7debe467fa26f68d845d12097cd124febe6b6888cb45a95",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_02/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_02__attempt-01_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_02/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_02__attempt-02_semantic_review_trace.json",
+      "bytes": 13169,
+      "sha256": "163b2320ba955acfeab3676a749542b0ac9b5140580de89aeda067b526db1860",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_02/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_02__attempt-02_semantic_review_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_02/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_02__attempt-02_trace.json",
+      "bytes": 11071,
+      "sha256": "6e10f9bb359fd318df781b01a72ee6377a35356a74a7a5da549b1bf3ea68187a",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_02/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_02__attempt-02_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_03/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_03__attempt-01_semantic_review_trace.json",
+      "bytes": 12185,
+      "sha256": "cc22dc24703a527cf437d33b54cc9fae9a899568d82ca2d3aff31425a6f58051",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_03/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_03__attempt-01_semantic_review_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_03/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_03__attempt-01_trace.json",
+      "bytes": 9998,
+      "sha256": "7e7ee60c607fb957138201200f0753fe4ad372e56aa49836e9c8795db4021434",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_03/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_03__attempt-01_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_04/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_04__attempt-01_semantic_review_trace.json",
+      "bytes": 12051,
+      "sha256": "f2b30e20b99b068b65cbfdc0d17c3c15bcffedbc3c1cb684a1f2d6fd814c59b6",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_04/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_04__attempt-01_semantic_review_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/artwork_candidates/artwork_04/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_04__attempt-01_trace.json",
+      "bytes": 10945,
+      "sha256": "348a7e3309df3e175a93ba93f49447d2967ab36d53ea06e688f687849d7c506b",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_04/source/botanical_decay_bloom_master_artwork__candidate_04_dir_04_decay_gradient__artwork_04__attempt-01_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "api_traces/execution/generated_sources/route_a_candidate_01__candidate_04_dir_04_decay_gradient__attempt-01_trace.json",
+      "bytes": 6756,
+      "sha256": "b6b4fcb30cfbebcd92ca24f761f6410b6d7e4ce6a1cfcea3cbf8de773df924b1",
+      "source": "runs/agent_flower_demo_v1/execution/generated_sources/route_a_candidate_01__candidate_04_dir_04_decay_gradient__attempt-01_trace.json",
+      "sanitized": true
+    },
+    {
+      "path": "selected_ornamental/agent_run_result.json",
+      "bytes": 124896,
+      "sha256": "0d8e7f64104382bea3f28341c13ec1e45e4e4471c8a7bce5cde5e2ba49c12185",
+      "source": "runs/agent_flower_ornamental_v2/agent_run_result.json",
+      "sanitized": true
+    },
+    {
+      "path": "selected_ornamental/checkpoint.json",
+      "bytes": 121285,
+      "sha256": "ece67653e10007f45b04c41aa4987bcc4dcdb08dcefc2a5ca8d1910550d3ba18",
+      "source": "runs/agent_flower_ornamental_v2/checkpoint.json",
+      "sanitized": true
+    },
+    {
+      "path": "selected_ornamental/events.jsonl",
+      "bytes": 4760,
+      "sha256": "ef2e867d072255396d1238f436d8108e52c392cefcf7b438919193d930d125bc",
+      "source": "runs/agent_flower_ornamental_v2/events.jsonl",
+      "sanitized": true
+    },
+    {
+      "path": "selected_ornamental/execution_manifest.json",
+      "bytes": 56679,
+      "sha256": "576048b996f3da6a4f03b2d46592ac32a6614e04fcd92c684a9f776f71086d81",
+      "source": "runs/agent_flower_ornamental_v2/execution/execution_manifest.json",
+      "sanitized": true
+    },
+    {
+      "path": "selected_ornamental/final/route_b_log.json",
+      "bytes": 20492,
+      "sha256": "44854dcf323e6418d80ba3ec384bfee29eb09814c073e7060714ddd9729254ad",
+      "source": "runs/agent_flower_ornamental_v2/execution/route_b/route_b_log.json",
+      "sanitized": true
+    },
+    {
+      "path": "selected_ornamental/final/route_b_selected.png",
+      "bytes": 4789201,
+      "sha256": "110352ebbe85fb1c243de7812799304d6f0bbe247caa3f5ef738bc2ed3e3a22a",
+      "source": "runs/agent_flower_ornamental_v2/execution/route_b/route_b_selected.png",
+      "sanitized": false
+    },
+    {
+      "path": "selected_ornamental/final/route_b_width_4_left.png",
+      "bytes": 146298,
+      "sha256": "8ef5b278ea56281e7c83d396e194a5c20e061b65444f1adff6468d0503b56bd4",
+      "source": "runs/agent_flower_ornamental_v2/execution/route_b/route_b_width_4_left.png",
+      "sanitized": false
+    },
+    {
+      "path": "selected_ornamental/final/route_b_width_4_multiview.png",
+      "bytes": 102373,
+      "sha256": "595efa2887b6d881442e90b6190f7ea4b700dd9b586452f10c754c859b54cc17",
+      "source": "runs/agent_flower_ornamental_v2/execution/route_b/route_b_width_4_multiview.png",
+      "sanitized": false
+    },
+    {
+      "path": "selected_ornamental/final/route_b_width_4_right.png",
+      "bytes": 145956,
+      "sha256": "a4f27bc3f99be26b487754f0b1178f7d298a196677fbd29234b538313a946b1e",
+      "source": "runs/agent_flower_ornamental_v2/execution/route_b/route_b_width_4_right.png",
+      "sanitized": false
+    },
+    {
+      "path": "selected_ornamental/final/route_b_width_4_top.png",
+      "bytes": 59518,
+      "sha256": "8f19573490db515a8c83d85c7e2198cd5f406c521ff2645709afe6d0be2605bd",
+      "source": "runs/agent_flower_ornamental_v2/execution/route_b/route_b_width_4_top.png",
+      "sanitized": false
+    },
+    {
+      "path": "selected_ornamental/final/selected__route-b__custom-paint-job.tga",
+      "bytes": 12582956,
+      "sha256": "81c4d5c8fd3c4d65713801cd9040e93aa6660ea3d8d8dd4be17ad0c519cf386e",
+      "source": "runs/agent_flower_ornamental_v2/execution/route_b/selected__route-b__custom-paint-job.tga",
+      "sanitized": false
+    },
+    {
+      "path": "selected_ornamental/memory_snapshot.json",
+      "bytes": 505,
+      "sha256": "e88df715cd51f3991f3af279056c2b72508939f6cae7d4599f23c5b8bd6634ff",
+      "source": "runs/agent_flower_ornamental_v2/memory_snapshot.json",
+      "sanitized": true
+    },
+    {
+      "path": "workflow/agent_run_result.json",
+      "bytes": 118723,
+      "sha256": "c810f38523d13abc18dade0952694a9beb3fcac487531801efecec2b2e3fb638",
+      "source": "runs/agent_flower_demo_v1/agent_run_result.json",
+      "sanitized": true
+    },
+    {
+      "path": "workflow/candidates/artwork_01/generation_log.json",
+      "bytes": 49293,
+      "sha256": "4706d05a9435bc951b81bdb2e3072848d63bdb20a01c3b77b2d35cb52267c641",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/generation_log.json",
+      "sanitized": true
+    },
+    {
+      "path": "workflow/candidates/artwork_01/multiview.png",
+      "bytes": 100228,
+      "sha256": "e880a0853b85da0cebdc764c65bda5a2ccd3b39d980b7ddb479c4b8efa8bbb0e",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/mapped_preview/route_b_width_1_multiview.png",
+      "sanitized": false
+    },
+    {
+      "path": "workflow/candidates/artwork_01/source.png",
+      "bytes": 2381240,
+      "sha256": "ff520f9befe9b3e0e02bd38406c1de29beded63922674992469683ef876a5420",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/route_b_master_artwork.png",
+      "sanitized": false
+    },
+    {
+      "path": "workflow/candidates/artwork_01/source_validation.json",
+      "bytes": 1466,
+      "sha256": "c75c0a240010f869ee78422f716249f3d3f905e0affc042d9d3038e203442456",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_01/source/route_b_master_artwork_validation.json",
+      "sanitized": true
+    },
+    {
+      "path": "workflow/candidates/artwork_02/generation_log.json",
+      "bytes": 20371,
+      "sha256": "6eb964f499c2a984273b5629d5a4559be258e0423ea322ce46a52be1c97c39e7",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_02/source/generation_log.json",
+      "sanitized": true
+    },
+    {
+      "path": "workflow/candidates/artwork_02/multiview.png",
+      "bytes": 98665,
+      "sha256": "67045f51be07d2a4097c6955ef06bf97a9ee3f3587e61e550c7c1ec538eff1fa",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_02/mapped_preview/route_b_width_1_multiview.png",
+      "sanitized": false
+    },
+    {
+      "path": "workflow/candidates/artwork_02/source.png",
+      "bytes": 2300637,
+      "sha256": "dac71aeaa9d061e154020e929c08feea49000f37f5121cae3dff0fd75ccc7abc",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_02/source/route_b_master_artwork.png",
+      "sanitized": false
+    },
+    {
+      "path": "workflow/candidates/artwork_02/source_validation.json",
+      "bytes": 1176,
+      "sha256": "8c52e7619fca46371920a1c865f08d5989f164133d8e27c1a7249655487d343c",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_02/source/route_b_master_artwork_validation.json",
+      "sanitized": true
+    },
+    {
+      "path": "workflow/candidates/artwork_03/generation_log.json",
+      "bytes": 10314,
+      "sha256": "a664016708a77d8eee7875752b19eb8b0ec288198b58d9f72ad13d963dcf9fe7",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_03/source/generation_log.json",
+      "sanitized": true
+    },
+    {
+      "path": "workflow/candidates/artwork_03/multiview.png",
+      "bytes": 102393,
+      "sha256": "270ccea222f469ed18efa2824761d8c1b5f402e5b5d3ec9c960436c93ca184a4",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_03/mapped_preview/route_b_width_1_multiview.png",
+      "sanitized": false
+    },
+    {
+      "path": "workflow/candidates/artwork_03/source.png",
+      "bytes": 2284375,
+      "sha256": "92320728c26ad85e94cb570a3b57bb85a7ac61b4eb83af14f9413eec45e43929",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_03/source/route_b_master_artwork.png",
+      "sanitized": false
+    },
+    {
+      "path": "workflow/candidates/artwork_03/source_validation.json",
+      "bytes": 910,
+      "sha256": "cfbfff77353c44fc6f3dce4f08c0fba51a490cea89e970d2e96f16f8a9a7692f",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_03/source/route_b_master_artwork_validation.json",
+      "sanitized": true
+    },
+    {
+      "path": "workflow/candidates/artwork_04/generation_log.json",
+      "bytes": 10203,
+      "sha256": "6898479396b14996e2d499b7d6fcdb0096774a96aa4ec0c6162f88333882186d",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_04/source/generation_log.json",
+      "sanitized": true
+    },
+    {
+      "path": "workflow/candidates/artwork_04/multiview.png",
+      "bytes": 98896,
+      "sha256": "ebc8188c823793076a4ff46c3b090bc2e5b8cf78b3d02c476f754c476e0ddaa9",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_04/mapped_preview/route_b_width_1_multiview.png",
+      "sanitized": false
+    },
+    {
+      "path": "workflow/candidates/artwork_04/source.png",
+      "bytes": 2182383,
+      "sha256": "74891d99c69df378eec0901b2c7be01d0922d552fcbc2ffee7ef0e1444a59ee4",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_04/source/route_b_master_artwork.png",
+      "sanitized": false
+    },
+    {
+      "path": "workflow/candidates/artwork_04/source_validation.json",
+      "bytes": 776,
+      "sha256": "7f493da9d31c40ea1896e1319a5ff8a76a293791a06b4952add2118d7b5a1699",
+      "source": "runs/agent_flower_demo_v1/artwork_candidates/artwork_04/source/route_b_master_artwork_validation.json",
+      "sanitized": true
+    },
+    {
+      "path": "workflow/checkpoint.json",
+      "bytes": 115297,
+      "sha256": "f7d9e12f3bf98cc83455d2342f5325e14fe6bcac064c90f4a4d3daec561ba657",
+      "source": "runs/agent_flower_demo_v1/checkpoint.json",
+      "sanitized": true
+    },
+    {
+      "path": "workflow/events.jsonl",
+      "bytes": 41868,
+      "sha256": "8997f644c887e1ac7f690085990320aaef45c0d82fb23ee5a26e5b43a3b786d0",
+      "source": "runs/agent_flower_demo_v1/events.jsonl",
+      "sanitized": true
+    },
+    {
+      "path": "workflow/memory_snapshot.json",
+      "bytes": 499,
+      "sha256": "e34f0d7b28bc31900dac2e933198ad970b2eec932f486ed253a5a1025a38179b",
+      "source": "runs/agent_flower_demo_v1/memory_snapshot.json",
+      "sanitized": true
+    },
+    {
+      "path": "workflow/planning/compiled_style.json",
+      "bytes": 5215,
+      "sha256": "3d09c1cd44640e0bf52bb8bde7ebb4160007ca0a7c6504b794e6d101e3493d01",
+      "source": "runs/agent_flower_demo_v1/planning/compiled_style.json",
+      "sanitized": true
+    },
+    {
+      "path": "workflow/planning/compiled_theme.json",
+      "bytes": 6141,
+      "sha256": "9f770e771ff07c6012fd863b190bef543685c26d21ebee15ec0108f04dac8348",
+      "source": "runs/agent_flower_demo_v1/planning/compiled_theme.json",
+      "sanitized": true
+    },
+    {
+      "path": "workflow/planning/planning_manifest.json",
+      "bytes": 1126,
+      "sha256": "94428773cc8ff5a55a213caa40aab0a64b675af357b6a4cef5fe18aa06683b2a",
+      "source": "runs/agent_flower_demo_v1/planning/planning_manifest.json",
+      "sanitized": true
+    },
+    {
+      "path": "workflow/planning/route_design_bundle.json",
+      "bytes": 13888,
+      "sha256": "582c938fcf15a64aaf9a32435a0e1b926bc58abc25b850f3b94d8a62f7f6252a",
+      "source": "runs/agent_flower_demo_v1/planning/route_design_bundle.json",
+      "sanitized": true
+    }
+  ]
+}

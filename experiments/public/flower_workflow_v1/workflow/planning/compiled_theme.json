@@ -1,0 +1,158 @@
+{
+  "theme_id": "botanical_decay_bloom",
+  "display_name": "Withered Petal Covenant",
+  "generation_label": "faded floral illustration",
+  "match_terms": [
+    "flower",
+    "botanical",
+    "withered",
+    "heirloom",
+    "floral_illustration"
+  ],
+  "concept": "A study of a dying garden where pressed, dried flowers are preserved behind layers of cracked, aged varnish and oxidized copper plating.",
+  "narrative": "The weapon serves as a relic from a forgotten conservatory. As the floral patterns transition from the stock to the barrel, they shift from vibrant, saturated pigments to desiccated, charcoal-toned skeletons, reflecting the passage of time and the fragility of nature against industrial steel.",
+  "default_style_id": "modern_chinese_botanical_v1",
+  "palette": [
+    "#2D3A2C",
+    "#8C7B75",
+    "#C4A484",
+    "#4A2E35",
+    "#D9D0C1"
+  ],
+  "elements": [
+    {
+      "element_id": "dying_peony_hero",
+      "display_name": "Focal Peony",
+      "semantic_role": "hero",
+      "generation_description": "A large, semi-wilted peony flower with curling, translucent petal edges, rendered in fine-line ink illustration."
+    },
+    {
+      "element_id": "cracked_glaze_texture",
+      "display_name": "Varnish Craquelure",
+      "semantic_role": "background",
+      "generation_description": "A macro texture of fine, spiderweb-like cracks in old lacquer, creating a sense of aged material depth."
+    },
+    {
+      "element_id": "thorny_vines",
+      "display_name": "Barbed Tendrils",
+      "semantic_role": "connector",
+      "generation_description": "Intertwining, thin, dry thorny vines that bridge the negative space between larger floral motifs."
+    },
+    {
+      "element_id": "fallen_petals",
+      "display_name": "Petal Scatter",
+      "semantic_role": "secondary",
+      "generation_description": "Single, wind-blown, curling petals resting on the barrel area, showing signs of browning edges."
+    },
+    {
+      "element_id": "antique_brass_filigree",
+      "display_name": "Oxidized Frame",
+      "semantic_role": "background",
+      "generation_description": "Subtle, tarnished brass ornamental flourishes that outline the receiver edges."
+    },
+    {
+      "element_id": "dried_leaf_clusters",
+      "display_name": "Skeletonized Foliage",
+      "semantic_role": "secondary",
+      "generation_description": "Brittle, translucent leaves showing prominent vein structures, layered behind flowers."
+    },
+    {
+      "element_id": "dust_motes",
+      "display_name": "Atmospheric Dust",
+      "semantic_role": "background",
+      "generation_description": "Micro-specks of light-colored debris scattered unevenly across the dark surfaces to imply a forgotten room."
+    },
+    {
+      "element_id": "ink_wash_smudge",
+      "display_name": "Stained Ink Wash",
+      "semantic_role": "connector",
+      "generation_description": "Soft, monochromatic ink bleeding patterns that transition between the botanical elements."
+    }
+  ],
+  "pattern_notes": [
+    "The design utilizes a heavy 'aged lacquer' overlay that creates a high-gloss finish over the matte floral ink work.",
+    "Floral density should be highest on the receiver and decrease as the pattern moves toward the muzzle.",
+    "Avoid solid geometric repeats; favor an organic, asymmetrical arrangement that mimics an overgrown garden wall."
+  ],
+  "component_story": {
+    "stock": {
+      "narrative_role": "Introduction to the garden, featuring the most intact and saturated peony blooms.",
+      "element_ids": [
+        "dying_peony_hero",
+        "cracked_glaze_texture"
+      ],
+      "prominence": 0.8,
+      "detail_density": 0.6
+    },
+    "receiver": {
+      "narrative_role": "The heart of the composition, where hero flowers meet encroaching ink smudges and brass framing.",
+      "element_ids": [
+        "dying_peony_hero",
+        "antique_brass_filigree",
+        "ink_wash_smudge"
+      ],
+      "prominence": 1.0,
+      "detail_density": 0.9
+    },
+    "magazine": {
+      "narrative_role": "Dense cluster of thorny vines and skeletonized leaves wrapping around the curvature.",
+      "element_ids": [
+        "thorny_vines",
+        "dried_leaf_clusters",
+        "cracked_glaze_texture"
+      ],
+      "prominence": 0.7,
+      "detail_density": 0.8
+    },
+    "pistol_grip": {
+      "narrative_role": "A singular, decaying leaf motif serving as a transition point.",
+      "element_ids": [
+        "dried_leaf_clusters",
+        "ink_wash_smudge"
+      ],
+      "prominence": 0.4,
+      "detail_density": 0.5
+    },
+    "handguard": {
+      "narrative_role": "Vines extending forward, thinning out as they move toward the front assembly.",
+      "element_ids": [
+        "thorny_vines",
+        "cracked_glaze_texture"
+      ],
+      "prominence": 0.6,
+      "detail_density": 0.6
+    },
+    "front_assembly": {
+      "narrative_role": "The end of the growth, showing only subtle, faded vine wisps.",
+      "element_ids": [
+        "ink_wash_smudge",
+        "dust_motes"
+      ],
+      "prominence": 0.3,
+      "detail_density": 0.3
+    },
+    "barrel_muzzle": {
+      "narrative_role": "Quiet, muted transition to oxidized metal, with only light dust motes remaining.",
+      "element_ids": [
+        "dust_motes"
+      ],
+      "prominence": 0.1,
+      "detail_density": 0.2
+    }
+  },
+  "evaluation_criteria": [
+    "Floral elements must feel organic and hand-illustrated rather than procedurally generated.",
+    "The contrast between the 'fresh' botanical colors and the 'aged' varnish must be legible at a distance.",
+    "The density of the pattern must successfully decline from stock to barrel to avoid visual noise at the muzzle."
+  ],
+  "reference_policy": "Strictly adheres to historical botanical illustration styles and classical ink wash techniques; no references to living digital artists.",
+  "target_components": [
+    "stock",
+    "receiver",
+    "magazine",
+    "pistol_grip",
+    "handguard",
+    "front_assembly",
+    "barrel_muzzle"
+  ]
+}

@@ -1,0 +1,530 @@
+{
+  "texture_png": "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_selected.png",
+  "texture_tga": "runs\\agent_garden_demo_v1\\execution\\route_b\\selected__route-b__custom-paint-job.tga",
+  "previews": [
+    "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_4_left.png",
+    "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_4_right.png",
+    "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_4_top.png",
+    "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_4_multiview.png"
+  ],
+  "score": {
+    "candidate_id": "width_4",
+    "seam_score": 0.9936755759907621,
+    "contrast_score": 0.7657742682626748,
+    "saturation_score": 0.7424032468781393,
+    "coverage_score": 0.5536503261990018,
+    "texture_score": 0.8204419957674517,
+    "multi_view": {
+      "views": [
+        {
+          "view_name": "left",
+          "foreground_ratio": 0.10807291666666667,
+          "contrast_score": 0.5892680303153494,
+          "saturation_score": 0.817179628519104,
+          "detail_score": 0.9168796397712061,
+          "mean_luminance": 0.21183512262557858
+        },
+        {
+          "view_name": "right",
+          "foreground_ratio": 0.1071045524691358,
+          "contrast_score": 0.5775785019797305,
+          "saturation_score": 0.7885752182000372,
+          "detail_score": 0.9365488176071178,
+          "mean_luminance": 0.19553952733949154
+        },
+        {
+          "view_name": "top",
+          "foreground_ratio": 0.04136766975308642,
+          "contrast_score": 0.6532677109393126,
+          "saturation_score": 0.8112566187943693,
+          "detail_score": 1.0,
+          "mean_luminance": 0.21795601150229268
+        }
+      ],
+      "consistency_score": 0.952697497792542,
+      "total_score": 0.8116765168562788
+    },
+    "semantic": null,
+    "total_score": 0.8173740781485412
+  },
+  "constraints_passed": true,
+  "metrics": {
+    "selected_edge_width": 4,
+    "asset_seam": {
+      "seam_pair_count": 4999,
+      "samples_per_edge": 16,
+      "color_error": 0.0015086472322455434,
+      "gradient_error": 0.00045698072814732537,
+      "total_error": 0.001245730606220989
+    },
+    "multi_view_score": 0.8116765168562788,
+    "multi_view_retention": 0.9999422267755027,
+    "total_score": 0.8173740781485412,
+    "constraints_passed": true
+  },
+  "artifacts": {
+    "raw_texture": "runs\\agent_garden_demo_v1\\execution\\route_b\\uv_baked_raw.png",
+    "texture_png": "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_selected.png",
+    "texture_tga": "runs\\agent_garden_demo_v1\\execution\\route_b\\selected__route-b__custom-paint-job.tga",
+    "previews": [
+      "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_4_left.png",
+      "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_4_right.png",
+      "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_4_top.png",
+      "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_4_multiview.png"
+    ],
+    "weapon_space_canvases": {
+      "left": "runs\\agent_garden_demo_v1\\execution\\route_b\\weapon_space_left.png",
+      "right": "runs\\agent_garden_demo_v1\\execution\\route_b\\weapon_space_right.png",
+      "top": "runs\\agent_garden_demo_v1\\execution\\route_b\\weapon_space_top.png"
+    }
+  },
+  "asset_verification": {
+    "mesh_sha256": "dae29ee5cadfbf17f84d50d0fe1d50500988e45886571f17bf5eab0d4065654f",
+    "uv_sheet_sha256": null
+  },
+  "asset_contract": {
+    "asset_spec": {
+      "asset_id": "cs2_ak47_new_geometry",
+      "display_name": "AK-47 (new CS2 Workshop geometry)",
+      "game": "Counter-Strike 2",
+      "mesh_path": "D:\\project\\SDSC6002-SkinSmith\\third_party\\valve_geometry\\weapon_rif_ak47.obj",
+      "mesh_sha256": "dae29ee5cadfbf17f84d50d0fe1d50500988e45886571f17bf5eab0d4065654f",
+      "mesh_version": "Valve Workshop Resources: NEW CS2 weapon model geometry",
+      "uv_source": "mesh_derived_from_same_obj",
+      "uv_address_mode": "clamp",
+      "uv_sheet_path": null,
+      "uv_sheet_sha256": null,
+      "texture_size": 2048,
+      "export_format": "TGA 24-bit Custom Paint exact-fit",
+      "camera_views": [
+        "left",
+        "right",
+        "top"
+      ],
+      "semantic_region_order": [
+        "magazine",
+        "pistol_grip",
+        "handguard",
+        "barrel_muzzle",
+        "stock",
+        "receiver",
+        "front_assembly"
+      ],
+      "default_region": "other",
+      "source_path": "D:\\project\\SDSC6002-SkinSmith\\config\\assets\\ak47_cs2.json"
+    },
+    "canonical_frame_axes": {
+      "longitudinal_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "up_axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    }
+  },
+  "geometry_maps": {
+    "size": 2048,
+    "valid_pixel_count": 2971821,
+    "valid_pixel_fraction": 0.7085373401641846,
+    "overlap_pixel_count": 15375,
+    "overlap_pixel_fraction": 0.0036656856536865234,
+    "maximum_coverage_count": 14
+  },
+  "content_provenance": {
+    "master_artwork__side": {
+      "semantic_role": "master_artwork",
+      "composition_group_id": "master_artwork",
+      "source_path": "runs\\agent_garden_demo_v1\\execution\\generated_sources\\route_b_master_artwork.png",
+      "sha256": "26d7ae014ad4411079c5e6a796eed5ad89a7fd2e1cbc2cc969185aea0860ea29"
+    },
+    "master_artwork__top": {
+      "semantic_role": "master_artwork",
+      "composition_group_id": "master_artwork",
+      "source_path": "runs\\agent_garden_demo_v1\\execution\\generated_sources\\route_b_master_artwork.png",
+      "sha256": "26d7ae014ad4411079c5e6a796eed5ad89a7fd2e1cbc2cc969185aea0860ea29"
+    }
+  },
+  "composition_mode": "continuous_master_artwork_obj_uv_bake",
+  "edge_candidates": {
+    "width_0": {
+      "width": 0,
+      "texture_png": "runs\\agent_garden_demo_v1\\execution\\route_b\\width_0.png",
+      "previews": [
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_0_left.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_0_right.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_0_top.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_0_multiview.png"
+      ],
+      "asset_seam": {
+        "seam_pair_count": 4999,
+        "samples_per_edge": 16,
+        "color_error": 0.10519158470081452,
+        "gradient_error": 0.029588178555062718,
+        "total_error": 0.08629073316437658
+      },
+      "score": {
+        "candidate_id": "route_b_width_0",
+        "seam_score": 0.9910792548741613,
+        "contrast_score": 0.798934648078297,
+        "saturation_score": 0.7577096944840607,
+        "coverage_score": 0.640257199605306,
+        "texture_score": 0.8437458828068468,
+        "multi_view": {
+          "views": [
+            {
+              "view_name": "left",
+              "foreground_ratio": 0.10823109567901235,
+              "contrast_score": 0.5878554655331596,
+              "saturation_score": 0.8270932228957808,
+              "detail_score": 0.8910733873750966,
+              "mean_luminance": 0.21831801071971377
+            },
+            {
+              "view_name": "right",
+              "foreground_ratio": 0.10710648148148148,
+              "contrast_score": 0.5858925475577772,
+              "saturation_score": 0.7966281590024582,
+              "detail_score": 0.9306376931187824,
+              "mean_luminance": 0.20208085251246236
+            },
+            {
+              "view_name": "top",
+              "foreground_ratio": 0.041373456790123456,
+              "contrast_score": 0.6641533277965961,
+              "saturation_score": 0.8261218827760067,
+              "detail_score": 1.0,
+              "mean_luminance": 0.2293199786441992
+            }
+          ],
+          "consistency_score": 0.9440571013838053,
+          "total_score": 0.8117234127352325
+        },
+        "semantic": null,
+        "total_score": 0.8325380182817818
+      },
+      "multi_view_retention": 1.0
+    },
+    "width_4": {
+      "width": 4,
+      "texture_png": "runs\\agent_garden_demo_v1\\execution\\route_b\\width_4.png",
+      "previews": [
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_4_left.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_4_right.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_4_top.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_4_multiview.png"
+      ],
+      "asset_seam": {
+        "seam_pair_count": 4999,
+        "samples_per_edge": 16,
+        "color_error": 0.0015086472322455434,
+        "gradient_error": 0.00045698072814732537,
+        "total_error": 0.001245730606220989
+      },
+      "score": {
+        "candidate_id": "width_4",
+        "seam_score": 0.9936755759907621,
+        "contrast_score": 0.7657742682626748,
+        "saturation_score": 0.7424032468781393,
+        "coverage_score": 0.5536503261990018,
+        "texture_score": 0.8204419957674517,
+        "multi_view": {
+          "views": [
+            {
+              "view_name": "left",
+              "foreground_ratio": 0.10807291666666667,
+              "contrast_score": 0.5892680303153494,
+              "saturation_score": 0.817179628519104,
+              "detail_score": 0.9168796397712061,
+              "mean_luminance": 0.21183512262557858
+            },
+            {
+              "view_name": "right",
+              "foreground_ratio": 0.1071045524691358,
+              "contrast_score": 0.5775785019797305,
+              "saturation_score": 0.7885752182000372,
+              "detail_score": 0.9365488176071178,
+              "mean_luminance": 0.19553952733949154
+            },
+            {
+              "view_name": "top",
+              "foreground_ratio": 0.04136766975308642,
+              "contrast_score": 0.6532677109393126,
+              "saturation_score": 0.8112566187943693,
+              "detail_score": 1.0,
+              "mean_luminance": 0.21795601150229268
+            }
+          ],
+          "consistency_score": 0.952697497792542,
+          "total_score": 0.8116765168562788
+        },
+        "semantic": null,
+        "total_score": 0.8173740781485412
+      },
+      "multi_view_retention": 0.9999422267755027
+    },
+    "width_8": {
+      "width": 8,
+      "texture_png": "runs\\agent_garden_demo_v1\\execution\\route_b\\width_8.png",
+      "previews": [
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_8_left.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_8_right.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_8_top.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_8_multiview.png"
+      ],
+      "asset_seam": {
+        "seam_pair_count": 4999,
+        "samples_per_edge": 16,
+        "color_error": 0.0004203191971692092,
+        "gradient_error": 0.00013138439054994762,
+        "total_error": 0.0003480854955143938
+      },
+      "score": {
+        "candidate_id": "width_8",
+        "seam_score": 0.9954264857141035,
+        "contrast_score": 0.7396006355598512,
+        "saturation_score": 0.7323683455339206,
+        "coverage_score": 0.4967967669169108,
+        "texture_score": 0.8040639373199251,
+        "multi_view": {
+          "views": [
+            {
+              "view_name": "left",
+              "foreground_ratio": 0.10813078703703703,
+              "contrast_score": 0.5888917713842259,
+              "saturation_score": 0.8093720708746919,
+              "detail_score": 0.9016307036109016,
+              "mean_luminance": 0.20679920456274564
+            },
+            {
+              "view_name": "right",
+              "foreground_ratio": 0.10701195987654322,
+              "contrast_score": 0.5721233713454548,
+              "saturation_score": 0.7817975430890629,
+              "detail_score": 0.9184317260027038,
+              "mean_luminance": 0.19070565260804637
+            },
+            {
+              "view_name": "top",
+              "foreground_ratio": 0.04139081790123457,
+              "contrast_score": 0.6458724035977113,
+              "saturation_score": 0.8009264170067307,
+              "detail_score": 1.0,
+              "mean_luminance": 0.21034755329171795
+            }
+          ],
+          "consistency_score": 0.9572670785710216,
+          "total_score": 0.8056263952939601
+        },
+        "semantic": null,
+        "total_score": 0.8046107976108373
+      },
+      "multi_view_retention": 0.9924887993303931
+    },
+    "width_12": {
+      "width": 12,
+      "texture_png": "runs\\agent_garden_demo_v1\\execution\\route_b\\width_12.png",
+      "previews": [
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_12_left.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_12_right.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_12_top.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_12_multiview.png"
+      ],
+      "asset_seam": {
+        "seam_pair_count": 4999,
+        "samples_per_edge": 16,
+        "color_error": 0.00018442648050983313,
+        "gradient_error": 6.323845518278736e-05,
+        "total_error": 0.0001541294741780717
+      },
+      "score": {
+        "candidate_id": "width_12",
+        "seam_score": 0.9973560171201825,
+        "contrast_score": 0.7150237851012312,
+        "saturation_score": 0.7234771791087017,
+        "coverage_score": 0.45134756300184464,
+        "texture_score": 0.7900959233953979,
+        "multi_view": {
+          "views": [
+            {
+              "view_name": "left",
+              "foreground_ratio": 0.10800733024691359,
+              "contrast_score": 0.5875293210725194,
+              "saturation_score": 0.8014708138425503,
+              "detail_score": 0.8798491965429509,
+              "mean_luminance": 0.2020185316897919
+            },
+            {
+              "view_name": "right",
+              "foreground_ratio": 0.10724922839506174,
+              "contrast_score": 0.5652415651159984,
+              "saturation_score": 0.7750738074120422,
+              "detail_score": 0.9019291079796854,
+              "mean_luminance": 0.1856040808351831
+            },
+            {
+              "view_name": "top",
+              "foreground_ratio": 0.04146990740740741,
+              "contrast_score": 0.638410963222584,
+              "saturation_score": 0.7925805157503866,
+              "detail_score": 1.0,
+              "mean_luminance": 0.20396224728611326
+            }
+          ],
+          "consistency_score": 0.958828454837203,
+          "total_score": 0.7985473783693692
+        },
+        "semantic": null,
+        "total_score": 0.7930539326362879
+      },
+      "multi_view_retention": 0.9837678276132696
+    },
+    "width_16": {
+      "width": 16,
+      "texture_png": "runs\\agent_garden_demo_v1\\execution\\route_b\\width_16.png",
+      "previews": [
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_16_left.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_16_right.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_16_top.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_16_multiview.png"
+      ],
+      "asset_seam": {
+        "seam_pair_count": 4999,
+        "samples_per_edge": 16,
+        "color_error": 9.606964658112289e-05,
+        "gradient_error": 3.752619728119743e-05,
+        "total_error": 8.143378425614152e-05
+      },
+      "score": {
+        "candidate_id": "width_16",
+        "seam_score": 0.9983777909073979,
+        "contrast_score": 0.6916330373552914,
+        "saturation_score": 0.7154363327256515,
+        "coverage_score": 0.41323105494181317,
+        "texture_score": 0.7773313004881843,
+        "multi_view": {
+          "views": [
+            {
+              "view_name": "left",
+              "foreground_ratio": 0.10781442901234568,
+              "contrast_score": 0.585359102852822,
+              "saturation_score": 0.7944905853029545,
+              "detail_score": 0.8456394833450174,
+              "mean_luminance": 0.19760794908577303
+            },
+            {
+              "view_name": "right",
+              "foreground_ratio": 0.10739583333333333,
+              "contrast_score": 0.5575999345997941,
+              "saturation_score": 0.7686373014723558,
+              "detail_score": 0.8702446384308654,
+              "mean_luminance": 0.18051056324386996
+            },
+            {
+              "view_name": "top",
+              "foreground_ratio": 0.04154513888888889,
+              "contrast_score": 0.6305761764907615,
+              "saturation_score": 0.7849494128838295,
+              "detail_score": 1.0,
+              "mean_luminance": 0.19834557400988906
+            }
+          ],
+          "consistency_score": 0.9588042590767145,
+          "total_score": 0.7884356807383616
+        },
+        "semantic": null,
+        "total_score": 0.7812178335757464
+      },
+      "multi_view_retention": 0.9713107548316252
+    },
+    "width_24": {
+      "width": 24,
+      "texture_png": "runs\\agent_garden_demo_v1\\execution\\route_b\\width_24.png",
+      "previews": [
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_24_left.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_24_right.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_24_top.png",
+        "runs\\agent_garden_demo_v1\\execution\\route_b\\route_b_width_24_multiview.png"
+      ],
+      "asset_seam": {
+        "seam_pair_count": 4999,
+        "samples_per_edge": 16,
+        "color_error": 3.7282465694122404e-05,
+        "gradient_error": 1.974743766075383e-05,
+        "total_error": 3.289870868578026e-05
+      },
+      "score": {
+        "candidate_id": "width_24",
+        "seam_score": 0.9992312381177076,
+        "contrast_score": 0.6467539609763175,
+        "saturation_score": 0.7016597322748799,
+        "coverage_score": 0.35707950592041016,
+        "texture_score": 0.7552748578341999,
+        "multi_view": {
+          "views": [
+            {
+              "view_name": "left",
+              "foreground_ratio": 0.1080690586419753,
+              "contrast_score": 0.5778917902636712,
+              "saturation_score": 0.7816409113806926,
+              "detail_score": 0.7856351206403863,
+              "mean_luminance": 0.18884085772895096
+            },
+            {
+              "view_name": "right",
+              "foreground_ratio": 0.10753472222222223,
+              "contrast_score": 0.5421979983395183,
+              "saturation_score": 0.7553686325267932,
+              "detail_score": 0.8088635792865693,
+              "mean_luminance": 0.17062868486827157
+            },
+            {
+              "view_name": "top",
+              "foreground_ratio": 0.041712962962962966,
+              "contrast_score": 0.6175302361785457,
+              "saturation_score": 0.7720744477534321,
+              "detail_score": 0.9595819459859416,
+              "mean_luminance": 0.18885896570985033
+            }
+          ],
+          "consistency_score": 0.9570521339774132,
+          "total_score": 0.7651515531378185
+        },
+        "semantic": null,
+        "total_score": 0.7587317011904664
+      },
+      "multi_view_retention": 0.9426259500875025
+    }
+  },
+  "selection": {
+    "selected_id": "width_4",
+    "feasible_ids": [
+      "width_4",
+      "width_8",
+      "width_12",
+      "width_16"
+    ],
+    "rejected_ids": [
+      "width_0",
+      "width_24"
+    ],
+    "pareto_ids": [
+      "width_4",
+      "width_8",
+      "width_12",
+      "width_16"
+    ],
+    "violations": {
+      "width_0": 7.629073316437658,
+      "width_4": 0.0,
+      "width_8": 0.0,
+      "width_12": 0.0,
+      "width_16": 0.0,
+      "width_24": 0.007762157802628906
+    },
+    "policy": "hard constraints -> Pareto front -> lexicographic fixed objectives"
+  }
+}

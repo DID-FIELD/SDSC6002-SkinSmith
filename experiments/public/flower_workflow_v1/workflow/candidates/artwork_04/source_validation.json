@@ -1,0 +1,19 @@
+{
+  "role": "master_artwork",
+  "passed": true,
+  "technical_passed": true,
+  "semantic_status": "The artwork successfully adheres to the Withered Petal Covenant theme, featuring a dense, organic, and asymmetric distribution of floral motifs, aged lacquer textures, and botanical elements without violating forbidden object constraints.",
+  "reasons": [],
+  "metrics": {
+    "width": 1376,
+    "height": 768,
+    "aspect_ratio": 1.7916666666666667,
+    "foreground_ratio": 0.9099300887233527,
+    "foreground_edge_ratio": 0.12115517608947728,
+    "border_std": 58.978973388671875,
+    "image_std": 63.54574203491211,
+    "detail_density": 0.37310551522407964,
+    "low_detail_patch_ratio": 0.0,
+    "minimum_local_detail_density": 0.10904971939519797
+  }
+}
