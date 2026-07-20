@@ -2,7 +2,8 @@
 
 > Updated: 2026-07-20
 > Canonical context: `CODEX_CONTEXT.md`  
-> Accepted formal run: `runs/agent_dragon_multicandidate_v1/`
+> Accepted benchmark run: `runs/agent_dragon_multicandidate_v1/`
+> Current presentation case: `runs/agent_flower_demo_v1/`
 
 ## Current status
 
@@ -25,6 +26,20 @@ Select registered weapon + enter one theme keyword
 ```
 
 AK-47 is the accepted full target. M4A4 remains transfer evidence only.
+
+The fresh `flower` case completed the same three-checkpoint workflow on
+2026-07-20. It locked `Decay Gradient`, human-selected `artwork_04`, selected
+Route B after Route-C rollback, and exported the exact selected source at 2048.
+Use this case as the narrative spine of the next presentation revision; retain
+the dragon run as stronger benchmark evidence rather than mixing its Workshop
+images into the flower sequence.
+
+Flower TGA for Workbench:
+
+`runs/agent_flower_demo_v1/execution/route_b/selected__route-b__custom-paint-job.tga`
+
+The user must return fixed left/right/top Workbench captures and one settings
+screenshot before the presentation is rebuilt and frozen.
 
 ## Locked formal result
 
@@ -94,8 +109,13 @@ The academic poster and rebuilt presentation are available at:
 - `report/build/SkinSmith_Supervisor_Presentation.pptx`
 - `report/build/SkinSmith_Supervisor_Presentation.pdf`
 
-The poster is a true 1189.04 x 841.11 mm A0 landscape academic poster and remains
-unchanged. The presentation now contains 13 evidence-led slides, actual CS2
+The poster is a revised 1188.993 x 840.978 mm A0 landscape academic poster. Its
+original layout is preserved, while candidate/view labels, Route-C evidence,
+base-colour material scope, test count, checkpoint chronology, valid demo command,
+member IDs, and supervisor metadata are corrected against the project evidence.
+The PPTX is the primary submission artifact. It must be sent to the supervisor
+and `ds.go@cityu.edu.hk` by 12:00 noon on 2026-08-02, and a poster presentation
+must be arranged with the supervisor before then. The presentation contains 13 evidence-led slides, actual CS2
 Workbench screenshots, and English speaker notes on every slide. It was exported
 through Microsoft PowerPoint, visually checked, and passed automated overflow
 testing. The PPTX contains 13 speaker-note slides.
@@ -117,16 +137,19 @@ Resume the academic and publication work in this order:
 3. Resolve contradictions explicitly and preserve the locked technical evidence.
 4. Apply approved supervisor feedback to `report/overleaf/`.
 5. Freeze the approved report and export the final report PDF.
-6. Keep the rebuilt presentation aligned with any accepted report changes. Poster
-   revision remains deferred unless directly requested.
+6. Rebuild the presentation around the complete flower CP1/CP2/CP3/formal-export
+   sequence after the user supplies flower Workbench screenshots; retain English
+   speaker notes on every slide.
 7. Run the final submission consistency and visual QA.
-8. Add the final Workbench evidence for the exact accepted dragon TGA: fixed left,
-   right, and top captures plus one settings-panel screenshot.
+8. Add final Workbench evidence for the flower TGA: fixed left, right, and top
+   captures plus one settings-panel screenshot.
+9. Before 12:00 noon on 2026-08-02, send the final A0 PPTX to the supervisor and
+   `ds.go@cityu.edu.hk`, and confirm the poster-presentation arrangement.
 
 The required import path and filenames are recorded in
-`WORKBENCH_VIEWING_GUIDE.md`. Keep these dragon captures separate from the
-black-and-gold marble deployment case already used to prove the calibrated engine
-path.
+`WORKBENCH_VIEWING_GUIDE.md`. Keep the new flower captures separate from the
+dragon and black-and-gold cases already used as benchmark and calibrated-engine
+evidence.
 
 The revised cover lists all five English names and student IDs and identifies
 YUAN Ye as project lead and integration owner. The registered topic remains as a
@@ -149,6 +172,8 @@ paragraph after it has been removed.
 ## Verification baseline
 
 - 100 tests pass.
+- All 100 tests pass after adding resumable reuse of preserved passing Route-B
+  sources.
 - `compileall` passes.
 - Streamlit headless startup passes.
 - No new image call is required merely to continue the academic deliverables.

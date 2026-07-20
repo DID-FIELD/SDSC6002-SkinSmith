@@ -429,6 +429,32 @@ class RouteExecutionTests(unittest.TestCase):
             self.assertTrue((output / "route_b_connector.png").is_file())
             self.assertTrue(validations["connector"].passed)
 
+            resumed_state = AgentState(run_id="retry_resume", request=request)
+            resumed_context = AgentToolContext(
+                state=resumed_state,
+                memory=AgentMemory(),
+                output_dir=output,
+                emit=lambda *args, **kwargs: events.append((args, kwargs)),
+            )
+            resumed_records, resumed_validations = tool._generate_and_validate_sources(
+                resumed_context,
+                (
+                    RouteImageJob(
+                        job_id="connector_job",
+                        route="B",
+                        semantic_role="connector",
+                        prompt="square connector asset",
+                        output_name="route_b_connector.png",
+                    ),
+                ),
+                output,
+            )
+            self.assertEqual(backend.calls, 2)
+            self.assertEqual(resumed_state.image_calls_used, 0)
+            self.assertEqual(resumed_state.role_retries_used, 0)
+            self.assertEqual(resumed_records, [])
+            self.assertTrue(resumed_validations["connector"].passed)
+
 
 if __name__ == "__main__":
     unittest.main()

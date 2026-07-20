@@ -14,11 +14,11 @@ Working title:
 
 CS2 is the case study. The research contribution is the general pipeline for constrained texture generation, render-in-the-loop evaluation, and bounded agent refinement.
 
-Final deadline: **2026-08-02 at 12:00 noon**. Required academic deliverables: report PDF, A0 landscape poster PowerPoint (1189 × 841 mm), and presentation with the supervisor. The group decided not to request an extension.
+Final deadline: **2026-08-02 at 12:00 noon**. Required academic deliverables include the report PDF and an A0 landscape poster PowerPoint (1189 × 841 mm). The poster PPTX must be sent to the supervisor and General Office (`ds.go@cityu.edu.hk`) by the deadline, and the group must arrange a poster presentation with the supervisor before then. The group decided not to request an extension.
 
 ## 2. Current phase and decision
 
-Current phase: **the Agent and thin Streamlit client implement the clarified three-checkpoint interaction contract, the English report draft includes the accepted group contribution record and an explicit material-channel boundary, and the A0 poster remains unchanged. The supervisor presentation has been rebuilt as a 13-slide evidence-led deck with actual CS2 Workbench screenshots and English speaker notes on every slide. The user selects a registered weapon, enters one short theme keyword such as `dragon`, confirms the Agent-expanded visual world, selects one of 3-4 dynamically generated textual directions, and then selects one artwork from indivisible source + left/right/top mapped candidate cards before formal execution. AK-47 is the fully accepted client target. M4A4 remains adapter-level transfer evidence rather than an AK-equivalent end-to-end target. The existing real Gemini run selected `Treasured Relic` and `artwork_04`, then reused the exact source for formal 2048 Route-B/TGA export; this remains accepted evidence. The reviewed repository is published at `https://github.com/DID-FIELD/SDSC6002-SkinSmith`. The immediate evidence task is a fixed left/right/top Workbench capture plus settings screenshot for the exact accepted dragon TGA; supervisor feedback is still pending before final report freeze**.
+Current phase: **the Agent and thin Streamlit client implement the clarified three-checkpoint interaction contract, the English report draft includes the accepted group contribution record and an explicit material-channel boundary, and the A0 poster has been revised against the preserved project evidence while retaining its original layout. A fresh `flower` case now demonstrates the complete transferable workflow: CP1 expanded the single keyword into `Withered Petal Covenant`; CP2 offered four textual directions and locked `Decay Gradient`; CP3 compared four indivisible source + left/right/top candidate cards and human-selected `artwork_04`; formal execution reused that exact source and exported a 2048 Route-B PNG/TGA. The existing dragon run remains accepted evidence. The supervisor presentation must next be rebuilt around the complete flower flow after the user supplies fixed left/right/top CS2 Workbench captures plus a settings screenshot for the new flower TGA. AK-47 is the fully accepted client target, M4A4 remains adapter-level transfer evidence, and output remains base-colour Custom Paint Job rather than generated PBR material. The reviewed repository is published at `https://github.com/DID-FIELD/SDSC6002-SkinSmith`; supervisor feedback is still pending before final report freeze**.
 
 Question tested: can the project reliably execute texture generation, seam processing, real UV mapping, multi-view rendering, quantitative evaluation, automatic ranking, and evidence logging before adding diffusion?
 
@@ -913,6 +913,56 @@ Python/environment:
   workflow, setup, verified findings, and technical boundaries. Academic report,
   poster, presentation, Overleaf, and test-count inventories remain in the
   repository as backup but are not presented as GitHub deliverables.
+
+## 8.6 A0 poster evidence correction and submission-ready PPTX (2026-07-20)
+
+- The user directly requested revision of the supplied A0 poster while preserving
+  its overall format. `report/build/SkinSmith_A0_Poster.pptx` retains the original
+  A0 landscape page, three-column grid, numbered section bands, palette, image
+  gallery placement, and footer structure.
+- The final PPTX measures 1188.993 x 840.978 mm in OOXML, satisfying the required
+  1189 x 841 mm A0 landscape specification. The PPTX is the primary submission
+  artifact; the PDF is only a print and visual-QA derivative.
+- Claims now match the preserved evidence: exactly 100 automated tests; three
+  fixed mapped views; four paired formal candidates rather than four viewpoints;
+  AK-47 as the complete target; M4A4 as adapter-level transfer; and base-colour
+  PNG/TGA output rather than normal/PBR material generation.
+- The paired mapped-view chart uses candidate_01 through candidate_04 and the
+  preserved Route-A/Route-B scores. The correction chart distinguishes four
+  formal candidate-level rejections from the separate live dragon rollback.
+- The Route-B process graphic identifies geometry normals as baking guidance and
+  the exported asset as an RGB/base-colour texture. CP1 is theme confirmation;
+  source artwork is generated after CP2 and inspected at CP3.
+- The footer includes all five members, student IDs, and supervisor. The Office
+  PDF export and a full-size 4494 x 3179 render were visually inspected without
+  clipping, overlap, or page-size drift.
+- Submission remains an external action: send the A0 PPTX to the supervisor and
+  `ds.go@cityu.edu.hk` by 12:00 noon on 2026-08-02 and arrange the poster
+  presentation with the supervisor before the deadline.
+
+## 8.7 Fresh flower workflow and resumable candidate recovery (2026-07-20)
+
+- `runs/agent_flower_demo_v1/` is the new presentation case. CP1 expanded
+  `flower` into `Withered Petal Covenant`; CP2 produced four distinct directions
+  and the human choice locked `candidate_04_dir_04_decay_gradient`; CP3 produced
+  four source-plus-three-view cards and the human choice locked `artwork_04`.
+- `artwork_04` had the highest preview multi-view score (`0.721016`) and highest
+  preview total (`0.795516`). Formal Route B used the same source at 2048,
+  selected edge width 4, passed constraints, scored `0.744018` multi-view and
+  `0.778297` total, and exported
+  `execution/route_b/selected__route-b__custom-paint-job.tga`.
+- Route C was correctly rolled back because its score decreased by `0.020942`;
+  Route B remained selected. The formal TGA is a 2048 x 2048 base-colour Custom
+  Paint Job texture and is now waiting for fixed Workbench left/right/top and
+  settings screenshots from the user.
+- The live run exposed a recovery defect: an interrupted candidate batch retained
+  passing source files and validation JSON but regenerated them on resume,
+  consuming image-call and retry budgets. `RouteExecutionTool` now reuses a
+  canonical Route-B source only when its preserved validation explicitly records
+  `passed: true`. The regression is covered in `test_route_execution.py`; all
+  100 tests pass after the change.
+- The interrupted attempts, one transient SSL failure, rejected candidates, and
+  corrected final run remain preserved as evidence. No API key is logged.
 
 ## 9. Non-negotiable boundaries
 

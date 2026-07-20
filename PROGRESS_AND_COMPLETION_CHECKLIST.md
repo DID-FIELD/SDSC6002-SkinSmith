@@ -82,9 +82,11 @@
   explanation, and detailed group contribution statement.
 - [x] Report citation, evidence-path, placeholder, and production-marker audit.
 - [ ] Final report PDF.
-- [x] A0 landscape poster PowerPoint, 1189 x 841 mm, plus PDF and Office render.
-- [x] Rebuilt 13-slide supervisor presentation with actual CS2 Workbench evidence,
-  English speaker notes on every slide, PDF export, and Office-rendered slide QA.
+- [x] Revised A0 landscape poster PowerPoint, verified at 1188.993 x 840.978 mm,
+  with project-backed claims, corrected charts, member metadata, PDF, and Office render.
+- [ ] Rebuild the supervisor presentation around the complete flower workflow
+  after flower Workbench screenshots arrive; retain English speaker notes on
+  every slide and repeat PDF/Office-rendered QA.
 - [x] Poster and presentation evidence audit for every reported number and figure.
 - [ ] Final reproducibility, disclosure, and visual QA.
 
@@ -106,7 +108,10 @@
 - [x] Confirm the five-member contribution statement.
 - [ ] Classify and document every requested revision.
 - [ ] Apply approved report revisions.
-- [x] Apply the requested presentation rebuild. Poster revision remains deferred.
+- [x] Apply the requested presentation rebuild and evidence-backed A0 poster revision.
+- [ ] Send the final A0 poster PPTX to the supervisor and `ds.go@cityu.edu.hk`
+  by 12:00 noon on 2026-08-02.
+- [ ] Arrange the poster presentation with the supervisor before the deadline.
 - [ ] Freeze the final report PDF and submission artifacts.
 
 ## Completion conditions
@@ -122,8 +127,8 @@
 - [ ] Portability claims remain limited to adapter-based transfer.
 - [x] Report and project documentation distinguish base-colour texture output from
   normal, roughness, metallic, height, displacement, and full PBR material output.
-- [ ] Capture the exact accepted dragon TGA in fixed Workbench left/right/top views
-  and preserve one settings-panel screenshot.
+- [ ] Capture the flower TGA in fixed Workbench left/right/top views and preserve
+  one settings-panel screenshot for the complete presentation flow.
 
 ## Frozen boundaries
 

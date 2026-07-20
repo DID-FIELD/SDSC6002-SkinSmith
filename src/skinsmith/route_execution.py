@@ -712,6 +712,37 @@ class RouteExecutionTool:
         validations: dict[str, SourceValidation] = {}
         for job in jobs:
             output_name = Path(job.output_name)
+            canonical_path = output_dir / job.output_name
+            validation_key = output_name.stem.removeprefix("route_b_")
+            preserved_validation = validations_data.get(validation_key)
+            if (
+                canonical_path.is_file()
+                and isinstance(preserved_validation, dict)
+                and preserved_validation.get("passed") is True
+            ):
+                validation = SourceValidation(
+                    role=str(preserved_validation["role"]),
+                    passed=True,
+                    technical_passed=bool(
+                        preserved_validation.get("technical_passed", True)
+                    ),
+                    semantic_status=str(
+                        preserved_validation.get("semantic_status", "")
+                    ),
+                    reasons=tuple(preserved_validation.get("reasons", ())),
+                    metrics=dict(preserved_validation.get("metrics", {})),
+                )
+                validations[validation_key] = validation
+                context.emit(
+                    AgentEventType.OBSERVATION,
+                    f"Reused preserved passing Route-B {job.semantic_role} source.",
+                    tool="source_validator",
+                    data={
+                        "output": str(canonical_path),
+                        "validation": validation.to_dict(),
+                    },
+                )
+                continue
             guide = _source_scope_guide(job)
             guide_path: Path | None = None
             if guide is not None:
@@ -753,7 +784,6 @@ class RouteExecutionTool:
                 else:
                     raw_path = None
                     image = self.image_backend.generate_image(prompt).convert("RGB")
-                canonical_path = output_dir / job.output_name
                 attempt_path = output_dir / (
                     f"{output_name.stem}__attempt-{attempt:02d}{output_name.suffix}"
                 )
@@ -809,7 +839,6 @@ class RouteExecutionTool:
                         encoding="utf-8",
                     )
                     record["semantic_review_trace"] = str(semantic_trace_path)
-                validation_key = output_name.stem.removeprefix("route_b_")
                 validations[validation_key] = validation
                 validations_data[validation_key] = validation.to_dict()
                 validation_path = output_dir / f"{output_name.stem}_validation.json"
