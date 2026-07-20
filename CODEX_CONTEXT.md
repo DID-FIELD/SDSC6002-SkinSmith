@@ -18,7 +18,7 @@ Final deadline: **2026-08-02 at 12:00 noon**. Required academic deliverables inc
 
 ## 2. Current phase and decision
 
-Current phase: **the Agent and thin Streamlit client implement the clarified three-checkpoint interaction contract, the English report draft includes the accepted group contribution record and an explicit material-channel boundary, and the A0 poster has been revised against the preserved project evidence while retaining its original layout. A fresh `flower` case now demonstrates the complete transferable workflow: CP1 expanded the single keyword into `Withered Petal Covenant`; CP2 offered four textual directions and locked `Decay Gradient`; CP3 compared four indivisible source + left/right/top candidate cards and human-selected `artwork_04`; formal execution reused that exact source and exported a 2048 Route-B PNG/TGA. The existing dragon run remains accepted evidence. The supervisor presentation must next be rebuilt around the complete flower flow after the user supplies fixed left/right/top CS2 Workbench captures plus a settings screenshot for the new flower TGA. AK-47 is the fully accepted client target, M4A4 remains adapter-level transfer evidence, and output remains base-colour Custom Paint Job rather than generated PBR material. The reviewed repository is published at `https://github.com/DID-FIELD/SDSC6002-SkinSmith`; supervisor feedback is still pending before final report freeze**.
+Current phase: **the Agent and thin Streamlit client implement the clarified three-checkpoint interaction contract, the English report draft includes the accepted group contribution record and explicit material-channel boundary, and the A0 poster retains its revised evidence-backed layout. The `garden` case is now the complete presentation workflow: CP1 confirmed `Midnight Serenity`; CP2 selected `Spectral Movement`; CP3 compared four indivisible source + left/right/top cards and human-selected `artwork_02` even though `artwork_03` had the highest automatic preview total; formal execution reused the exact selected source, exported a 2048 Route-B PNG/TGA, and rolled Route C back. Fixed Workshop left/right/top captures, Item Editor settings, and two in-game views verify the same base-colour texture. The 13-slide supervisor PPTX is rebuilt around this evidence chain, every slide has English speaker notes, rendered visual QA passes, and the matching PDF is exported. AK-47 is the fully accepted client target, M4A4 remains adapter-level transfer evidence, and output remains base-colour Custom Paint Job rather than generated PBR material. The reviewed repository is published at `https://github.com/DID-FIELD/SDSC6002-SkinSmith`; supervisor feedback is still pending before final report freeze**.
 
 Question tested: can the project reliably execute texture generation, seam processing, real UV mapping, multi-view rendering, quantitative evaluation, automatic ranking, and evidence logging before adding diffusion?
 
@@ -992,13 +992,42 @@ Python/environment:
   was rolled back. The 2048 TGA is
   `runs/agent_garden_demo_v1/execution/route_b/selected__route-b__custom-paint-job.tga`
   with SHA-256 `8615e42473d86719a6ebb1dc2f2fa239381f635ab9c648475c94430fe28f4bb0`.
-- `experiments/public/garden_workflow_v1/` publishes 49 evidence files (about
-  25.1 MB) with the same redaction and hash policy as the flower package. Both
-  package manifests verify and the combined public evidence scan finds no API
-  credential pattern.
-- The next action is user Workbench validation of the garden TGA, followed by a
-  presentation rebuild using garden CP1/CP2/CP3, formal export, and fixed engine
-  views. Do not use either flower mapping as the final visual case.
+- At CP3, all four garden candidates passed the technical constraints.
+  `artwork_03` (`Atmospheric World`) had the highest preview total
+  (`0.895454`), while the user selected `artwork_02` (`Ornamental Tapestry`,
+  `0.829271`). This is now explicit evidence that automatic metrics screen
+  feasibility and support recommendation but do not replace human aesthetic
+  authority.
+- `experiments/public/garden_workflow_v1/` uses the same redaction and hash
+  policy as the flower package. Its new `engine_validation/` directory publishes
+  six reviewed images: fixed Workshop left/right/top, Item Editor settings, an
+  in-game close inspection, and a normal play view. A nested manifest records
+  dimensions and SHA-256 hashes. The privacy review found no API credential,
+  account identifier, chat overlay, or private notification.
+- The next action is supervisor feedback intake and final cross-artifact
+  consistency QA. Do not use either flower mapping as the final visual case.
+
+## 8.9 Garden presentation and engine evidence freeze (2026-07-20)
+
+- `report/build/SkinSmith_Supervisor_Presentation.pptx` is rebuilt as a 13-slide
+  garden narrative: problem definition; three-checkpoint contract; actual CP1 and
+  CP2 decisions; four CP3 candidate cards; auto-top versus human-selected
+  comparison; fixed Workshop views; formal Route A/B evidence; exact selected
+  source and mapped result; Route-C rollback; Item Editor settings; two in-game
+  views; base-colour/PBR boundary; conclusion and group ownership.
+- Every slide contains non-empty English speaker notes. Artifact-tool rendering
+  was inspected slide by slide, and `slides_test.py` reports no overflow.
+- The matching PDF was exported through Microsoft PowerPoint. The existing deck
+  typography, white/black/gold/blue/green palette, title rules, page numbers, and
+  evidence-card geometry were preserved.
+- Final presentation SHA-256 values: PPTX
+  `718b76bb15c88302997e9ff6c5cffffe9070df5435be4f4e6f29c5f45ed60fef`;
+  PDF `d0dd329e25f2172dac421b3b90986e5c6a7051f5b8498b472ef045c80236b7cb`.
+- The presentation's central new claim is bounded: technical rank is not
+  aesthetic choice. `artwork_03` is labelled as the automatic top score, while
+  `artwork_02` is labelled as the human-selected candidate. No slide claims that
+  the Agent generated normal, roughness, metallic, height, displacement, or a
+  complete PBR material.
 
 ## 9. Non-negotiable boundaries
 

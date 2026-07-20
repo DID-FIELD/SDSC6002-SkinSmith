@@ -208,6 +208,33 @@ no weapon-aware focal composition. These screenshots are path evidence only. The
 formal experiment must select a stronger candidate before the final presentation.
 Machine-readable evidence is in `runs/diffusion_refinement/workbench_validation.json`.
 
+## Garden human-choice and engine validation
+
+The current presentation case is the complete `garden` run under
+`runs/agent_garden_demo_v1/`:
+
+- Checkpoint 1 confirmed `Midnight Serenity`;
+- Checkpoint 2 selected `Spectral Movement` from four textual directions;
+- Checkpoint 3 retained four source-plus-mapped-view cards;
+- `artwork_03` had the highest automatic preview total (`0.895454`), while the
+  user selected `artwork_02`, `Ornamental Tapestry` (`0.829271`);
+- formal Route B selected edge width 4, asset seam `0.001246`, multi-view
+  `0.811677`, and total `0.817374`;
+- Route C changed the score by `-0.016233` and was correctly rolled back;
+- the final 2048 TGA SHA-256 is
+  `8615e42473d86719a6ebb1dc2f2fa239381f635ab9c648475c94430fe28f4bb0`.
+
+The score-versus-choice result is intentional evidence that deployment metrics
+and aesthetic preference have different roles. Automatic scores screen
+feasibility and support recommendation; they do not replace human selection.
+
+Fixed Workshop left/right/top captures, the Item Editor settings, and two in-game
+views verify base-colour placement, coverage, readability, and the export/import
+path. Publication-safe copies and hashes are under
+`experiments/public/garden_workflow_v1/engine_validation/`. The screenshots do
+not support a claim of Agent-generated PBR channels; CS2 lighting and reflectance
+remain engine effects.
+
 ## Known limits
 
 - SD-Turbo is an accepted first generation backend, not a claim that it is the best possible model.

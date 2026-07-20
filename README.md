@@ -41,13 +41,17 @@ Select a registered weapon and enter one keyword
   -> bake, render, evaluate, refine once if justified, and export
 ```
 
-For example, the keyword `dragon` is expanded into subjects, symbols, materials,
-palette, atmosphere, supporting details, and prohibited content. The Agent then
-proposes materially different directions instead of treating the keyword as a
-complete prompt.
+For example, the keyword `garden` was expanded into the `Midnight Serenity`
+visual world. The Agent proposed four materially different directions, the user
+selected `Spectral Movement`, and four source-plus-mapped-view cards remained
+available at the final checkpoint.
 
 Model review can recommend a candidate, but it does not replace the user's
-decision. Formal execution cannot begin until the user selects the mapped artwork.
+decision. In the garden case, `artwork_03` had the highest automatic preview total
+(`0.8955`), while the user selected `artwork_02` (`0.8293`) for its preferred
+visual composition. The scores screen technical feasibility; the checkpoints
+preserve aesthetic authority. Formal execution cannot begin until the user
+selects the mapped artwork.
 
 ## Design routes
 
@@ -74,19 +78,22 @@ pattern-first baseline, weapon-space Route B:
 - increased mean multi-view score from `0.76898` to `0.82911`;
 - improved both measures for all four paired candidates.
 
-In the accepted live three-checkpoint run, the user selected:
+In the current complete garden run, the user selected:
 
-- theme keyword: `dragon`;
-- art direction: `Treasured Relic`;
-- artwork: `artwork_04`;
+- theme keyword: `garden`;
+- expanded theme: `Midnight Serenity`;
+- art direction: `Spectral Movement`;
+- artwork: `artwork_02` (`Ornamental Tapestry`);
 - final route: Route B;
-- asset-seam error: `0.0007776109029832148`;
-- multi-view score: `0.8166198880536247`;
-- total score: `0.8291228922780649`.
+- asset-seam error: `0.001245730606220989`;
+- multi-view score: `0.8116765168562788`;
+- total score: `0.8173740781485412`.
 
-The Route C correction reduced the score by `0.02195902089447299`, so the Agent
+The Route C correction reduced the score by `0.016233440019044476`, so the Agent
 correctly rejected it and retained Route B. This rollback is part of the intended
-behavior rather than a failed execution.
+behavior rather than a failed execution. Fixed Workshop left/right/top captures,
+the Item Editor settings, and two in-game views verify the exact selected TGA as
+a deployable base-colour texture.
 
 ## Repository structure
 
@@ -104,8 +111,9 @@ Raw `runs/`, `third_party/`, local environments, model weights, Valve assets, an
 temporary rendering files are intentionally excluded from GitHub. A compact
 publication-safe experiment package is available under `experiments/public/`.
 It includes checkpoints, events, planning records, candidate comparisons, final
-PNG/TGA outputs, metrics, hashes, and sanitized provider traces. API keys and
-long embedded binary response values are not published.
+PNG/TGA outputs, metrics, hashes, sanitized provider traces, and publication-safe
+Workshop/in-game validation images. API keys and long embedded binary response
+values are not published.
 
 ## Requirements
 
@@ -182,9 +190,8 @@ Gemini adapters share the same validated planning and generation interfaces.
 The next technical priorities are aligned multi-channel material generation,
 cross-channel and engine-side validation, automated fixed-view Workbench capture,
 additional asset adapters, stronger perceptual measures, and a user study of the
-three checkpoints. The immediate evidence task is to capture the selected garden
-TGA in fixed left, right, and top Workbench views plus the import settings, then
-use that complete workflow as the presentation case.
+three checkpoints. The current garden case already supplies the complete
+presentation chain from one-word input through Workshop and in-game validation.
 
 ## Responsible use and licensing
 

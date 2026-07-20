@@ -61,7 +61,31 @@ The current SkinSmith output is base colour only. Workbench lighting, highlights
 and finish response must not be reported as generated normal, roughness, metallic,
 height, or displacement information.
 
-## Final dragon evidence capture
+## Completed garden engine validation
+
+Import:
+
+`runs/agent_garden_demo_v1/execution/route_b/selected__route-b__custom-paint-job.tga`
+
+The completed validation uses `Custom Paint Job`, scale `1.0`, U/V offsets `0`,
+rotation `0`, Ignore Weapon Size Scale enabled, and no custom normal map. Local
+run files are:
+
+- `runs/agent_garden_demo_v1/execution/route_b/left.png`
+- `runs/agent_garden_demo_v1/execution/route_b/right.png`
+- `runs/agent_garden_demo_v1/execution/route_b/top.png`
+- `runs/agent_garden_demo_v1/execution/route_b/48f1910adeec395ab66e8afc4cb5be77.png`
+- `runs/agent_garden_demo_v1/execution/route_b/real1.png`
+- `runs/agent_garden_demo_v1/execution/route_b/real2.png`
+
+Publication-safe copies, dimensions, and SHA-256 hashes are preserved under
+`experiments/public/garden_workflow_v1/engine_validation/`.
+
+The fixed views and in-game inspection pass for base-colour placement, coverage,
+readability, and the export/import path. They do not constitute evidence of
+Agent-generated normal, roughness, metallic, height, or displacement channels.
+
+## Dragon benchmark capture path
 
 Import:
 
@@ -75,8 +99,10 @@ Size Scale enabled, and minimum wear. Save the fixed views as:
 - `runs/agent_dragon_multicandidate_v1/execution/workbench/dragon_artwork_04_top.png`
 - `runs/agent_dragon_multicandidate_v1/execution/workbench/dragon_artwork_04_settings.png`
 
-The settings capture should show the finish and mapping fields. Keep this evidence
-separate from the calibrated black-and-gold marble deployment case.
+The settings capture should show the finish and mapping fields. This benchmark
+path is retained for optional comparison and is not the current presentation
+case. Keep it separate from the completed garden and calibrated black-and-gold
+deployment cases.
 
 ## Accepted references
 
@@ -84,5 +110,7 @@ separate from the calibrated black-and-gold marble deployment case.
   `runs/known_good_uv_calibration/`
 - Accepted formal dragon output:
   `runs/agent_dragon_multicandidate_v1/execution/route_b/`
+- Completed garden engine validation:
+  `experiments/public/garden_workflow_v1/engine_validation/`
 - Finish profile configuration:
   `config/workbench_finish_profiles.json`

@@ -9,6 +9,9 @@
   `https://github.com/DID-FIELD/SDSC6002-SkinSmith.git`.
 - The reviewed publication was pushed successfully to remote `main` on
   2026-07-17.
+- The 2026-07-20 sync candidate adds the rebuilt garden supervisor presentation
+  and six publication-safe Workshop/in-game images under
+  `experiments/public/garden_workflow_v1/engine_validation/`.
 - The user explicitly authorized the initial GitHub upload on 2026-07-17.
 - The remote `main` branch contains one existing `Initial commit` with `LICENSE`;
   the local project publication will preserve and merge that history.
@@ -25,6 +28,12 @@
   `OPENAI_API_KEY` and `GEMINI_API_KEY`, but no credential values.
 - API trace code records `api_key_recorded: false` and reads credentials only
   from the local environment.
+- The 2026-07-20 non-ignored tree was rescanned for OpenAI, Google, GitHub, AWS,
+  Slack, and private-key formats after adding the garden engine evidence; no real
+  credential pattern matched.
+- The six new screenshots were reviewed visually. No account identifier, chat
+  overlay, private notification, or API value is visible. The Item Editor image
+  contains only a local Steam installation path and project asset path.
 - Three ignored historical trace files produced Google-key-shaped false positives
   inside very large model `signature` or image `data` strings. These were not
   credential fields. The entire `runs/` tree remains ignored and must not be

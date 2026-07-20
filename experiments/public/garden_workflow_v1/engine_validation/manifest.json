@@ -1,0 +1,15 @@
+{
+  "case": "garden / Spectral Movement / artwork_02 / Ornamental Tapestry",
+  "finish": "Custom Paint Job",
+  "scope": "base-colour texture deployment evidence",
+  "files": [
+    {"path": "in_game_detail.png", "bytes": 1621144, "width": 1280, "height": 720, "sha256": "0b7f5ce80cb779155beda5f5a8a62f00c0129a410e209bbc32f2f5bd87ff17bd"},
+    {"path": "in_game_play_view.png", "bytes": 1731558, "width": 1280, "height": 720, "sha256": "9186ceeb5987195cb7cb48786edb6ae003c7894a0f5fd99f51d1793e939be1ab"},
+    {"path": "workshop_item_editor.png", "bytes": 201661, "width": 1803, "height": 1247, "sha256": "04f8d4d98fdee949d112ae3b3235ecdecdabc2af41c94b57ecd08227ec4e8461"},
+    {"path": "workshop_left.png", "bytes": 846526, "width": 1280, "height": 720, "sha256": "2c58caf5aa188dbc9d8c9d751cb69772fd433f2c9df0da8657a92e2aa0bd3cd1"},
+    {"path": "workshop_right.png", "bytes": 864877, "width": 1280, "height": 720, "sha256": "a1797c056da95b14b4a1557862f2d46921c2de61724d0b230a4b74f2e6364d71"},
+    {"path": "workshop_top.png", "bytes": 780901, "width": 1280, "height": 720, "sha256": "9270c38da4b30b4bbe22d47d6db69635239d8ff9d6db3fe6ca47f5d4c8ba631b"}
+  ],
+  "privacy_review": "No API key, authorization value, account identifier, chat overlay, or private notification is visible. The editor screenshot contains only a local Steam installation path and project asset path.",
+  "boundary": "CS2 lighting and reflectance are engine effects, not Agent-generated PBR channels."
+}

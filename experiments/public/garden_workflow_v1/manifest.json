@@ -348,6 +348,48 @@
       "sha256": "21f807f34f3b0613ea7963a358de64de55b3bfee06a628b5da8edb57946a46c9",
       "source": "runs/agent_garden_demo_v1/planning/route_design_bundle.json",
       "sanitized": true
+    },
+    {
+      "path": "engine_validation/in_game_detail.png",
+      "bytes": 1621144,
+      "sha256": "0b7f5ce80cb779155beda5f5a8a62f00c0129a410e209bbc32f2f5bd87ff17bd",
+      "source": "runs/agent_garden_demo_v1/execution/route_b/real1.png",
+      "sanitized": false
+    },
+    {
+      "path": "engine_validation/in_game_play_view.png",
+      "bytes": 1731558,
+      "sha256": "9186ceeb5987195cb7cb48786edb6ae003c7894a0f5fd99f51d1793e939be1ab",
+      "source": "runs/agent_garden_demo_v1/execution/route_b/real2.png",
+      "sanitized": false
+    },
+    {
+      "path": "engine_validation/workshop_item_editor.png",
+      "bytes": 201661,
+      "sha256": "04f8d4d98fdee949d112ae3b3235ecdecdabc2af41c94b57ecd08227ec4e8461",
+      "source": "runs/agent_garden_demo_v1/execution/route_b/48f1910adeec395ab66e8afc4cb5be77.png",
+      "sanitized": false
+    },
+    {
+      "path": "engine_validation/workshop_left.png",
+      "bytes": 846526,
+      "sha256": "2c58caf5aa188dbc9d8c9d751cb69772fd433f2c9df0da8657a92e2aa0bd3cd1",
+      "source": "runs/agent_garden_demo_v1/execution/route_b/left.png",
+      "sanitized": false
+    },
+    {
+      "path": "engine_validation/workshop_right.png",
+      "bytes": 864877,
+      "sha256": "a1797c056da95b14b4a1557862f2d46921c2de61724d0b230a4b74f2e6364d71",
+      "source": "runs/agent_garden_demo_v1/execution/route_b/right.png",
+      "sanitized": false
+    },
+    {
+      "path": "engine_validation/workshop_top.png",
+      "bytes": 780901,
+      "sha256": "9270c38da4b30b4bbe22d47d6db69635239d8ff9d6db3fe6ca47f5d4c8ba631b",
+      "source": "runs/agent_garden_demo_v1/execution/route_b/top.png",
+      "sanitized": false
     }
   ]
 }

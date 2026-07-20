@@ -84,9 +84,10 @@
 - [ ] Final report PDF.
 - [x] Revised A0 landscape poster PowerPoint, verified at 1188.993 x 840.978 mm,
   with project-backed claims, corrected charts, member metadata, PDF, and Office render.
-- [ ] Rebuild the supervisor presentation around the complete garden workflow
-  after garden Workbench screenshots arrive; retain English speaker notes on
-  every slide and repeat PDF/Office-rendered QA.
+- [x] Rebuilt the 13-slide supervisor presentation around the complete garden
+  workflow, including the automatic-score versus human-choice contrast, fixed
+  Workshop views, Item Editor settings, and two in-game captures; all 13 slides
+  contain English speaker notes and pass rendered overflow QA.
 - [x] Poster and presentation evidence audit for every reported number and figure.
 - [ ] Final reproducibility, disclosure, and visual QA.
 
@@ -104,6 +105,8 @@
   candidate images, final PNG/TGA, machine-readable records, hashes, and
   sanitized API traces; exclude actual credentials, Valve assets, repeated
   caches, and embedded binary response payloads.
+- [x] Add six publication-safe garden Workshop/in-game validation images plus a
+  hash manifest and material-scope boundary.
 
 ## Awaiting external review
 
@@ -131,8 +134,9 @@
 - [ ] Portability claims remain limited to adapter-based transfer.
 - [x] Report and project documentation distinguish base-colour texture output from
   normal, roughness, metallic, height, displacement, and full PBR material output.
-- [ ] Capture the garden TGA in fixed Workbench left/right/top views and preserve
-  one settings-panel screenshot for the complete presentation flow.
+- [x] Captured the garden TGA in fixed Workbench left/right/top views, preserved
+  one settings-panel screenshot and two in-game views, and used them in the
+  complete presentation flow.
 
 ## Frozen boundaries
 
