@@ -96,8 +96,6 @@ src/skinsmith/          Agent runtime, generation, UV, rendering, and evaluation
 scripts/                Planning, experiment, diagnostics, and replay entry points
 tests/                  Unit and integration tests
 assets/showcase/        Project-owned example artwork
-report/overleaf/        Overleaf-ready report source, figures, tables, and BibTeX
-report/build/           Compiled report, A0 poster, presentation, and Overleaf ZIP
 streamlit_app.py        Thin interactive client over the same Agent runtime
 ```
 
@@ -160,32 +158,27 @@ $env:GEMINI_API_KEY = "<set-locally>"
 Provider and model defaults are defined in `config/creative_api.json`. OpenAI and
 Gemini adapters share the same validated planning and generation interfaces.
 
-## Reproducibility and academic artifacts
-
-The repository includes:
-
-- an Overleaf-ready report project under `report/overleaf/`;
-- the compiled report draft and Overleaf ZIP under `report/build/`;
-- an A0 landscape academic poster in PowerPoint and PDF formats;
-- a ten-slide supervisor presentation in PowerPoint and PDF formats;
-- machine-readable tables used by the report;
-- 100 automated tests covering the Agent, generation contracts, UV processing,
-  rendering, evaluation, selection, replay, and bounded refinement.
-
-Formal experiment payloads are not published because they include large generated
-assets and provider traces. The report contains an evidence index describing the
-preserved local records used for each claim.
-
 ## Scope and limitations
 
 - SkinSmith is an academic prototype, not a commercial authoring platform.
+- The verified output is a base-color / Custom Paint Job texture. The current
+  system does not generate normal, roughness, metallic, height, displacement, or
+  a complete PBR material set.
 - The current renderer is a controlled software evaluator, not a photorealistic
   replacement for the game engine.
+- CS2 Workbench lighting and reflectance are engine effects and are not claimed as
+  model-generated surface detail.
 - Automated semantic readability is recommendation-only.
 - AK-47 is the complete case; M4A4 provides bounded transfer evidence.
 - The system does not claim that one UV layout or texture transfers directly
   across weapons.
 - Steam Workshop publication is outside the project scope.
+
+The next technical priorities are aligned multi-channel material generation,
+cross-channel and engine-side validation, automated fixed-view Workbench capture,
+additional asset adapters, stronger perceptual measures, and a user study of the
+three checkpoints. The immediate evidence task is to capture the accepted final
+dragon TGA in fixed left, right, and top Workbench views plus the import settings.
 
 ## Responsible use and licensing
 

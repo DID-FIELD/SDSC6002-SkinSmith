@@ -1,6 +1,6 @@
 # SkinSmith Progress and Completion Checklist
 
-> Updated: 2026-07-17  
+> Updated: 2026-07-20
 > Canonical evidence and history: `CODEX_CONTEXT.md`
 
 ## Completed
@@ -77,12 +77,14 @@
   and rubric-to-evidence matrix.
 - [x] Complete English report manuscript in an Overleaf-ready LaTeX project.
 - [x] Local pdfLaTeX/BibTeX compilation and 33-page visual QA draft.
+- [x] Regenerated Overleaf ZIP independently compiles to the same 33-page PDF.
 - [x] Five-member cover metadata, registered-topic traceability, scoped-project
   explanation, and detailed group contribution statement.
 - [x] Report citation, evidence-path, placeholder, and production-marker audit.
 - [ ] Final report PDF.
 - [x] A0 landscape poster PowerPoint, 1189 x 841 mm, plus PDF and Office render.
-- [x] Ten-slide supervisor presentation, plus PDF and Office-rendered slide QA.
+- [x] Rebuilt 13-slide supervisor presentation with actual CS2 Workbench evidence,
+  English speaker notes on every slide, PDF export, and Office-rendered slide QA.
 - [x] Poster and presentation evidence audit for every reported number and figure.
 - [ ] Final reproducibility, disclosure, and visual QA.
 
@@ -104,7 +106,7 @@
 - [x] Confirm the five-member contribution statement.
 - [ ] Classify and document every requested revision.
 - [ ] Apply approved report revisions.
-- [ ] Apply any consequential poster and presentation revisions.
+- [x] Apply the requested presentation rebuild. Poster revision remains deferred.
 - [ ] Freeze the final report PDF and submission artifacts.
 
 ## Completion conditions
@@ -118,6 +120,10 @@
 - [ ] AI use, copyright boundaries, failed cases, and renderer limitations are
   disclosed clearly.
 - [ ] Portability claims remain limited to adapter-based transfer.
+- [x] Report and project documentation distinguish base-colour texture output from
+  normal, roughness, metallic, height, displacement, and full PBR material output.
+- [ ] Capture the exact accepted dragon TGA in fixed Workbench left/right/top views
+  and preserve one settings-panel screenshot.
 
 ## Frozen boundaries
 

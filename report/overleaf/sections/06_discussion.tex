@@ -89,6 +89,30 @@ number of revisions, perceived control, preference confidence, and the frequency
 with which source-only and mapped choices disagree. Such a study would provide
 stronger evidence for RQ4 beyond successful execution.
 
+\subsection{Material-channel and engine-validation boundary}
+
+The implemented output is a base-colour texture for the Custom Paint Job
+workflow. It does not generate aligned normal, roughness, metallic, height, or
+displacement maps, and it should therefore not be described as a complete
+physically based material authoring system. The current contribution concerns
+semantic planning, colour-texture composition, UV-aware baking, mapped-view
+evaluation, and constrained selection.
+
+CS2 Workbench captures provide important deployment evidence, but their lighting
+and reflectance are produced by the engine and finish configuration. They do not
+demonstrate model-generated surface relief or material response. The known-good
+calibration case verifies the UV orientation and import contract, while the
+black-and-gold marble case verifies coherent in-engine colour-texture deployment.
+These cases are kept distinct from the accepted live dragon Agent run, whose
+final TGA still requires a fixed left/right/top Workbench capture for the strongest
+end-to-end visual record.
+
+The most direct technical extension is a multi-channel material pipeline that
+generates spatially aligned base-colour, normal, roughness, and metallic maps,
+checks cross-channel consistency, and validates the result under fixed engine
+lighting. This would require material-aware metrics and export adapters in
+addition to the present UV and colour-texture checks.
+
 \subsection{Project management and methodological evolution}
 
 The registered topic, \emph{Latent Vision $\rightarrow$ Image Generation}, was

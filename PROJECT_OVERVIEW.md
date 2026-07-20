@@ -137,6 +137,11 @@ for:
 
 ## Scope boundaries
 
+- The completed pipeline generates and evaluates base-colour / Custom Paint Job
+  textures. Normal, roughness, metallic, height, and displacement channels are
+  outside the current implementation.
+- Workbench lighting is deployment context, not evidence of model-generated
+  physical surface properties.
 - Steam Workshop publication is outside the course deliverable.
 - Do not use logos, brands, teams, copyrighted characters, copied skins, or
   unlicensed images.
@@ -145,9 +150,17 @@ for:
 - Do not expand to every weapon.
 - Do not claim universal game compatibility from one CS2 case study.
 
-## Remaining deliverables
+## Prioritised next improvements
 
-- final report PDF;
-- A0 landscape poster PowerPoint;
-- supervisor presentation;
-- final evidence and reproducibility audit.
+1. Capture the accepted dragon TGA in fixed Workbench left, right, and top views,
+   plus one settings-panel screenshot.
+2. Add spatially aligned normal, roughness, and metallic generation with
+   cross-channel validation.
+3. Automate fixed-camera engine capture and evidence logging.
+4. Extend the adapter study beyond AK-47 and the bounded M4A4 transfer case.
+5. Run a user study measuring revision effort, perceived control, and disagreement
+   between source-only and mapped candidate choices.
+
+Remaining academic work is final report PDF compilation, revised presentation
+verification, supervisor feedback integration, and final reproducibility and
+submission QA.

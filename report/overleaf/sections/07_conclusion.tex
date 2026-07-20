@@ -25,8 +25,19 @@ show what happens after mapping, preserve the user's authority where metrics are
 weak, distinguish feasibility from preference, and retain the evidence behind
 acceptance and rollback.
 
-Future work should evaluate more weapon and non-weapon assets, add game-engine
-render capture, improve semantic and perceptual measures, learn adapter-specific
-seam correction, and conduct a user study of the three checkpoints. Those
-extensions would test whether the observed benefits generalize beyond the present
-case without weakening the bounded claims established here.
+The current system is deliberately limited to base-colour Custom Paint Job
+textures. It does not generate normal, roughness, metallic, height, or displacement
+channels; Workbench lighting must therefore not be interpreted as generated
+surface detail. Before final submission, the highest-value evidence addition is a
+fixed left/right/top Workbench capture of the exact accepted dragon TGA, together
+with one screenshot of the import settings.
+
+Future work should proceed in four stages. First, add spatially aligned normal,
+roughness, and metallic generation with cross-channel and engine-side validation.
+Second, automate fixed-camera Workbench or game-engine capture so that deployment
+evidence is reproducible. Third, evaluate more weapon and non-weapon adapters and
+learn asset-specific correction parameters. Fourth, improve perceptual measures
+and conduct a user study of the three checkpoints, including task time, revision
+count, perceived control, and disagreements between source-only and mapped
+choices. These extensions would test generalisation without weakening the bounded
+claims established here.

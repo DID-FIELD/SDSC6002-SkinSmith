@@ -57,6 +57,27 @@ The software renderer is suitable for repeatable technical comparison, but it is
 not a photorealistic replacement for CS2 Workbench. Workbench screenshots are
 final visual evidence; software renders remain the reproducible evaluation loop.
 
+The current SkinSmith output is base colour only. Workbench lighting, highlights,
+and finish response must not be reported as generated normal, roughness, metallic,
+height, or displacement information.
+
+## Final dragon evidence capture
+
+Import:
+
+`runs/agent_dragon_multicandidate_v1/execution/route_b/selected__route-b__custom-paint-job.tga`
+
+Use `Custom Paint Job`, scale `1.0`, U/V offsets `0`, rotation `0`, Ignore Weapon
+Size Scale enabled, and minimum wear. Save the fixed views as:
+
+- `runs/agent_dragon_multicandidate_v1/execution/workbench/dragon_artwork_04_left.png`
+- `runs/agent_dragon_multicandidate_v1/execution/workbench/dragon_artwork_04_right.png`
+- `runs/agent_dragon_multicandidate_v1/execution/workbench/dragon_artwork_04_top.png`
+- `runs/agent_dragon_multicandidate_v1/execution/workbench/dragon_artwork_04_settings.png`
+
+The settings capture should show the finish and mapping fields. Keep this evidence
+separate from the calibrated black-and-gold marble deployment case.
+
 ## Accepted references
 
 - Known-good calibration:

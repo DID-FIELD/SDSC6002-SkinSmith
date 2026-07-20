@@ -1,14 +1,14 @@
 # SkinSmith Next-Session Handoff
 
-> Updated: 2026-07-17  
+> Updated: 2026-07-20
 > Canonical context: `CODEX_CONTEXT.md`  
 > Accepted formal run: `runs/agent_dragon_multicandidate_v1/`
 
 ## Current status
 
-Session closed on 2026-07-17. The project is intentionally paused while YUAN Ye
-waits for feedback from the supervisor and group members. Continue from the
-feedback review; do not restart implementation or expand the technical scope.
+The presentation and report limitation sections were revised on 2026-07-17 while
+YUAN Ye continues to wait for supervisor feedback. Do not restart implementation
+or expand the technical scope unless feedback requires it.
 
 The complete Agent workflow is implemented:
 
@@ -87,17 +87,27 @@ Academic Phase 1 is complete and preserved in:
 - `RUBRIC_EVIDENCE_MATRIX.md`: all seven assessment dimensions, five CILOs,
   milestones, evidence rules, and report production gates.
 
-The academic poster and presentation are now complete:
+The academic poster and rebuilt presentation are available at:
 
 - `report/build/SkinSmith_A0_Poster.pptx`
 - `report/build/SkinSmith_A0_Poster.pdf`
 - `report/build/SkinSmith_Supervisor_Presentation.pptx`
 - `report/build/SkinSmith_Supervisor_Presentation.pdf`
 
-The poster is a true 1189.04 x 841.11 mm A0 landscape academic poster. The
-presentation contains ten slides. Both were exported through Microsoft
-PowerPoint and visually checked; the presentation also passed automated overflow
-testing.
+The poster is a true 1189.04 x 841.11 mm A0 landscape academic poster and remains
+unchanged. The presentation now contains 13 evidence-led slides, actual CS2
+Workbench screenshots, and English speaker notes on every slide. It was exported
+through Microsoft PowerPoint, visually checked, and passed automated overflow
+testing. The PPTX contains 13 speaker-note slides.
+
+The report and project documentation now state the material boundary explicitly:
+SkinSmith generates and evaluates base-colour / Custom Paint Job textures, not
+normal, roughness, metallic, height, displacement, or a complete PBR material.
+Workbench lighting must not be presented as generated surface detail.
+
+The Overleaf ZIP was regenerated from the tracked source and independently
+compiled. It contains the revised Discussion and Conclusion and reproduces the
+33-page report draft.
 
 Resume the academic and publication work in this order:
 
@@ -107,10 +117,16 @@ Resume the academic and publication work in this order:
 3. Resolve contradictions explicitly and preserve the locked technical evidence.
 4. Apply approved supervisor feedback to `report/overleaf/`.
 5. Freeze the approved report and export the final report PDF.
-6. Revisit the poster and presentation only when requested; dissatisfaction is
-   recorded, but revisions are explicitly deferred for now.
+6. Keep the rebuilt presentation aligned with any accepted report changes. Poster
+   revision remains deferred unless directly requested.
 7. Run the final submission consistency and visual QA.
-8. Optionally add one final Workbench screenshot of the accepted TGA.
+8. Add the final Workbench evidence for the exact accepted dragon TGA: fixed left,
+   right, and top captures plus one settings-panel screenshot.
+
+The required import path and filenames are recorded in
+`WORKBENCH_VIEWING_GUIDE.md`. Keep these dragon captures separate from the
+black-and-gold marble deployment case already used to prove the calibrated engine
+path.
 
 The revised cover lists all five English names and student IDs and identifies
 YUAN Ye as project lead and integration owner. The registered topic remains as a

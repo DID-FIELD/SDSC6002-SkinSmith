@@ -1,7 +1,7 @@
 # SkinSmith Codex Context
 
 > Canonical continuity file for future Codex sessions. Read this file first.  
-> Status date: 2026-07-17, Asia/Shanghai.  
+> Status date: 2026-07-20, Asia/Shanghai.
 > Project root: `D:\project\SDSC6002-SkinSmith`.
 
 ## 1. Mission and academic requirement
@@ -18,7 +18,7 @@ Final deadline: **2026-08-02 at 12:00 noon**. Required academic deliverables: re
 
 ## 2. Current phase and decision
 
-Current phase: **the Agent and thin Streamlit client implement the clarified three-checkpoint interaction contract, the English report draft has completed its first group-authorship revision, and the academic A0 poster plus ten-slide supervisor presentation are complete and visually verified. The user selects a registered weapon, enters one short theme keyword such as `dragon`, confirms the Agent-expanded visual world, selects one of 3-4 dynamically generated textual directions, and then selects one artwork from indivisible source + left/right/top mapped candidate cards before formal execution. AK-47 is the fully accepted client target. M4A4 is visible but explicitly disabled for formal client execution because it currently provides adapter-level transfer evidence rather than an AK-equivalent end-to-end deployment contract. The existing real Gemini run selected `Treasured Relic` and `artwork_04`, then reused the exact source for formal 2048 Route-B/TGA export; this remains accepted evidence. The reviewed project repository was published successfully to `https://github.com/DID-FIELD/SDSC6002-SkinSmith` on 2026-07-17 while preserving the existing remote `LICENSE` history. Group contribution feedback is complete and accepted; work is now waiting only for supervisor feedback before final report freeze. Poster and presentation revisions are deferred by the user**.
+Current phase: **the Agent and thin Streamlit client implement the clarified three-checkpoint interaction contract, the English report draft includes the accepted group contribution record and an explicit material-channel boundary, and the A0 poster remains unchanged. The supervisor presentation has been rebuilt as a 13-slide evidence-led deck with actual CS2 Workbench screenshots and English speaker notes on every slide. The user selects a registered weapon, enters one short theme keyword such as `dragon`, confirms the Agent-expanded visual world, selects one of 3-4 dynamically generated textual directions, and then selects one artwork from indivisible source + left/right/top mapped candidate cards before formal execution. AK-47 is the fully accepted client target. M4A4 remains adapter-level transfer evidence rather than an AK-equivalent end-to-end target. The existing real Gemini run selected `Treasured Relic` and `artwork_04`, then reused the exact source for formal 2048 Route-B/TGA export; this remains accepted evidence. The reviewed repository is published at `https://github.com/DID-FIELD/SDSC6002-SkinSmith`. The immediate evidence task is a fixed left/right/top Workbench capture plus settings screenshot for the exact accepted dragon TGA; supervisor feedback is still pending before final report freeze**.
 
 Question tested: can the project reliably execute texture generation, seam processing, real UV mapping, multi-view rendering, quantitative evaluation, automatic ranking, and evidence logging before adding diffusion?
 
@@ -396,7 +396,7 @@ Already complete and not gaps: known-good HD AK OBJ/UV calibration, true Route-B
 weapon-space/UV bake, formal A/B/C experiment, M4A4 transfer case, real single-
 master Gemini acceptance, CLI/Python Agent orchestration, the real two-selection
 workflow, mapped-readability recommendation, the thin Streamlit/replay client,
-the revised report draft, the A0 academic poster, and the ten-slide supervisor
+the revised report draft, the A0 academic poster, and the supervisor
 presentation.
 
 Known-good HD UV calibration prepared on 16 July:
@@ -877,6 +877,42 @@ Python/environment:
 - The user is dissatisfied with the current poster and presentation, but has
   explicitly deferred those revisions. Do not modify either artifact until later
   feedback or a direct request.
+
+## 8.5 Presentation rebuild and material-scope revision (2026-07-17)
+
+- The user directly requested a presentation rebuild, superseding the earlier
+  deferral for the presentation only. The A0 poster remains unchanged.
+- `report/build/SkinSmith_Supervisor_Presentation.pptx` is now a 13-slide
+  evidence-led deck using the restrained Codex Grid visual system.
+- Every slide contains English speaker notes. The exported PPTX contains 13
+  `notesSlides`, and the deck passed the automated overflow test.
+- Microsoft PowerPoint exported the matching PDF and 13 slide PNGs. The Office
+  montage was inspected with no clipping, overlap, broken glyph, or layout drift.
+- Actual CS2 Workbench evidence is used in two distinct roles: the known-good UV
+  calibration proves orientation/import correctness, and the calibrated
+  black-and-gold marble case proves coherent in-engine colour-texture deployment.
+- The deck does not represent the black-and-gold case as the accepted dragon Agent
+  result. The exact final dragon TGA still needs fixed left/right/top Workbench
+  captures and one settings-panel screenshot.
+- The report Discussion and Conclusion, root `README.md`, `PROJECT_OVERVIEW.md`,
+  and `WORKBENCH_VIEWING_GUIDE.md` now state that the implemented output is a
+  base-colour / Custom Paint Job texture, not a full PBR material. Workbench
+  lighting is not evidence of generated normal, roughness, metallic, height, or
+  displacement channels.
+- Prioritised future work is: aligned multi-channel material generation and
+  validation; automated fixed-camera engine capture; broader asset adapters;
+  stronger perceptual measures; and a user study of the three checkpoints.
+- The updated report compiles successfully to 33 pages. The revised material
+  boundary and conclusion pages were rendered and visually inspected without
+  clipping or pagination defects.
+- `report/build/SkinSmith_Overleaf.zip` was regenerated from the tracked Overleaf
+  source on 2026-07-20. The package contains 28 required files, includes the
+  revised Discussion and Conclusion, and compiles independently to the same
+  33-page, 3,794,036-byte PDF.
+- The root `README.md` is intentionally limited to the software project, its
+  workflow, setup, verified findings, and technical boundaries. Academic report,
+  poster, presentation, Overleaf, and test-count inventories remain in the
+  repository as backup but are not presented as GitHub deliverables.
 
 ## 9. Non-negotiable boundaries
 

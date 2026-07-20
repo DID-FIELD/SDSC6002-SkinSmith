@@ -21,3 +21,7 @@ The report deliberately distinguishes:
 
 Do not merge these candidate pools or replace reported values without updating the
 evidence audit in the repository.
+
+The report also distinguishes base-colour texture generation from full PBR
+material authoring. CS2 Workbench lighting is deployment context and is not
+evidence of generated normal, roughness, or metallic channels.
